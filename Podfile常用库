@@ -1,0 +1,63 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'PodTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  #use_frameworks!
+
+  # Pods for PodTest
+  pod 'TKBaseKit', '~> 2.0' #通用基础库
+  pod 'MBProgressHUD'
+  pod 'SDWebImage'
+  pod 'SDWebImageFLPlugin' #gif
+  pod 'SDCycleScrollView'
+  pod 'iCarousel'
+  pod 'IQKeyboardManager'
+  
+  pod 'JXCategoryView' #分段选择器
+  pod 'JXPagingView/Pager' #联动
+  
+  pod 'PYSearch'
+  pod 'SocketRocket'
+  pod 'YYText'
+  pod 'YYModel'
+
+  pod 'AliyunPlayer_iOS', '~> 3.4.10'
+  pod 'AliyunOSSiOS' #阿里云对象存储 OSS
+
+  pod 'TZImagePickerController' #照片选择器
+  pod 'YBImageBrowser'  #图片浏览器-注意依耐
+  pod 'YBImageBrowser/Video'  #视频功能需添加
+  pod "PYPhotoBrowser"  #图片浏览器-可用于社区型APP-注意依耐
+  #pod 'RSKImageCropViewController' #相册剪裁
+
+  pod 'CHTCollectionViewWaterfallLayout'    #瀑布流库
+  pod 'JTCalendar'    #日历控件
+  pod 'FSCalendar'
+  pod 'TQGestureLockView' #手势密码
+  pod 'QRCodeReaderViewController' #二维码 --使用lib中修改过的
+
+  pod 'NSDictionary-NilSafe'	#防止NSDictionary nil 崩溃
+  pod 'AvoidCrash'				#防止APP崩溃
+  #pod 'NSObjectSafe'
+
+  # pod 'AlipaySDK-iOS'  		#支付宝支付
+  # pod 'WechatOpenSDK'  		#微信支付
+
+  # pod 'JPush'				#极光推送
+
+  pod 'Ono'   #html解析
+  
+  pod 'SVGKit'
+  
+  pod 'M13ProgressSuite'  #进度条
+  
+   pod 'LBXScan'  #二维码-可根据需求添加库
+  
+  #  Chart
+  #YYStock  #k线图（股票）--需要手动添加
+  pod 'AAChartKit'
+  pod 'PNChart'
+
+end

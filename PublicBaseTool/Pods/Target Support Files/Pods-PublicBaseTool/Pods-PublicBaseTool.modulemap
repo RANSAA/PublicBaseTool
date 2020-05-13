@@ -1,0 +1,6 @@
+framework module Pods_PublicBaseTool {
+  umbrella header "Pods-PublicBaseTool-umbrella.h"
+
+  export *
+  module * { export * }
+}
