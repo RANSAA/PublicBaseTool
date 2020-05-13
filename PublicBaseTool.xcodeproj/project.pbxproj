@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3FA0843924556550002A5FD6 /* BaseTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA0843924556550002A5FD6 /* PublicBaseTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicBaseTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA0843C24556550002A5FD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FA0843D24556550002A5FD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3FA0843F24556550002A5FD6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		3FA0843024556550002A5FD6 = {
 			isa = PBXGroup;
 			children = (
-				3FA0843B24556550002A5FD6 /* BaseTool */,
+				3FA0843B24556550002A5FD6 /* PublicBaseTool */,
 				3FA0843A24556550002A5FD6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,12 +56,12 @@
 		3FA0843A24556550002A5FD6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FA0843924556550002A5FD6 /* BaseTool.app */,
+				3FA0843924556550002A5FD6 /* PublicBaseTool.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3FA0843B24556550002A5FD6 /* BaseTool */ = {
+		3FA0843B24556550002A5FD6 /* PublicBaseTool */ = {
 			isa = PBXGroup;
 			children = (
 				3FA084592455674C002A5FD6 /* Tool */,
@@ -77,7 +77,7 @@
 				3FA0844D24556552002A5FD6 /* Info.plist */,
 				3FA0844E24556552002A5FD6 /* main.m */,
 			);
-			path = BaseTool;
+			path = PublicBaseTool;
 			sourceTree = "<group>";
 		};
 		3FA084592455674C002A5FD6 /* Tool */ = {
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3FA0843824556550002A5FD6 /* BaseTool */ = {
+		3FA0843824556550002A5FD6 /* PublicBaseTool */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FA0845224556552002A5FD6 /* Build configuration list for PBXNativeTarget "BaseTool" */;
+			buildConfigurationList = 3FA0845224556552002A5FD6 /* Build configuration list for PBXNativeTarget "PublicBaseTool" */;
 			buildPhases = (
 				3FA0843524556550002A5FD6 /* Sources */,
 				3FA0843624556550002A5FD6 /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = BaseTool;
+			name = PublicBaseTool;
 			productName = BaseTool;
-			productReference = 3FA0843924556550002A5FD6 /* BaseTool.app */;
+			productReference = 3FA0843924556550002A5FD6 /* PublicBaseTool.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -123,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3FA0843424556550002A5FD6 /* Build configuration list for PBXProject "BaseTool" */;
+			buildConfigurationList = 3FA0843424556550002A5FD6 /* Build configuration list for PBXProject "PublicBaseTool" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FA0843824556550002A5FD6 /* BaseTool */,
+				3FA0843824556550002A5FD6 /* PublicBaseTool */,
 			);
 		};
 /* End PBXProject section */
@@ -305,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
-				INFOPLIST_FILE = BaseTool/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PublicBaseTool/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -323,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
-				INFOPLIST_FILE = BaseTool/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PublicBaseTool/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FA0843424556550002A5FD6 /* Build configuration list for PBXProject "BaseTool" */ = {
+		3FA0843424556550002A5FD6 /* Build configuration list for PBXProject "PublicBaseTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FA0845024556552002A5FD6 /* Debug */,
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FA0845224556552002A5FD6 /* Build configuration list for PBXNativeTarget "BaseTool" */ = {
+		3FA0845224556552002A5FD6 /* Build configuration list for PBXNativeTarget "PublicBaseTool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FA0845324556552002A5FD6 /* Debug */,

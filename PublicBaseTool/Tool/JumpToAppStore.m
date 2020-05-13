@@ -8,6 +8,8 @@
 
 #import "JumpToAppStore.h"
 #import <StoreKit/StoreKit.h>
+#import <UIKit/UIKit.h>
+
 
 
 // Apple iteuns 中该App对应的ID，用于更新跳转到APP Store
