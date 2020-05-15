@@ -47,13 +47,15 @@ target 'PodTest' do
 
   # pod 'JPush'				#极光推送
 
-  pod 'Ono'   #html解析
+  pod 'Ono'         #html解析
   
-  pod 'SVGKit'
+  pod 'SVGKit'      #SVG图片加载
+
+  pod 'ZYNetworkAccessibity'    iOS网络权限的监控和判断
   
   pod 'M13ProgressSuite'  #进度条
   
-   pod 'LBXScan'  #二维码-可根据需求添加库
+  pod 'LBXScan'  #二维码-可根据需求添加库
   
   #  Chart
   #YYStock  #k线图（股票）--需要手动添加
