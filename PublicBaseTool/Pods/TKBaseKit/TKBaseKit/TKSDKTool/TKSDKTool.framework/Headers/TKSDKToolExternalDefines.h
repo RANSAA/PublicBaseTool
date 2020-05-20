@@ -16,15 +16,20 @@
 #import <MJRefresh/MJRefresh.h>
 #import <GTMBase64/GTMBase64.h>
 #import <Masonry/Masonry.h>
+#import <YYModel/YYModel.h>
+#import <AFNetworking/AFNetworking.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 //#import <AFNetworking/AFNetworking.h>
 //AFNetworking, 移出了其中的UIKit模块
-#import <AFURLSessionManager.h>
-#import <AFHTTPSessionManager.h>
-#import <AFURLRequestSerialization.h>
-#import <AFURLResponseSerialization.h>
-#import <AFNetworkReachabilityManager.h>
-#import <AFSecurityPolicy.h>
+//#import <AFURLSessionManager.h>
+//#import <AFHTTPSessionManager.h>
+//#import <AFURLRequestSerialization.h>
+//#import <AFURLResponseSerialization.h>
+//#import <AFNetworkReachabilityManager.h>
+//#import <AFSecurityPolicy.h>
+
+
 
 
 #endif /* TKSDKToolExternalDefines_h */

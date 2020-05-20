@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TKNavEdgeButton">
+            <connections>
+                <outlet property="btnMask" destination="9dm-68-uiJ" id="K7E-pd-ye2"/>
+                <outlet property="img" destination="0Xg-In-Tir" id="wcO-Xy-NaR"/>
+                <outlet property="labEdge" destination="VuR-Um-JS0" id="y2s-dX-lqu"/>
+                <outlet property="layLabHeight" destination="Ptt-mN-sCM" id="Lec-hi-q0q"/>
+                <outlet property="layLabLeftSpce" destination="BIS-rv-fKV" id="wSD-5o-5xf"/>
+                <outlet property="layLabWidth" destination="EUj-jd-rFn" id="3ja-iM-vof"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="94" height="87"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="消息" translatesAutoresizingMaskIntoConstraints="NO" id="0Xg-In-Tir">
+                    <rect key="frame" x="35.5" y="34.5" width="23.5" height="18"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuR-Um-JS0">
+                    <rect key="frame" x="51" y="30" width="18.5" height="12.5"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="18.5" id="EUj-jd-rFn"/>
+                        <constraint firstAttribute="height" constant="12.5" id="Ptt-mN-sCM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dm-68-uiJ" userLabel="btnMask">
+                    <rect key="frame" x="0.0" y="0.0" width="94" height="87"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VuR-Um-JS0" firstAttribute="leading" secondItem="0Xg-In-Tir" secondAttribute="trailing" constant="-8" id="BIS-rv-fKV"/>
+                <constraint firstItem="0Xg-In-Tir" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="BkA-Pp-BlG"/>
+                <constraint firstItem="9dm-68-uiJ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="FCR-G4-QoK"/>
+                <constraint firstItem="9dm-68-uiJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="OnQ-I5-ee3"/>
+                <constraint firstItem="0Xg-In-Tir" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="U1E-Q4-TiB"/>
+                <constraint firstItem="9dm-68-uiJ" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="WX5-XB-iFZ"/>
+                <constraint firstItem="9dm-68-uiJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="bcV-R9-cX0"/>
+                <constraint firstItem="0Xg-In-Tir" firstAttribute="top" secondItem="VuR-Um-JS0" secondAttribute="bottom" constant="-8" id="dox-sp-0Ep"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9dm-68-uiJ" secondAttribute="trailing" id="lwj-1l-Px8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="9dm-68-uiJ" secondAttribute="bottom" id="xBt-1E-tF8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="172.80000000000001" y="174.06296851574214"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="消息" width="23.5" height="18"/>
+    </resources>
+</document>

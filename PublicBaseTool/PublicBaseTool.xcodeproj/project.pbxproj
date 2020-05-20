@@ -7,6 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F407BE5247539C700FB4CC6 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BC8247539C700FB4CC6 /* BaseTableViewController.m */; };
+		3F407BE6247539C700FB4CC6 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BC9247539C700FB4CC6 /* BaseViewController.m */; };
+		3F407BE7247539C700FB4CC6 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BCA247539C700FB4CC6 /* BaseNavigationController.m */; };
+		3F407BE8247539C700FB4CC6 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BCF247539C700FB4CC6 /* TabBarViewController.m */; };
+		3F407BEC247539C700FB4CC6 /* BaseResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BD5247539C700FB4CC6 /* BaseResult.m */; };
+		3F407BEF247539C700FB4CC6 /* BaseXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BDE247539C700FB4CC6 /* BaseXibView.m */; };
+		3F407BF0247539C700FB4CC6 /* HtmlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BE2247539C700FB4CC6 /* HtmlViewController.m */; };
+		3F407BF1247539C700FB4CC6 /* NSString+TKWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BE3247539C700FB4CC6 /* NSString+TKWeb.m */; };
+		3F407BF424753D3400FB4CC6 /* TKRotateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BF324753D3300FB4CC6 /* TKRotateManager.m */; };
+		3F407BF72475412700FB4CC6 /* TKTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BF52475412700FB4CC6 /* TKTimerManager.m */; };
+		3F407BFA2475428F00FB4CC6 /* NSString+TK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BF82475428F00FB4CC6 /* NSString+TK.m */; };
+		3F407BFD247542DC00FB4CC6 /* TKAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BFB247542DB00FB4CC6 /* TKAnimation.m */; };
+		3F407C002475430100FB4CC6 /* TKJumpToolUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407BFF2475430100FB4CC6 /* TKJumpToolUnit.m */; };
+		3F407C032475436F00FB4CC6 /* TKStringGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C012475436F00FB4CC6 /* TKStringGroup.m */; };
+		3F407C072475457E00FB4CC6 /* UIButton+TK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C062475457E00FB4CC6 /* UIButton+TK.m */; };
+		3F407C0A247545E600FB4CC6 /* UIImage+TK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C09247545E600FB4CC6 /* UIImage+TK.m */; };
+		3F407C0D2475460100FB4CC6 /* UIView+TK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C0B2475460100FB4CC6 /* UIView+TK.m */; };
+		3F407C132475467E00FB4CC6 /* StateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C112475467E00FB4CC6 /* StateManager.m */; };
+		3F407C142475467E00FB4CC6 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C122475467E00FB4CC6 /* AppManager.m */; };
+		3F407C1A247546A900FB4CC6 /* CheckAppVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C19247546A800FB4CC6 /* CheckAppVersion.m */; };
+		3F407C1D247546CF00FB4CC6 /* TKAFNetworkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C1C247546CF00FB4CC6 /* TKAFNetworkTool.m */; };
+		3F407C212475470100FB4CC6 /* WebSocketUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407C1F2475470100FB4CC6 /* WebSocketUnit.m */; };
+		3F407DAA24754B4000FB4CC6 /* TKSimplePhotoPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DA524754B4000FB4CC6 /* TKSimplePhotoPickerView.m */; };
+		3F407DAB24754B4000FB4CC6 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DA624754B4000FB4CC6 /* UIImage+Extension.m */; };
+		3F407DAC24754B4000FB4CC6 /* TKSimplePhotoPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DA824754B4000FB4CC6 /* TKSimplePhotoPickerView.xib */; };
+		3F407DEC24754C2800FB4CC6 /* TKStarsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DAE24754C2800FB4CC6 /* TKStarsView.xib */; };
+		3F407DED24754C2800FB4CC6 /* TKStarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DAF24754C2800FB4CC6 /* TKStarsView.m */; };
+		3F407DEE24754C2800FB4CC6 /* TKDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DB224754C2800FB4CC6 /* TKDatePickerView.xib */; };
+		3F407DEF24754C2800FB4CC6 /* TKSimplePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DB424754C2800FB4CC6 /* TKSimplePickerView.m */; };
+		3F407DF024754C2800FB4CC6 /* TKSimplePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DB524754C2800FB4CC6 /* TKSimplePickerView.xib */; };
+		3F407DF124754C2800FB4CC6 /* TKDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DB624754C2800FB4CC6 /* TKDatePickerView.m */; };
+		3F407DF224754C2800FB4CC6 /* TKTriangleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DB924754C2800FB4CC6 /* TKTriangleButton.m */; };
+		3F407DF324754C2800FB4CC6 /* TKRunLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DBA24754C2800FB4CC6 /* TKRunLabelView.m */; };
+		3F407DF424754C2800FB4CC6 /* TKPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DBB24754C2800FB4CC6 /* TKPointView.m */; };
+		3F407DF524754C2800FB4CC6 /* TKCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DBD24754C2800FB4CC6 /* TKCommentView.m */; };
+		3F407DF624754C2800FB4CC6 /* TKDotProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DBE24754C2800FB4CC6 /* TKDotProgressView.xib */; };
+		3F407DF724754C2800FB4CC6 /* TKItemTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DBF24754C2800FB4CC6 /* TKItemTitleView.m */; };
+		3F407DF824754C2800FB4CC6 /* TKProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DC024754C2800FB4CC6 /* TKProgressView.xib */; };
+		3F407DF924754C2800FB4CC6 /* TKNavEdgeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DC124754C2800FB4CC6 /* TKNavEdgeButton.xib */; };
+		3F407DFA24754C2800FB4CC6 /* TKProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DC324754C2800FB4CC6 /* TKProgressView.m */; };
+		3F407DFB24754C2800FB4CC6 /* TKItemTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DC424754C2800FB4CC6 /* TKItemTitleView.xib */; };
+		3F407DFC24754C2800FB4CC6 /* TKCommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DC524754C2800FB4CC6 /* TKCommentView.xib */; };
+		3F407DFD24754C2800FB4CC6 /* TKItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DC724754C2800FB4CC6 /* TKItemView.xib */; };
+		3F407DFE24754C2800FB4CC6 /* TKDotProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DC824754C2800FB4CC6 /* TKDotProgressView.m */; };
+		3F407DFF24754C2800FB4CC6 /* TKTriangleButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DCA24754C2800FB4CC6 /* TKTriangleButton.xib */; };
+		3F407E0024754C2800FB4CC6 /* TKPointView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DCC24754C2800FB4CC6 /* TKPointView.xib */; };
+		3F407E0124754C2800FB4CC6 /* TKNavEdgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DD024754C2800FB4CC6 /* TKNavEdgeButton.m */; };
+		3F407E0224754C2800FB4CC6 /* TKItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DD224754C2800FB4CC6 /* TKItemView.m */; };
+		3F407E0324754C2800FB4CC6 /* TKUpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DD424754C2800FB4CC6 /* TKUpdateAlertView.m */; };
+		3F407E0424754C2800FB4CC6 /* TKMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DD524754C2800FB4CC6 /* TKMBProgressHUD.m */; };
+		3F407E0524754C2800FB4CC6 /* TKInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DD724754C2800FB4CC6 /* TKInputView.m */; };
+		3F407E0624754C2800FB4CC6 /* TKAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DD824754C2800FB4CC6 /* TKAlertView.xib */; };
+		3F407E0724754C2800FB4CC6 /* TKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DDC24754C2800FB4CC6 /* TKAlertView.m */; };
+		3F407E0824754C2800FB4CC6 /* TKUpdateAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DDD24754C2800FB4CC6 /* TKUpdateAlertView.xib */; };
+		3F407E0924754C2800FB4CC6 /* TKInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DDE24754C2800FB4CC6 /* TKInputView.xib */; };
+		3F407E0A24754C2800FB4CC6 /* TKErrorPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DE024754C2800FB4CC6 /* TKErrorPopView.xib */; };
+		3F407E0B24754C2800FB4CC6 /* TKErrorPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DE124754C2800FB4CC6 /* TKErrorPopView.m */; };
+		3F407E0C24754C2800FB4CC6 /* TKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DE424754C2800FB4CC6 /* TKTextView.m */; };
+		3F407E0D24754C2800FB4CC6 /* TKTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DE624754C2800FB4CC6 /* TKTableView.m */; };
+		3F407E0E24754C2800FB4CC6 /* TKSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DE924754C2800FB4CC6 /* TKSearchBar.m */; };
+		3F407E0F24754C2800FB4CC6 /* TKSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DEB24754C2800FB4CC6 /* TKSearchBar.xib */; };
 		3FA0843E24556550002A5FD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0843D24556550002A5FD6 /* AppDelegate.m */; };
 		3FA0844124556550002A5FD6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0844024556550002A5FD6 /* SceneDelegate.m */; };
 		3FA0844424556550002A5FD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0844324556550002A5FD6 /* ViewController.m */; };
@@ -22,6 +83,115 @@
 		0F42D9FD377EDA40F7DA3774 /* Pods-PublicBaseTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicBaseTool.debug.xcconfig"; path = "Target Support Files/Pods-PublicBaseTool/Pods-PublicBaseTool.debug.xcconfig"; sourceTree = "<group>"; };
 		33348819724DECA74EB8FD4B /* libPods-PublicBaseTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PublicBaseTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34DBA8A4D44836C8F8DD9839 /* Pods-PublicBaseTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PublicBaseTool.release.xcconfig"; path = "Target Support Files/Pods-PublicBaseTool/Pods-PublicBaseTool.release.xcconfig"; sourceTree = "<group>"; };
+		3F407BC8247539C700FB4CC6 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		3F407BC9247539C700FB4CC6 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		3F407BCA247539C700FB4CC6 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		3F407BCB247539C700FB4CC6 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		3F407BCC247539C700FB4CC6 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		3F407BCD247539C700FB4CC6 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		3F407BCE247539C700FB4CC6 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		3F407BCF247539C700FB4CC6 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		3F407BD5247539C700FB4CC6 /* BaseResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseResult.m; sourceTree = "<group>"; };
+		3F407BDA247539C700FB4CC6 /* BaseResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseResult.h; sourceTree = "<group>"; };
+		3F407BDE247539C700FB4CC6 /* BaseXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseXibView.m; sourceTree = "<group>"; };
+		3F407BDF247539C700FB4CC6 /* BaseXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseXibView.h; sourceTree = "<group>"; };
+		3F407BE1247539C700FB4CC6 /* NSString+TKWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TKWeb.h"; sourceTree = "<group>"; };
+		3F407BE2247539C700FB4CC6 /* HtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HtmlViewController.m; sourceTree = "<group>"; };
+		3F407BE3247539C700FB4CC6 /* NSString+TKWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TKWeb.m"; sourceTree = "<group>"; };
+		3F407BE4247539C700FB4CC6 /* HtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HtmlViewController.h; sourceTree = "<group>"; };
+		3F407BF224753D3300FB4CC6 /* TKRotateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRotateManager.h; sourceTree = "<group>"; };
+		3F407BF324753D3300FB4CC6 /* TKRotateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKRotateManager.m; sourceTree = "<group>"; };
+		3F407BF52475412700FB4CC6 /* TKTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTimerManager.m; sourceTree = "<group>"; };
+		3F407BF62475412700FB4CC6 /* TKTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTimerManager.h; sourceTree = "<group>"; };
+		3F407BF82475428F00FB4CC6 /* NSString+TK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TK.m"; sourceTree = "<group>"; };
+		3F407BF92475428F00FB4CC6 /* NSString+TK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TK.h"; sourceTree = "<group>"; };
+		3F407BFB247542DB00FB4CC6 /* TKAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAnimation.m; sourceTree = "<group>"; };
+		3F407BFC247542DB00FB4CC6 /* TKAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAnimation.h; sourceTree = "<group>"; };
+		3F407BFE2475430100FB4CC6 /* TKJumpToolUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKJumpToolUnit.h; sourceTree = "<group>"; };
+		3F407BFF2475430100FB4CC6 /* TKJumpToolUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKJumpToolUnit.m; sourceTree = "<group>"; };
+		3F407C012475436F00FB4CC6 /* TKStringGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKStringGroup.m; sourceTree = "<group>"; };
+		3F407C022475436F00FB4CC6 /* TKStringGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKStringGroup.h; sourceTree = "<group>"; };
+		3F407C052475457D00FB4CC6 /* UIButton+TK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TK.h"; sourceTree = "<group>"; };
+		3F407C062475457E00FB4CC6 /* UIButton+TK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TK.m"; sourceTree = "<group>"; };
+		3F407C08247545E600FB4CC6 /* UIImage+TK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TK.h"; sourceTree = "<group>"; };
+		3F407C09247545E600FB4CC6 /* UIImage+TK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TK.m"; sourceTree = "<group>"; };
+		3F407C0B2475460100FB4CC6 /* UIView+TK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TK.m"; sourceTree = "<group>"; };
+		3F407C0C2475460100FB4CC6 /* UIView+TK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TK.h"; sourceTree = "<group>"; };
+		3F407C0F2475467E00FB4CC6 /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
+		3F407C102475467E00FB4CC6 /* StateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateManager.h; sourceTree = "<group>"; };
+		3F407C112475467E00FB4CC6 /* StateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateManager.m; sourceTree = "<group>"; };
+		3F407C122475467E00FB4CC6 /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
+		3F407C15247546A800FB4CC6 /* AddressManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressManager.h; sourceTree = "<group>"; };
+		3F407C16247546A800FB4CC6 /* EnumManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumManager.h; sourceTree = "<group>"; };
+		3F407C17247546A800FB4CC6 /* NotifactionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifactionManager.h; sourceTree = "<group>"; };
+		3F407C18247546A800FB4CC6 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		3F407C19247546A800FB4CC6 /* CheckAppVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAppVersion.m; sourceTree = "<group>"; };
+		3F407C1B247546CF00FB4CC6 /* TKAFNetworkTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAFNetworkTool.h; sourceTree = "<group>"; };
+		3F407C1C247546CF00FB4CC6 /* TKAFNetworkTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAFNetworkTool.m; sourceTree = "<group>"; };
+		3F407C1F2475470100FB4CC6 /* WebSocketUnit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocketUnit.m; sourceTree = "<group>"; };
+		3F407C202475470100FB4CC6 /* WebSocketUnit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketUnit.h; sourceTree = "<group>"; };
+		3F407DA524754B4000FB4CC6 /* TKSimplePhotoPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKSimplePhotoPickerView.m; sourceTree = "<group>"; };
+		3F407DA624754B4000FB4CC6 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		3F407DA724754B4000FB4CC6 /* TKSimplePhotoPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKSimplePhotoPickerView.h; sourceTree = "<group>"; };
+		3F407DA824754B4000FB4CC6 /* TKSimplePhotoPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKSimplePhotoPickerView.xib; sourceTree = "<group>"; };
+		3F407DA924754B4000FB4CC6 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		3F407DAE24754C2800FB4CC6 /* TKStarsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKStarsView.xib; sourceTree = "<group>"; };
+		3F407DAF24754C2800FB4CC6 /* TKStarsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKStarsView.m; sourceTree = "<group>"; };
+		3F407DB024754C2800FB4CC6 /* TKStarsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKStarsView.h; sourceTree = "<group>"; };
+		3F407DB224754C2800FB4CC6 /* TKDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKDatePickerView.xib; sourceTree = "<group>"; };
+		3F407DB324754C2800FB4CC6 /* TKDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDatePickerView.h; sourceTree = "<group>"; };
+		3F407DB424754C2800FB4CC6 /* TKSimplePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKSimplePickerView.m; sourceTree = "<group>"; };
+		3F407DB524754C2800FB4CC6 /* TKSimplePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKSimplePickerView.xib; sourceTree = "<group>"; };
+		3F407DB624754C2800FB4CC6 /* TKDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDatePickerView.m; sourceTree = "<group>"; };
+		3F407DB724754C2800FB4CC6 /* TKSimplePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKSimplePickerView.h; sourceTree = "<group>"; };
+		3F407DB924754C2800FB4CC6 /* TKTriangleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTriangleButton.m; sourceTree = "<group>"; };
+		3F407DBA24754C2800FB4CC6 /* TKRunLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKRunLabelView.m; sourceTree = "<group>"; };
+		3F407DBB24754C2800FB4CC6 /* TKPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKPointView.m; sourceTree = "<group>"; };
+		3F407DBC24754C2800FB4CC6 /* TKDotProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDotProgressView.h; sourceTree = "<group>"; };
+		3F407DBD24754C2800FB4CC6 /* TKCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCommentView.m; sourceTree = "<group>"; };
+		3F407DBE24754C2800FB4CC6 /* TKDotProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKDotProgressView.xib; sourceTree = "<group>"; };
+		3F407DBF24754C2800FB4CC6 /* TKItemTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKItemTitleView.m; sourceTree = "<group>"; };
+		3F407DC024754C2800FB4CC6 /* TKProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKProgressView.xib; sourceTree = "<group>"; };
+		3F407DC124754C2800FB4CC6 /* TKNavEdgeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKNavEdgeButton.xib; sourceTree = "<group>"; };
+		3F407DC224754C2800FB4CC6 /* TKItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKItemView.h; sourceTree = "<group>"; };
+		3F407DC324754C2800FB4CC6 /* TKProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKProgressView.m; sourceTree = "<group>"; };
+		3F407DC424754C2800FB4CC6 /* TKItemTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKItemTitleView.xib; sourceTree = "<group>"; };
+		3F407DC524754C2800FB4CC6 /* TKCommentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKCommentView.xib; sourceTree = "<group>"; };
+		3F407DC624754C2800FB4CC6 /* TKNavEdgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKNavEdgeButton.h; sourceTree = "<group>"; };
+		3F407DC724754C2800FB4CC6 /* TKItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKItemView.xib; sourceTree = "<group>"; };
+		3F407DC824754C2800FB4CC6 /* TKDotProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDotProgressView.m; sourceTree = "<group>"; };
+		3F407DC924754C2800FB4CC6 /* TKPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKPointView.h; sourceTree = "<group>"; };
+		3F407DCA24754C2800FB4CC6 /* TKTriangleButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKTriangleButton.xib; sourceTree = "<group>"; };
+		3F407DCB24754C2800FB4CC6 /* TKRunLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRunLabelView.h; sourceTree = "<group>"; };
+		3F407DCC24754C2800FB4CC6 /* TKPointView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKPointView.xib; sourceTree = "<group>"; };
+		3F407DCD24754C2800FB4CC6 /* TKTriangleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTriangleButton.h; sourceTree = "<group>"; };
+		3F407DCE24754C2800FB4CC6 /* TKItemTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKItemTitleView.h; sourceTree = "<group>"; };
+		3F407DCF24754C2800FB4CC6 /* TKCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKCommentView.h; sourceTree = "<group>"; };
+		3F407DD024754C2800FB4CC6 /* TKNavEdgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKNavEdgeButton.m; sourceTree = "<group>"; };
+		3F407DD124754C2800FB4CC6 /* TKProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKProgressView.h; sourceTree = "<group>"; };
+		3F407DD224754C2800FB4CC6 /* TKItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKItemView.m; sourceTree = "<group>"; };
+		3F407DD424754C2800FB4CC6 /* TKUpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKUpdateAlertView.m; sourceTree = "<group>"; };
+		3F407DD524754C2800FB4CC6 /* TKMBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKMBProgressHUD.m; sourceTree = "<group>"; };
+		3F407DD624754C2800FB4CC6 /* TKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertView.h; sourceTree = "<group>"; };
+		3F407DD724754C2800FB4CC6 /* TKInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKInputView.m; sourceTree = "<group>"; };
+		3F407DD824754C2800FB4CC6 /* TKAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKAlertView.xib; sourceTree = "<group>"; };
+		3F407DD924754C2800FB4CC6 /* TKMBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMBProgressHUD.h; sourceTree = "<group>"; };
+		3F407DDA24754C2800FB4CC6 /* TKUpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKUpdateAlertView.h; sourceTree = "<group>"; };
+		3F407DDB24754C2800FB4CC6 /* TKInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKInputView.h; sourceTree = "<group>"; };
+		3F407DDC24754C2800FB4CC6 /* TKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertView.m; sourceTree = "<group>"; };
+		3F407DDD24754C2800FB4CC6 /* TKUpdateAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKUpdateAlertView.xib; sourceTree = "<group>"; };
+		3F407DDE24754C2800FB4CC6 /* TKInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKInputView.xib; sourceTree = "<group>"; };
+		3F407DE024754C2800FB4CC6 /* TKErrorPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKErrorPopView.xib; sourceTree = "<group>"; };
+		3F407DE124754C2800FB4CC6 /* TKErrorPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKErrorPopView.m; sourceTree = "<group>"; };
+		3F407DE224754C2800FB4CC6 /* TKErrorPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKErrorPopView.h; sourceTree = "<group>"; };
+		3F407DE424754C2800FB4CC6 /* TKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTextView.m; sourceTree = "<group>"; };
+		3F407DE524754C2800FB4CC6 /* TKTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTableView.h; sourceTree = "<group>"; };
+		3F407DE624754C2800FB4CC6 /* TKTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKTableView.m; sourceTree = "<group>"; };
+		3F407DE724754C2800FB4CC6 /* TKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKTextView.h; sourceTree = "<group>"; };
+		3F407DE924754C2800FB4CC6 /* TKSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKSearchBar.m; sourceTree = "<group>"; };
+		3F407DEA24754C2800FB4CC6 /* TKSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKSearchBar.h; sourceTree = "<group>"; };
+		3F407DEB24754C2800FB4CC6 /* TKSearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKSearchBar.xib; sourceTree = "<group>"; };
+		3F407E1A2475600700FB4CC6 /* ColorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorManager.h; sourceTree = "<group>"; };
 		3FA0843924556550002A5FD6 /* PublicBaseTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicBaseTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA0843C24556550002A5FD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FA0843D24556550002A5FD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +221,232 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F407BC52475399F00FB4CC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F407BC6247539C700FB4CC6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3F407BC7247539C700FB4CC6 /* Controller */,
+				3F407BD0247539C700FB4CC6 /* Model */,
+				3F407BDD247539C700FB4CC6 /* View */,
+				3F407BE0247539C700FB4CC6 /* HtmlViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3F407BC7247539C700FB4CC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F407BCD247539C700FB4CC6 /* BaseNavigationController.h */,
+				3F407BCA247539C700FB4CC6 /* BaseNavigationController.m */,
+				3F407BCC247539C700FB4CC6 /* BaseTableViewController.h */,
+				3F407BC8247539C700FB4CC6 /* BaseTableViewController.m */,
+				3F407BCE247539C700FB4CC6 /* BaseViewController.h */,
+				3F407BC9247539C700FB4CC6 /* BaseViewController.m */,
+				3F407BCB247539C700FB4CC6 /* TabBarViewController.h */,
+				3F407BCF247539C700FB4CC6 /* TabBarViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F407BD0247539C700FB4CC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F407BDA247539C700FB4CC6 /* BaseResult.h */,
+				3F407BD5247539C700FB4CC6 /* BaseResult.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F407BDD247539C700FB4CC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F407BDF247539C700FB4CC6 /* BaseXibView.h */,
+				3F407BDE247539C700FB4CC6 /* BaseXibView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F407BE0247539C700FB4CC6 /* HtmlViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F407BE4247539C700FB4CC6 /* HtmlViewController.h */,
+				3F407BE2247539C700FB4CC6 /* HtmlViewController.m */,
+				3F407BE1247539C700FB4CC6 /* NSString+TKWeb.h */,
+				3F407BE3247539C700FB4CC6 /* NSString+TKWeb.m */,
+			);
+			path = HtmlViewController;
+			sourceTree = "<group>";
+		};
+		3F407C042475456000FB4CC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DA424754B4000FB4CC6 /* TKPhotoPickerTool */,
+				3F407DD324754C2800FB4CC6 /* AlertView */,
+				3F407DE324754C2800FB4CC6 /* CustomView */,
+				3F407DB824754C2800FB4CC6 /* OtherView */,
+				3F407DB124754C2800FB4CC6 /* PickerView */,
+				3F407DDF24754C2800FB4CC6 /* PopView */,
+				3F407DE824754C2800FB4CC6 /* TKSearchBar */,
+				3F407DAD24754C2800FB4CC6 /* TKStarView */,
+				3F407C052475457D00FB4CC6 /* UIButton+TK.h */,
+				3F407C062475457E00FB4CC6 /* UIButton+TK.m */,
+				3F407C08247545E600FB4CC6 /* UIImage+TK.h */,
+				3F407C09247545E600FB4CC6 /* UIImage+TK.m */,
+				3F407C0C2475460100FB4CC6 /* UIView+TK.h */,
+				3F407C0B2475460100FB4CC6 /* UIView+TK.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F407C0E2475465B00FB4CC6 /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				3F407C15247546A800FB4CC6 /* AddressManager.h */,
+				3F407C18247546A800FB4CC6 /* ConfigManager.h */,
+				3F407E1A2475600700FB4CC6 /* ColorManager.h */,
+				3F407C16247546A800FB4CC6 /* EnumManager.h */,
+				3F407C17247546A800FB4CC6 /* NotifactionManager.h */,
+				3F407C0F2475467E00FB4CC6 /* AppManager.h */,
+				3F407C122475467E00FB4CC6 /* AppManager.m */,
+				3F407C19247546A800FB4CC6 /* CheckAppVersion.m */,
+				3F407C102475467E00FB4CC6 /* StateManager.h */,
+				3F407C112475467E00FB4CC6 /* StateManager.m */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
+		3F407C1E2475470100FB4CC6 /* WebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				3F407C1F2475470100FB4CC6 /* WebSocketUnit.m */,
+				3F407C202475470100FB4CC6 /* WebSocketUnit.h */,
+			);
+			path = WebSocket;
+			sourceTree = "<group>";
+		};
+		3F407DA424754B4000FB4CC6 /* TKPhotoPickerTool */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DA524754B4000FB4CC6 /* TKSimplePhotoPickerView.m */,
+				3F407DA624754B4000FB4CC6 /* UIImage+Extension.m */,
+				3F407DA724754B4000FB4CC6 /* TKSimplePhotoPickerView.h */,
+				3F407DA824754B4000FB4CC6 /* TKSimplePhotoPickerView.xib */,
+				3F407DA924754B4000FB4CC6 /* UIImage+Extension.h */,
+			);
+			path = TKPhotoPickerTool;
+			sourceTree = "<group>";
+		};
+		3F407DAD24754C2800FB4CC6 /* TKStarView */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DAE24754C2800FB4CC6 /* TKStarsView.xib */,
+				3F407DAF24754C2800FB4CC6 /* TKStarsView.m */,
+				3F407DB024754C2800FB4CC6 /* TKStarsView.h */,
+			);
+			path = TKStarView;
+			sourceTree = "<group>";
+		};
+		3F407DB124754C2800FB4CC6 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DB224754C2800FB4CC6 /* TKDatePickerView.xib */,
+				3F407DB324754C2800FB4CC6 /* TKDatePickerView.h */,
+				3F407DB424754C2800FB4CC6 /* TKSimplePickerView.m */,
+				3F407DB524754C2800FB4CC6 /* TKSimplePickerView.xib */,
+				3F407DB624754C2800FB4CC6 /* TKDatePickerView.m */,
+				3F407DB724754C2800FB4CC6 /* TKSimplePickerView.h */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		3F407DB824754C2800FB4CC6 /* OtherView */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DB924754C2800FB4CC6 /* TKTriangleButton.m */,
+				3F407DBA24754C2800FB4CC6 /* TKRunLabelView.m */,
+				3F407DBB24754C2800FB4CC6 /* TKPointView.m */,
+				3F407DBC24754C2800FB4CC6 /* TKDotProgressView.h */,
+				3F407DBD24754C2800FB4CC6 /* TKCommentView.m */,
+				3F407DBE24754C2800FB4CC6 /* TKDotProgressView.xib */,
+				3F407DBF24754C2800FB4CC6 /* TKItemTitleView.m */,
+				3F407DC024754C2800FB4CC6 /* TKProgressView.xib */,
+				3F407DC124754C2800FB4CC6 /* TKNavEdgeButton.xib */,
+				3F407DC224754C2800FB4CC6 /* TKItemView.h */,
+				3F407DC324754C2800FB4CC6 /* TKProgressView.m */,
+				3F407DC424754C2800FB4CC6 /* TKItemTitleView.xib */,
+				3F407DC524754C2800FB4CC6 /* TKCommentView.xib */,
+				3F407DC624754C2800FB4CC6 /* TKNavEdgeButton.h */,
+				3F407DC724754C2800FB4CC6 /* TKItemView.xib */,
+				3F407DC824754C2800FB4CC6 /* TKDotProgressView.m */,
+				3F407DC924754C2800FB4CC6 /* TKPointView.h */,
+				3F407DCA24754C2800FB4CC6 /* TKTriangleButton.xib */,
+				3F407DCB24754C2800FB4CC6 /* TKRunLabelView.h */,
+				3F407DCC24754C2800FB4CC6 /* TKPointView.xib */,
+				3F407DCD24754C2800FB4CC6 /* TKTriangleButton.h */,
+				3F407DCE24754C2800FB4CC6 /* TKItemTitleView.h */,
+				3F407DCF24754C2800FB4CC6 /* TKCommentView.h */,
+				3F407DD024754C2800FB4CC6 /* TKNavEdgeButton.m */,
+				3F407DD124754C2800FB4CC6 /* TKProgressView.h */,
+				3F407DD224754C2800FB4CC6 /* TKItemView.m */,
+			);
+			path = OtherView;
+			sourceTree = "<group>";
+		};
+		3F407DD324754C2800FB4CC6 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DD624754C2800FB4CC6 /* TKAlertView.h */,
+				3F407DDC24754C2800FB4CC6 /* TKAlertView.m */,
+				3F407DD824754C2800FB4CC6 /* TKAlertView.xib */,
+				3F407DDB24754C2800FB4CC6 /* TKInputView.h */,
+				3F407DD724754C2800FB4CC6 /* TKInputView.m */,
+				3F407DDE24754C2800FB4CC6 /* TKInputView.xib */,
+				3F407DD924754C2800FB4CC6 /* TKMBProgressHUD.h */,
+				3F407DD524754C2800FB4CC6 /* TKMBProgressHUD.m */,
+				3F407DDA24754C2800FB4CC6 /* TKUpdateAlertView.h */,
+				3F407DD424754C2800FB4CC6 /* TKUpdateAlertView.m */,
+				3F407DDD24754C2800FB4CC6 /* TKUpdateAlertView.xib */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		3F407DDF24754C2800FB4CC6 /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DE224754C2800FB4CC6 /* TKErrorPopView.h */,
+				3F407DE124754C2800FB4CC6 /* TKErrorPopView.m */,
+				3F407DE024754C2800FB4CC6 /* TKErrorPopView.xib */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
+		3F407DE324754C2800FB4CC6 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DE424754C2800FB4CC6 /* TKTextView.m */,
+				3F407DE524754C2800FB4CC6 /* TKTableView.h */,
+				3F407DE624754C2800FB4CC6 /* TKTableView.m */,
+				3F407DE724754C2800FB4CC6 /* TKTextView.h */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		3F407DE824754C2800FB4CC6 /* TKSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				3F407DE924754C2800FB4CC6 /* TKSearchBar.m */,
+				3F407DEA24754C2800FB4CC6 /* TKSearchBar.h */,
+				3F407DEB24754C2800FB4CC6 /* TKSearchBar.xib */,
+			);
+			path = TKSearchBar;
+			sourceTree = "<group>";
+		};
 		3FA0843024556550002A5FD6 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +468,9 @@
 		3FA0843B24556550002A5FD6 /* PublicBaseTool */ = {
 			isa = PBXGroup;
 			children = (
+				3F407BC6247539C700FB4CC6 /* Base */,
+				3F407BC52475399F00FB4CC6 /* Controller */,
+				3F407C042475456000FB4CC6 /* View */,
 				3FA084592455674C002A5FD6 /* Tool */,
 				3FA0843C24556550002A5FD6 /* AppDelegate.h */,
 				3FA0843D24556550002A5FD6 /* AppDelegate.m */,
@@ -92,8 +491,24 @@
 		3FA084592455674C002A5FD6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				3F407C0E2475465B00FB4CC6 /* AppManager */,
+				3F407C1E2475470100FB4CC6 /* WebSocket */,
+				3F407C1B247546CF00FB4CC6 /* TKAFNetworkTool.h */,
+				3F407C1C247546CF00FB4CC6 /* TKAFNetworkTool.m */,
 				3FA0845A2455674C002A5FD6 /* JumpToAppStore.h */,
 				3FA0845B2455674C002A5FD6 /* JumpToAppStore.m */,
+				3F407BF224753D3300FB4CC6 /* TKRotateManager.h */,
+				3F407BF324753D3300FB4CC6 /* TKRotateManager.m */,
+				3F407BF62475412700FB4CC6 /* TKTimerManager.h */,
+				3F407BF52475412700FB4CC6 /* TKTimerManager.m */,
+				3F407BF92475428F00FB4CC6 /* NSString+TK.h */,
+				3F407BF82475428F00FB4CC6 /* NSString+TK.m */,
+				3F407BFC247542DB00FB4CC6 /* TKAnimation.h */,
+				3F407BFB247542DB00FB4CC6 /* TKAnimation.m */,
+				3F407BFE2475430100FB4CC6 /* TKJumpToolUnit.h */,
+				3F407BFF2475430100FB4CC6 /* TKJumpToolUnit.m */,
+				3F407C022475436F00FB4CC6 /* TKStringGroup.h */,
+				3F407C012475436F00FB4CC6 /* TKStringGroup.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -174,9 +589,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F407DFB24754C2800FB4CC6 /* TKItemTitleView.xib in Resources */,
+				3F407DAC24754B4000FB4CC6 /* TKSimplePhotoPickerView.xib in Resources */,
+				3F407E0624754C2800FB4CC6 /* TKAlertView.xib in Resources */,
+				3F407DFF24754C2800FB4CC6 /* TKTriangleButton.xib in Resources */,
+				3F407E0924754C2800FB4CC6 /* TKInputView.xib in Resources */,
+				3F407DF824754C2800FB4CC6 /* TKProgressView.xib in Resources */,
+				3F407DFC24754C2800FB4CC6 /* TKCommentView.xib in Resources */,
+				3F407E0824754C2800FB4CC6 /* TKUpdateAlertView.xib in Resources */,
+				3F407DEE24754C2800FB4CC6 /* TKDatePickerView.xib in Resources */,
 				3FA0844C24556552002A5FD6 /* LaunchScreen.storyboard in Resources */,
 				3FA0844924556552002A5FD6 /* Assets.xcassets in Resources */,
+				3F407DFD24754C2800FB4CC6 /* TKItemView.xib in Resources */,
+				3F407DF624754C2800FB4CC6 /* TKDotProgressView.xib in Resources */,
+				3F407E0A24754C2800FB4CC6 /* TKErrorPopView.xib in Resources */,
+				3F407E0F24754C2800FB4CC6 /* TKSearchBar.xib in Resources */,
 				3FA0844724556550002A5FD6 /* Main.storyboard in Resources */,
+				3F407DEC24754C2800FB4CC6 /* TKStarsView.xib in Resources */,
+				3F407DF024754C2800FB4CC6 /* TKSimplePickerView.xib in Resources */,
+				3F407E0024754C2800FB4CC6 /* TKPointView.xib in Resources */,
+				3F407DF924754C2800FB4CC6 /* TKNavEdgeButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,11 +661,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F407E0B24754C2800FB4CC6 /* TKErrorPopView.m in Sources */,
+				3F407C002475430100FB4CC6 /* TKJumpToolUnit.m in Sources */,
 				3FA0844424556550002A5FD6 /* ViewController.m in Sources */,
+				3F407E0524754C2800FB4CC6 /* TKInputView.m in Sources */,
+				3F407BF0247539C700FB4CC6 /* HtmlViewController.m in Sources */,
+				3F407DF124754C2800FB4CC6 /* TKDatePickerView.m in Sources */,
+				3F407DFA24754C2800FB4CC6 /* TKProgressView.m in Sources */,
+				3F407BEF247539C700FB4CC6 /* BaseXibView.m in Sources */,
+				3F407DAA24754B4000FB4CC6 /* TKSimplePhotoPickerView.m in Sources */,
+				3F407E0324754C2800FB4CC6 /* TKUpdateAlertView.m in Sources */,
+				3F407E0D24754C2800FB4CC6 /* TKTableView.m in Sources */,
+				3F407C1D247546CF00FB4CC6 /* TKAFNetworkTool.m in Sources */,
+				3F407E0224754C2800FB4CC6 /* TKItemView.m in Sources */,
 				3FA0843E24556550002A5FD6 /* AppDelegate.m in Sources */,
+				3F407DF424754C2800FB4CC6 /* TKPointView.m in Sources */,
 				3FA0844F24556552002A5FD6 /* main.m in Sources */,
+				3F407DFE24754C2800FB4CC6 /* TKDotProgressView.m in Sources */,
+				3F407BF424753D3400FB4CC6 /* TKRotateManager.m in Sources */,
+				3F407DED24754C2800FB4CC6 /* TKStarsView.m in Sources */,
+				3F407C0D2475460100FB4CC6 /* UIView+TK.m in Sources */,
+				3F407E0724754C2800FB4CC6 /* TKAlertView.m in Sources */,
 				3FA0844124556550002A5FD6 /* SceneDelegate.m in Sources */,
+				3F407BE7247539C700FB4CC6 /* BaseNavigationController.m in Sources */,
+				3F407BFD247542DC00FB4CC6 /* TKAnimation.m in Sources */,
+				3F407C142475467E00FB4CC6 /* AppManager.m in Sources */,
+				3F407BE5247539C700FB4CC6 /* BaseTableViewController.m in Sources */,
+				3F407C032475436F00FB4CC6 /* TKStringGroup.m in Sources */,
+				3F407DF724754C2800FB4CC6 /* TKItemTitleView.m in Sources */,
+				3F407DAB24754B4000FB4CC6 /* UIImage+Extension.m in Sources */,
+				3F407C072475457E00FB4CC6 /* UIButton+TK.m in Sources */,
+				3F407DF224754C2800FB4CC6 /* TKTriangleButton.m in Sources */,
+				3F407C212475470100FB4CC6 /* WebSocketUnit.m in Sources */,
+				3F407C0A247545E600FB4CC6 /* UIImage+TK.m in Sources */,
+				3F407E0424754C2800FB4CC6 /* TKMBProgressHUD.m in Sources */,
+				3F407BEC247539C700FB4CC6 /* BaseResult.m in Sources */,
+				3F407BFA2475428F00FB4CC6 /* NSString+TK.m in Sources */,
+				3F407BE6247539C700FB4CC6 /* BaseViewController.m in Sources */,
+				3F407DF524754C2800FB4CC6 /* TKCommentView.m in Sources */,
+				3F407DF324754C2800FB4CC6 /* TKRunLabelView.m in Sources */,
+				3F407E0C24754C2800FB4CC6 /* TKTextView.m in Sources */,
+				3F407C132475467E00FB4CC6 /* StateManager.m in Sources */,
+				3F407E0124754C2800FB4CC6 /* TKNavEdgeButton.m in Sources */,
+				3F407BE8247539C700FB4CC6 /* TabBarViewController.m in Sources */,
+				3F407E0E24754C2800FB4CC6 /* TKSearchBar.m in Sources */,
+				3F407DEF24754C2800FB4CC6 /* TKSimplePickerView.m in Sources */,
+				3F407BF72475412700FB4CC6 /* TKTimerManager.m in Sources */,
 				3FA0845C2455674D002A5FD6 /* JumpToAppStore.m in Sources */,
+				3F407C1A247546A900FB4CC6 /* CheckAppVersion.m in Sources */,
+				3F407BF1247539C700FB4CC6 /* NSString+TKWeb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

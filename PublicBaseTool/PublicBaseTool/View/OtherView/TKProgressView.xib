@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TKProgressView">
+            <connections>
+                <outlet property="layProgressViewWidth" destination="m5R-Hf-sCI" id="5qV-wq-VRq"/>
+                <outlet property="progressView" destination="zDa-uw-JXA" id="8Dy-ZU-PAh"/>
+                <outlet property="trackView" destination="pub-E0-JbS" id="RuB-dz-o4x"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pub-E0-JbS" userLabel="trackView">
+                    <rect key="frame" x="0.0" y="0.0" width="423" height="75"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDa-uw-JXA" userLabel="progressView">
+                            <rect key="frame" x="0.0" y="0.0" width="12" height="75"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="m5R-Hf-sCI"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="zDa-uw-JXA" secondAttribute="bottom" id="1Ha-qG-pyd"/>
+                        <constraint firstItem="zDa-uw-JXA" firstAttribute="top" secondItem="pub-E0-JbS" secondAttribute="top" id="eEc-cb-VZJ"/>
+                        <constraint firstItem="zDa-uw-JXA" firstAttribute="leading" secondItem="pub-E0-JbS" secondAttribute="leading" id="heG-zX-TEp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pub-E0-JbS" secondAttribute="bottom" id="4Ms-6H-QA4"/>
+                <constraint firstItem="pub-E0-JbS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BaK-AF-Nfc"/>
+                <constraint firstAttribute="trailing" secondItem="pub-E0-JbS" secondAttribute="trailing" id="Bek-Pi-3D5"/>
+                <constraint firstItem="pub-E0-JbS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RRX-Qc-bf5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="44.20289855072464" y="309.04017857142856"/>
+        </view>
+    </objects>
+</document>

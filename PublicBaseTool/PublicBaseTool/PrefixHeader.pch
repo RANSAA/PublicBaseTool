@@ -11,5 +11,9 @@
 
 //#import <TKBaseKit.h>
 
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <YYModel.h>
+#import <TKBaseKit.h>
 
 #endif /* PrefixHeader_h */

@@ -21,9 +21,25 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)TKCreateStorageFolder:(NSString *)path;
 
 /**
- 获取TK在沙盒中的存储目录
- */
+获取TK在沙盒中的存储目录，不能被《文件》这个应用访问
+PS:位于Library中的子目录中
+*/
 + (NSString *)TKGetStorageFolder;
+
+/**
+ 获取Document这个目录
+ */
++ (NSString *)TKGetStorageDocument;
+
+/**
+ 获取Preferences这个目录
+ */
++ (NSString *)TKGetStoragePreferences;
+
+/**
+ 获取Caches这个目录
+ */
++ (NSString *)TKGetStorageCaches;
 
 /**
  判断path路径是文件，还是目录或者不存在

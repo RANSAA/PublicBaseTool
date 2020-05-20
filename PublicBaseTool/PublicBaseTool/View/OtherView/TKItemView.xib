@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TKItemView">
+            <connections>
+                <outlet property="btnMask" destination="dcz-cF-gsN" id="R07-B4-DEV"/>
+                <outlet property="img" destination="MVa-dU-SkM" id="2M7-xt-raA"/>
+                <outlet property="labTitle" destination="ZHa-QS-6Cf" id="rmG-a2-Ym8"/>
+                <outlet property="layImgToViewSpaceBottom" destination="MVa-dU-SkM" id="gGa-rK-ZCE"/>
+                <outlet property="layLabTitleToViewSpaceTop" destination="rYc-QX-xKJ" id="rDz-0b-by3"/>
+                <outlet property="layVviewSpaceY" destination="jN3-4i-OAb" id="X5E-Hh-p0j"/>
+                <outlet property="vView" destination="EfA-v0-f7V" id="kOG-Hu-qyy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="143"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfA-v0-f7V" userLabel="V">
+                    <rect key="frame" x="0.0" y="71" width="175" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="IcA-JY-68K"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="智能还款" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHa-QS-6Cf">
+                    <rect key="frame" x="58.5" y="82" width="58" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcz-cF-gsN">
+                    <rect key="frame" x="6" y="6" width="163" height="131"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-root-智能还款" translatesAutoresizingMaskIntoConstraints="NO" id="MVa-dU-SkM">
+                    <rect key="frame" x="67.5" y="36" width="40" height="40"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="dcz-cF-gsN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="6" id="E6L-fS-sp3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dcz-cF-gsN" secondAttribute="trailing" constant="6" id="Y0E-fV-Mmz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dcz-cF-gsN" secondAttribute="bottom" constant="6" id="aMl-2Z-auu"/>
+                <constraint firstItem="dcz-cF-gsN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="6" id="bZ1-no-Qda"/>
+                <constraint firstItem="EfA-v0-f7V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fBT-QP-7AI"/>
+                <constraint firstItem="EfA-v0-f7V" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gwl-GR-N7i"/>
+                <constraint firstItem="EfA-v0-f7V" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="jN3-4i-OAb"/>
+                <constraint firstItem="MVa-dU-SkM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="mBg-pl-bPl"/>
+                <constraint firstItem="ZHa-QS-6Cf" firstAttribute="top" secondItem="EfA-v0-f7V" secondAttribute="bottom" constant="10" id="rYc-QX-xKJ"/>
+                <constraint firstItem="ZHa-QS-6Cf" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="tQ9-pY-TpG"/>
+                <constraint firstItem="EfA-v0-f7V" firstAttribute="top" secondItem="MVa-dU-SkM" secondAttribute="bottom" constant="-5" id="vdj-dF-iEB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-28" y="389.95502248875567"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home-root-智能还款" width="40" height="40"/>
+    </resources>
+</document>

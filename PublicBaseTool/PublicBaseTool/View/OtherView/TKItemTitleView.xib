@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TKItemTitleView">
+            <connections>
+                <outlet property="btnMask" destination="QnF-Jf-bVa" id="o8B-YX-Gxg"/>
+                <outlet property="labBottom" destination="yt8-aj-4aT" id="Utr-xK-RkB"/>
+                <outlet property="labTop" destination="BFC-cu-6CV" id="r3m-9C-Hqa"/>
+                <outlet property="layLabBottomTovViewSpaceTop" destination="EaZ-bK-JVL" id="tav-BX-sal"/>
+                <outlet property="layLabTopTovViewSpaceBottom" destination="c5E-Wp-nZN" id="gmY-5s-Yyg"/>
+                <outlet property="vView" destination="3JC-hi-pQS" id="Knj-TV-7tU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="217" height="269"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3JC-hi-pQS" userLabel="V">
+                    <rect key="frame" x="0.0" y="134" width="217" height="1"/>
+                    <color key="backgroundColor" red="0.1019607843" green="0.67843137249999996" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="1EE-y7-jB6"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFC-cu-6CV">
+                    <rect key="frame" x="94" y="112" width="29.5" height="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="累计邀请" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yt8-aj-4aT">
+                    <rect key="frame" x="84" y="135" width="49.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnF-Jf-bVa">
+                    <rect key="frame" x="0.0" y="0.0" width="217" height="269"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="BFC-cu-6CV" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="3Qr-EV-kwl"/>
+                <constraint firstItem="QnF-Jf-bVa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="BaQ-Us-kz8"/>
+                <constraint firstItem="yt8-aj-4aT" firstAttribute="top" secondItem="3JC-hi-pQS" secondAttribute="bottom" id="EaZ-bK-JVL"/>
+                <constraint firstAttribute="trailing" secondItem="3JC-hi-pQS" secondAttribute="trailing" id="JIp-3m-vW8"/>
+                <constraint firstItem="3JC-hi-pQS" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="SEf-kC-He6"/>
+                <constraint firstItem="3JC-hi-pQS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="avh-zW-6hb"/>
+                <constraint firstItem="3JC-hi-pQS" firstAttribute="top" secondItem="BFC-cu-6CV" secondAttribute="bottom" id="c5E-Wp-nZN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QnF-Jf-bVa" secondAttribute="trailing" id="cNN-Nf-psq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QnF-Jf-bVa" secondAttribute="bottom" id="leH-Dw-DWR"/>
+                <constraint firstItem="yt8-aj-4aT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="m8g-e2-rt0"/>
+                <constraint firstItem="QnF-Jf-bVa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tnI-Rf-fqf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="5.5999999999999996" y="719.19040479760122"/>
+        </view>
+    </objects>
+</document>

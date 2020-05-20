@@ -8,10 +8,11 @@ target 'PublicBaseTool' do
   # use_frameworks!
 
 
-pod 'TKBaseKit', '~> 2.0'
 
 
 
   # Pods for PublicBaseTool
+  pod 'YYModel'
+  pod 'TKBaseKit', '~> 2.1'
 
 end

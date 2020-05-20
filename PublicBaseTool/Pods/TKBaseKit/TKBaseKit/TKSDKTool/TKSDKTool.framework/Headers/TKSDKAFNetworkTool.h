@@ -49,12 +49,16 @@
 
 
 typedef  NS_ENUM(NSInteger ,TKSDKNetRequestType){
-    TKSDKNetRequestTypeGet  =0,
-    TKSDKNetRequestTypePost =1
+    TKSDKNetRequestTypeGet      = 0,
+    TKSDKNetRequestTypePost     = 1,
+    TKSDKNetRequestTypePut      = 2,
+    TKSDKNetRequestTypeHead     = 3,
+    TKSDKNetRequestTypeDelete   = 4,
+    TKSDKNetRequestTypePatch    = 5
 };
 typedef NS_ENUM(NSInteger,TKSDKNetResponseType){
     TKSDKNetResponseTypeData = 0,
-    TKSDKNetResponseTypeJson =1
+    TKSDKNetResponseTypeJson = 1
 };
 
 
@@ -62,9 +66,9 @@ typedef NS_ENUM(NSInteger,TKSDKNetResponseType){
 
 #pragma mark -------基础设置区域，如：开启缓存，开启log等--------
 /** 使用个字母和数字生成32位的随机字符串随机字符串  */
-+ (NSString *)getRandomStringUseCharacter;
++ (nullable NSString *)getRandomStringUseCharacter;
 /** 直接根据路径获取文件大小 */
-+ (long long)getFileSizeAtPath:(NSString *)filePath;
++ (long long)getFileSizeAtPath:(nullable NSString *)filePath;
 /** 是否开启缓存,默认不开启*/
 + (void)isEndbledCache:(BOOL)isEndbled;
 /** 是否开启URLEncode，默认开启 */
@@ -80,43 +84,63 @@ typedef NS_ENUM(NSInteger,TKSDKNetResponseType){
  AFNetworkReachabilityStatusReachableViaWWAN = 1,   // 3G 花钱
  AFNetworkReachabilityStatusReachableViaWiFi = 2,   // WiFi
  **/
-+ (void)netWorkStatus:(void(^)(NSInteger status))netStatus;
++ (void)netWorkStatus:(nullable void(^)(NSInteger status))netStatus;
+
+/**
+ 将字典类型参数转换成字符串参数模式(用于追加到url后边)
+ @{@"k1":@"v1", @"k2":@"v2"} 转换后  k1=v1&k2=v2
+ */
++ (nonnull NSString *)parameterToString:(nullable NSDictionary *)par;
 
 #pragma mark-------------------------请求部分-------------------------
 
 /**
- 基础通用的请求faction
+基础通用的请求方法,支持GET,POST,HEAD,PUT,DELETE,PATCH
+ 
+@param url 请求URL
+@param par 请求参数字典
+@param filePar 要上传文件时使用，并且同时可以以不同的方式进行上传文件，
+目前可同时包括：NSString , NSURL ,NSData 3种f方式进行上传文件
+使用方式如：filePar=@{@"参数名1":@"数据类型-NSString",
+                    @"参数名2":@"数据类型-NSURL",
+                    @"参数名3":@"数据类型-NSData"}
+其中文件类型可同时为上面3种
 
- @param url 请求URL
- @param par 请求参数字典
- @param filePar 要上传文件时使用，并且同时可以以不同的方式进行上传文件，
- 目前可同时包括：NSString , NSURL ,NSData 3种f方式进行上传文件
- 使用方式如：filePar=@{@"参数名1":@"文件1",@"参数名2":@"文件2"}，其中文件类型可同时为上面3种
+@param requestType 请求方式：post或者get
+@param responseType 响应数据类型：data或者json
+@param progress 请求进度：上行或者下行
+@param success 成功回调
+@param fail 失败回调
+ 
+*/
++ (nullable NSURLSessionDataTask *)baseRequestWithUrl:(nullable NSString *)url
+                                         par:(nullable id)par
+                               uploadFilePar:(nullable NSDictionary *)filePar
+                                 requestType:(TKSDKNetRequestType)requestType
+                                responseType:(TKSDKNetResponseType)responseType
+                                    progress:(nullable void(^)(CGFloat progress))progress
+                                     success:(nullable void(^)(id _Nullable responseObject))success
+                                        fail:(nullable void(^)(NSError * _Nullable error))fail;
 
- @param requestType 请求方式：post或者get
- @param responseType 响应数据类型：data或者json
- @param success 成功回调
- @param fail 失败回调
- @param progress 请求进度：上行或者下行
- */
-+ (NSURLSessionDataTask *)baseRequestWithUrl:(NSString *)url par:(id)par uploadFilePar:(NSDictionary *)filePar requestType:(TKSDKNetRequestType)requestType responseType:(TKSDKNetResponseType)responseType success:(void(^)(id responseObject))success fail:(void(^)(NSError *error))fail progress:(void(^)(CGFloat))progress;
+
+/**
+ get方式数据请求，获取数据类型为Json格式
+*  url: 请求URL地址
+*  par: post请求参数字典
+*  success:请求成功回调
+*  fail:请求失败回调
+    PS:注意参数不是直接追加到url后面的
+**/
++ (nullable NSURLSessionDataTask *)JSONGetWithUrl:(nullable NSString *)url par:(nullable id)par success:(nullable void(^)(id _Nullable json))success fail:(nullable void(^)(NSError * _Nullable error))fail;
+
 
 /** get方式数据请求，取数据类型为Json格式
  *  url:请求URL
  *  success:请求成功回调
  *  fail:请求失败回调
  **/
-+ (NSURLSessionDataTask *)JSONGetWithUrl:(NSString *)url success:(void(^)(id json))success fail:(void(^)(NSError *error))fail;
++ (nullable NSURLSessionDataTask *)JSONGetWithUrl:(nullable NSString *)url success:(nullable void(^)(id _Nullable json))success fail:(nullable void(^)(NSError * _Nullable error))fail;
 
-/**
- *  get方式数据请求，获取数据类型为Json格式
- *  url:请求URL
- *  par:请求参数
- *  success:请求成功回调
- *  fail:请求失败回调
- *  PS:注意这儿的参数是直接拼接再url后面的
- **/
-+ (NSURLSessionDataTask *)JSONGetWithUrl:(NSString *)url par:(id)par success:(void(^)(id json))success fail:(void(^)(NSError *error))fail;
 
 /** post方式数据请求获，取数据类型为Json格式
  *  url: 请求URL地址
@@ -124,34 +148,43 @@ typedef NS_ENUM(NSInteger,TKSDKNetResponseType){
  *  success:请求成功回调
  *  fail:请求失败回调
  **/
-+ (NSURLSessionDataTask *)JSONPostWithUrl:(NSString *)url par:(id)par success:(void(^)(id json))success fail:(void(^)(NSError *error))fail;
++ (nullable NSURLSessionDataTask *)JSONPostWithUrl:(nullable NSString *)url par:(nullable id)par success:(nullable void(^)(id _Nullable json))success fail:(nullable void(^)(NSError * _Nullable error))fail;
 /** get方法直接获取NSData数据
  *  url: 请求URL地址
  *  success: 请求成功回调
  *  fail: 请求失败回调
  **/
-+ (NSURLSessionDataTask *)DataGetWithUrl:(NSString *)url success:(void(^)(id data))success fail:(void(^)(NSError *error))fail;
++ (nullable NSURLSessionDataTask *)DataGetWithUrl:(nullable NSString *)url success:(nullable void(^)(id _Nullable data))success fail:(nullable void(^)(NSError * _Nullable error))fail;
+
+/** get方法直接获取NSData数据
+ *  url: 请求URL地址
+ *  success: 请求成功回调
+ *  fail: 请求失败回调
+ *  PS:注意这儿的参数不是直接追加到url后面的
+ **/
++ (nullable NSURLSessionDataTask *)DataGetWithUrl:(nullable NSString *)url par:(nullable id)par success:(nullable void(^)(id _Nullable data))success fail:(nullable void(^)(NSError * _Nullable error))fail;
+
 /** post方法直接获取NSData数据
  *  url: 请求URL地址
  *  par: post请求参数字典
  *  success:请求成功回调
  *  fail:请求失败回调
  **/
-+ (NSURLSessionDataTask *)DataPostWithUrl:(NSString *)url par:(id)par success:(void(^)(id data))success fail:(void(^)(NSError *error))fail;
++ (nullable NSURLSessionDataTask *)DataPostWithUrl:(nullable NSString *)url par:(nullable id)par success:(nullable void(^)(id _Nullable data))success fail:(nullable void(^)(NSError * _Nullable error))fail;
 
 /**
  上传文件-不带进度条
  返回类型为NSData
  PS:使用了公共的baseRequestWithUrl方法
  */
-+(NSURLSessionDataTask *)UploadFileWithUrl:(NSString *)url par:(id)par filePar:(NSDictionary *)filePar success:(void(^)(id data))success fail:(void(^)(NSError *error))fail;
++(nullable NSURLSessionDataTask *)UploadFileWithUrl:(nullable NSString *)url par:(nullable id)par filePar:(nullable NSDictionary *)filePar success:(nullable void(^)(id _Nullable data))success fail:(nullable void(^)(NSError * _Nullable error))fail;
 
 /**
  上传文件-带进度条
  返回类型为NSData
  PS:使用了公共的baseRequestWithUrl方法
  */
-+(NSURLSessionDataTask *)UploadFileWithUrl:(NSString *)url par:(id)par filePar:(NSDictionary *)filePar success:(void(^)(id data))success progress:(void(^)(CGFloat progress))progress fail:(void(^)(NSError *error))fail;
++(nullable NSURLSessionDataTask *)UploadFileWithUrl:(nullable NSString *)url par:(nullable id)par filePar:(nullable NSDictionary *)filePar success:(nullable void(^)(id _Nullable data))success progress:(nullable void(^)(CGFloat progress))progress fail:(nullable void(^)(NSError * _Nullable error))fail;
 
 
 
@@ -168,22 +201,29 @@ typedef NS_ENUM(NSInteger,TKSDKNetResponseType){
  ps：https://www.cnblogs.com/jyking/p/6737295.html
  ps:https://blog.csdn.net/dongruanlong/article/details/72641754
  */
-+ (void)customSessionManager:(AFHTTPSessionManager *)sessionManager;
++ (void)customSessionManager:(nullable AFHTTPSessionManager *)sessionManager;
 
 /**
  添加通用header需要添加的参数
  @param requestSerializer 向header中添加一些v标识
+ 通过AFHTTPRequestSerializer添加header参数
  */
-+ (void)customPublicHeaderWith:(AFHTTPRequestSerializer*)requestSerializer;
++ (void)customPublicHeaderWith:(nullable AFHTTPRequestSerializer*)requestSerializer;
+
+/**
+ 重写为URL请求添加header请求参数
+ */
++ (nullable NSDictionary *)customURLHeaders;
 
 /**
  处理请求URL，比如是否添加公共请求域名，以及一些特殊的请求路劲绑定不同的域名
+ 重写-对请求url进行拼接
  @param url 请求传入的URL
  @param requestType 请求方式
  @param responseType 响应方式
  @return 针对URL进行特殊处理，如添加域名，针对特殊URL进行处理
  */
-+ (NSString *)customRequestURL:(NSString *)url requestType:(TKSDKNetRequestType)requestType responseType:(TKSDKNetResponseType)responseType;
++ (nonnull NSString *)customRequestURL:(nullable NSString *)url requestType:(TKSDKNetRequestType)requestType responseType:(TKSDKNetResponseType)responseType;
 
 /**
  参数二次解析封装处理
@@ -191,20 +231,21 @@ typedef NS_ENUM(NSInteger,TKSDKNetResponseType){
  @return 返回额为处理的参数；如添加一些公共参数
  :重写该方法时，注意par为null的情况
  */
-+ (id)customRequestMutablePar:(id)par;
++ (nullable id)customRequestMutablePar:(nullable id)par;
 
 /**
  对属响应数据二次处理，如筛选某些特定通用数据等，注意最终返回的数据类型是不会改变的
  @param responseObject 请求成功时响应的数据
  @param responseType 响应数据的类型：NSData或者Json
  */
-+ (void)customResponseDataWithSuccess:(id)responseObject responseType:(TKSDKNetResponseType)responseType;
++ (void)customResponseDataWithSuccess:(nullable id)responseObject responseType:(TKSDKNetResponseType)responseType;
 
 /**
  对请求错Error的二次处理
  @param error 响应错误
  */
-+ (void)customResponseError:(NSError *)error;
++ (void)customResponseError:(nullable NSError *)error;
+
 
 
 @end

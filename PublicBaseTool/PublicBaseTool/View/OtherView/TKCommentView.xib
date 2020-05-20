@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TKCommentView">
+            <connections>
+                <outlet property="btnSubmit" destination="cxR-Gz-OzN" id="vwE-t6-4qh"/>
+                <outlet property="showView" destination="j4e-4K-O7s" id="uAa-3J-gHR"/>
+                <outlet property="textFieldInput" destination="mIc-Ed-CEF" id="DYt-tI-qMB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="530" height="155"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4e-4K-O7s">
+                    <rect key="frame" x="0.0" y="0.0" width="530" height="155"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-Ed-CEF">
+                            <rect key="frame" x="10" y="62.5" width="456" height="30"/>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="750" constant="30" id="Qmo-eH-45R"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxR-Gz-OzN">
+                            <rect key="frame" x="466" y="0.0" width="64" height="155"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="HCN-x7-id7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="发布"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cxR-Gz-OzN" secondAttribute="trailing" id="0Af-YF-H2l"/>
+                        <constraint firstItem="cxR-Gz-OzN" firstAttribute="top" secondItem="j4e-4K-O7s" secondAttribute="top" id="IJz-y6-E28"/>
+                        <constraint firstItem="mIc-Ed-CEF" firstAttribute="centerY" secondItem="j4e-4K-O7s" secondAttribute="centerY" id="imh-ga-kSv"/>
+                        <constraint firstAttribute="bottom" secondItem="cxR-Gz-OzN" secondAttribute="bottom" id="lEA-1r-BsX"/>
+                        <constraint firstItem="mIc-Ed-CEF" firstAttribute="leading" secondItem="j4e-4K-O7s" secondAttribute="leading" constant="10" id="mFc-r5-ozv"/>
+                        <constraint firstItem="cxR-Gz-OzN" firstAttribute="leading" secondItem="mIc-Ed-CEF" secondAttribute="trailing" id="xrN-hr-gjX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="j4e-4K-O7s" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="6RD-L5-jSd"/>
+                <constraint firstItem="j4e-4K-O7s" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8so-wY-pu1"/>
+                <constraint firstItem="j4e-4K-O7s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VzM-a1-bdv"/>
+                <constraint firstAttribute="bottom" secondItem="j4e-4K-O7s" secondAttribute="bottom" id="sDu-rA-DsX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="215.94202898550725" y="426.22767857142856"/>
+        </view>
+    </objects>
+</document>

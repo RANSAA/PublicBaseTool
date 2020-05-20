@@ -1,45 +1,59 @@
 PODS:
-  - AFNetworking/NSURLSession (3.2.1):
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - GTMBase64 (1.0.1)
   - Masonry (1.1.0)
-  - MJRefresh (3.3.1)
-  - TKBaseKit (2.0):
-    - TKBaseKit/TKSDKTool (= 2.0)
-    - TKBaseKit/TKSDKUniversal (= 2.0)
-  - TKBaseKit/TKSDKTool (2.0):
-    - AFNetworking/NSURLSession (~> 3.2.1)
-    - AFNetworking/Reachability (~> 3.2.1)
-    - AFNetworking/Security (~> 3.2.1)
-    - AFNetworking/Serialization (~> 3.2.1)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.4.3)
+  - TKBaseKit (2.1.1):
+    - TKBaseKit/TKSDKTool (= 2.1.1)
+    - TKBaseKit/TKSDKUniversal (= 2.1.1)
+  - TKBaseKit/TKSDKTool (2.1.1):
+    - AFNetworking (~> 4.0.1)
     - GTMBase64 (~> 1.0.1)
     - Masonry
-    - MJRefresh (~> 3.3.1)
-  - TKBaseKit/TKSDKUniversal (2.0)
+    - MBProgressHUD
+    - MJRefresh (~> 3.4)
+    - YYModel
+  - TKBaseKit/TKSDKUniversal (2.1.1)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - TKBaseKit (~> 2.0)
+  - TKBaseKit (~> 2.1)
+  - YYModel
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - GTMBase64
     - Masonry
+    - MBProgressHUD
     - MJRefresh
     - TKBaseKit
+    - YYModel
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
-  TKBaseKit: 7c7d955b8c0a454d7519cd7d4ddf5af85b16b5cf
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  TKBaseKit: 2236c3dedb97a8baec0f291d00d0506ab6478c93
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 00fe09806662c5a74e3fc7e841790f8f4f75b1d9
+PODFILE CHECKSUM: 2988786381812e919f563cb7ea85237625b0cffe
 
 COCOAPODS: 1.9.1
