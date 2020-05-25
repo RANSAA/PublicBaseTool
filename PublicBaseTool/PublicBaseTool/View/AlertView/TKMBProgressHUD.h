@@ -10,8 +10,6 @@
 
 /**
  * MBProgressHUD:二次封装
- *
- * 让Loading同时只能显示一个
  **/
 
 @interface TKMBProgressHUD : NSObject

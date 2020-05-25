@@ -42,6 +42,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (TKRotateManager *)shared;
 
 /**
+ 检查手机是否横屏
+ */
++ (BOOL)isInterfaceLandscape;
+
+/**
  强制设置屏幕方向：YES:强制设置为横屏(Home right) NO:强制设置屏幕方向为竖屏(Home Bottom)
  PS:强制设置屏幕方向之后，注意手动修复一下dirMaskType的值
  设置横屏之后 dirMaskType=1

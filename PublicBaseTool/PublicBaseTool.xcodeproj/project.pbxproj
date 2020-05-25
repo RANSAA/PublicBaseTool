@@ -68,6 +68,7 @@
 		3F407E0D24754C2800FB4CC6 /* TKTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DE624754C2800FB4CC6 /* TKTableView.m */; };
 		3F407E0E24754C2800FB4CC6 /* TKSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DE924754C2800FB4CC6 /* TKSearchBar.m */; };
 		3F407E0F24754C2800FB4CC6 /* TKSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DEB24754C2800FB4CC6 /* TKSearchBar.xib */; };
+		3F5B3DC7247BCBE60080781C /* AliPushSDKTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B3DC6247BCBE60080781C /* AliPushSDKTool.m */; };
 		3FA0843E24556550002A5FD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0843D24556550002A5FD6 /* AppDelegate.m */; };
 		3FA0844124556550002A5FD6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0844024556550002A5FD6 /* SceneDelegate.m */; };
 		3FA0844424556550002A5FD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0844324556550002A5FD6 /* ViewController.m */; };
@@ -192,6 +193,8 @@
 		3F407DEA24754C2800FB4CC6 /* TKSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKSearchBar.h; sourceTree = "<group>"; };
 		3F407DEB24754C2800FB4CC6 /* TKSearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TKSearchBar.xib; sourceTree = "<group>"; };
 		3F407E1A2475600700FB4CC6 /* ColorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorManager.h; sourceTree = "<group>"; };
+		3F5B3DC5247BCBE60080781C /* AliPushSDKTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliPushSDKTool.h; sourceTree = "<group>"; };
+		3F5B3DC6247BCBE60080781C /* AliPushSDKTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliPushSDKTool.m; sourceTree = "<group>"; };
 		3FA0843924556550002A5FD6 /* PublicBaseTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicBaseTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA0843C24556550002A5FD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FA0843D24556550002A5FD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -501,6 +504,8 @@
 				3F407BF324753D3300FB4CC6 /* TKRotateManager.m */,
 				3F407BF62475412700FB4CC6 /* TKTimerManager.h */,
 				3F407BF52475412700FB4CC6 /* TKTimerManager.m */,
+				3F5B3DC5247BCBE60080781C /* AliPushSDKTool.h */,
+				3F5B3DC6247BCBE60080781C /* AliPushSDKTool.m */,
 				3F407BF92475428F00FB4CC6 /* NSString+TK.h */,
 				3F407BF82475428F00FB4CC6 /* NSString+TK.m */,
 				3F407BFC247542DB00FB4CC6 /* TKAnimation.h */,
@@ -678,6 +683,7 @@
 				3F407DF424754C2800FB4CC6 /* TKPointView.m in Sources */,
 				3FA0844F24556552002A5FD6 /* main.m in Sources */,
 				3F407DFE24754C2800FB4CC6 /* TKDotProgressView.m in Sources */,
+				3F5B3DC7247BCBE60080781C /* AliPushSDKTool.m in Sources */,
 				3F407BF424753D3400FB4CC6 /* TKRotateManager.m in Sources */,
 				3F407DED24754C2800FB4CC6 /* TKStarsView.m in Sources */,
 				3F407C0D2475460100FB4CC6 /* UIView+TK.m in Sources */,

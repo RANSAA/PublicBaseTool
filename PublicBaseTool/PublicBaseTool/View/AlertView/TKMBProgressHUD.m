@@ -8,27 +8,12 @@
 
 #import "TKMBProgressHUD.h"
 
-
 @implementation TKMBProgressHUD
     
 /**  HUD消除最大时间延迟 */
 static CGFloat maxAfter = MAXFLOAT;//99999999999.0
 /**  存放Loadding方式创建的HUD容器*/
-//static NSMutableArray *aryLoading = nil;
-
-/**
- 存放创建的MBProgressHUD 类型：Loadding显示
- **/
-+ (NSMutableArray *)hudLoadAry
-{
-    static NSMutableArray *ary = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        ary = [[NSMutableArray alloc] init];
-    });
-    return ary;
-}
-
+static NSMutableArray *aryLoading = nil;
     
 +(MBProgressHUD*)createHUDWithViwe:(UIView *)view mode:(MBProgressHUDMode)mode text:(NSString*)text after:(CGFloat)after
 {
@@ -37,23 +22,26 @@ static CGFloat maxAfter = MAXFLOAT;//99999999999.0
     [view addSubview:HUD];
     //mode要先设置，然后再设置其相应的属性
     HUD.mode = mode;
+    //bezelView显示模式-颜色控制（其它bulr）
+    HUD.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    
     if(mode == MBProgressHUDModeText){//提示文字
-        HUD.bezelView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.64];
+        HUD.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.64];
         HUD.label.text = text;
         HUD.label.numberOfLines = 0;
         HUD.label.textColor = [UIColor whiteColor];
     }else if (mode == MBProgressHUDModeCustomView){//自定义：提示图片的提示
-        HUD.bezelView.backgroundColor = [[UIColor blackColor]colorWithAlphaComponent:0.45];
+        HUD.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.45];
         HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"我的_白"]];
         HUD.label.text = text;
         HUD.label.textColor = [UIColor whiteColor];
     }else if (mode == MBProgressHUDModeIndeterminate){//菊花-圈圈
         HUD.contentColor = [UIColor whiteColor];
-        HUD.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.68];
+        HUD.bezelView.color = [[UIColor blackColor] colorWithAlphaComponent:0.56];
 
     }else if (mode == MBProgressHUDModeDeterminate){//圆形进度条样式
         HUD.contentColor = [UIColor whiteColor];
-        HUD.bezelView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.9];
+        HUD.bezelView.color = [[UIColor blackColor] colorWithAlphaComponent:0.56];
         
         for (UIView *view in HUD.bezelView.subviews) {//这儿进行进度条样式调整，后面应该放到相应方法中去调整！
             if([view isKindOfClass:[MBRoundProgressView class]]){
@@ -73,6 +61,7 @@ static CGFloat maxAfter = MAXFLOAT;//99999999999.0
         
         
     }
+    
     //bezelView -- 是中间的那一块
     HUD.animationType = MBProgressHUDAnimationZoom;
     // 隐藏时候从父控件中移除
@@ -86,9 +75,10 @@ static CGFloat maxAfter = MAXFLOAT;//99999999999.0
 /** 显示提示文字 */
 + (void)showText:(NSString *)text inView:(UIView *)view after:(CGFloat)after
 {
-    if (text.length>0) {
-        [TKMBProgressHUD createHUDWithViwe:view mode:MBProgressHUDModeText text:text after:after];
+    if(!text){
+        text = @"";
     }
+    [TKMBProgressHUD createHUDWithViwe:view mode:MBProgressHUDModeText text:text after:after];
 }
 
 /** 显示提示文字 */
@@ -110,18 +100,16 @@ static CGFloat maxAfter = MAXFLOAT;//99999999999.0
 /**显示loaing, 在after秒之后消除*/
 + (TKMBProgressHUD *)showLoaddingInView:(UIView *)view after:(CGFloat)after
 {
-    //只能有一个hud loading view 显示
-//    if ([self hudLoadAry].count==0) {
-        MBProgressHUD *HUD = [TKMBProgressHUD createHUDWithViwe:view mode:MBProgressHUDModeIndeterminate text:nil after:after];
-        TKMBProgressHUD *obj = [TKMBProgressHUD new];
-        obj.HUD = HUD;
-        
-        //将obj添加到数组容器中
-        [[self hudLoadAry] addObject:obj];
-        
-        return obj;
-//    }
-//    return nil;
+    MBProgressHUD *HUD = [TKMBProgressHUD createHUDWithViwe:view mode:MBProgressHUDModeIndeterminate text:nil after:after];
+    TKMBProgressHUD *obj = [TKMBProgressHUD new];
+    obj.HUD = HUD;
+    
+    //将obj添加到数组容器中
+    if (aryLoading ==nil) {
+        aryLoading = [[NSMutableArray alloc]init];
+    }
+    [aryLoading addObject:obj];
+    return obj;
 }
 
 /** 显示loaing不消除 */
@@ -141,10 +129,10 @@ static CGFloat maxAfter = MAXFLOAT;//99999999999.0
 /** 移除Loading模式创建的HUD */
 +(void)hideLoadingHUDafterDelay:(CGFloat)after
 {
-    NSUInteger count = [self hudLoadAry].count;
+    NSInteger count = aryLoading.count;
     for (NSInteger i=0; i<count; i++) {
-        TKMBProgressHUD *obj = [[self hudLoadAry] objectAtIndex:i];
-        if ([self hudLoadAry].count>1) {
+        TKMBProgressHUD *obj = [aryLoading objectAtIndex:i];
+        if (aryLoading.count>1) {
             if (i==count-1) {
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [obj.HUD hideAnimated:YES afterDelay:after];
@@ -160,17 +148,16 @@ static CGFloat maxAfter = MAXFLOAT;//99999999999.0
             });
         }
     }
-    
     //从容器中移除，防止一直存在，无法释放掉的问题
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(after * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         NSInteger removeCount = count;
-        if (count <= [self hudLoadAry].count) {
+        if (count <= aryLoading.count) {
             removeCount = count;
         }else{
-            removeCount = [self hudLoadAry].count;
+            removeCount = aryLoading.count;
         }
         for (NSInteger i=0; i<removeCount; i++) {
-            [[self hudLoadAry] removeObject:[[self hudLoadAry] objectAtIndex:0]];
+            [aryLoading removeObject:[aryLoading objectAtIndex:0]];
         }
     });
 }
@@ -186,7 +173,6 @@ static CGFloat maxAfter = MAXFLOAT;//99999999999.0
     [TKMBProgressHUD hideLoadingHUDafterDelay:after];
 }
     
-
     
 @end
 
