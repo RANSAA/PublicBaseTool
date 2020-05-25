@@ -27,7 +27,7 @@ target 'PodTest' do
   pod 'AliyunOSSiOS' #阿里云对象存储 OSS
 
   pod 'TZImagePickerController' #照片选择器
-  pod 'YBImageBrowser'  #图片浏览器-注意依耐
+  pod 'YBImageBrowser'  #图片浏览器-注意依耐   ---  优先
   pod 'YBImageBrowser/Video'  #视频功能需添加
   pod "PYPhotoBrowser"  #图片浏览器-可用于社区型APP-注意依耐
   #pod 'RSKImageCropViewController' #相册剪裁
