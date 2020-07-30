@@ -22,7 +22,7 @@
 @implementation JumpToAppStore
 
 /**
- 跳转到App Store
+ 不离开本应用，应用内跳转到App Store
  presentVC:跳转Appstore需要依托的控制器
  */
 - (void)jumpWithPresentVC:(UIViewController *)presentVC
@@ -39,6 +39,25 @@
 - (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
 {
     [viewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+/**
+ 离开本应用,直接跳转到App Store
+ */
+- (void)jump
+{
+    NSString *str = [NSString stringWithFormat:@"https://itunes.apple.com/app/apple-store/id%@?mt=8",AppleAppID];
+    NSURL *url = [NSURL URLWithString:str];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+
+            }];
+        }else{
+            [[UIApplication sharedApplication] openURL:url];
+        }
+    }
 }
 
 @end

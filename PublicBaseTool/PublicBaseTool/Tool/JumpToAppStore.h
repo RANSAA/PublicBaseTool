@@ -18,10 +18,15 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JumpToAppStore : NSObject
 
 /**
-跳转到App Store
-presentVC:跳转Appstore需要依托的控制器
-*/
+ 不离开本应用，应用内跳转到App Store
+ presentVC:跳转Appstore需要依托的控制器
+ */
 - (void)jumpWithPresentVC:(UIViewController *)presentVC;
+
+/**
+ 离开本应用,直接跳转到App Store
+ */
+- (void)jump;
 
 @end
 
