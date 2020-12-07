@@ -154,9 +154,17 @@
 
 
 
-#pragma mark 直接把下面这段代码复制到AppDelegate中，并在配置文件中将4个方向都勾上
 
-////-----------------程序旋转屏幕控制区域---------------------
+
+
+
+#pragma mark 旋转方式1--示例-->可以直接使用该工具类方式
+//PS:注意AppDelegate，UITabViewControllert，UINavigationController，UIViewController的优先级
+
+//1:
+//1：直接把下面这段代码复制到AppDelegate中，并在配置文件中将4个方向都勾上
+//-----------------程序旋转屏幕控制区域---------------------
+
 ///**
 // APP支持旋转屏幕的方向(把4个方向都选上)
 // 默认为info.plist中勾选的方向
@@ -183,20 +191,85 @@
 
 
 
-//直接在控制器中使用示例
+
+#pragma mark 旋转方式2--示例
+//2:
 /**
+
+//AppDelegate中实现，只示例了UINavigationController，(UITabViewControllert同理)
+//
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    UINavigationController *navigationController = (id)self.window.rootViewController;
+    if ([navigationController isKindOfClass:[UINavigationController class]]) {
+        return [navigationController.visibleViewController supportedInterfaceOrientations];
+    }
+    return navigationController.supportedInterfaceOrientations;
+}
+
+
+
+// UIViewController中实现，以控制单个页面旋转状态(UINavigationController，UITabViewControllert中也要实现相应操作)
+//
 - (BOOL)shouldAutorotate{
-    return NO;
+    return YES;
 }
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
+//当前控制器支持方向：动态修改控制
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    if (self.isLock || self.isEnterBackground) {
+        return UIInterfaceOrientationMaskLandscapeRight;
+    }else{
+        return UIInterfaceOrientationMaskPortrait|UIInterfaceOrientationMaskLandscapeLeft|UIInterfaceOrientationMaskLandscapeRight;
+    }
 }
-
+//默认方向
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
     return UIInterfaceOrientationPortrait;
 }
+
+
+
 **/
+
+
+
+
+
+#pragma mark 手动切换方向
+//方式1：
+/**
+ //首先设置UIInterfaceOrientationUnknown欺骗系统，避免可能出现直接设置无效的情况
+  [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationUnknown) forKey:@"orientation"];
+  [[UIDevice currentDevice] setValue:@(mask) forKey:@"orientation"];
+ */
+
+
+//方式2：
+/**
+ + (void)setFullOrHalfScreen {
+     BOOL isFull = [self isInterfaceOrientationPortrait];
+     if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+         SEL selector = NSSelectorFromString(@"setOrientation:");
+         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+         [invocation setSelector:selector];
+         [invocation setTarget:[UIDevice currentDevice]];
+         int val = isFull ? UIInterfaceOrientationLandscapeRight:UIInterfaceOrientationPortrait;
+
+         [invocation setArgument:&val atIndex:2];
+         [invocation invoke];
+     }
+     [[UIApplication sharedApplication]setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:YES];
+ }
+
+ + (BOOL)isInterfaceOrientationPortrait {
+     UIInterfaceOrientation o = [[UIApplication sharedApplication] statusBarOrientation];
+     return o == UIInterfaceOrientationPortrait;
+ }
+
+
+ */
+
+
+
 
 
 @end
