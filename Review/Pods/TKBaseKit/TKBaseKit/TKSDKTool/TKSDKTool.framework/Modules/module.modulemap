@@ -1,0 +1,6 @@
+framework module TKSDKTool {
+  umbrella header "TKSDKTool.h"
+
+  export *
+  module * { export * }
+}
