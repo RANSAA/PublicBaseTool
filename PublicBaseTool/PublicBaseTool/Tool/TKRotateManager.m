@@ -226,6 +226,9 @@
     return UIInterfaceOrientationPortrait;
 }
 
+ PS:
+ 1:必须注意控制器的优先级，不然会无效
+ 2:presentViewController时需要注意modalPresentationStyle样式。UIModalPresentationFullScreen时为当前VC控制方向，iOS13的悬浮样式为上一级VC控制方向
 
 
 **/
@@ -265,6 +268,16 @@
      return o == UIInterfaceOrientationPortrait;
  }
 
+ //简写：
+ if ([[UIDevice currentDevice] respondsToSelector:@selector(setOrientation:)]) {
+     SEL selector = NSSelectorFromString(@"setOrientation:");
+     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[UIDevice instanceMethodSignatureForSelector:selector]];
+     [invocation setSelector:selector];
+     [invocation setTarget:[UIDevice currentDevice]];
+     int val = UIInterfaceOrientationLandscapeRight;//这里可以改变旋转的方向
+     [invocation setArgument:&val atIndex:2];
+     [invocation invoke];
+ }
 
  */
 
