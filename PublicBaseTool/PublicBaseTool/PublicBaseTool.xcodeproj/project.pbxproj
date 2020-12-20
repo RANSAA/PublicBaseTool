@@ -69,6 +69,7 @@
 		3F407E0E24754C2800FB4CC6 /* TKSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F407DE924754C2800FB4CC6 /* TKSearchBar.m */; };
 		3F407E0F24754C2800FB4CC6 /* TKSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F407DEB24754C2800FB4CC6 /* TKSearchBar.xib */; };
 		3F5B3DC7247BCBE60080781C /* AliPushSDKTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5B3DC6247BCBE60080781C /* AliPushSDKTool.m */; };
+		3F9F15AF258F1D6200E7F6DD /* ViewController+AlertTips.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F15AD258F1D6200E7F6DD /* ViewController+AlertTips.m */; };
 		3FA0843E24556550002A5FD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0843D24556550002A5FD6 /* AppDelegate.m */; };
 		3FA0844124556550002A5FD6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0844024556550002A5FD6 /* SceneDelegate.m */; };
 		3FA0844424556550002A5FD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0844324556550002A5FD6 /* ViewController.m */; };
@@ -195,6 +196,8 @@
 		3F407E1A2475600700FB4CC6 /* ColorManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorManager.h; sourceTree = "<group>"; };
 		3F5B3DC5247BCBE60080781C /* AliPushSDKTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AliPushSDKTool.h; sourceTree = "<group>"; };
 		3F5B3DC6247BCBE60080781C /* AliPushSDKTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AliPushSDKTool.m; sourceTree = "<group>"; };
+		3F9F15AD258F1D6200E7F6DD /* ViewController+AlertTips.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+AlertTips.m"; sourceTree = "<group>"; };
+		3F9F15AE258F1D6200E7F6DD /* ViewController+AlertTips.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+AlertTips.h"; sourceTree = "<group>"; };
 		3FA0843924556550002A5FD6 /* PublicBaseTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicBaseTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA0843C24556550002A5FD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3FA0843D24556550002A5FD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 		3F407BC52475399F00FB4CC6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F9F15AE258F1D6200E7F6DD /* ViewController+AlertTips.h */,
+				3F9F15AD258F1D6200E7F6DD /* ViewController+AlertTips.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 				3F407DF724754C2800FB4CC6 /* TKItemTitleView.m in Sources */,
 				3F407DAB24754B4000FB4CC6 /* UIImage+Extension.m in Sources */,
 				3F407C072475457E00FB4CC6 /* UIButton+TK.m in Sources */,
+				3F9F15AF258F1D6200E7F6DD /* ViewController+AlertTips.m in Sources */,
 				3F407DF224754C2800FB4CC6 /* TKTriangleButton.m in Sources */,
 				3F407C212475470100FB4CC6 /* WebSocketUnit.m in Sources */,
 				3F407C0A247545E600FB4CC6 /* UIImage+TK.m in Sources */,
