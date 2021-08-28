@@ -48,6 +48,7 @@ NSString *kTKTimerManagerCurrentTime = @"kTKTimerManagerCurrentTimeKey";
         self.curInterval = [[NSDate new] timeIntervalSince1970];//当前时间
         self.timer = [NSTimer timerWithTimeInterval:self.timeTnterval target:self selector:@selector(currentTimeStampNotifaction) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        [[NSRunLoop currentRunLoop] run];
         [self.timer fire];//立即开始执行
     }else{
         [self.timer fire];//立即开始执行
@@ -63,6 +64,7 @@ NSString *kTKTimerManagerCurrentTime = @"kTKTimerManagerCurrentTimeKey";
         self.curInterval = [[NSDate new] timeIntervalSince1970];//当前时间
         self.timer = [NSTimer timerWithTimeInterval:self.timeTnterval target:self selector:@selector(currentTimeStampNotifaction) userInfo:nil repeats:YES];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        [[NSRunLoop currentRunLoop] run];
     }else{
         NSDate *curDate = [NSDate new];
         curDate = [curDate dateByAddingTimeInterval:self.timeTnterval];
