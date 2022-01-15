@@ -1,0 +1,24 @@
+PODS:
+  - FMDB/SQLCipher (2.7.5):
+    - SQLCipher
+  - SQLCipher (3.1.0):
+    - SQLCipher/standard (= 3.1.0)
+  - SQLCipher/common (3.1.0)
+  - SQLCipher/standard (3.1.0):
+    - SQLCipher/common
+
+DEPENDENCIES:
+  - FMDB/SQLCipher
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+    - SQLCipher
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  SQLCipher: 4684434d5791db86512cd7e02172aefba575849e
+
+PODFILE CHECKSUM: 8c0ff22df7316184e632cdbb50d698948c32e4b1
+
+COCOAPODS: 1.10.1
