@@ -213,33 +213,33 @@
     
     
     if ([firstType isEqualToString:@"f"]) {
-        NSNumber *number = [rs objectForColumnName:columnName];
+        NSNumber *number = [rs objectForColumn:columnName];
         [model setValue:@(number.floatValue) forKey:propertyName];
         
     } else if([firstType isEqualToString:@"i"]){
-        NSNumber *number = [rs objectForColumnName:columnName];
+        NSNumber *number = [rs objectForColumn:columnName];
         [model setValue:@(number.intValue) forKey:propertyName];
         
     } else if([firstType isEqualToString:@"d"]){
-        [model setValue:[rs objectForColumnName:columnName] forKey:propertyName];
+        [model setValue:[rs objectForColumn:columnName] forKey:propertyName];
         
     } else if([firstType isEqualToString:@"l"] || [firstType isEqualToString:@"q"]){
-        [model setValue:[rs objectForColumnName:columnName] forKey:propertyName];
+        [model setValue:[rs objectForColumn:columnName] forKey:propertyName];
         
     } else if([firstType isEqualToString:@"c"] || [firstType isEqualToString:@"B"]){
-        NSNumber *number = [rs objectForColumnName:columnName];
+        NSNumber *number = [rs objectForColumn:columnName];
         [model setValue:@(number.boolValue) forKey:propertyName];
         
     } else if([firstType isEqualToString:@"s"]){
-        NSNumber *number = [rs objectForColumnName:columnName];
+        NSNumber *number = [rs objectForColumn:columnName];
         [model setValue:@(number.shortValue) forKey:propertyName];
         
     } else if([firstType isEqualToString:@"I"]){
-        NSNumber *number = [rs objectForColumnName:columnName];
+        NSNumber *number = [rs objectForColumn:columnName];
         [model setValue:@(number.integerValue) forKey:propertyName];
         
     } else if([firstType isEqualToString:@"Q"]){
-        NSNumber *number = [rs objectForColumnName:columnName];
+        NSNumber *number = [rs objectForColumn:columnName];
         [model setValue:@(number.unsignedIntegerValue) forKey:propertyName];
         
     } else if([firstType isEqualToString:@"@\"NSData\""]){
@@ -255,7 +255,7 @@
         [model setValue:value forKey:propertyName];
         
     } else {
-        [model setValue:[rs objectForColumnName:columnName] forKey:propertyName];
+        [model setValue:[rs objectForColumn:columnName] forKey:propertyName];
     }
 }
 

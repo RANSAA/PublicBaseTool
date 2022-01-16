@@ -13,7 +13,9 @@
 #import <sqlite3.h>
 #endif
 
-
+@interface FMEncryptDatabase ()
+- (const char*)sqlitePath;
+@end
 
 @implementation FMEncryptDatabase
 
@@ -68,9 +70,7 @@ static NSString *encryptKey_;
     if (self.isOpen) {
         return YES;
     }
-
     // if we previously tried to open and it failed, make sure to close it before we try again
-
     if (_db) {
         [self close];
     }
@@ -99,19 +99,5 @@ static NSString *encryptKey_;
     return NO;
 #endif
 }
-
-
-//或者直接将Super FMDatabase中的-(void)sqlitePath：方法暴露在.h文件中
-- (const char*)sqlitePath {
-    if (!self.databasePath) {
-        return ":memory:";
-    }
-
-    if ([self.databasePath length] == 0) {
-        return ""; // this creates a temporary database (it's an sqlite thing).
-    }
-    return [self.databasePath fileSystemRepresentation];
-}
-
 
 @end
