@@ -51,11 +51,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface TKFontManager : NSObject
+#pragma mark 字体管理及其相关设置
 
 + (instancetype)shared;
 
 /**
  动态加载，注册字体文件
+ PS:必须在使用自定义字体之前加载
  */
 - (void)dynamicLoadFontData:(NSData *)fontData;
 
@@ -87,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  设置自定义字体
  fontName：字体名称
- isApply：是否生效
+ isApply：是否生效，NO直接使用系统默认字体
  */
 - (void)setFontName:(NSString *)fontName isApply:(BOOL)isApply;
 
@@ -96,7 +98,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (UIFont *)fontFactoryOfSize:(CGFloat)size;
 
-# pragma mark 快捷字体设置
+
+
+@end
+
+@interface TKFontManager (Fast)
+#pragma mark 快捷字体设置
 - (UIFont *)font4;
 - (UIFont *)font5;
 - (UIFont *)font6;
@@ -120,15 +127,19 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIFont *)font24;
 - (UIFont *)font25;
 - (UIFont *)font26;
-
 @end
 
 
+#pragma mark 自动刷新字体
 @interface TKFontManager (RefreshFont)
 /**
  修改字体后自动刷新所有页面控件字体显示
  */
 + (void)autoRefreshFont;
+/**
+ 通过旧的font获取新的font
+ */
+-(UIFont *)getNewFontWithOld:(UIFont *)font;
 @end
 
 
@@ -138,6 +149,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UILabel (RefreshFont)
 //是否主动设置富文本
 @property (nonatomic,assign)BOOL isSetAttributedText;
++ (void)swapMethod;
+@end
+
+
+#pragma mark UIButton扩展
+@interface UIButton (RefreshFont)
 + (void)swapMethod;
 @end
 

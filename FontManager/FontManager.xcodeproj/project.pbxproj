@@ -319,6 +319,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FontManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +341,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FontManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

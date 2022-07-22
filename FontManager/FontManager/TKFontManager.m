@@ -12,7 +12,7 @@
 
 NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 
-
+#pragma mark 字体管理及其相关设置
 @implementation TKFontManager{
     NSString * _customFontName;
     BOOL _isApply;
@@ -24,6 +24,7 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         obj = [[self.class alloc] init];
+        [obj restoreFontManageConfig];
     });
     return obj;
 }
@@ -31,6 +32,7 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 
 /**
  动态加载，注册字体文件
+ PS:必须在使用自定义字体之前加载
  */
 - (void)dynamicLoadFontData:(NSData *)fontData
 {
@@ -97,12 +99,15 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 /**
  设置自定义字体
  fontName：字体名称
- isApply：是否生效
+ isApply：是否生效，NO直接使用系统默认字体
  */
 - (void)setFontName:(NSString *)fontName isApply:(BOOL)isApply
 {
     _customFontName = fontName;
     _isApply = isApply;
+
+    [self saveFontManageConfig];
+
     [NSNotificationCenter.defaultCenter postNotificationName:kNotificationNameFontChangeKey object:nil];
 }
 
@@ -151,8 +156,29 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 }
 
 
+- (void)saveFontManageConfig
+{
+    NSUserDefaults *user = NSUserDefaults.standardUserDefaults;
+    [user setValue:_customFontName forKey:@"TKFontManage-fontName"];
+    [user setValue:@(_isApply) forKey:@"TKFontManage-isApply"];
+    [user synchronize];
+}
 
-# pragma mark 快捷字体设置
+
+- (void)restoreFontManageConfig
+{
+    NSUserDefaults *user = NSUserDefaults.standardUserDefaults;
+    _customFontName = [user valueForKey:@"TKFontManage-fontName"];
+    _isApply = [[user valueForKey:@"TKFontManage-isApply"] boolValue];
+    NSLog(@"恢复配置.....");
+}
+
+@end
+
+
+#pragma mark 快捷字体设置
+@implementation TKFontManager (Fast)
+
 - (UIFont *)font4
 {
     return [self fontFactoryOfSize:4];
@@ -271,8 +297,9 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 @end
 
 
-@implementation TKFontManager (RefreshFont)
 
+#pragma mark 自动刷新字体
+@implementation TKFontManager (RefreshFont)
 
 /**
  修改字体后自动刷新所有页面控件字体显示
@@ -284,6 +311,7 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
         [UILabel swapMethod];
         [UITextField swapMethod];
         [UITextView swapMethod];
+        [UIButton swapMethod];
     });
 }
 
@@ -311,6 +339,25 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     return YES;
 }
 
+/**
+ 通过旧的font获取新的font
+ */
+-(UIFont *)getNewFontWithOld:(UIFont *)font
+{
+    UIFont *newFont = nil;
+    if (self.isCustomFont) {
+        newFont = [UIFont fontWithName:self.currentFontName size:font.pointSize];
+        if (!newFont) {
+            NSLog(@"字体: %@ 不存在，使用系统默认字体", self.currentFontName);
+            newFont = [UIFont systemFontOfSize:font.pointSize];
+        }
+    }else{
+        newFont = [UIFont systemFontOfSize:font.pointSize];
+    }
+    return newFont;
+}
+
+
 @end
 
 #pragma mark UILable扩展
@@ -324,10 +371,10 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
         //class: self.class
         //Class cls0 = objc_getClass("__NSPlaceholderArray");
 
-        Class labelCls = self.class;
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(didMoveToSuperview) swizzled:@selector(tk_didMoveToSuperview)];
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(removeFromSuperview) swizzled:@selector(tk_removeFromSuperview)];
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(setAttributedText:) swizzled:@selector(tk_setAttributedText:)];
+        Class cls = self.class;
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(didMoveToSuperview) swizzled:@selector(tk_didMoveToSuperview)];
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(removeFromSuperview) swizzled:@selector(tk_removeFromSuperview)];
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(setAttributedText:) swizzled:@selector(tk_setAttributedText:)];
     });
 }
 
@@ -358,21 +405,6 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     return [objc_getAssociatedObject(self, @selector(isSetAttributedText)) boolValue];
 }
 
-// 通过老font 获取新font
--(UIFont *)getNewFontWithOld:(UIFont *)font{
-    UIFont *newFont = nil;
-    if (TKFontManager.shared.isCustomFont) {
-        newFont = [UIFont fontWithName:TKFontManager.shared.currentFontName size:font.pointSize];
-        if (!newFont) {
-            NSLog(@"字体: %@ 不存在，使用系统默认字体", TKFontManager.shared.currentFontName);
-            newFont = [UIFont systemFontOfSize:font.pointSize];
-        }
-    }else{
-        newFont = [UIFont systemFontOfSize:font.pointSize];
-    }
-    return newFont;
-}
-
 - (void)changeFontNotification:(NSNotification *)noti
 {
     if (self.isSetAttributedText) {
@@ -383,15 +415,71 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
                               options:(NSAttributedStringEnumerationReverse) usingBlock:^(UIFont *value, NSRange range, BOOL * _Nonnull stop){
                                   if (value) {
                                       *stop = YES;
-                                      [mutString addAttribute:NSFontAttributeName value:[self getNewFontWithOld:value] range:range];
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:value] range:range];
 
                                   }else{
-                                      [mutString addAttribute:NSFontAttributeName value:[self getNewFontWithOld:self.font] range:range];
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:self.font] range:range];
                                   }
                               }];
         self.attributedText = mutString;
     }else{
-        self.font = [self getNewFontWithOld:self.font];
+        self.font = [TKFontManager.shared getNewFontWithOld:self.font];
+    }
+}
+
+@end
+
+
+
+#pragma mark UIButton扩展
+@implementation UIButton (RefreshFont)
+
++ (void)swapMethod
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        //obj class:    object_getClass((id)self)
+        //class: self.class
+        //Class cls0 = objc_getClass("__NSPlaceholderArray");
+
+        Class cls = self.class;
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(didMoveToSuperview) swizzled:@selector(tk_didMoveToSuperview)];
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(removeFromSuperview) swizzled:@selector(tk_removeFromSuperview)];
+    });
+}
+
+- (void)tk_didMoveToSuperview
+{
+    [self tk_didMoveToSuperview];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChangeKey object:nil];
+}
+
+- (void)tk_removeFromSuperview{
+    [self tk_removeFromSuperview];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChangeKey object:nil];
+}
+
+
+//UIButton的AttributedTitle优先级高于title
+- (void)changeFontNotification:(NSNotification *)noti
+{
+    if (self.currentAttributedTitle) {
+        NSAttributedString *attr = [self attributedTitleForState:self.state];
+        NSRange range1 = NSMakeRange(0, attr.string.length);
+        NSMutableAttributedString *mutString = [attr mutableCopy];
+        [mutString enumerateAttribute:NSFontAttributeName
+                              inRange:range1
+                              options:(NSAttributedStringEnumerationReverse) usingBlock:^(UIFont *value, NSRange range, BOOL * _Nonnull stop){
+                                  if (value) {
+                                      *stop = YES;
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:value] range:range];
+                                  }else{
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:self.titleLabel.font] range:range];
+                                  }
+                              }];
+        [self setAttributedTitle:mutString forState:self.state];
+    }else{
+        self.titleLabel.font = [TKFontManager.shared getNewFontWithOld:self.titleLabel.font];
     }
 }
 
@@ -409,10 +497,10 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
         //class: self.class
         //Class cls0 = objc_getClass("__NSPlaceholderArray");
 
-        Class labelCls = self.class;
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(didMoveToSuperview) swizzled:@selector(tk_didMoveToSuperview)];
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(removeFromSuperview) swizzled:@selector(tk_removeFromSuperview)];
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(setAttributedText:) swizzled:@selector(tk_setAttributedText:)];
+        Class cls = self.class;
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(didMoveToSuperview) swizzled:@selector(tk_didMoveToSuperview)];
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(removeFromSuperview) swizzled:@selector(tk_removeFromSuperview)];
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(setAttributedText:) swizzled:@selector(tk_setAttributedText:)];
     });
 }
 
@@ -443,36 +531,24 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     return [objc_getAssociatedObject(self, @selector(isSetAttributedText)) boolValue];
 }
 
-// 通过老font 获取新font
--(UIFont *)getNewFontWithOld:(UIFont *)font{
-    UIFont *newFont = nil;
-    if (TKFontManager.shared.isCustomFont) {
-        newFont = [UIFont fontWithName:TKFontManager.shared.currentFontName size:font.pointSize];
-    }else{
-        newFont = [UIFont systemFontOfSize:font.pointSize];
-    }
-    return newFont;
-}
-
 - (void)changeFontNotification:(NSNotification *)noti
 {
     if (self.isSetAttributedText) {
-//        NSRange range1 = NSMakeRange(0, self.attributedText.string.length);
-//        NSMutableAttributedString *mutString = [self.attributedText mutableCopy];
-//        [mutString enumerateAttribute:NSFontAttributeName
-//                              inRange:range1
-//                              options:(NSAttributedStringEnumerationReverse) usingBlock:^(UIFont *value, NSRange range, BOOL * _Nonnull stop){
-//                                  if (value) {
-//                                      *stop = YES;
-//                                      [mutString addAttribute:NSFontAttributeName value:[self getNewFontWithOld:value] range:range];
-//
-//                                  }else{
-//                                      [mutString addAttribute:NSFontAttributeName value:[self getNewFontWithOld:self.font] range:range];
-//                                  }
-//                              }];
-//        self.attributedText = mutString;
+        NSRange range1 = NSMakeRange(0, self.attributedText.string.length);
+        NSMutableAttributedString *mutString = [self.attributedText mutableCopy];
+        [mutString enumerateAttribute:NSFontAttributeName
+                              inRange:range1
+                              options:(NSAttributedStringEnumerationReverse) usingBlock:^(UIFont *value, NSRange range, BOOL * _Nonnull stop){
+                                  if (value) {
+                                      *stop = YES;
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:value] range:range];
+                                  }else{
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:self.font] range:range];
+                                  }
+                              }];
+        self.attributedText = mutString;
     }else{
-        self.font = [self getNewFontWithOld:self.font];
+        self.font = [TKFontManager.shared getNewFontWithOld:self.font];
     }
 }
 
@@ -491,10 +567,10 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
         //class: self.class
         //Class cls0 = objc_getClass("__NSPlaceholderArray");
 
-        Class labelCls = self.class;
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(didMoveToSuperview) swizzled:@selector(tk_didMoveToSuperview)];
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(removeFromSuperview) swizzled:@selector(tk_removeFromSuperview)];
-        [TKFontManager exchangeMethodWithClass:labelCls original:@selector(setAttributedText:) swizzled:@selector(tk_setAttributedText:)];
+        Class cls = self.class;
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(didMoveToSuperview) swizzled:@selector(tk_didMoveToSuperview)];
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(removeFromSuperview) swizzled:@selector(tk_removeFromSuperview)];
+        [TKFontManager exchangeMethodWithClass:cls original:@selector(setAttributedText:) swizzled:@selector(tk_setAttributedText:)];
     });
 }
 
@@ -525,36 +601,24 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     return [objc_getAssociatedObject(self, @selector(isSetAttributedText)) boolValue];
 }
 
-// 通过老font 获取新font
--(UIFont *)getNewFontWithOld:(UIFont *)font{
-    UIFont *newFont = nil;
-    if (TKFontManager.shared.isCustomFont) {
-        newFont = [UIFont fontWithName:TKFontManager.shared.currentFontName size:font.pointSize];
-    }else{
-        newFont = [UIFont systemFontOfSize:font.pointSize];
-    }
-    return newFont;
-}
-
 - (void)changeFontNotification:(NSNotification *)noti
 {
     if (self.isSetAttributedText) {
-//        NSRange range1 = NSMakeRange(0, self.attributedText.string.length);
-//        NSMutableAttributedString *mutString = [self.attributedText mutableCopy];
-//        [mutString enumerateAttribute:NSFontAttributeName
-//                              inRange:range1
-//                              options:(NSAttributedStringEnumerationReverse) usingBlock:^(UIFont *value, NSRange range, BOOL * _Nonnull stop){
-//                                  if (value) {
-//                                      *stop = YES;
-//                                      [mutString addAttribute:NSFontAttributeName value:[self getNewFontWithOld:value] range:range];
-//
-//                                  }else{
-//                                      [mutString addAttribute:NSFontAttributeName value:[self getNewFontWithOld:self.font] range:range];
-//                                  }
-//                              }];
-//        self.attributedText = mutString;
+        NSRange range1 = NSMakeRange(0, self.attributedText.string.length);
+        NSMutableAttributedString *mutString = [self.attributedText mutableCopy];
+        [mutString enumerateAttribute:NSFontAttributeName
+                              inRange:range1
+                              options:(NSAttributedStringEnumerationReverse) usingBlock:^(UIFont *value, NSRange range, BOOL * _Nonnull stop){
+                                  if (value) {
+                                      *stop = YES;
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:value] range:range];
+                                  }else{
+                                      [mutString addAttribute:NSFontAttributeName value:[TKFontManager.shared getNewFontWithOld:self.font] range:range];
+                                  }
+                              }];
+        self.attributedText = mutString;
     }else{
-        self.font = [self getNewFontWithOld:self.font];
+        self.font = [TKFontManager.shared getNewFontWithOld:self.font];
     }
 }
 

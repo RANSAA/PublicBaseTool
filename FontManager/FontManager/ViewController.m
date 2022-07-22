@@ -12,6 +12,7 @@
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *lab;
 @property (strong, nonatomic) IBOutlet UILabel *labSetp;
+@property (strong, nonatomic) IBOutlet UIButton *btnAttr;
 
 @end
 
@@ -21,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    NSString *fPath = [NSBundle.mainBundle pathForResource:@"dynamic" ofType:@"ttf"];
+    NSString *fPath = [NSBundle.mainBundle pathForResource:@"dynamic-AaJianHaoTi" ofType:@"ttf"];
     NSData *fontData = [NSData dataWithContentsOfFile:fPath];
     [TKFontManager.shared dynamicLoadFontData:fontData];
 
@@ -31,6 +32,14 @@
 //    [TKFontManager.shared setFontName:@"AaJianHaoTi" isApply:YES];
     UIFont *f = kFont6;
     NSLog(@"font:%@",f);
+
+    self.lab.font = kFont26;
+
+    UIButton *btn;
+    [btn setAttributedTitle:nil forState:UIControlStateNormal];
+
+    [self.btnAttr setTitle:@"normal-title" forState:UIControlStateNormal];
+    self.lab.text = @"normal-title";
 }
 
 - (IBAction)btnFontSwitchAction:(UIButton *)sender {
