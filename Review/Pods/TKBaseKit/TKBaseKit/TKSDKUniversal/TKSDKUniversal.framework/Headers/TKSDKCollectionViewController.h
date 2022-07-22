@@ -32,12 +32,8 @@
         其中offY可以根据contentInsetAdjustmentBehavior的值来设置是：2倍statusBar安全区域的值，还是1倍statusBar安全区域的值。
  
  PS:
-    在使用contentInsetAdjustmentBehavior时一定要注意，如果将它的值设置为：UIScrollViewContentInsetAdjustmentNever时，
-    使用IQKeyboardManager时，输入框不会随着键盘弹出而移动位置(系统的UICollectionViewController也会这样)，所以要注意该属性的使用
-
-
- 使用场景：静态网格时推荐优先使用该控制器
-
+    在使用contentInsetAdjustmentBehavior时一定要注意，不如将它的值设置为：UIScrollViewContentInsetAdjustmentNever时，
+    使用IQKeyboardManager时，键盘无法弹出来(系统的UICollectionViewController也会这样)，所以要注意该属性的使用
  
 */
 
@@ -64,8 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark TKSDKNavigationBar默认配置相关区域
 /**
 默认配置方法，重写修改配置:
-执行顺序：重写init，initWithXXXX方法时，就会执行该方法。
-可修改的值：
+直接修改：
        _isEnabledSideslip
        _isEnabledTKNavigationBar
 注意:
@@ -92,20 +87,27 @@ PS:
  */
 - (void)setTKEnabledNewView;
 /**
-是否自动根据TKNavigationBar调整tablView.tap的约束值，默认YES
-*/
-@property(nonatomic, assign) BOOL collectionViewAutoUpdateTopAnchor;
-/**
- collectionView.topAnchor距离self.view顶部topLayoutGuide.bottom的距离
- 有效条件：即需要先设置collectionViewAutoUpdateTopAnchor的值为NO，该方法才会有效
+ 是否自动根据TKNavigationBar调整tablView.tap的约束值，默认YES
  */
-@property(nonatomic, assign) CGFloat collectionViewTopAnchorConstant;
-/** collectionView.leftAnchor距离self.view左边的距离*/
-@property(nonatomic, assign) CGFloat collectionViewLeftAnchorConstant;
-/** collectionView.rightAnchor距离self.view右边的距离*/
-@property(nonatomic, assign) CGFloat collectionViewRightAnchorConstant;
-/** collectionView.bottomAnchor距离self.view底部bottomLayoutGuide.bottom的距离*/
-@property(nonatomic, assign) CGFloat collectionViewBottomAnchorConstant;
+@property(nonatomic, assign, setter=setTKAutoUpdateCollectionViewTopAnchor:) BOOL autoUpdateCollectionViewTopAnchor;
+/**
+功能：设置CollectionView的layTopAnchor(基于topLayoutGuide.bottom)的值
+有效条件：即需要先设置autoUpdateCollectionViewTopAnchor的值为NO，该方法才会有效
+*/
+- (void)setTKCollectionViewTopAnchorConstant:(CGFloat)constant;
+/**
+ 设置CollectionView.leftAnchor距离newView.leftAnchor的constant距离,一般不修改
+ */
+- (void)setTKCollectionViewLeftAnchorConstant:(CGFloat)constant;
+/**
+ 设置CollectionView.rightAnchor距离newView.rightAnchor的constant距离,一般不修改
+ */
+- (void)setTKCollectionViewRightAnchorConstant:(CGFloat)constant;
+/**
+ 设置CollectionView.bottomAnchor距离newView.bottomAnchor的constant距离,一般不修改
+ */
+- (void)setTKCollectionViewBottomAnchorConstant:(CGFloat)constant;
+
 
 
 

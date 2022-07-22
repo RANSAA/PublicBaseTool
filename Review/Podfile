@@ -6,8 +6,9 @@ target 'Review' do
   use_frameworks!
 
   # Pods for Review
-  # pod 'TKBaseKit', :git => 'https://github.com/RANSAA/TKBaseKit.git'
-  pod 'TKBaseKit', '~> 2.0'
+#   pod 'TKBaseKit', :git => 'https://github.com/RANSAA/TKBaseKit.git'
+#   pod 'TKBaseKit', '~> 2.0'
+  pod 'TKBaseKit', :path => "/Users/D/Remote/TKSDKManager/TKBaseKit"
   pod 'YYImage'
 
 end

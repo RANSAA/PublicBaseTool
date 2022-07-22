@@ -17,8 +17,6 @@
 \
 >lipo -info 框架中二进制文件的路径
 
-## 注意：至少使用2.1即以上的版本
-
 ## 使用说明
 1. CocoaPods方式
 ```
@@ -42,9 +40,6 @@ pod 'TKBaseKit/TKSDKTool'
       pod 'AFNetworking/Security'            #, '~> 3.2.1'
       pod 'AFNetworking/Reachability'        #, '~> 3.2.1'
       pod 'AFNetworking/NSURLSession'        #, '~> 3.2.1'
-      
-     **注意：三方依赖库也会持续的更新**
-     
 第三步：
     1.设置"Other Linker Flags"-->添加: -ObjC 
     2.将Build Settings中的Allow Non-modular Includes In Framework Modules设为YES

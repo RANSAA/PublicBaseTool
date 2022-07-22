@@ -30,6 +30,7 @@
 		3FD7780524FE804D008B3BBD /* MHYPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7780424FE804D008B3BBD /* MHYPerson.m */; };
 		3FD7780824FE8E58008B3BBD /* UIImage+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7780724FE8E58008B3BBD /* UIImage+Tools.m */; };
 		3FD7780B24FE8F73008B3BBD /* NSObject+Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD7780A24FE8F73008B3BBD /* NSObject+Person.m */; };
+		3FDE6414288AC4B60091741C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE6413288AC4B60091741C /* AssetsLibrary.framework */; };
 		3FED9319250E1F9A004AAAD9 /* NibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FED9318250E1F9A004AAAD9 /* NibView.m */; };
 		FADE9D7BADAE3AA482F40174 /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27A351906D86D37FE86AFEDE /* Pods_Review.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		3FD7780724FE8E58008B3BBD /* UIImage+Tools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tools.m"; sourceTree = "<group>"; };
 		3FD7780924FE8F73008B3BBD /* NSObject+Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Person.h"; sourceTree = "<group>"; };
 		3FD7780A24FE8F73008B3BBD /* NSObject+Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Person.m"; sourceTree = "<group>"; };
+		3FDE6413288AC4B60091741C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/iOSSupport/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		3FED9317250E1F9A004AAAD9 /* NibView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibView.h; sourceTree = "<group>"; };
 		3FED9318250E1F9A004AAAD9 /* NibView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NibView.m; sourceTree = "<group>"; };
 		C82FDE3052941D3161F0E99D /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADE9D7BADAE3AA482F40174 /* Pods_Review.framework in Frameworks */,
+				3FDE6414288AC4B60091741C /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +211,7 @@
 		C6180210195A28786A71DAD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FDE6413288AC4B60091741C /* AssetsLibrary.framework */,
 				27A351906D86D37FE86AFEDE /* Pods_Review.framework */,
 			);
 			name = Frameworks;
@@ -519,9 +523,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.sdkmanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Review/Review-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -546,9 +554,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.sdkmanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Review/Review-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

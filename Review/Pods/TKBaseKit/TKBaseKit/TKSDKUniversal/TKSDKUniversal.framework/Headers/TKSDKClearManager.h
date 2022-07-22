@@ -8,10 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-/**
- 垃圾清理
- */
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TKSDKClearManager : NSObject

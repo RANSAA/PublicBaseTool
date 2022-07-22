@@ -17,25 +17,25 @@ PODS:
   - GTMBase64 (1.0.1)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
-  - MJRefresh (3.5.0)
-  - TKBaseKit (2.1.4):
-    - TKBaseKit/TKSDKTool (= 2.1.4)
-    - TKBaseKit/TKSDKUniversal (= 2.1.4)
-  - TKBaseKit/TKSDKTool (2.1.4):
+  - MJRefresh (3.7.5)
+  - TKBaseKit (2.2.0):
+    - TKBaseKit/TKSDKTool (= 2.2.0)
+    - TKBaseKit/TKSDKUniversal (= 2.2.0)
+  - TKBaseKit/TKSDKTool (2.2.0):
     - AFNetworking (~> 4.0)
-    - GTMBase64 (~> 1.0.1)
+    - GTMBase64
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - YYModel
-  - TKBaseKit/TKSDKUniversal (2.1.4)
+  - TKBaseKit/TKSDKUniversal (2.2.0)
   - YYImage (1.0.4):
     - YYImage/Core (= 1.0.4)
   - YYImage/Core (1.0.4)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - TKBaseKit (~> 2.0)
+  - TKBaseKit (from `/Users/D/Remote/TKSDKManager/TKBaseKit`)
   - YYImage
 
 SPEC REPOS:
@@ -45,20 +45,23 @@ SPEC REPOS:
     - Masonry
     - MBProgressHUD
     - MJRefresh
-    - TKBaseKit
     - YYImage
     - YYModel
+
+EXTERNAL SOURCES:
+  TKBaseKit:
+    :path: "/Users/D/Remote/TKSDKManager/TKBaseKit"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  TKBaseKit: f148d2988c2d4e6cfb30b35a59cf2cf1d20b119e
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  TKBaseKit: fde529df83871099ebeb818077674940bccbfcf0
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 53b677e4874d58a56c919fae6bf4b360964ab8ba
+PODFILE CHECKSUM: 36a3f6540bf73a2f43261b4d17bb6252b45475bc
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.11.2

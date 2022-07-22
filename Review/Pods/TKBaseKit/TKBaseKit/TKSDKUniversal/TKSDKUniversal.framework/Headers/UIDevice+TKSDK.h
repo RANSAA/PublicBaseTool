@@ -14,14 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark 获取信息区域
 /**
- * 获取APP名称
+ * 获取APP项目的名称
  **/
 + (NSString *)TK_getAppProjectName;
 
 /**
- * 获取APP的显示名称,Xcode11及其之后的版本创建的项目无法获取
+ * 获取APP的显示名称
  **/
-+ (NSString *)TK_getAppName API_DEPRECATED_WITH_REPLACEMENT("TK_getAppProjectName", ios(2.0, 9.0));
++ (NSString *)TK_getAppName;
 
 /**
  * 获取APP的包名
@@ -74,11 +74,6 @@ NS_ASSUME_NONNULL_BEGIN
  * 获取 iphone 名称
  **/
 + (NSString *)TK_getIphoneName;
-
-/**
- 获取CPU核心数
- */
-+ (NSInteger)TK_getCpuCores;
 
 /**
  * 获取电池电量

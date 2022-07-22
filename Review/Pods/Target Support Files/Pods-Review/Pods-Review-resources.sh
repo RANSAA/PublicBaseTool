@@ -97,10 +97,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/TKBaseKit/TKBaseKit/TKSDKTool/TKSDKTool.bundle"
+  install_resource "${PODS_ROOT}/../../../TKSDKManager/TKBaseKit/TKBaseKit/TKSDKTool/TKSDKTool.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/TKBaseKit/TKBaseKit/TKSDKTool/TKSDKTool.bundle"
+  install_resource "${PODS_ROOT}/../../../TKSDKManager/TKBaseKit/TKBaseKit/TKSDKTool/TKSDKTool.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

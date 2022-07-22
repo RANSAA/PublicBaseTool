@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor TKLightColor:UIColor.whiteColor darkColor:UIColor.blackColor];
+    self.view.backgroundColor = [UIColor colorWithLight:UIColor.whiteColor dark:UIColor.blackColor];
 
     
     [self add];

@@ -1,1 +1,1 @@
-../../../TKBaseKit/TKBaseKit/TKBaseKit.h
+../../../../../../TKSDKManager/TKBaseKit/TKBaseKit/TKBaseKit.h

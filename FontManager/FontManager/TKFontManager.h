@@ -50,7 +50,6 @@ NS_ASSUME_NONNULL_BEGIN
 #define kFont26 TKFontManager.shared.font26
 
 
-
 @interface TKFontManager : NSObject
 
 + (instancetype)shared;

@@ -6,20 +6,6 @@
 //  Copyright © 2019年 PC. All rights reserved.
 //
 
-/**
- 对MJRefresh进行了二次封装
- 该类中的所有属性和customXXX定定制方法都是通用设置，如果对某个上拉刷新/下拉加载更多，进行定制。
- 可以按照以下方式进行定制，例如：
-     MJRefreshGifHeader *header = [[TKSDKRefresh shared] headerGifWith:weakSelf.tableView refreshBlock:^{
-        //
-        ...
-     }];
-     //对header进行定制
-     ...
-     [header beginRefreshing];
- */
-
-
 #import <Foundation/Foundation.h>
 #import "TKSDKToolExternalDefines.h"
 
@@ -43,57 +29,42 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) UIColor *colorFooterStateLabel;
 @property(nonatomic, strong) UIColor *colorHeaderStateLabel;
 
+/** 可以直接重写该方法 */
 + (instancetype)shared;
-
-#pragma mark 资源获取
-
 /**
- 根据bundle中的文件名称创建bundle
- bundle:
- dirName:bundle中的文件名称，例如:nil, /, dir_1 , dir1/dir2/dir3
+ 获取Bundle指定目录下的所有文件的详细路径路径
+ 
+ @param bundelName Bundle名
+ @param subPath Bundle的子目录，可为空
+ @param trgetName Bundle中需要获取的目标文件夹名称可为空
+ @return 返回所有排序好了的路径
+ 例如：[self loadTKSDKToolBundleWithBundelName:@"TKSDKTool" subPath:@"动图数组" srcName:@"蓝白猫"];
  */
-- (NSBundle *)createBundleWithInBundle:(NSBundle *)bundle dirName:(NSString *)dirName;
+- (NSArray *)loadTKSDKToolBundleWithBundelName:(NSString *)bundelName subPath:(NSString *)subPath   trgetName:(NSString *)trgetName;
 
-/**
- 获取bundle中指定目录(一级目录)下的所有文件的文件名或者全路径
- bundle:指定bundle
- dirName：指定子目录名称，例如:nil, /, dir_1 , dir1/dir2/dir3
- isPath:是否返回全路径，YES:返回全路径 NO:只返回文件名称
- */
-- (NSArray *)getAllFileNameWithBundle:(NSBundle *)bundle dirName:(NSString *)dirName isPath:(BOOL)isPath;
-
-/**
- 获取TKSDKTool.bundle中指定目录中的所有图片名称，与之对应的bundle
- dirName：目录名称，例如：@"动图数组/下拉刷新"
- return:
- {
-    bundle:对应目录所在的bundle
-    images:图片名称数组
- }
- */
-- (NSDictionary *)getTKSDKToolBundleFileInfoWithDirName:(NSString *)dirName;
-
-/**
- 获取TKSDKTool.bundle中指定目录中的所有图片
- dirName：目录名称，例如：@"动图数组/下拉刷新"
- PS:该方法带缓存功能
- */
-- (NSArray<UIImage *> *)getTKSDKToolImagesWithDirName:(NSString *)dirName;
-
-/**
- 清除TKSDKTool.bundle中指定目录中所有图片在内存中的缓存
- dirName：目录名称，例如：@"动图数组/下拉刷新"
- */
-- (void)clearTKSDKToolImagesWithDirName:(NSString *)dirName;
-
-
-#pragma mark 重写区域,可重新配置header，footer状态提示文字，颜色，是否显示等操作。
+#pragma mark -------------------------自定义/重写区域-------------------------
 /**
  定制通用刷新样式配置，重写该方法修改刷新样式
  PS: 重写该方法时最好是先super
  **/
 - (void)customPublicRefreshStyle;
 
+#pragma mark -------------------------刷新状态控制区域-------------------------
+/** 结束刷新header */
+- (void)stopHeaderWith:(UIScrollView *)scrollView;
+/** 结束刷新footer */
+- (void)stopFooterWith:(UIScrollView *)scrollView;
+/** 隐藏或者显示footer
+ isHidden:  YES-隐藏footer    NO-显示footer
+ */
+- (void)hiddenFooterWith:(UIScrollView *)scrollView isHidden:(BOOL)isHidden;
+/** 展示没有更多数据状态-提示使用公共通用的提示 */
+- (void)endNoMoreDataWith:(UIScrollView *)scrollView;
+/** 展示没有更多数据-使用自定义提示 */
+- (void)endNoMoreDataWith:(UIScrollView *)scrollView tips:(NSString *)tips;
+
+
+#pragma mark -------------------------header，footer状态提示，显示等设置区域-------------------------
 /**
  设置header下拉刷新的状态提示-通用-公共设置
  :MJRefreshStateHeader
@@ -128,22 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)customFooterGifPublicStyleWithFooter:(MJRefreshFooter *)tmpFooter;
 
 
-#pragma mark 刷新状态控制区域
-/** 结束刷新header */
-- (void)stopHeaderWith:(UIScrollView *)scrollView;
-/** 结束刷新footer */
-- (void)stopFooterWith:(UIScrollView *)scrollView;
-/** 隐藏或者显示footer
- isHidden:  YES-隐藏footer    NO-显示footer
- */
-- (void)hiddenFooterWith:(UIScrollView *)scrollView isHidden:(BOOL)isHidden;
-/** 展示没有更多数据状态-提示使用公共通用的提示 */
-- (void)endNoMoreDataWith:(UIScrollView *)scrollView;
-/** 展示没有更多数据-使用自定义提示 */
-- (void)endNoMoreDataWith:(UIScrollView *)scrollView tips:(NSString *)tips;
-
-
-#pragma mark Header下拉刷新
+#pragma mark -------------------------下拉，上拉刷新等操作区域-------------------------
 /** 下拉刷新MJRefreshNormalHeader */
 - (MJRefreshNormalHeader *)headerNormalWith:(UIScrollView *)scrollView traget:(id)traget refreshAction:(SEL)refreshAction;
 /** 下拉刷新MJRefreshNormalHeader */
@@ -152,8 +108,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (MJRefreshGifHeader *)headerGifWith:(UIScrollView *)scrollView traget:(id)traget refreshAction:(SEL)refreshAction;
 /** 下拉刷新MJRefreshGifHeader */
 - (MJRefreshGifHeader *)headerGifWith:(UIScrollView *)scrollView refreshBlock:(void(^)(void))refreshBlock;
-
-#pragma mark Footer上拉加载更多
 
 /**
  上拉刷新MJRefreshAutoNormalFooter

@@ -40,8 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark TKSDKNavigationBar默认配置相关区域
 /**
 默认配置方法，重写修改配置:
-执行顺序：重写init，initWithXXXX方法时，就会执行该方法。
-可修改的值：
+直接修改：
        _isEnabledSideslip
        _isEnabledTKNavigationBar
 注意:
