@@ -78,6 +78,9 @@
 		3FA0844C24556552002A5FD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA0844A24556552002A5FD6 /* LaunchScreen.storyboard */; };
 		3FA0844F24556552002A5FD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0844E24556552002A5FD6 /* main.m */; };
 		3FA0845C2455674D002A5FD6 /* JumpToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA0845B2455674C002A5FD6 /* JumpToAppStore.m */; };
+		3FDE63A3288ABB230091741C /* dynamic-AaJianHaoTi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE63A1288ABB230091741C /* dynamic-AaJianHaoTi.ttf */; };
+		3FDE63A4288ABB230091741C /* Aa可爱日系中文-AaKADRXZW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FDE63A2288ABB230091741C /* Aa可爱日系中文-AaKADRXZW.ttf */; };
+		3FDE63B0288ABB380091741C /* TKFontManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE63AF288ABB380091741C /* TKFontManager.m */; };
 		A17EA9E06A623EC91572E46B /* libPods-PublicBaseTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 33348819724DECA74EB8FD4B /* libPods-PublicBaseTool.a */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +216,11 @@
 		3FA0845A2455674C002A5FD6 /* JumpToAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpToAppStore.h; sourceTree = "<group>"; };
 		3FA0845B2455674C002A5FD6 /* JumpToAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpToAppStore.m; sourceTree = "<group>"; };
 		3FDA21AE246BD8C0003E8D7C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3FDE6370288AB6DA0091741C /* PublicBaseTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PublicBaseTool.entitlements; sourceTree = "<group>"; };
+		3FDE63A1288ABB230091741C /* dynamic-AaJianHaoTi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dynamic-AaJianHaoTi.ttf"; sourceTree = "<group>"; };
+		3FDE63A2288ABB230091741C /* Aa可爱日系中文-AaKADRXZW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aa可爱日系中文-AaKADRXZW.ttf"; sourceTree = "<group>"; };
+		3FDE63AE288ABB380091741C /* TKFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKFontManager.h; sourceTree = "<group>"; };
+		3FDE63AF288ABB380091741C /* TKFontManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKFontManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,11 +484,13 @@
 		3FA0843B24556550002A5FD6 /* PublicBaseTool */ = {
 			isa = PBXGroup;
 			children = (
+				3FDE6370288AB6DA0091741C /* PublicBaseTool.entitlements */,
 				3F407BC6247539C700FB4CC6 /* Base */,
 				3F407BC52475399F00FB4CC6 /* Controller */,
 				3F407C042475456000FB4CC6 /* View */,
 				3FA084592455674C002A5FD6 /* Tool */,
 				3FA0843C24556550002A5FD6 /* AppDelegate.h */,
+				3FDE63A0288ABB230091741C /* Font */,
 				3FA0843D24556550002A5FD6 /* AppDelegate.m */,
 				3FA0843F24556550002A5FD6 /* SceneDelegate.h */,
 				3FA0844024556550002A5FD6 /* SceneDelegate.m */,
@@ -521,6 +531,17 @@
 				3F407C012475436F00FB4CC6 /* TKStringGroup.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		3FDE63A0288ABB230091741C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				3FDE63AE288ABB380091741C /* TKFontManager.h */,
+				3FDE63AF288ABB380091741C /* TKFontManager.m */,
+				3FDE63A1288ABB230091741C /* dynamic-AaJianHaoTi.ttf */,
+				3FDE63A2288ABB230091741C /* Aa可爱日系中文-AaKADRXZW.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		590C7A6AA91DA8E3E2EBAECB /* Pods */ = {
@@ -611,7 +632,9 @@
 				3FA0844C24556552002A5FD6 /* LaunchScreen.storyboard in Resources */,
 				3FA0844924556552002A5FD6 /* Assets.xcassets in Resources */,
 				3F407DFD24754C2800FB4CC6 /* TKItemView.xib in Resources */,
+				3FDE63A4288ABB230091741C /* Aa可爱日系中文-AaKADRXZW.ttf in Resources */,
 				3F407DF624754C2800FB4CC6 /* TKDotProgressView.xib in Resources */,
+				3FDE63A3288ABB230091741C /* dynamic-AaJianHaoTi.ttf in Resources */,
 				3F407E0A24754C2800FB4CC6 /* TKErrorPopView.xib in Resources */,
 				3F407E0F24754C2800FB4CC6 /* TKSearchBar.xib in Resources */,
 				3FA0844724556550002A5FD6 /* Main.storyboard in Resources */,
@@ -710,6 +733,7 @@
 				3F407BEC247539C700FB4CC6 /* BaseResult.m in Sources */,
 				3F407BFA2475428F00FB4CC6 /* NSString+TK.m in Sources */,
 				3F407BE6247539C700FB4CC6 /* BaseViewController.m in Sources */,
+				3FDE63B0288ABB380091741C /* TKFontManager.m in Sources */,
 				3F407DF524754C2800FB4CC6 /* TKCommentView.m in Sources */,
 				3F407DF324754C2800FB4CC6 /* TKRunLabelView.m in Sources */,
 				3F407E0C24754C2800FB4CC6 /* TKTextView.m in Sources */,
@@ -863,6 +887,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = "$(inherited)";
+				CODE_SIGN_ENTITLEMENTS = PublicBaseTool/PublicBaseTool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -875,6 +900,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.BaseTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -885,6 +911,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = "$(inherited)";
+				CODE_SIGN_ENTITLEMENTS = PublicBaseTool/PublicBaseTool.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -897,6 +924,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.BaseTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

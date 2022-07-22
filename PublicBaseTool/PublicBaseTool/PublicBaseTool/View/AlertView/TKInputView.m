@@ -46,12 +46,12 @@ typedef NS_ENUM(NSUInteger,TKInputViewStyle){
     UIView *fromView = appWin;
     self.frame = Screen_Bounds;
     [fromView addSubview:self];
-    [fromView.layer addAnimation:[TKAnimation TKAnimationGetFade] forKey:nil];
+//    [fromView.layer addAnimation:[TKAnimation TKAnimationGetFade] forKey:nil];
 }
 
 - (void)hidden
 {
-    [self.superview.layer addAnimation:[TKAnimation TKAnimationGetFade] forKey:nil];
+//    [self.superview.layer addAnimation:[TKAnimation TKAnimationGetFade] forKey:nil];
     [self removeFromSuperview];
 }
 
