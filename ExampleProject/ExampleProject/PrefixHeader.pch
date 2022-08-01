@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  ExampleProject
+//
+//  Created by PC on 2022/7/30.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "NavigationViewController.h"
+#import "TabBarViewController.h"
+#import "BaseViewController.h"
+#import "TableViewController.h"
+
+#import "LabelCell.h"
+#import "ClassTypeModel.h"
+
+#import "TKMethodSwap.h"
+#import "TKColorManage.h"
+#import "TKFontManager.h"
+#import "TKButtonFactory.h"
+#import "TKLableFactory.h"
+#import "TKTextFieldFactory.h"
+#import "TKTextViewFactory.h"
+#import "UIView+Factory.h"
+#import "UITextField+Factory.h"
+#import "UITextFieldCustom.h"
+#import "UIControl+Factory.h"
+#import "UIButton+Factory.h"
+#import "TKSearchBarFactory.h"
+#import "UISearchBar+Factory.h"
+
+#endif /* PrefixHeader_pch */
