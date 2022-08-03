@@ -29,7 +29,7 @@
 + (void)setDefaultStyleWith:(UITextField *)textField
 {
     textField.font = kFont15;
-    textField.textColor = kTextField;
+    textField.textColor = kColorTextField;
     textField.layer.cornerRadius = 17;
     textField.layer.borderWidth = 0.5;
     textField.layer.borderColor = [[TKColorManage systemGray] CGColor];
@@ -50,18 +50,18 @@
 + (void)setTitleInput:(UITextField *)textField
 {
     textField.font = kFont15;
-    textField.textColor = kTextField;
+    textField.textColor = kColorTextField;
     textField.layer.masksToBounds = YES;
-    textField.layer.cornerRadius = 6;
+    textField.layer.cornerRadius = 16;
     textField.layer.borderWidth = 0.5;
     textField.layer.borderColor = [[TKColorManage systemGray] CGColor];
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.offsetText = 0;
 
-    CGRect leftFrame = CGRectMake(0, 0, 44, 40);
+    CGRect leftFrame = CGRectMake(0, 0, 34, 40);
     UILabel *lable = [[UILabel alloc] initWithFrame:leftFrame];
     lable.text = @"left";
-    lable.textColor = kWhite;
+    lable.textColor = kColorWhite;
     lable.textAlignment = NSTextAlignmentCenter;
 
     UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"search"]];
@@ -78,7 +78,7 @@
 
     UILabel *right = [[UILabel alloc] initWithFrame:leftFrame];
     right.text = @"right";
-    right.textColor = kWhite;
+    right.textColor = kColorWhite;
     right.textAlignment = NSTextAlignmentCenter;
     UIView *rightView = [[UIView alloc] initWithFrame:leftFrame];
     rightView.backgroundColor = [TKColorManage systemOrange];
@@ -96,7 +96,7 @@
 + (void)setSearchBarStyleWith:(UITextField *)textField
 {
     textField.font = kFont14;
-    textField.textColor = kTextField;
+    textField.textColor = kColorTextField;
     textField.clipsToBounds = YES;
     textField.layer.borderWidth = 0.5;
     textField.layer.borderColor = [[TKColorManage systemOrange] CGColor];

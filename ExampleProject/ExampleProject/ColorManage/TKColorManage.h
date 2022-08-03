@@ -36,18 +36,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 //MARK: - APP主题相关颜色
-#define kWhite [TKColorManage white]
-#define kTextField [TKColorManage textFieldText]
-#define kTextFieldPlaceholder [TKColorManage textFieldPlaceholder]
-#define kTextView [TKColorManage textViewText]
+#define kColorWhite [TKColorManage colorWhite]
+#define kColorTextField [TKColorManage colorTextField]
+#define kColorTextFieldPlaceholder [TKColorManage colorTextFieldPlaceholder]
+#define kColorTextView [TKColorManage colorTextView]
 
 
 @interface TKColorManage (Theme)
 
-+ (UIColor *)white;
-+ (UIColor *)textFieldText;
-+ (UIColor *)textFieldPlaceholder;
-+ (UIColor *)textViewText;
++ (UIColor *)colorWhite;
++ (UIColor *)colorTextField;
++ (UIColor *)colorTextFieldPlaceholder;
++ (UIColor *)colorTextView;
 
 
 @end

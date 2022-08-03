@@ -19,6 +19,6 @@
 + (void)setDefaultStyleWith:(UITextView *)textView
 {
     textView.font = kFont15;
-    textView.textColor = kTextView;
+    textView.textColor = kColorTextView;
 }
 @end

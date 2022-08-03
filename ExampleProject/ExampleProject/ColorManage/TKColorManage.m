@@ -139,22 +139,24 @@ color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
 //MARK: - APP主题相关颜色
 @implementation TKColorManage (Theme)
 
-+ (UIColor *)white
+
+
++ (UIColor *)colorWhite
 {
     return [TKColorManage lightText];
 }
 
-+ (UIColor *)textFieldText
++ (UIColor *)colorTextField
 {
     return [TKColorManage darkText];
 }
 
-+ (UIColor *)textFieldPlaceholder
++ (UIColor *)colorTextFieldPlaceholder
 {
     return [TKColorManage placeholderText];
 }
 
-+ (UIColor *)textViewText
++ (UIColor *)colorTextView
 {
     return [TKColorManage darkText];
 }

@@ -21,7 +21,7 @@
 {
     lab.backgroundColor = [TKColorManage systemOrange];
     lab.font = kFont13;
-    lab.textColor = kWhite;
+    lab.textColor = kColorWhite;
     lab.textAlignment = NSTextAlignmentCenter;
 }
 
@@ -36,7 +36,7 @@
 + (void)setYellowTextWhiteWith:(UILabel *)lab
 {
     lab.backgroundColor = [TKColorManage systemYellow];
-    lab.textColor = kWhite;
+    lab.textColor = kColorWhite;
     lab.font = kFont13;
     lab.textAlignment = NSTextAlignmentCenter;
 }

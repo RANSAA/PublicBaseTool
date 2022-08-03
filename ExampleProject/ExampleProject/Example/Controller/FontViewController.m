@@ -45,13 +45,13 @@
     UITextField *textField = [TKTextFieldFactory defaultStyle];
     textField.frame = CGRectMake(24, 260, 280, 40);
     textField.text = @"UITextField字体效果";
-    NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"提示文字效果" attributes:@{NSForegroundColorAttributeName:kTextFieldPlaceholder,NSFontAttributeName:kFont15}];
+    NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"提示文字效果" attributes:@{NSForegroundColorAttributeName:kColorTextFieldPlaceholder,NSFontAttributeName:kFont15}];
 //    textField.attributedPlaceholder = attr;
     textField.placeholder = @"搜索家居美图、商品、专贴和讨论帖";
     [self.view addSubview:textField];
 
     UITextField *textField2 = TKTextFieldFactory.titleInput;
-    textField2.frame = CGRectMake(24, 320, 280, 40);
+    textField2.frame = CGRectMake(24, 320, 280, 36);
     textField2.text = @"UITextField字体效果";
     [self.view addSubview:textField2];
 
@@ -62,9 +62,7 @@
     textView.text = @"UITextView字体效果";
     [self.view addSubview:textView];
 
-//    NSLog(@"sub view button:%@",[self.view subViewOfClassName:@"UIButton"]);
-//    NSLog(@"sub all views button:%@",[self.view subViewsOfClassName:@"UIButton"]);
-//    NSLog(@"textfield:%f",textField.offsetCursorY);
+
 
     UISearchBar *searchBar = TKSearchBarFactory.defaultStyle;
     searchBar.frame = CGRectMake(24, 440, 280, 44);
