@@ -40,6 +40,16 @@
 		3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE392289661D8002C74AE /* UIView+Factory.m */; };
 		3FEEE397289665C6002C74AE /* UITextField+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE396289665C6002C74AE /* UITextField+Factory.m */; };
 		3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE39C28966996002C74AE /* TKMethodSwap.m */; };
+		3FF755C5289BA9DA00BC0121 /* TraitCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755C4289BA9DA00BC0121 /* TraitCollectionViewController.m */; };
+		3FF755CD289BAD7300BC0121 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755CC289BAD7300BC0121 /* KVOViewController.m */; };
+		3FF755D2289BB32100BC0121 /* TransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755D1289BB32100BC0121 /* TransformViewController.m */; };
+		3FF755D7289BF82700BC0121 /* DeviceToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755D6289BF82700BC0121 /* DeviceToken.m */; };
+		3FF755E4289C0DAF00BC0121 /* UIApplication+Window.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755E3289C0DAF00BC0121 /* UIApplication+Window.m */; };
+		3FF755E8289C0E7900BC0121 /* LaunchPageManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755E7289C0E7900BC0121 /* LaunchPageManage.m */; };
+		3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755EC289C17E900BC0121 /* LaunchPageViewController.m */; };
+		3FF755F2289C324C00BC0121 /* LaunchImage0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF755EF289C324B00BC0121 /* LaunchImage0.png */; };
+		3FF755F3289C324C00BC0121 /* LaunchImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF755F0289C324B00BC0121 /* LaunchImage2.png */; };
+		3FF755F4289C324C00BC0121 /* LaunchImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF755F1289C324C00BC0121 /* LaunchImage1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +117,23 @@
 		3FEEE396289665C6002C74AE /* UITextField+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Factory.m"; sourceTree = "<group>"; };
 		3FEEE39B28966996002C74AE /* TKMethodSwap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMethodSwap.h; sourceTree = "<group>"; };
 		3FEEE39C28966996002C74AE /* TKMethodSwap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMethodSwap.m; sourceTree = "<group>"; };
+		3FF755C3289BA9DA00BC0121 /* TraitCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TraitCollectionViewController.h; sourceTree = "<group>"; };
+		3FF755C4289BA9DA00BC0121 /* TraitCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraitCollectionViewController.m; sourceTree = "<group>"; };
+		3FF755CB289BAD7300BC0121 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		3FF755CC289BAD7300BC0121 /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
+		3FF755D0289BB32100BC0121 /* TransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformViewController.h; sourceTree = "<group>"; };
+		3FF755D1289BB32100BC0121 /* TransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransformViewController.m; sourceTree = "<group>"; };
+		3FF755D5289BF82700BC0121 /* DeviceToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceToken.h; sourceTree = "<group>"; };
+		3FF755D6289BF82700BC0121 /* DeviceToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceToken.m; sourceTree = "<group>"; };
+		3FF755E2289C0DAF00BC0121 /* UIApplication+Window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Window.h"; sourceTree = "<group>"; };
+		3FF755E3289C0DAF00BC0121 /* UIApplication+Window.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Window.m"; sourceTree = "<group>"; };
+		3FF755E6289C0E7900BC0121 /* LaunchPageManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchPageManage.h; sourceTree = "<group>"; };
+		3FF755E7289C0E7900BC0121 /* LaunchPageManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchPageManage.m; sourceTree = "<group>"; };
+		3FF755EB289C17E900BC0121 /* LaunchPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchPageViewController.h; sourceTree = "<group>"; };
+		3FF755EC289C17E900BC0121 /* LaunchPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchPageViewController.m; sourceTree = "<group>"; };
+		3FF755EF289C324B00BC0121 /* LaunchImage0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage0.png; sourceTree = "<group>"; };
+		3FF755F0289C324B00BC0121 /* LaunchImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage2.png; sourceTree = "<group>"; };
+		3FF755F1289C324C00BC0121 /* LaunchImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +171,12 @@
 				3F0A8F682894FFBE009C8BEE /* AppDelegate.m */,
 				3F0A8F6A2894FFBE009C8BEE /* SceneDelegate.h */,
 				3F0A8F6B2894FFBE009C8BEE /* SceneDelegate.m */,
+				3FF755E2289C0DAF00BC0121 /* UIApplication+Window.h */,
+				3FF755E3289C0DAF00BC0121 /* UIApplication+Window.m */,
 				3F0A8F6D2894FFBE009C8BEE /* ViewController.h */,
 				3F0A8F6E2894FFBE009C8BEE /* ViewController.m */,
+				3FF755D9289C09C600BC0121 /* LaunchAgreement */,
+				3FF755D4289BF80400BC0121 /* Push */,
 				3FEEE39928966710002C74AE /* Runttime */,
 				3F4047FA289518BA004CBD35 /* FontManage */,
 				3F4047F9289518A9004CBD35 /* ColorManage */,
@@ -156,6 +187,9 @@
 				3F0A8F702894FFBE009C8BEE /* Main.storyboard */,
 				3F0A8F732894FFC8009C8BEE /* Assets.xcassets */,
 				3F0A8F752894FFC8009C8BEE /* LaunchScreen.storyboard */,
+				3FF755EF289C324B00BC0121 /* LaunchImage0.png */,
+				3FF755F1289C324C00BC0121 /* LaunchImage1.png */,
+				3FF755F0289C324B00BC0121 /* LaunchImage2.png */,
 				3F0A8F782894FFC8009C8BEE /* Info.plist */,
 				3F0A8F792894FFC8009C8BEE /* main.m */,
 				3F0A8FA028950156009C8BEE /* PrefixHeader.pch */,
@@ -203,6 +237,12 @@
 				3F40480C28951E49004CBD35 /* ColorViewController.m */,
 				3F40480F28951E5C004CBD35 /* FontViewController.h */,
 				3F40481028951E5C004CBD35 /* FontViewController.m */,
+				3FF755C3289BA9DA00BC0121 /* TraitCollectionViewController.h */,
+				3FF755C4289BA9DA00BC0121 /* TraitCollectionViewController.m */,
+				3FF755CB289BAD7300BC0121 /* KVOViewController.h */,
+				3FF755CC289BAD7300BC0121 /* KVOViewController.m */,
+				3FF755D0289BB32100BC0121 /* TransformViewController.h */,
+				3FF755D1289BB32100BC0121 /* TransformViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +334,26 @@
 			path = "UIView+Category";
 			sourceTree = "<group>";
 		};
+		3FF755D4289BF80400BC0121 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				3FF755D5289BF82700BC0121 /* DeviceToken.h */,
+				3FF755D6289BF82700BC0121 /* DeviceToken.m */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		3FF755D9289C09C600BC0121 /* LaunchAgreement */ = {
+			isa = PBXGroup;
+			children = (
+				3FF755E6289C0E7900BC0121 /* LaunchPageManage.h */,
+				3FF755E7289C0E7900BC0121 /* LaunchPageManage.m */,
+				3FF755EB289C17E900BC0121 /* LaunchPageViewController.h */,
+				3FF755EC289C17E900BC0121 /* LaunchPageViewController.m */,
+			);
+			path = LaunchAgreement;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -352,7 +412,10 @@
 			files = (
 				3F0A8F772894FFC8009C8BEE /* LaunchScreen.storyboard in Resources */,
 				3F0A8F742894FFC8009C8BEE /* Assets.xcassets in Resources */,
+				3FF755F3289C324C00BC0121 /* LaunchImage2.png in Resources */,
 				3F4962B128952BB900F471F2 /* Aa可爱日系中文-AaKADRXZW.ttf in Resources */,
+				3FF755F4289C324C00BC0121 /* LaunchImage1.png in Resources */,
+				3FF755F2289C324C00BC0121 /* LaunchImage0.png in Resources */,
 				3F4962B228952BB900F471F2 /* dynamic-AaJianHaoTi.ttf in Resources */,
 				3F0A8F722894FFBE009C8BEE /* Main.storyboard in Resources */,
 			);
@@ -366,12 +429,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */,
+				3FF755C5289BA9DA00BC0121 /* TraitCollectionViewController.m in Sources */,
+				3FF755CD289BAD7300BC0121 /* KVOViewController.m in Sources */,
 				3F0A8F6F2894FFBE009C8BEE /* ViewController.m in Sources */,
 				3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */,
 				3F378D99289687E000F1533C /* UIButton+Factory.m in Sources */,
 				3F0A8F8728950050009C8BEE /* BaseViewController.m in Sources */,
 				3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
+				3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */,
+				3FF755E4289C0DAF00BC0121 /* UIApplication+Window.m in Sources */,
 				3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */,
 				3F4047F628951834004CBD35 /* LabelCell.m in Sources */,
 				3F40480928951CCD004CBD35 /* ClassTypeModel.m in Sources */,
@@ -388,9 +455,12 @@
 				3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */,
 				3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */,
 				3F40480528951AFB004CBD35 /* TwoTableViewController.m in Sources */,
+				3FF755E8289C0E7900BC0121 /* LaunchPageManage.m in Sources */,
+				3FF755D7289BF82700BC0121 /* DeviceToken.m in Sources */,
 				3F4962B028952BB900F471F2 /* TKFontManager.m in Sources */,
 				3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */,
 				3F0A8F6C2894FFBE009C8BEE /* SceneDelegate.m in Sources */,
+				3FF755D2289BB32100BC0121 /* TransformViewController.m in Sources */,
 				3F40481128951E5C004CBD35 /* FontViewController.m in Sources */,
 				3F0A8F9528950092009C8BEE /* TableViewController.m in Sources */,
 			);

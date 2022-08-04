@@ -69,6 +69,11 @@
     searchBar.text = @"UISearchBar";
     [self.view addSubview:searchBar];
     searchBar.delegate = self;
+    NSLog(@"searchbar:%@",searchBar.subViewsMark);
+    UIView *background = [searchBar subViewKindOfClassName:@"UISearchBarBackground"];
+    background.backgroundColor = UIColor.yellowColor;
+    background.layer.contents = nil;
+    NSLog(@"background:%@",background);
 
     UISearchBar *searchBar1 = TKSearchBarFactory.defaultStyle2;
     searchBar1.frame = CGRectMake(24, 500, 280, 44);
@@ -83,6 +88,8 @@
     searchBar2.placeholder = @"搜索家居美图、商品、专贴和讨论帖";
     [self.view addSubview:searchBar2];
 }
+
+
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
 {

@@ -10,6 +10,23 @@
 @implementation UIView (Factory)
 
 /**
+ 获取类型为className或其子类的第一个子控件
+ */
+- (UIView *)subViewKindOfClassName:(NSString*)className
+{
+    for (UIView *subView in self.subviews) {
+        if ([subView isKindOfClass:NSClassFromString(className)]) {
+            return subView;
+        }
+        UIView *resultFound = [subView subViewKindOfClassName:className];
+        if (resultFound) {
+            return  resultFound;
+        }
+    }
+    return nil;
+}
+
+/**
  获取类型为className的第一个子控件
  */
 - (UIView*)subViewOfClassName:(NSString*)className

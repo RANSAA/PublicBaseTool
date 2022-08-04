@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIView (Factory)
 
 /**
+ 获取类型为className或其子类的第一个子控件
+ */
+- (UIView *)subViewKindOfClassName:(NSString*)className;
+
+/**
  获取类型为className的第一个子控件
  */
 - (UIView*)subViewOfClassName:(NSString*)className;

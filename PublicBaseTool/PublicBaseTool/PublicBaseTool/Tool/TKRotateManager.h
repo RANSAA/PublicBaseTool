@@ -20,6 +20,7 @@
  iPad横竖屏切换无效解决方法：
  将iPad对应的设备方向全都不勾选，这样屏幕方向控制就有效了。(即在通用设备处选中iPad然后让它所有的方向都不勾选)
 
+ other:https://blog.csdn.net/super_man_ww/article/details/122990643
  **/
 
 #import <Foundation/Foundation.h>

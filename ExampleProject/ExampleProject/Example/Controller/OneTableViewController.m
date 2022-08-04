@@ -8,12 +8,25 @@
 #import "OneTableViewController.h"
 #import "ColorViewController.h"
 #import "FontViewController.h"
+#import "TraitCollectionViewController.h"
+#import "KVOViewController.h"
+#import "TransformViewController.h"
 
 @interface OneTableViewController ()
 
 @end
 
 @implementation OneTableViewController
+
+
+- (void)loadData
+{
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"字体管理" cls:@"FontViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"颜色管理" cls:@"ColorViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"TraitCollection" cls:@"TraitCollectionViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"KVO依赖属性设置" cls:@"KVOViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"Transform动画" cls:@"TransformViewController"]];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,19 +38,28 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self loadData];
 
+//    [LaunchPageManage.shared checkAgreement];
+
+
+//
+
     UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] init];
      backBtn.title = @"返回";
     [backBtn setTitleTextAttributes:@{NSFontAttributeName:kFont14,NSForegroundColorAttributeName:UIColor.redColor} forState:UIControlStateNormal];
      self.navigationItem.backBarButtonItem = backBtn;
     self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
     self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage new];
+
+
+
+    NSLog(@"getKeyWindow:%@",[self getKeyWindow]);
+    NSLog(@"getKeyWindow1:%@",[self getKeyWindow1]);
+
+    //解决系统导航条切换时，右上角显示问题
+    UIWindow *key = [self getKeyWindow];
+    key.backgroundColor = UIColor.whiteColor;
 }
 
-- (void)loadData
-{
-    [self.dataAry addObject:[ClassTypeModel initWithName:@"字体管理" cls:@"FontViewController"]];
-    [self.dataAry addObject:[ClassTypeModel initWithName:@"颜色管理" cls:@"ColorViewController"]];
-}
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -48,6 +70,36 @@
     [vc setValue:model forKey:@"clsModel"];
 //    [vc setValue:@(YES) forKey:@"hidesBottomBarWhenPushed"];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (UIWindow *)getKeyWindow
+{
+    if (@available(iOS 13.0, *))
+    {
+        for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes) {
+            if (windowScene.activationState == UISceneActivationStateForegroundActive)
+            {
+                for (UIWindow *window in windowScene.windows)
+                {
+                    if (window.isKeyWindow)
+                    {
+                        return window;
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        return [UIApplication sharedApplication].keyWindow;
+    }
+    return nil;
+}
+
+- (UIWindow *)getKeyWindow1
+{
+    return  UIApplication.sharedApplication.windows.firstObject;
 }
 
 /*

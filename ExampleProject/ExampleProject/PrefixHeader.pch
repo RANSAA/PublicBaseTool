@@ -14,6 +14,7 @@
 #import "TabBarViewController.h"
 #import "BaseViewController.h"
 #import "TableViewController.h"
+#import "UIApplication+Window.h"
 
 #import "LabelCell.h"
 #import "ClassTypeModel.h"
@@ -32,5 +33,6 @@
 #import "UIButton+Factory.h"
 #import "TKSearchBarFactory.h"
 #import "UISearchBar+Factory.h"
+#import "LaunchPageManage.h"
 
 #endif /* PrefixHeader_pch */

@@ -8,7 +8,9 @@
 #import "KVOViewController.h"
 
 @interface KVOViewController ()
-
+@property(nonatomic, assign) NSInteger a;
+@property(nonatomic, assign) NSInteger b;
+@property(nonatomic, assign) NSInteger c;
 @end
 
 @implementation KVOViewController
@@ -17,6 +19,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+- (NSInteger)a
+{
+    return _b+_c;
+}
+
+/**
+ KVO计算属性 设置依赖键
+ a的值依赖于b和c
+ */
++ (NSSet *)keyPathsForValuesAffectingA
+{
+    return [NSSet setWithObjects:@"b",@"c", nil];
+}
+
 
 /*
 #pragma mark - Navigation
