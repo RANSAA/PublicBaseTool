@@ -8,27 +8,33 @@
 #import "UIApplication+Window.h"
 
 @implementation UIApplication (Window)
+
+
+
 - (UIWindow *)getKeyWindow
 {
-    if (@available(iOS 13.0, *))
-    {
-        for (UIWindowScene* windowScene in [UIApplication sharedApplication].connectedScenes) {
-            if (windowScene.activationState == UISceneActivationStateForegroundActive)
-            {
-                for (UIWindow *window in windowScene.windows)
-                {
-                    if (window.isKeyWindow)
-                    {
+    UIWindow *mainWindow = nil;
+    if (@available(iOS 13.0, *)) {
+        for (UIWindowScene *windowScene in UIApplication.sharedApplication.connectedScenes) {
+            if (windowScene.activationState == UISceneActivationStateForegroundActive) {
+                for (UIWindow *window in windowScene.windows) {
+                    if (window.isKeyWindow) {
                         return window;
                     }
                 }
             }
         }
+    }else{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        mainWindow = UIApplication.sharedApplication.keyWindow;
+#pragma clang diagnostic pop
     }
-    else
-    {
-        return [UIApplication sharedApplication].keyWindow;
+    if (!mainWindow) {
+        mainWindow = UIApplication.sharedApplication.windows.firstObject;
     }
-    return UIApplication.sharedApplication.windows.firstObject;
+    return mainWindow;
 }
+
+
 @end

@@ -26,6 +26,11 @@
 
 }
 
+- (void)dealloc
+{
+    NSLog(@"dealloc class:%@    title:%@",self.class,self.clsModel.name);
+}
+
 /*
 #pragma mark - Navigation
 

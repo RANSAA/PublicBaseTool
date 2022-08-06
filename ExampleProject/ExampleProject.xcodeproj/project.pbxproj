@@ -35,6 +35,8 @@
 		3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4962B92895323800F471F2 /* TKButtonFactory.m */; };
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
+		3FA4C63D289E89800068544D /* DotIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C63C289E89800068544D /* DotIndicator.m */; };
+		3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C640289EBAFF0068544D /* TestAniView.m */; };
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
 		3FC8C67C28957C9C00B933A7 /* TKTextViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67B28957C9C00B933A7 /* TKTextViewFactory.m */; };
 		3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE392289661D8002C74AE /* UIView+Factory.m */; };
@@ -107,6 +109,10 @@
 		3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Factory.m"; sourceTree = "<group>"; };
 		3F7BABFF2897CD0400C972C5 /* UITextFieldCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldCustom.h; sourceTree = "<group>"; };
 		3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldCustom.m; sourceTree = "<group>"; };
+		3FA4C63B289E897F0068544D /* DotIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotIndicator.h; sourceTree = "<group>"; };
+		3FA4C63C289E89800068544D /* DotIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotIndicator.m; sourceTree = "<group>"; };
+		3FA4C63F289EBAFF0068544D /* TestAniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAniView.h; sourceTree = "<group>"; };
+		3FA4C640289EBAFF0068544D /* TestAniView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAniView.m; sourceTree = "<group>"; };
 		3FC8C67628957C8E00B933A7 /* TKTextFieldFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTextFieldFactory.h; sourceTree = "<group>"; };
 		3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTextFieldFactory.m; sourceTree = "<group>"; };
 		3FC8C67A28957C9C00B933A7 /* TKTextViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTextViewFactory.h; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 				3FF755E3289C0DAF00BC0121 /* UIApplication+Window.m */,
 				3F0A8F6D2894FFBE009C8BEE /* ViewController.h */,
 				3F0A8F6E2894FFBE009C8BEE /* ViewController.m */,
+				3FA4C63A289E895E0068544D /* Animation */,
 				3FF755D9289C09C600BC0121 /* LaunchAgreement */,
 				3FF755D4289BF80400BC0121 /* Push */,
 				3FEEE39928966710002C74AE /* Runttime */,
@@ -306,6 +313,17 @@
 				3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */,
 			);
 			path = "UIView+Custom";
+			sourceTree = "<group>";
+		};
+		3FA4C63A289E895E0068544D /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				3FA4C63B289E897F0068544D /* DotIndicator.h */,
+				3FA4C63C289E89800068544D /* DotIndicator.m */,
+				3FA4C63F289EBAFF0068544D /* TestAniView.h */,
+				3FA4C640289EBAFF0068544D /* TestAniView.m */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		3FEEE39928966710002C74AE /* Runttime */ = {
@@ -457,8 +475,10 @@
 				3F40480528951AFB004CBD35 /* TwoTableViewController.m in Sources */,
 				3FF755E8289C0E7900BC0121 /* LaunchPageManage.m in Sources */,
 				3FF755D7289BF82700BC0121 /* DeviceToken.m in Sources */,
+				3FA4C63D289E89800068544D /* DotIndicator.m in Sources */,
 				3F4962B028952BB900F471F2 /* TKFontManager.m in Sources */,
 				3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */,
+				3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */,
 				3F0A8F6C2894FFBE009C8BEE /* SceneDelegate.m in Sources */,
 				3FF755D2289BB32100BC0121 /* TransformViewController.m in Sources */,
 				3F40481128951E5C004CBD35 /* FontViewController.m in Sources */,

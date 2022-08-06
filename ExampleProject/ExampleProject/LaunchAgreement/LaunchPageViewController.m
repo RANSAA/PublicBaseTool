@@ -21,8 +21,7 @@
     [self setupLaunchView];
     [self setupUI];
 
-//    NSString *path = [NSBundle.mainBundle resourcePath];
-//    NSLog(@"str path:%@",path);
+//    NSString *path = [NSBundle.mainBu÷
 //    path = [path stringByAppendingString:@"/123.txt"];
 //    NSError *err = nil;
 //    [path writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&err];

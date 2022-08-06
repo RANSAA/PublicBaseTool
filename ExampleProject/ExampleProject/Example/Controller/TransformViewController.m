@@ -6,6 +6,8 @@
 //
 
 #import "TransformViewController.h"
+#import "DotIndicator.h"
+#import "TestAniView.h"
 
 @interface TransformViewController ()
 
@@ -21,7 +23,7 @@
 
 - (void)setupUI
 {
-    UIStackView *stackView = [[UIStackView alloc]initWithFrame:CGRectMake(20, 64, 200, 400)];
+    UIStackView *stackView = [[UIStackView alloc]initWithFrame:CGRectMake(100, 64, 200, 400)];
     stackView.backgroundColor = TKColorManage.systemGray3;
     stackView.axis = UILayoutConstraintAxisVertical;
     stackView.distribution = UIStackViewDistributionFillEqually;
@@ -32,20 +34,58 @@
     [self.view addSubview:stackView];
 
     UIButton *btn1 = TKButtonFactory.btnOrangeCorner;
-    [btn1 setTitle:@"111" forState:UIControlStateNormal];
+    [btn1 setTitle:@"DotIndicator" forState:UIControlStateNormal];
+    btn1.tag = 1;
+    [btn1 addTarget:self action:@selector(btnClickAction:) forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *btn2 = TKButtonFactory.btnGreenCorner;
-    [btn2 setTitle:@"222" forState:UIControlStateNormal];
+    [btn2 setTitle:@"TestAniView" forState:UIControlStateNormal];
+    btn2.tag = 2;
+    [btn2 addTarget:self action:@selector(btnClickAction:) forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *btn3 = TKButtonFactory.btnYellowCorner;
     [btn3 setTitle:@"333" forState:UIControlStateNormal];
-
+    btn3.tag = 3;
+    [btn3 addTarget:self action:@selector(btnClickAction:) forControlEvents:UIControlEventTouchUpInside];
 
     [stackView addArrangedSubview:btn1];
     [stackView addArrangedSubview:btn2];
     [stackView addArrangedSubview:btn3];
 
    
+}
+
+- (void)btnClickAction:(UIButton *)btn
+{
+    NSInteger index = btn.tag;
+    NSLog(@"index:%ld",index);
+    switch (index) {
+        case 1:
+            [self aniDotIndicator];
+            break;
+        case 2:
+            [self aniTestAniView];
+            break;
+
+        default:
+            break;
+    }
+
+}
+
+- (void)aniDotIndicator
+{
+    DotIndicator *view = [[DotIndicator alloc] initWithFrame:CGRectMake(8, 80, 80, 80)];
+    view.backgroundColor = UIColor.grayColor;
+//    view.color1 = UIColor.redColor;
+    [self.view addSubview:view];
+}
+
+- (void)aniTestAniView
+{
+    TestAniView *view = [[TestAniView alloc] initWithFrame:CGRectMake(8, 80, 80, 80)];
+    view.backgroundColor = UIColor.grayColor;
+    [self.view addSubview:view];
 }
 
 /*

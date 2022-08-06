@@ -48,6 +48,7 @@
     UIWindow *keyWin = [UIApplication.sharedApplication getKeyWindow];
     keyWin.rootViewController = navVC;
     [keyWin makeKeyAndVisible];
+    NSLog(@"[UIApplication.sharedApplication getKeyWindow]:%@",[UIApplication.sharedApplication getKeyWindow]);
     return  vc;;
 }
 

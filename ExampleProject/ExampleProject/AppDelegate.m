@@ -29,8 +29,6 @@
 
     }else{
         [LaunchPageManage.shared userAgreementStatusDetectionCompletionHandler:^{
-
-
             TabBarViewController *tabVC = [[TabBarViewController alloc] init];
             self.window.rootViewController = tabVC;
             [self.window makeKeyAndVisible];
