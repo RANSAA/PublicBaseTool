@@ -8,6 +8,7 @@
 #import "TransformViewController.h"
 #import "DotIndicator.h"
 #import "TestAniView.h"
+#import "NYWaterWaveView.h"
 
 @interface TransformViewController ()
 
@@ -44,7 +45,7 @@
     [btn2 addTarget:self action:@selector(btnClickAction:) forControlEvents:UIControlEventTouchUpInside];
 
     UIButton *btn3 = TKButtonFactory.btnYellowCorner;
-    [btn3 setTitle:@"333" forState:UIControlStateNormal];
+    [btn3 setTitle:@"NYWaterWaveView" forState:UIControlStateNormal];
     btn3.tag = 3;
     [btn3 addTarget:self action:@selector(btnClickAction:) forControlEvents:UIControlEventTouchUpInside];
 
@@ -66,6 +67,9 @@
         case 2:
             [self aniTestAniView];
             break;
+        case 3:
+            [self aniNYWaterWaveView];
+            break;;
 
         default:
             break;
@@ -86,6 +90,12 @@
     TestAniView *view = [[TestAniView alloc] initWithFrame:CGRectMake(8, 80, 80, 80)];
     view.backgroundColor = UIColor.grayColor;
     [self.view addSubview:view];
+}
+
+- (void)aniNYWaterWaveView
+{
+    NYWaterWaveView *waterWaveView = [[NYWaterWaveView alloc]initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 200)];
+    [self.view addSubview:waterWaveView];
 }
 
 /*

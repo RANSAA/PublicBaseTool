@@ -35,6 +35,7 @@
 		3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4962B92895323800F471F2 /* TKButtonFactory.m */; };
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
+		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
 		3FA4C63D289E89800068544D /* DotIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C63C289E89800068544D /* DotIndicator.m */; };
 		3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C640289EBAFF0068544D /* TestAniView.m */; };
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
@@ -109,6 +110,8 @@
 		3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Factory.m"; sourceTree = "<group>"; };
 		3F7BABFF2897CD0400C972C5 /* UITextFieldCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldCustom.h; sourceTree = "<group>"; };
 		3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldCustom.m; sourceTree = "<group>"; };
+		3F7E1051289F8E110053408B /* NYWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYWaterWaveView.m; sourceTree = "<group>"; };
+		3F7E1052289F8E110053408B /* NYWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYWaterWaveView.h; sourceTree = "<group>"; };
 		3FA4C63B289E897F0068544D /* DotIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotIndicator.h; sourceTree = "<group>"; };
 		3FA4C63C289E89800068544D /* DotIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotIndicator.m; sourceTree = "<group>"; };
 		3FA4C63F289EBAFF0068544D /* TestAniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAniView.h; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 		3FA4C63A289E895E0068544D /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				3F7E1052289F8E110053408B /* NYWaterWaveView.h */,
+				3F7E1051289F8E110053408B /* NYWaterWaveView.m */,
 				3FA4C63B289E897F0068544D /* DotIndicator.h */,
 				3FA4C63C289E89800068544D /* DotIndicator.m */,
 				3FA4C63F289EBAFF0068544D /* TestAniView.h */,
@@ -462,6 +467,7 @@
 				3F40480928951CCD004CBD35 /* ClassTypeModel.m in Sources */,
 				3F0A8F692894FFBE009C8BEE /* AppDelegate.m in Sources */,
 				3F378DA128969DED00F1533C /* TKSearchBarFactory.m in Sources */,
+				3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */,
 				3F0A8F7A2894FFC8009C8BEE /* main.m in Sources */,
 				3F40480D28951E49004CBD35 /* ColorViewController.m in Sources */,
 				3F4047FD28951911004CBD35 /* TKColorManage.m in Sources */,
