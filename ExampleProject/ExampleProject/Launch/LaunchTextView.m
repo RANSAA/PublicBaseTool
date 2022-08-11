@@ -9,12 +9,30 @@
 
 @implementation LaunchTextView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+- (BOOL)canBecomeFirstResponder
+{
+    return NO;
 }
-*/
+
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self disabledLongGesture];
+}
+
+
+/**
+ 禁用长按手势
+ */
+- (void)disabledLongGesture
+{
+    for (UIGestureRecognizer *recognizer in self.gestureRecognizers) {
+      if ([recognizer isKindOfClass:[UILongPressGestureRecognizer class]]){
+        recognizer.enabled = NO;
+      }
+    }
+}
 
 @end

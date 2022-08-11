@@ -7,6 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 长按不会出现菜单栏
+ */
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LaunchTextView : UITextView

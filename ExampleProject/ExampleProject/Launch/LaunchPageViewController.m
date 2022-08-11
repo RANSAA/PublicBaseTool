@@ -7,6 +7,7 @@
 
 #import "LaunchPageViewController.h"
 #import "LaunchPageManage.h"
+#import "LaunchTextView.h"
 
 @interface LaunchPageViewController ()<UITextViewDelegate>
 
@@ -109,7 +110,7 @@
 
 
 
-    UITextView *textview = [[UITextView alloc] init];
+    LaunchTextView *textview = [[LaunchTextView alloc] init];
     textview.editable = NO;
     textview.delegate = self;
     textview.dataDetectorTypes = UIDataDetectorTypeLink;

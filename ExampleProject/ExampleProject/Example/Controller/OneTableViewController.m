@@ -11,6 +11,8 @@
 #import "TraitCollectionViewController.h"
 #import "KVOViewController.h"
 #import "TransformViewController.h"
+#import "FlowViewController.h"
+#import "LaunchImageViewController.h"
 
 @interface OneTableViewController ()
 
@@ -26,6 +28,8 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"TraitCollection" cls:@"TraitCollectionViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"KVO依赖属性设置" cls:@"KVOViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Transform动画" cls:@"TransformViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"背景流动视图" cls:@"FlowViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改启动图" cls:@"LaunchImageViewController"]];
 }
 
 - (void)viewDidLoad {

@@ -6,6 +6,7 @@
 //
 
 #import "FlowViewController.h"
+#import "FlowView.h"
 
 @interface FlowViewController ()
 
@@ -16,6 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupUI];
+}
+
+- (void)setupUI
+{
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 80, 320, 1)];
+    line.backgroundColor = UIColor.redColor;
+    [self.view addSubview: line];
+
+    UIView *line1 = [[UIView alloc] initWithFrame:CGRectMake(0, 80+420, 320, 1)];
+    line1.backgroundColor = UIColor.redColor;
+    [self.view addSubview: line1];
+    
+    FlowView *flow = [[FlowView alloc] initWithFrame:CGRectMake(20, 80, 280, 420)];
+    flow.backgroundColor = TKColorManage.systemGray5;
+    flow.image = [UIImage imageNamed:@"LaunchImage1"];
+    flow.fixed = 580;
+    flow.distance = 0.5;
+//    flow.direction = FlowViewDirectionHorizontal;
+    [self.view addSubview:flow];
 }
 
 /*
