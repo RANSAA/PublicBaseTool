@@ -113,6 +113,8 @@
     textview.editable = NO;
     textview.delegate = self;
     textview.dataDetectorTypes = UIDataDetectorTypeLink;
+    textview.textColor = TKColorManage.label;
+    textview.backgroundColor = TKColorManage.colorWhite;
     [topView addSubview:textview];
     textview.translatesAutoresizingMaskIntoConstraints = NO;
     NSDictionary *v = @{@"view":textview};
