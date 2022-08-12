@@ -1,15 +1,15 @@
 //
-//  LaunchImageHelper.m
+//  TKDynamicLaunchImageHelper.m
 //  DynamicLaunchImage_Example
 //
 //  Created by seth on 2020/9/16.
 //  Copyright © 2020 seth. All rights reserved.
 //
 
-#import "LaunchImageHelper.h"
+#import "TKDynamicLaunchImageHelper.h"
 #import <ImageIO/ImageIO.h>
 
-@implementation LaunchImageHelper
+@implementation TKDynamicLaunchImageHelper
 
 
 

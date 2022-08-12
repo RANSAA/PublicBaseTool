@@ -61,7 +61,7 @@
 /// 替换启动图
 + (BOOL)replaceLaunchImage:(UIImage *)replacementImage
         compressionQuality:(CGFloat)quality
-          customValidation:(BBACustomValicationBlock)validationBlock {
+          customValidation:(TKCustomValicationBlock)validationBlock {
     if (!replacementImage) return NO;
     
     // 转为jpeg

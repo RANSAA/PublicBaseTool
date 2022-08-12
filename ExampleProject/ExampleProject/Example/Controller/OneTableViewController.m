@@ -13,6 +13,7 @@
 #import "TransformViewController.h"
 #import "FlowViewController.h"
 #import "LaunchImageViewController.h"
+#import "AppIconViewController.h"
 
 @interface OneTableViewController ()
 
@@ -30,6 +31,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Transform动画" cls:@"TransformViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"背景流动视图" cls:@"FlowViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改启动图" cls:@"LaunchImageViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改App图标" cls:@"AppIconViewController"]];
 }
 
 - (void)viewDidLoad {
@@ -42,10 +44,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self loadData];
 
-//    [LaunchPageManage.shared checkAgreement];
-
-
-//
 
     UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] init];
      backBtn.title = @"返回";
@@ -54,14 +52,6 @@
     self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
     self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage new];
 
-
-
-    NSLog(@"getKeyWindow:%@",[self getKeyWindow]);
-    NSLog(@"getKeyWindow1:%@",[self getKeyWindow1]);
-
-    //解决系统导航条切换时，右上角显示问题
-    UIWindow *key = [self getKeyWindow];
-    key.backgroundColor = UIColor.whiteColor;
 }
 
 

@@ -1,0 +1,6 @@
+framework module TKPermissionKit {
+  umbrella header "TKPermissionKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,12 +9,18 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
 /**
- 动态需改启动图逻辑：找到缓存。然后替换缓存中的文件
+ 动态修改启动图核心操作与逻辑
+ 逻辑：找到启动图缓存(系统自动截图)，然后替换缓存图片的内容，注意图片的大小要匹配。
+ 参考地址：
+ https://www.jianshu.com/p/139a00561d3d
+ https://mp.weixin.qq.com/s/giXmBAC0ft-kRB3BloawzA
+ demo: https://github.com/iversonxh/DynamicLaunchImage
  */
 
 /// 自定义校验规则，originImage为原始系统缓存启动图，yourImage为替代的启动图，返回YES代表本次替换，否则本次不会进行替换
-typedef BOOL(^BBACustomValicationBlock)(UIImage *originImage, UIImage *yourImage);
+typedef BOOL(^TKCustomValicationBlock)(UIImage *originImage, UIImage *yourImage);
 
 /**
  动态启动图（请确保替换的图片尺寸与屏幕分辨率一致，否则替换不成功）
@@ -39,7 +45,7 @@ typedef BOOL(^BBACustomValicationBlock)(UIImage *originImage, UIImage *yourImage
 /// @return 替换是否成功
 + (BOOL)replaceLaunchImage:(UIImage *)replacementImage
         compressionQuality:(CGFloat)quality
-          customValidation:(BBACustomValicationBlock)validationBlock;
+          customValidation:(TKCustomValicationBlock)validationBlock;
 
 @end
 

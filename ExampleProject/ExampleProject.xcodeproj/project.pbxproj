@@ -58,6 +58,12 @@
 		3FF755F2289C324C00BC0121 /* LaunchImage0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF755EF289C324B00BC0121 /* LaunchImage0.png */; };
 		3FF755F3289C324C00BC0121 /* LaunchImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF755F0289C324B00BC0121 /* LaunchImage2.png */; };
 		3FF755F4289C324C00BC0121 /* LaunchImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF755F1289C324C00BC0121 /* LaunchImage1.png */; };
+		3FFDB47A28A67E49004AA481 /* TKDynamicLaunchImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDB47828A67E49004AA481 /* TKDynamicLaunchImageHelper.m */; };
+		3FFDB48028A69414004AA481 /* AppIconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDB47F28A69414004AA481 /* AppIconViewController.m */; };
+		3FFDB53028A6A095004AA481 /* Icon1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDB52F28A6A095004AA481 /* Icon1@3x.png */; };
+		3FFDB53328A6A0C1004AA481 /* Icon3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDB53228A6A0C1004AA481 /* Icon3@3x.png */; };
+		3FFDB53628A6A0F7004AA481 /* Icon2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FFDB53528A6A0F7004AA481 /* Icon2@3x.png */; };
+		3FFDB53B28A6A3C5004AA481 /* AppIconManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDB53A28A6A3C5004AA481 /* AppIconManage.m */; };
 		EFBCA72A4260BB3FAF960865 /* Pods_ExampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B36ADFF77DB9D0E192C02F9 /* Pods_ExampleProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +167,15 @@
 		3FF755EF289C324B00BC0121 /* LaunchImage0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage0.png; sourceTree = "<group>"; };
 		3FF755F0289C324B00BC0121 /* LaunchImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage2.png; sourceTree = "<group>"; };
 		3FF755F1289C324C00BC0121 /* LaunchImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage1.png; sourceTree = "<group>"; };
+		3FFDB47828A67E49004AA481 /* TKDynamicLaunchImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKDynamicLaunchImageHelper.m; sourceTree = "<group>"; };
+		3FFDB47928A67E49004AA481 /* TKDynamicLaunchImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKDynamicLaunchImageHelper.h; sourceTree = "<group>"; };
+		3FFDB47E28A69414004AA481 /* AppIconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppIconViewController.h; sourceTree = "<group>"; };
+		3FFDB47F28A69414004AA481 /* AppIconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppIconViewController.m; sourceTree = "<group>"; };
+		3FFDB52F28A6A095004AA481 /* Icon1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon1@3x.png"; sourceTree = "<group>"; };
+		3FFDB53228A6A0C1004AA481 /* Icon3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3@3x.png"; sourceTree = "<group>"; };
+		3FFDB53528A6A0F7004AA481 /* Icon2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon2@3x.png"; sourceTree = "<group>"; };
+		3FFDB53928A6A3C5004AA481 /* AppIconManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppIconManage.h; sourceTree = "<group>"; };
+		3FFDB53A28A6A3C5004AA481 /* AppIconManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppIconManage.m; sourceTree = "<group>"; };
 		81FEDAB17A2C302FE49577DB /* Pods-ExampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleProject.release.xcconfig"; path = "Target Support Files/Pods-ExampleProject/Pods-ExampleProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +302,8 @@
 				3F4617A228A3953600EFBE6D /* FlowViewController.m */,
 				3F4617A528A3BD7D00EFBE6D /* LaunchImageViewController.h */,
 				3F4617A628A3BD7D00EFBE6D /* LaunchImageViewController.m */,
+				3FFDB47E28A69414004AA481 /* AppIconViewController.h */,
+				3FFDB47F28A69414004AA481 /* AppIconViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -405,16 +422,55 @@
 		3FF755D9289C09C600BC0121 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				3FFDB52B28A6A033004AA481 /* icons */,
 				3FF755E6289C0E7900BC0121 /* LaunchPageManage.h */,
 				3FF755E7289C0E7900BC0121 /* LaunchPageManage.m */,
+				3FC9BAB828A530A300C559EC /* LaunchTextView.h */,
+				3FC9BAB928A530A300C559EC /* LaunchTextView.m */,
 				3FF755EB289C17E900BC0121 /* LaunchPageViewController.h */,
 				3FF755EC289C17E900BC0121 /* LaunchPageViewController.m */,
 				3F4617A928A3C6E400EFBE6D /* TKDynamicLaunchImage.h */,
 				3F4617AA28A3C6E400EFBE6D /* TKDynamicLaunchImage.m */,
-				3FC9BAB828A530A300C559EC /* LaunchTextView.h */,
-				3FC9BAB928A530A300C559EC /* LaunchTextView.m */,
+				3FFDB47928A67E49004AA481 /* TKDynamicLaunchImageHelper.h */,
+				3FFDB47828A67E49004AA481 /* TKDynamicLaunchImageHelper.m */,
+				3FFDB53928A6A3C5004AA481 /* AppIconManage.h */,
+				3FFDB53A28A6A3C5004AA481 /* AppIconManage.m */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		3FFDB52B28A6A033004AA481 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDB52E28A6A05A004AA481 /* icon3 */,
+				3FFDB52D28A6A054004AA481 /* icon2 */,
+				3FFDB52C28A6A04D004AA481 /* icon1 */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		3FFDB52C28A6A04D004AA481 /* icon1 */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDB52F28A6A095004AA481 /* Icon1@3x.png */,
+			);
+			path = icon1;
+			sourceTree = "<group>";
+		};
+		3FFDB52D28A6A054004AA481 /* icon2 */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDB53528A6A0F7004AA481 /* Icon2@3x.png */,
+			);
+			path = icon2;
+			sourceTree = "<group>";
+		};
+		3FFDB52E28A6A05A004AA481 /* icon3 */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDB53228A6A0C1004AA481 /* Icon3@3x.png */,
+			);
+			path = icon3;
 			sourceTree = "<group>";
 		};
 		7DC3FC07784A513FA6759B89 /* Pods */ = {
@@ -438,6 +494,7 @@
 				3F0A8F612894FFBE009C8BEE /* Frameworks */,
 				3F0A8F622894FFBE009C8BEE /* Resources */,
 				B34083B8E7DC7738C0B1E2AD /* [CP] Embed Pods Frameworks */,
+				A331E791FC0CB0F81CD8A6FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -484,10 +541,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFDB53028A6A095004AA481 /* Icon1@3x.png in Resources */,
 				3F0A8F772894FFC8009C8BEE /* LaunchScreen.storyboard in Resources */,
+				3FFDB53328A6A0C1004AA481 /* Icon3@3x.png in Resources */,
 				3F0A8F742894FFC8009C8BEE /* Assets.xcassets in Resources */,
 				3FF755F3289C324C00BC0121 /* LaunchImage2.png in Resources */,
 				3F4962B128952BB900F471F2 /* Aa可爱日系中文-AaKADRXZW.ttf in Resources */,
+				3FFDB53628A6A0F7004AA481 /* Icon2@3x.png in Resources */,
 				3FF755F4289C324C00BC0121 /* LaunchImage1.png in Resources */,
 				3FF755F2289C324C00BC0121 /* LaunchImage0.png in Resources */,
 				3F4962B228952BB900F471F2 /* dynamic-AaJianHaoTi.ttf in Resources */,
@@ -518,6 +578,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A331E791FC0CB0F81CD8A6FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B34083B8E7DC7738C0B1E2AD /* [CP] Embed Pods Frameworks */ = {
@@ -569,10 +646,13 @@
 				3F0A8F9E289500DF009C8BEE /* TabBarViewController.m in Sources */,
 				3F4617A328A3953600EFBE6D /* FlowViewController.m in Sources */,
 				3FEEE397289665C6002C74AE /* UITextField+Factory.m in Sources */,
+				3FFDB48028A69414004AA481 /* AppIconViewController.m in Sources */,
 				3F40480128951AF1004CBD35 /* OneTableViewController.m in Sources */,
 				3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */,
 				3FC8C67C28957C9C00B933A7 /* TKTextViewFactory.m in Sources */,
+				3FFDB47A28A67E49004AA481 /* TKDynamicLaunchImageHelper.m in Sources */,
 				3F4617A728A3BD7D00EFBE6D /* LaunchImageViewController.m in Sources */,
+				3FFDB53B28A6A3C5004AA481 /* AppIconManage.m in Sources */,
 				3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */,
 				3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */,
 				3F40480528951AFB004CBD35 /* TwoTableViewController.m in Sources */,
@@ -741,6 +821,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -765,6 +846,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;

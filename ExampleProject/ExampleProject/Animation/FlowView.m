@@ -118,7 +118,7 @@
         if (@available(iOS 10.0, *)) {
             _link.preferredFramesPerSecond = 60;
         }else{
-//            _link.frameInterval = 60/60;
+//            _link.frameInterval = 1;
         }
     }
     return _link;

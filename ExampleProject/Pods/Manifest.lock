@@ -1,16 +1,53 @@
 PODS:
+  - IQKeyboardManager (6.5.10)
   - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - TKBaseKit/TKSDKUniversal (2.2.0)
+  - TKPermissionKit/Camera (1.2.4):
+    - TKPermissionKit/Public
+  - TKPermissionKit/Photo (1.2.4):
+    - TKPermissionKit/Public
+  - TKPermissionKit/Public (1.2.4)
+  - TKUIKit (0.0.2):
+    - TKUIKit/Anim (= 0.0.2)
+    - TKUIKit/Core (= 0.0.2)
+    - TKUIKit/Tool (= 0.0.2)
+    - TKUIKit/View (= 0.0.2)
+  - TKUIKit/Anim (0.0.2):
+    - TKUIKit/Core
+  - TKUIKit/Core (0.0.2):
+    - MBProgressHUD
+    - TKBaseKit/TKSDKUniversal
+    - TKPermissionKit/Camera
+    - TKPermissionKit/Photo
+  - TKUIKit/Tool (0.0.2):
+    - TKUIKit/Core
+  - TKUIKit/View (0.0.2):
+    - TKUIKit/Anim
+    - TKUIKit/Core
 
 DEPENDENCIES:
+  - IQKeyboardManager
   - Masonry
+  - TKUIKit
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManager
     - Masonry
+    - MBProgressHUD
+    - TKBaseKit
+    - TKPermissionKit
+    - TKUIKit
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  TKBaseKit: fde529df83871099ebeb818077674940bccbfcf0
+  TKPermissionKit: 4226853b17bc39c40ddaf28771c81a0a33544e35
+  TKUIKit: eb9d79d38a07aad42329dcab602fdbadaeeafbb1
 
-PODFILE CHECKSUM: cc6c90666a3f1e3f0cdde801332adb358da4caa6
+PODFILE CHECKSUM: 743f5a819816b9ce09830fa1cce6eb01d68118e8
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

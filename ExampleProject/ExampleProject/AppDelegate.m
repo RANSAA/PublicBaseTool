@@ -19,14 +19,19 @@
     NSLog(@"home:%@",NSHomeDirectory());
 
     NSLog(@"AppDelegate keyWin:%@",[UIApplication.sharedApplication getKeyWindow]);
+    NSLog(@"first:%@",UIApplication.sharedApplication.windows.firstObject);
 
+
+
+
+    [NSThread sleepForTimeInterval:1.5];
 
     [self registerFont];
 
 
 
     if (@available(iOS 13.0, *)) {
-
+        NSLog(@"first 13.0+:%@",UIApplication.sharedApplication.connectedScenes.allObjects.firstObject);
     }else{
         [LaunchPageManage.shared userAgreementStatusDetectionCompletionHandler:^{
             TabBarViewController *tabVC = [[TabBarViewController alloc] init];
@@ -34,6 +39,7 @@
             [self.window makeKeyAndVisible];
         }];
     }
+
 
 
     return YES;

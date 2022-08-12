@@ -1,5 +1,5 @@
 //
-//  LaunchImageHelper.h
+//  TKDynamicLaunchImageHelper.h
 //  DynamicLaunchImage_Example
 //
 //  Created by seth on 2020/9/16.
@@ -12,10 +12,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- 截图与替换
+ Controller截图与启动图替换操作
  */
 
-@interface LaunchImageHelper : NSObject
+@interface TKDynamicLaunchImageHelper : NSObject
 
 + (UIImage *)snapshotViewController:(UIViewController *)controller isPortrait:(BOOL)isPortrait;
 

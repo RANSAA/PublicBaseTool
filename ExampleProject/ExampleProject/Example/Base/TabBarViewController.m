@@ -21,6 +21,7 @@
     // Do any additional setup after loading the view.
     NSLog(@"class name:%@",self.class);
     [self setupUI];
+    [self updateKeyWindows];
 }
 
 - (void)setupUI
@@ -64,6 +65,29 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
     NSLog(@"tabbar vc selected index:%ld",self.selectedIndex);
+}
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
+{
+    [super traitCollectionDidChange:previousTraitCollection];
+    if (@available(iOS 13.0, *)) {
+        if ([self.traitCollection hasDifferentColorAppearanceComparedToTraitCollection:previousTraitCollection]) {
+            [self updateKeyWindows];
+            NSLog(@"主题跟换。。。。");
+        }
+    } else {
+        // Fallback on earlier versions
+    }
+}
+
+/**
+ 更新keyWindow的背景颜色
+ */
+- (void)updateKeyWindows
+{
+    //解决系统导航条切换时，右上角显示问题
+    UIWindow *key = [UIApplication.sharedApplication getKeyWindow];
+    key.backgroundColor = TKColorManage.systemBackground;
 }
 
 /*
