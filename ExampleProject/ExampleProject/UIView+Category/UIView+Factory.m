@@ -6,13 +6,14 @@
 //
 
 #import "UIView+Factory.h"
+#import <objc/runtime.h>
 
 @implementation UIView (Factory)
 
 /**
  获取类型为className或其子类的第一个子控件
  */
-- (UIView *)subViewKindOfClassName:(NSString*)className
+- (nullable UIView *)subViewKindOfClassName:(NSString*)className
 {
     for (UIView *subView in self.subviews) {
         if ([subView isKindOfClass:NSClassFromString(className)]) {
@@ -29,7 +30,7 @@
 /**
  获取类型为className的第一个子控件
  */
-- (UIView*)subViewOfClassName:(NSString*)className
+- (nullable UIView*)subViewOfClassName:(NSString*)className
 {
     for (UIView *subView in self.subviews) {
         if ([NSStringFromClass(subView.class) isEqualToString:className]) {
@@ -80,4 +81,8 @@
     return ary;
 }
 
+
 @end
+
+
+

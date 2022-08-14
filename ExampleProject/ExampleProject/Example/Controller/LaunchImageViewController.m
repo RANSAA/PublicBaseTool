@@ -47,7 +47,8 @@
     [btn3 addTarget:self action:@selector(btnChangeAction:) forControlEvents:UIControlEventTouchUpInside];
     btn3.tag = 3;
     [self.view addSubview:btn3];
-    
+
+
 
     self.textView = TKTextViewFactory.defaultStyle;
     self.textView.frame = CGRectMake(20, 200, 300, 320);
@@ -74,15 +75,15 @@
 
 
 
-    NSLog(@"ns home:%@",NSHomeDirectory());
-    NSString *path0 = [NSHomeDirectory() stringByAppendingPathComponent:@"1.png"];
-    NSString *path1 = [NSHomeDirectory() stringByAppendingPathComponent:@"2.png"];
-
-    NSData *data0 = UIImagePNGRepresentation(image0);
-    NSData *data1 = UIImagePNGRepresentation(image1);
-
-    [data0 writeToFile:path0 options:NSDataWritingWithoutOverwriting error:nil];
-    [data1 writeToFile:path1 options:NSDataWritingWithoutOverwriting error:nil];
+//    NSLog(@"ns home:%@",NSHomeDirectory());
+//    NSString *path0 = [NSHomeDirectory() stringByAppendingPathComponent:@"1.png"];
+//    NSString *path1 = [NSHomeDirectory() stringByAppendingPathComponent:@"2.png"];
+//
+//    NSData *data0 = UIImagePNGRepresentation(image0);
+//    NSData *data1 = UIImagePNGRepresentation(image1);
+//
+//    [data0 writeToFile:path0 options:NSDataWritingWithoutOverwriting error:nil];
+//    [data1 writeToFile:path1 options:NSDataWritingWithoutOverwriting error:nil];
 
     [TKMBProgressHUD showText:@"启动图更新成功,程序退出中...." inView:self.view after:1.5];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{

@@ -23,7 +23,6 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     static id obj = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        obj = [[self.class alloc] init];
         obj = [super allocWithZone:NULL];
         [obj restoreFontManageConfig];
     });
@@ -50,22 +49,26 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
             NSLog(@"字体：%@ 已加载，不需要重复加载！",fontName);
             return;
         }
+
         CFErrorRef error;
         CGDataProviderRef providerRef = CGDataProviderCreateWithCFData((CFDataRef)fontData);
-        CGFontRef font = CGFontCreateWithDataProvider(providerRef);
-        if (!CTFontManagerRegisterGraphicsFont(font, &error))
-        {
-            //如果注册失败，则不使用
-            CFStringRef errorDescription = CFErrorCopyDescription(error);
-            NSLog(@"无法加载字体文件: %@", errorDescription);
-            CFRelease(errorDescription);
-        }else{
-            NSLog(@"动态字体文件加载成功!");
-            NSString *loadFontName = (__bridge NSString *)CGFontCopyFullName(font);
-            NSLog(@"动态字体文件的字体名：%@",loadFontName);
+        if (providerRef) {
+            CGFontRef font = CGFontCreateWithDataProvider(providerRef);
+            if (font) {
+                if (!CTFontManagerRegisterGraphicsFont(font, &error)){
+                    //如果注册失败，则不使用
+                    CFStringRef errorDescription = CFErrorCopyDescription(error);
+                    NSLog(@"无法加载字体文件: %@", errorDescription);
+                    CFRelease(errorDescription);
+                }else{
+                    NSString *loadFontName = (__bridge NSString *)CGFontCopyFullName(font);
+                    NSLog(@"动态字体文件加载成功!");
+                    NSLog(@"动态字体文件的字体名：%@",loadFontName);
+                }
+                CFRelease(font);
+            }
+            CFRelease(providerRef);
         }
-        CFRelease(font);
-        CFRelease(providerRef);
     }else{
         NSLog(@"字体文件不存在，fontData:%@",fontData);
     }
@@ -193,6 +196,16 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     }
 }
 
++ (NSString *)systemFontName
+{
+    static NSString *name = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        UIFont *font = [UIFont systemFontOfSize:12];
+        name = font.fontName;
+    });
+    return name;
+}
 
 /**
  当前使用的字体类型名称
@@ -203,12 +216,7 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     if (_isApply) {
         fontName = _customFontName;
     }else{
-        static NSString *systemFontName = nil;
-        if (systemFontName != nil) {
-            UIFont *font = [UIFont systemFontOfSize:12];
-            systemFontName = font.fontName;
-        }
-        fontName = systemFontName;
+        fontName = [TKFontManager systemFontName];
     }
     return  fontName;
 }

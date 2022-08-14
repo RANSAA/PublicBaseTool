@@ -25,12 +25,14 @@
     if (@available(iOS 11.0, *)) {
         [TKTextFieldFactory setSearchBarStyleWith:textfield];
         [TKTextFieldFactory setSearchBarStyleWith:textfield];
-        textfield.backgroundColor = TKColorManage.systemGray6;
+        textfield.backgroundColor = TKColorManage.colorTextFieldPlaceholder;
+//        textfield.backgroundColor = TKColorManage.systemGray6;
     }else{
         UIView* backgroundView = [self textFieldBackgroundViewWith:searchBar];
         backgroundView.layer.cornerRadius = 12.0f;
         backgroundView.clipsToBounds = YES;
-        textfield.backgroundColor = TKColorManage.systemGray6;
+        textfield.backgroundColor = TKColorManage.colorTextFieldPlaceholder;
+//        textfield.backgroundColor = TKColorManage.systemGray6;
     }
     searchBar.textField.font = kFont14;
     textfield.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索家居美图、商品、专贴和讨论帖" attributes:@{

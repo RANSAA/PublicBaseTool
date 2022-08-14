@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavBackStyle];
+//    [self setNavBackStyle];
     [self setupUI];
 }
 
@@ -45,7 +45,7 @@
     UITextField *textField = [TKTextFieldFactory defaultStyle];
     textField.frame = CGRectMake(24, 260, 280, 40);
     textField.text = @"UITextField字体效果";
-    NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"提示文字效果" attributes:@{NSForegroundColorAttributeName:kColorTextFieldPlaceholder,NSFontAttributeName:kFont15}];
+//    NSAttributedString *attr = [[NSAttributedString alloc] initWithString:@"提示文字效果" attributes:@{NSForegroundColorAttributeName:kColorTextFieldPlaceholder,NSFontAttributeName:kFont15}];
 //    textField.attributedPlaceholder = attr;
     textField.placeholder = @"搜索家居美图、商品、专贴和讨论帖";
     [self.view addSubview:textField];
@@ -117,7 +117,7 @@
     //然后通过系统给的自定义BarButtonItem的方法创建BarButtonItem
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
     //覆盖返回按键
-//    self.navigationItem.leftBarButtonItem = backItem;
+    self.navigationItem.leftBarButtonItem = backItem;
 }
 
 

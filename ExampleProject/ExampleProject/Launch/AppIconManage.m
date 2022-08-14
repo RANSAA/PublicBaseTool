@@ -15,10 +15,11 @@
 
 + (instancetype)shared
 {
-    static id obj = nil;
+    static AppIconManage* obj = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         obj = [super allocWithZone:NULL];
+        obj.showAlert = YES;
     });
     return obj;
 }
@@ -28,14 +29,14 @@
     return self.shared;
 }
 
-
-- (void)setShowAlert:(BOOL)showAlert
-{
-    _showAlert = showAlert;
-    if (!showAlert) {
-        [UIViewController appIconDynamicSwap];
-    }
-}
+//
+//- (void)setShowAlert:(BOOL)showAlert
+//{
+//    _showAlert = showAlert;
+//    if (!showAlert) {
+//        [UIViewController appIconDynamicSwap];
+//    }
+//}
 
 // MARK: - APP图标替换
 
@@ -43,28 +44,79 @@
  APP图标替换
  iconName: Icon files (iOS 5) -> CFBundleAlternateIcons -> iconName ; 如果为nil则使用默认icon
  */
-- (void)changeAppIconWithName:(NSString *)iconName
+- (void)changeAppIconWithName:(nullable NSString *)iconName
 {
 
     if (@available(iOS 10.3, *)) {
         if (![[UIApplication sharedApplication] supportsAlternateIcons]) {
             return;
         }
-
         if ([iconName isEqualToString:@""]) {
             iconName = nil;
         }
+
+        if (self.showAlert) {
+            [self requestAlertAppIconWithName:iconName];
+        }else{
+            [self requestAppIconWithName:iconName];
+        }
+    } else {
+        NSLog(@"iOS版本小于10.3不支持动态更换APP图标。");
+    }
+}
+
+- (void)requestAlertAppIconWithName:(NSString *)iconName
+{
+    if (@available(iOS 10.3, *)) {
+        __weak typeof(self)weakSelf = self;
         [[UIApplication sharedApplication] setAlternateIconName:iconName completionHandler:^(NSError * _Nullable error) {
             if (error) {
                 NSLog(@"更换app图标发生错误了 ： %@",error);
             }else{
                 NSLog(@"更换成功");
             }
+            if (weakSelf.completionHandler) {
+                weakSelf.completionHandler(error);
+            }
         }];
     } else {
-        NSLog(@"iOS版本小于10.3不支持动态更换APP图标。");
+        // Fallback on earlier versions
     }
 }
+
+
+/**
+ 使用IMP发送消息修改icon方式不会显示弹窗信息
+ PS: 还可以使用[UIViewController appIconDynamicSwap]交换函数来实现不显示弹窗信息
+ */
+- (void)requestAppIconWithName:(NSString *)iconName
+{
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(supportsAlternateIcons)] ){
+         NSMutableString *selectorString = [[NSMutableString alloc] initWithCapacity:40];
+         [selectorString appendString:@"_setAlternate"];
+         [selectorString appendString:@"IconName:"];
+         [selectorString appendString:@"completionHandler:"];
+
+         SEL selector = NSSelectorFromString(selectorString);
+         IMP imp = [[UIApplication sharedApplication] methodForSelector:selector];
+         void (*func)(id, SEL, id, id) = (void *)imp;
+         if (func){
+             __weak typeof(self)weakSelf = self;
+             func([UIApplication sharedApplication], selector, iconName, ^(NSError * _Nullable error) {
+                 if (error) {
+                     NSLog(@"更换app图标发生错误了 ： %@",error);
+                 }else{
+                     NSLog(@"更换成功");
+                 }
+                 if (weakSelf.completionHandler) {
+                     weakSelf.completionHandler(error);
+                 }
+             });
+         }
+     }
+}
+
+
 
 @end
 
@@ -72,7 +124,15 @@
 
 
 
+
 // MARK: - 为UIViewController添加扩展，实现去掉更换icon时的弹框
+@interface UIViewController (AppIconDynamic)
+/**
+ 开启函数交换实现更换icon时去掉弹出
+ */
++ (void)appIconDynamicSwap;
+@end
+
 
 @implementation UIViewController (AppIconDynamic)
 
@@ -98,5 +158,7 @@
     }
     [self AppIconDynamic_presentViewController:viewControllerToPresent animated:flag completion:completion];
 }
+
+
 
 @end

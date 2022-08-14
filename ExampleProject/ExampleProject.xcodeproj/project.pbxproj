@@ -40,6 +40,8 @@
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
 		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
+		3F86C88C28A87AF9006AC931 /* TestImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F86C88B28A87AF9006AC931 /* TestImageView.m */; };
+		3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */; };
 		3FA4C63D289E89800068544D /* DotIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C63C289E89800068544D /* DotIndicator.m */; };
 		3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C640289EBAFF0068544D /* TestAniView.m */; };
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
@@ -48,6 +50,9 @@
 		3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE392289661D8002C74AE /* UIView+Factory.m */; };
 		3FEEE397289665C6002C74AE /* UITextField+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE396289665C6002C74AE /* UITextField+Factory.m */; };
 		3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE39C28966996002C74AE /* TKMethodSwap.m */; };
+		3FF5F30128A78664002C475F /* Icon3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF5F30028A78664002C475F /* Icon3@2x.png */; };
+		3FF5F30428A7868B002C475F /* Icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF5F30328A7868B002C475F /* Icon1@2x.png */; };
+		3FF5F30728A786A9002C475F /* Icon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF5F30628A786A9002C475F /* Icon2@2x.png */; };
 		3FF755C5289BA9DA00BC0121 /* TraitCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755C4289BA9DA00BC0121 /* TraitCollectionViewController.m */; };
 		3FF755CD289BAD7300BC0121 /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755CC289BAD7300BC0121 /* KVOViewController.m */; };
 		3FF755D2289BB32100BC0121 /* TransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF755D1289BB32100BC0121 /* TransformViewController.m */; };
@@ -134,6 +139,10 @@
 		3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldCustom.m; sourceTree = "<group>"; };
 		3F7E1051289F8E110053408B /* NYWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYWaterWaveView.m; sourceTree = "<group>"; };
 		3F7E1052289F8E110053408B /* NYWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYWaterWaveView.h; sourceTree = "<group>"; };
+		3F86C88A28A87AF9006AC931 /* TestImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestImageView.h; sourceTree = "<group>"; };
+		3F86C88B28A87AF9006AC931 /* TestImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestImageView.m; sourceTree = "<group>"; };
+		3F86C89328A883E2006AC931 /* UIView+ThemeEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ThemeEnvironment.h"; sourceTree = "<group>"; };
+		3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ThemeEnvironment.m"; sourceTree = "<group>"; };
 		3FA4C63B289E897F0068544D /* DotIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotIndicator.h; sourceTree = "<group>"; };
 		3FA4C63C289E89800068544D /* DotIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotIndicator.m; sourceTree = "<group>"; };
 		3FA4C63F289EBAFF0068544D /* TestAniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAniView.h; sourceTree = "<group>"; };
@@ -150,6 +159,9 @@
 		3FEEE396289665C6002C74AE /* UITextField+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Factory.m"; sourceTree = "<group>"; };
 		3FEEE39B28966996002C74AE /* TKMethodSwap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMethodSwap.h; sourceTree = "<group>"; };
 		3FEEE39C28966996002C74AE /* TKMethodSwap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMethodSwap.m; sourceTree = "<group>"; };
+		3FF5F30028A78664002C475F /* Icon3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3@2x.png"; sourceTree = "<group>"; };
+		3FF5F30328A7868B002C475F /* Icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon1@2x.png"; sourceTree = "<group>"; };
+		3FF5F30628A786A9002C475F /* Icon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon2@2x.png"; sourceTree = "<group>"; };
 		3FF755C3289BA9DA00BC0121 /* TraitCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TraitCollectionViewController.h; sourceTree = "<group>"; };
 		3FF755C4289BA9DA00BC0121 /* TraitCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraitCollectionViewController.m; sourceTree = "<group>"; };
 		3FF755CB289BAD7300BC0121 /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
@@ -229,6 +241,7 @@
 				3FF755E3289C0DAF00BC0121 /* UIApplication+Window.m */,
 				3F0A8F6D2894FFBE009C8BEE /* ViewController.h */,
 				3F0A8F6E2894FFBE009C8BEE /* ViewController.m */,
+				3F86C88928A87AE3006AC931 /* TestView */,
 				3FA4C63A289E895E0068544D /* Animation */,
 				3FF755D9289C09C600BC0121 /* Launch */,
 				3FF755D4289BF80400BC0121 /* Push */,
@@ -369,6 +382,15 @@
 			path = "UIView+Custom";
 			sourceTree = "<group>";
 		};
+		3F86C88928A87AE3006AC931 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				3F86C88A28A87AF9006AC931 /* TestImageView.h */,
+				3F86C88B28A87AF9006AC931 /* TestImageView.m */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
 		3FA4C63A289E895E0068544D /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +418,8 @@
 		3FEEE39F28967894002C74AE /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
+				3F86C89328A883E2006AC931 /* UIView+ThemeEnvironment.h */,
+				3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */,
 				3FEEE391289661D8002C74AE /* UIView+Factory.h */,
 				3FEEE392289661D8002C74AE /* UIView+Factory.m */,
 				3FEEE395289665C6002C74AE /* UITextField+Factory.h */,
@@ -452,6 +476,7 @@
 		3FFDB52C28A6A04D004AA481 /* icon1 */ = {
 			isa = PBXGroup;
 			children = (
+				3FF5F30328A7868B002C475F /* Icon1@2x.png */,
 				3FFDB52F28A6A095004AA481 /* Icon1@3x.png */,
 			);
 			path = icon1;
@@ -460,6 +485,7 @@
 		3FFDB52D28A6A054004AA481 /* icon2 */ = {
 			isa = PBXGroup;
 			children = (
+				3FF5F30628A786A9002C475F /* Icon2@2x.png */,
 				3FFDB53528A6A0F7004AA481 /* Icon2@3x.png */,
 			);
 			path = icon2;
@@ -468,6 +494,7 @@
 		3FFDB52E28A6A05A004AA481 /* icon3 */ = {
 			isa = PBXGroup;
 			children = (
+				3FF5F30028A78664002C475F /* Icon3@2x.png */,
 				3FFDB53228A6A0C1004AA481 /* Icon3@3x.png */,
 			);
 			path = icon3;
@@ -493,8 +520,8 @@
 				3F0A8F602894FFBE009C8BEE /* Sources */,
 				3F0A8F612894FFBE009C8BEE /* Frameworks */,
 				3F0A8F622894FFBE009C8BEE /* Resources */,
-				B34083B8E7DC7738C0B1E2AD /* [CP] Embed Pods Frameworks */,
-				A331E791FC0CB0F81CD8A6FD /* [CP] Copy Pods Resources */,
+				90DC222F32D9F65BFEE9C8BD /* [CP] Embed Pods Frameworks */,
+				33A50915EC74E4F674286DF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -541,6 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF5F30428A7868B002C475F /* Icon1@2x.png in Resources */,
 				3FFDB53028A6A095004AA481 /* Icon1@3x.png in Resources */,
 				3F0A8F772894FFC8009C8BEE /* LaunchScreen.storyboard in Resources */,
 				3FFDB53328A6A0C1004AA481 /* Icon3@3x.png in Resources */,
@@ -548,8 +576,10 @@
 				3FF755F3289C324C00BC0121 /* LaunchImage2.png in Resources */,
 				3F4962B128952BB900F471F2 /* Aa可爱日系中文-AaKADRXZW.ttf in Resources */,
 				3FFDB53628A6A0F7004AA481 /* Icon2@3x.png in Resources */,
+				3FF5F30728A786A9002C475F /* Icon2@2x.png in Resources */,
 				3FF755F4289C324C00BC0121 /* LaunchImage1.png in Resources */,
 				3FF755F2289C324C00BC0121 /* LaunchImage0.png in Resources */,
+				3FF5F30128A78664002C475F /* Icon3@2x.png in Resources */,
 				3F4962B228952BB900F471F2 /* dynamic-AaJianHaoTi.ttf in Resources */,
 				3F0A8F722894FFBE009C8BEE /* Main.storyboard in Resources */,
 			);
@@ -580,7 +610,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A331E791FC0CB0F81CD8A6FD /* [CP] Copy Pods Resources */ = {
+		33A50915EC74E4F674286DF7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -597,7 +627,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B34083B8E7DC7738C0B1E2AD /* [CP] Embed Pods Frameworks */ = {
+		90DC222F32D9F65BFEE9C8BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -655,7 +685,9 @@
 				3FFDB53B28A6A3C5004AA481 /* AppIconManage.m in Sources */,
 				3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */,
 				3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */,
+				3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */,
 				3F40480528951AFB004CBD35 /* TwoTableViewController.m in Sources */,
+				3F86C88C28A87AF9006AC931 /* TestImageView.m in Sources */,
 				3FF755E8289C0E7900BC0121 /* LaunchPageManage.m in Sources */,
 				3FF755D7289BF82700BC0121 /* DeviceToken.m in Sources */,
 				3FA4C63D289E89800068544D /* DotIndicator.m in Sources */,
@@ -813,6 +845,7 @@
 				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ExampleProject/Info.plist;
@@ -838,6 +871,7 @@
 				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ExampleProject/Info.plist;

@@ -119,6 +119,9 @@
 
     // 还原系统缓存目录
     moveResult = [fm moveItemAtPath:tmpDir toPath:cacheDir error:nil];
+    if (!moveResult) {
+        TKLog(@"还原系统缓存目录 失败");
+    }
 
     // 清理工作目录
     if ([fm fileExistsAtPath:tmpDir]) {
@@ -129,7 +132,7 @@
 }
 
 /// 获取image对象
-+ (UIImage *)imageFromData:(NSData *)data {
++ (nullable UIImage *)imageFromData:(NSData *)data {
     CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data, NULL);
     if (source) {
         CGImageRef imageRef = CGImageSourceCreateImageAtIndex(source, 0, NULL);
@@ -138,6 +141,8 @@
             CFRelease(imageRef);
             CFRelease(source);
             return originImage;
+        }else{
+            CFRelease(source);
         }
     }
     return nil;
@@ -146,13 +151,17 @@
 /// 获取图片大小
 + (CGSize)getImageSize:(NSData *)imageData {
     CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)imageData, NULL);
-    CGImageRef imageRef = CGImageSourceCreateImageAtIndex(source, 0, NULL);
-    if (imageRef) {
-        CGFloat width = CGImageGetWidth(imageRef);
-        CGFloat height = CGImageGetHeight(imageRef);
-        CFRelease(imageRef);
-        CFRelease(source);
-        return CGSizeMake(width, height);
+    if (source) {
+        CGImageRef imageRef = CGImageSourceCreateImageAtIndex(source, 0, NULL);
+        if (imageRef) {
+            CGFloat width = CGImageGetWidth(imageRef);
+            CGFloat height = CGImageGetHeight(imageRef);
+            CFRelease(imageRef);
+            CFRelease(source);
+            return CGSizeMake(width, height);
+        }else{
+            CFRelease(source);
+        }
     }
     return CGSizeZero;
 }

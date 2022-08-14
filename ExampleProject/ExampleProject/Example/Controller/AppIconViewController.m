@@ -75,6 +75,9 @@
 
     AppIconManage.shared.showAlert = NO;
     [AppIconManage.shared changeAppIconWithName:iconName];
+    AppIconManage.shared.completionHandler = ^(NSError * _Nullable error) {
+        NSLog(@"App Icon 更新回调");
+    };
 
 
 }

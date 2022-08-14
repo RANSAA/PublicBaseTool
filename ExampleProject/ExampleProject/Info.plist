@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string></string>
-	</array>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
@@ -15,6 +11,7 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>Icon1@3x</string>
+					<string>Icon1@2x</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -24,6 +21,7 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>Icon2@3x</string>
+					<string>Icon2@2x</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -33,6 +31,7 @@
 				<key>CFBundleIconFiles</key>
 				<array>
 					<string>Icon3@3x</string>
+					<string>Icon3@2x</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
 				<false/>
@@ -61,6 +60,8 @@
 			<string>UINewsstandBindingEdgeLeft</string>
 		</dict>
 	</dict>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Aa可爱日系中文-AaKADRXZW.ttf</string>

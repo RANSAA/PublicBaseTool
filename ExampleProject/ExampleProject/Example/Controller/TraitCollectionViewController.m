@@ -6,9 +6,13 @@
 //
 
 #import "TraitCollectionViewController.h"
+#import "TestImageView.h"
+
+
 
 @interface TraitCollectionViewController ()
 @property(nonatomic, strong) NSString *kvoUs;
+@property(nonatomic, strong) UIImageView *blockImgView;
 @end
 
 @implementation TraitCollectionViewController
@@ -16,7 +20,113 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupUI];
 }
+
+- (void)setupUI
+{
+    TestImageView *imgView = [[TestImageView alloc] initWithFrame:CGRectMake(10, 80, 150, 320)];
+    imgView.clipsToBounds = YES;
+    imgView.contentMode = UIViewContentModeScaleAspectFill;
+    imgView.image = [UIImage imageNamed:@"LaunchImage0"];
+    imgView.tag = 9527;
+    [self.view addSubview:imgView];
+
+    CGRect frame = CGRectMake(170, 80, 140, 44);
+    UIButton *btn1 = TKButtonFactory.btnOrangeCorner;
+    btn1.frame = frame;
+    [btn1 setTitle:@"button" forState:UIControlStateNormal];
+    [self.view addSubview:btn1];
+
+    UILabel *lab = TKLableFactory.labOrangeTextWhite;
+    frame.origin.y += 50;
+    lab.frame = frame;
+    lab.text = @"lable";
+    [self.view addSubview:lab];
+
+    UITextField *textField = TKTextFieldFactory.defaultStyle;
+    frame.origin.y += 50;
+    textField.frame = frame;
+    textField.text = @"textField";
+    [self.view addSubview:textField];
+
+    UITextView *textView = TKTextViewFactory.defaultStyle;
+    frame.origin.y += 50;
+    textView.frame = frame;
+    textView.text =@"textview";
+    [self.view addSubview:textView];
+
+
+    UISearchBar *searchBar = TKSearchBarFactory.defaultStyle;
+    frame.origin.y += 50;
+    searchBar.frame = frame;
+    searchBar.text = @"searchbar";
+    [self.view addSubview:searchBar];
+
+
+    if (@available(iOS 12.0, *)) {
+        [imgView bingMonitorTheme:^(UIUserInterfaceStyle theme, UIView * _Nonnull view) {
+            UIImageView *img = (UIImageView *)view;
+            if (theme == UIUserInterfaceStyleDark) {
+                img.image = [UIImage imageNamed:@"LaunchImage1"];
+            }else{
+                img.image = [UIImage imageNamed:@"LaunchImage2"];
+            }
+        }];
+
+        [btn1 bingMonitorTheme:^(UIUserInterfaceStyle theme, UIView * _Nonnull view) {
+            if (theme == UIUserInterfaceStyleDark) {
+                view.backgroundColor = UIColor.redColor;
+            }else{
+                view.backgroundColor = UIColor.orangeColor;
+            }
+        }];
+
+        [lab bingMonitorTheme:^(UIUserInterfaceStyle theme, UIView * _Nonnull view) {
+            if (theme == UIUserInterfaceStyleDark) {
+                view.backgroundColor = UIColor.redColor;
+            }else{
+                view.backgroundColor = UIColor.orangeColor;
+            }
+        }];
+
+        [textField bingMonitorTheme:^(UIUserInterfaceStyle theme, UIView * _Nonnull view) {
+            if (theme == UIUserInterfaceStyleDark) {
+                view.backgroundColor = UIColor.redColor;
+            }else{
+                view.backgroundColor = UIColor.orangeColor;
+            }
+        }];
+
+        [textView bingMonitorTheme:^(UIUserInterfaceStyle theme, UIView * _Nonnull view) {
+            if (theme == UIUserInterfaceStyleDark) {
+                view.backgroundColor = UIColor.redColor;
+            }else{
+                view.backgroundColor = UIColor.orangeColor;
+            }
+        }];
+
+        [searchBar bingMonitorTheme:^(UIUserInterfaceStyle theme, UIView * _Nonnull view) {
+            if (theme == UIUserInterfaceStyleDark) {
+                view.backgroundColor = UIColor.redColor;
+            }else{
+                view.backgroundColor = UIColor.orangeColor;
+            }
+
+            UISearchBar *bar = (UISearchBar *)view;
+            if (theme == UIUserInterfaceStyleDark) {
+                bar.barTintColor = UIColor.redColor;
+            }else{
+                bar.barTintColor = UIColor.orangeColor;
+            }
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
+
+
+}
+
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
@@ -31,11 +141,11 @@
     }
 
 }
-
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
-{
-    NSLog(@"viewWillTransitionToSize:%@     coordinator:%@",NSStringFromCGSize(size),coordinator);
-}
+//
+//- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+//{
+//    NSLog(@"viewWillTransitionToSize:%@     coordinator:%@",NSStringFromCGSize(size),coordinator);
+//}
 
 
 

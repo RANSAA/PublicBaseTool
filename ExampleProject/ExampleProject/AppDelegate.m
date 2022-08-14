@@ -24,9 +24,11 @@
 
 
 
-    [NSThread sleepForTimeInterval:1.5];
+
 
     [self registerFont];
+
+//    [NSThread sleepForTimeInterval:1.5];
 
 
 
@@ -49,7 +51,7 @@
 {
 //    [TKFontManager.shared turnOnAutoRefreshFonts];
     NSString *path = [NSBundle.mainBundle pathForResource:@"dynamic-AaJianHaoTi" ofType:@"ttf"];
-    NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+//    NSData *data = [[NSData alloc] initWithContentsOfFile:path];
     [TKFontManager.shared dynamicLoadFontPath:path checkFontName:@"AaJianHaoTi"];
     [TKFontManager.shared dynamicLoadFontPath:path checkFontName:@"AaJianHaoTi"];
     [TKFontManager.shared turnOnAutoRefreshFonts];

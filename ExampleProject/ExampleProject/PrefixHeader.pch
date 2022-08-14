@@ -10,6 +10,7 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
 #import <Masonry.h>
 #import <TKUIKit/TKUIKit.h>
 
@@ -30,6 +31,7 @@
 #import "TKTextFieldFactory.h"
 #import "TKTextViewFactory.h"
 #import "UIView+Factory.h"
+#import "UIView+ThemeEnvironment.h"
 #import "UITextField+Factory.h"
 #import "UITextFieldCustom.h"
 #import "UIControl+Factory.h"
