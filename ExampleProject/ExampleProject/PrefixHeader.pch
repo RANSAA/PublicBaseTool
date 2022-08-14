@@ -31,7 +31,6 @@
 #import "TKTextFieldFactory.h"
 #import "TKTextViewFactory.h"
 #import "UIView+Factory.h"
-#import "UIView+ThemeEnvironment.h"
 #import "UITextField+Factory.h"
 #import "UITextFieldCustom.h"
 #import "UIControl+Factory.h"
@@ -39,5 +38,7 @@
 #import "TKSearchBarFactory.h"
 #import "UISearchBar+Factory.h"
 #import "LaunchPageManage.h"
+#import "UIView+ThemeEnvironment.h"
+#import "UIViewController+ThemeEnvironment.h"
 
 #endif /* PrefixHeader_pch */

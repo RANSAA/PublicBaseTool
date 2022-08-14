@@ -9,46 +9,74 @@
 #import "TKMethodSwap.h"
 #import <objc/runtime.h>
 
-API_AVAILABLE(ios(12.0)) typedef void(^TKMonitorThemeBlock)(UIUserInterfaceStyle theme, UIView* view);
+API_AVAILABLE(ios(12.0)) typedef void(^TKMonitorThemeViewBlock)(UIUserInterfaceStyle theme, UIView* view);
+API_AVAILABLE(ios(8.0)) typedef void(^TKMonitorTraitCollectionViewBlock)(UITraitCollection *traitCollection, UIView* view);
 API_AVAILABLE(ios(12.0)) @interface UIView ()
-@property(nonatomic, copy) TKMonitorThemeBlock monitorThemeCompletionHandlerCache;
+@property(nonatomic, copy) TKMonitorThemeViewBlock monitorThemeCompletionHandlerUseUserTK;
+@property(nonatomic, copy) TKMonitorTraitCollectionViewBlock monitorTraitCollectionCompletionHandlerUseUserTK;
 @end
 
 API_AVAILABLE(ios(12.0)) @implementation UIView (ThemeEnvironment)
 
 // MARK: - add property
-- (void)setMonitorThemeCompletionHandlerCache:(TKMonitorThemeBlock)completionHandler
+
+- (void)setMonitorThemeCompletionHandlerUseUserTK:(TKMonitorThemeViewBlock)completionHandler
 {
-    objc_setAssociatedObject(self, @selector(monitorThemeCompletionHandlerCache), completionHandler, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(monitorThemeCompletionHandlerUseUserTK), completionHandler, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (TKMonitorThemeBlock)monitorThemeCompletionHandlerCache
+- (TKMonitorThemeViewBlock)monitorThemeCompletionHandlerUseUserTK
 {
-    return objc_getAssociatedObject(self, @selector(monitorThemeCompletionHandlerCache));
+    return objc_getAssociatedObject(self, @selector(monitorThemeCompletionHandlerUseUserTK));
 }
 
-// MARK: 请求监听绑定
-- (void)ThemeEnvironment_requestMonitorThemeHandlerWith:(UITraitCollection *)previousTraitCollection
+- (void)setMonitorTraitCollectionCompletionHandlerUseUserTK:(TKMonitorTraitCollectionViewBlock)completionHandler
+{
+    objc_setAssociatedObject(self, @selector(monitorTraitCollectionCompletionHandlerUseUserTK), completionHandler, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (TKMonitorTraitCollectionViewBlock)monitorTraitCollectionCompletionHandlerUseUserTK
+{
+    return objc_getAssociatedObject(self, @selector(monitorTraitCollectionCompletionHandlerUseUserTK));
+}
+
+
+// MARK: - 绑定监听变化
+/**
+ 绑定监听显示主题切换
+ */
+- (void)bingMonitorTheme:(void(^)(UIUserInterfaceStyle style, UIView* view))completionHandler
+{
+    self.monitorThemeCompletionHandlerUseUserTK = completionHandler;
+}
+
+/**
+ 绑定监听TraitCollectionDidChange:
+ */
+- (void)bingMonitorTraitCollection:(void(^)(UITraitCollection *previousTraitCollection, UIView* view))completionHandler
+{
+    self.monitorTraitCollectionCompletionHandlerUseUserTK = completionHandler;
+}
+
+// MARK: - 请求处理监听绑定回调事件集
+- (void)TKThemeEnvironment_requestMonitorThemeHandlerWith:(UITraitCollection *)previousTraitCollection
 {
     if (@available(iOS 13.0, *)) {
         //主题切换才会调用
-        if (self.monitorThemeCompletionHandlerCache) {
+        if (self.monitorThemeCompletionHandlerUseUserTK) {
             //判断当前模式是否发生变化，因为屏幕旋转也会触发该方法。
             if ([self.traitCollection hasDifferentColorAppearanceComparedToTraitCollection:previousTraitCollection]) {
-                __weak typeof(self)weakSelf = self;
-                self.monitorThemeCompletionHandlerCache(self.traitCollection.userInterfaceStyle, weakSelf);
+                self.monitorThemeCompletionHandlerUseUserTK(self.traitCollection.userInterfaceStyle, self);
             }
-//            NSLog(@"self.monitorThemeCompletionHandlerCache:%@      class:%@",self.monitorThemeCompletionHandlerCache,self.class);
         }
-        //other
+    }
+
+    if (self.monitorTraitCollectionCompletionHandlerUseUserTK) {
+        self.monitorTraitCollectionCompletionHandlerUseUserTK(previousTraitCollection, self);
     }
 }
 
-// MARK: - 绑定监听显示主题切换
-- (void)bingMonitorTheme:(void(^)(UIUserInterfaceStyle theme, UIView* view))completionHandler;
-{
-    self.monitorThemeCompletionHandlerCache = completionHandler;
-}
+
 
 // MARK: - 交换实现主题切换监听绑定
 + (void)load
@@ -56,15 +84,19 @@ API_AVAILABLE(ios(12.0)) @implementation UIView (ThemeEnvironment)
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cls = self.class;
-        SEL selector = NSSelectorFromString(@"ThemeEnvironment_traitCollectionDidChange:");
+        SEL selector = NSSelectorFromString(@"TKThemeEnvironment_traitCollectionDidChange:");
         [TKMethodSwap swizzleMethod:cls originSel:@selector(traitCollectionDidChange:) swizzSel:selector];
     });
 }
 
-- (void)ThemeEnvironment_traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
+- (void)TKThemeEnvironment_traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
-    [self ThemeEnvironment_traitCollectionDidChange:previousTraitCollection];
-    SEL selector = NSSelectorFromString(@"ThemeEnvironment_requestMonitorThemeHandlerWith:");
+    [self TKThemeEnvironment_traitCollectionDidChange:previousTraitCollection];
+
+    /**
+     performSelector:方法调用通过String创建的selector会出现内存可能会泄露警告，解决方法可直接通过函数指针方式调用，如下：
+     */
+    SEL selector = NSSelectorFromString(@"TKThemeEnvironment_requestMonitorThemeHandlerWith:");
     if ([self respondsToSelector:selector]) {
         IMP imp = [self methodForSelector:selector];
         void (*func)(id, SEL,id) = (void *)imp;
@@ -86,15 +118,15 @@ API_AVAILABLE(ios(12.0)) @implementation UIView (ThemeEnvironment)
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cls = self.class;
-        SEL selector = NSSelectorFromString(@"ThemeEnvironment_traitCollectionDidChange:");
+        SEL selector = NSSelectorFromString(@"TKThemeEnvironment_traitCollectionDidChange:");
         [TKMethodSwap swizzleMethod:cls originSel:@selector(traitCollectionDidChange:) swizzSel:selector];
     });
 }
 
-- (void)ThemeEnvironment_traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
+- (void)TKThemeEnvironment_traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
-    [self ThemeEnvironment_traitCollectionDidChange:previousTraitCollection];
-    SEL selector = NSSelectorFromString(@"ThemeEnvironment_requestMonitorThemeHandlerWith:");
+    [self TKThemeEnvironment_traitCollectionDidChange:previousTraitCollection];
+    SEL selector = NSSelectorFromString(@"TKThemeEnvironment_requestMonitorThemeHandlerWith:");
     if ([self respondsToSelector:selector]) {
         IMP imp = [self methodForSelector:selector];
         void (*func)(id, SEL,id) = (void *)imp;
@@ -117,15 +149,15 @@ API_AVAILABLE(ios(12.0)) @implementation UIView (ThemeEnvironment)
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cls = self.class;
-        SEL selector = NSSelectorFromString(@"ThemeEnvironment_traitCollectionDidChange:");
+        SEL selector = NSSelectorFromString(@"TKThemeEnvironment_traitCollectionDidChange:");
         [TKMethodSwap swizzleMethod:cls originSel:@selector(traitCollectionDidChange:) swizzSel:selector];
     });
 }
 
-- (void)ThemeEnvironment_traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
+- (void)TKThemeEnvironment_traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
-    [self ThemeEnvironment_traitCollectionDidChange:previousTraitCollection];
-    SEL selector = NSSelectorFromString(@"ThemeEnvironment_requestMonitorThemeHandlerWith:");
+    [self TKThemeEnvironment_traitCollectionDidChange:previousTraitCollection];
+    SEL selector = NSSelectorFromString(@"TKThemeEnvironment_requestMonitorThemeHandlerWith:");
     if ([self respondsToSelector:selector]) {
         IMP imp = [self methodForSelector:selector];
         void (*func)(id, SEL,id) = (void *)imp;

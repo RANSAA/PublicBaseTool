@@ -64,7 +64,7 @@
     [self.view addSubview:searchBar];
 
 
-    if (@available(iOS 12.0, *)) {
+    if (@available(iOS 13.0, *)) {
         [imgView bingMonitorTheme:^(UIUserInterfaceStyle theme, UIView * _Nonnull view) {
             UIImageView *img = (UIImageView *)view;
             if (theme == UIUserInterfaceStyleDark) {
@@ -120,6 +120,20 @@
                 bar.barTintColor = UIColor.orangeColor;
             }
         }];
+
+
+        //controller
+        [self bingMonitorTheme:^(UIUserInterfaceStyle theme, UIViewController * _Nonnull controller) {
+            if (theme == UIUserInterfaceStyleDark) {
+                controller.view.backgroundColor = UIColor.cyanColor;
+            }else{
+                controller.view.backgroundColor = UIColor.whiteColor;
+            }
+        }];
+
+        [self bingMonitorTraitCollection:^(UITraitCollection * _Nonnull previousTraitCollection, UIViewController * _Nonnull controller) {
+            NSLog(@"previousTraitCollection...");
+        }];
     } else {
         // Fallback on earlier versions
     }
@@ -131,12 +145,12 @@
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
 {
     [super traitCollectionDidChange:previousTraitCollection];
-    NSLog(@"TraitCollection状态改变。。");
+    NSLog(@"ViewController TraitCollection状态改变。。");
 
     if (@available(iOS 13.0,*)) {
         //判断当前模式是否发生变化，因为屏幕旋转也会触发该方法。
         if ([self.traitCollection hasDifferentColorAppearanceComparedToTraitCollection:previousTraitCollection]) {
-            NSLog(@"TraitCollection主题模式发生变化，可以在这儿做修改");
+            NSLog(@"ViewController TraitCollection主题模式发生变化，可以在这儿做修改");
         }
     }
 

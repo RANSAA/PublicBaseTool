@@ -37,6 +37,7 @@
 		3F4962B228952BB900F471F2 /* dynamic-AaJianHaoTi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F4962AF28952BB900F471F2 /* dynamic-AaJianHaoTi.ttf */; };
 		3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4962B52895320D00F471F2 /* TKLableFactory.m */; };
 		3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4962B92895323800F471F2 /* TKButtonFactory.m */; };
+		3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */; };
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
 		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
@@ -133,6 +134,8 @@
 		3F4962B52895320D00F471F2 /* TKLableFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKLableFactory.m; sourceTree = "<group>"; };
 		3F4962B82895323800F471F2 /* TKButtonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKButtonFactory.h; sourceTree = "<group>"; };
 		3F4962B92895323800F471F2 /* TKButtonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKButtonFactory.m; sourceTree = "<group>"; };
+		3F61A5C828A909E300880DCC /* UIViewController+ThemeEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ThemeEnvironment.h"; sourceTree = "<group>"; };
+		3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ThemeEnvironment.m"; sourceTree = "<group>"; };
 		3F7BABF22897BA3200C972C5 /* UISearchBar+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Factory.h"; sourceTree = "<group>"; };
 		3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Factory.m"; sourceTree = "<group>"; };
 		3F7BABFF2897CD0400C972C5 /* UITextFieldCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldCustom.h; sourceTree = "<group>"; };
@@ -418,8 +421,6 @@
 		3FEEE39F28967894002C74AE /* UIView+Category */ = {
 			isa = PBXGroup;
 			children = (
-				3F86C89328A883E2006AC931 /* UIView+ThemeEnvironment.h */,
-				3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */,
 				3FEEE391289661D8002C74AE /* UIView+Factory.h */,
 				3FEEE392289661D8002C74AE /* UIView+Factory.m */,
 				3FEEE395289665C6002C74AE /* UITextField+Factory.h */,
@@ -430,6 +431,10 @@
 				3F378D9C2896880600F1533C /* UIControl+Factory.m */,
 				3F7BABF22897BA3200C972C5 /* UISearchBar+Factory.h */,
 				3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */,
+				3F86C89328A883E2006AC931 /* UIView+ThemeEnvironment.h */,
+				3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */,
+				3F61A5C828A909E300880DCC /* UIViewController+ThemeEnvironment.h */,
+				3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */,
 			);
 			path = "UIView+Category";
 			sourceTree = "<group>";
@@ -659,6 +664,7 @@
 				3F378D99289687E000F1533C /* UIButton+Factory.m in Sources */,
 				3F0A8F8728950050009C8BEE /* BaseViewController.m in Sources */,
 				3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */,
+				3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */,
 				3F46179F28A3951400EFBE6D /* FlowView.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
 				3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */,

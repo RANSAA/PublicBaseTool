@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)colorTextField;
 + (UIColor *)colorTextFieldPlaceholder;
 + (UIColor *)colorTextView;
-
++ (UIColor *)colorTextViewBackground;
 
 @end
 

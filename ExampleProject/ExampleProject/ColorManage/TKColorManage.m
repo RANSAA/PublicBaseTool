@@ -161,7 +161,10 @@ color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
     return [TKColorManage darkText];
 }
 
-
++ (UIColor *)colorTextViewBackground
+{
+    return [TKColorManage colorWithLight:UIColor.whiteColor dark:nil];
+}
 
 @end
 
