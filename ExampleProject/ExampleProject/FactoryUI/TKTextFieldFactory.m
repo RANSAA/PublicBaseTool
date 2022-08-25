@@ -32,9 +32,9 @@
     textField.textColor = kColorTextField;
     textField.layer.cornerRadius = 17;
     textField.layer.borderWidth = 0.5;
-    textField.layer.borderColor = [[TKColorManage systemGray] CGColor];
+    textField.layer.borderColor = [[TKColorManager systemGray] CGColor];
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    textField.backgroundColor = [TKColorManage systemOrange];
+    textField.backgroundColor = [TKColorManager systemOrange];
     textField.offsetText = 12;
     textField.borderStyle = UITextBorderStyleNone;
 }
@@ -54,7 +54,7 @@
     textField.layer.masksToBounds = YES;
     textField.layer.cornerRadius = 16;
     textField.layer.borderWidth = 0.5;
-    textField.layer.borderColor = [[TKColorManage systemGray] CGColor];
+    textField.layer.borderColor = [[TKColorManager systemGray] CGColor];
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.offsetText = 0;
 
@@ -70,7 +70,7 @@
 
 
     UIView *leftView = [[UIView alloc] initWithFrame:leftFrame];
-    leftView.backgroundColor = [TKColorManage systemOrange];
+    leftView.backgroundColor = [TKColorManager systemOrange];
     [leftView addSubview:lable];
     [leftView addSubview:imgView];
     textField.leftView = leftView;
@@ -81,7 +81,7 @@
     right.textColor = kColorWhite;
     right.textAlignment = NSTextAlignmentCenter;
     UIView *rightView = [[UIView alloc] initWithFrame:leftFrame];
-    rightView.backgroundColor = [TKColorManage systemOrange];
+    rightView.backgroundColor = [TKColorManager systemOrange];
     [rightView addSubview:right];
 }
 
@@ -99,7 +99,7 @@
     textField.textColor = kColorTextField;
     textField.clipsToBounds = YES;
     textField.layer.borderWidth = 0.5;
-    textField.layer.borderColor = [[TKColorManage systemOrange] CGColor];
+    textField.layer.borderColor = [[TKColorManager systemOrange] CGColor];
     textField.borderStyle = UITextBorderStyleNone;
     if (@available(iOS 11.0, *)) {
         textField.layer.cornerRadius = 18;
@@ -109,9 +109,9 @@
 
     textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索家居美图、商品、专贴和讨论帖" attributes:@{
         NSFontAttributeName:kFont14,
-        NSForegroundColorAttributeName:TKColorManage.systemGray3
+        NSForegroundColorAttributeName:TKColorManager.systemGray3
     }];
-    textField.backgroundColor = TKColorManage.systemGray6;
+    textField.backgroundColor = TKColorManager.systemGray6;
 }
 
 @end

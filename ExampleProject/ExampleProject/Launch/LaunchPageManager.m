@@ -5,15 +5,16 @@
 //  Created by PC on 2022/8/4.
 //
 
-#import "LaunchPageManage.h"
+#import <UIKit/UIKit.h>
+#import "LaunchPageManager.h"
 #import "LaunchPageViewController.h"
 
 
-@interface LaunchPageManage ()
+@interface LaunchPageManager ()
 
 @end
 
-@implementation LaunchPageManage
+@implementation LaunchPageManager
 
 + (instancetype)shared
 {
@@ -26,6 +27,19 @@
 }
 
 
+- (void)saveUserAgreementStatus
+{
+    [NSUserDefaults.standardUserDefaults setValue:@(YES) forKey:@"FirstLaunchUserAgreementAgreeStatus"];
+}
+
+- (BOOL)getUserAgreementStatus
+{
+    BOOL status = [[NSUserDefaults.standardUserDefaults valueForKey:@"FirstLaunchUserAgreementAgreeStatus"] boolValue];
+    return status;
+}
+
+
+
 /// 用户协议检测
 /// @param completion 在block回调中进行APP初始化配置。
 - (void)userAgreementStatusDetectionCompletionHandler:(void (^)(void))completion
@@ -36,7 +50,10 @@
         }
     }else{
         LaunchPageViewController *vc = [self instanceViewController];
-        vc.block = completion;
+        vc.completion = completion;
+        vc.saveAgreementStatus = ^{
+            [self saveUserAgreementStatus];
+        };
     }
 }
 
@@ -52,15 +69,5 @@
     return  vc;;
 }
 
-- (void)saveUserAgreementStatus
-{
-    [NSUserDefaults.standardUserDefaults setValue:@(YES) forKey:@"UserAgreementStatus"];
-}
-
-- (BOOL)getUserAgreementStatus
-{
-    BOOL status = [[NSUserDefaults.standardUserDefaults valueForKey:@"UserAgreementStatus"] boolValue];
-    return status;
-}
 
 @end

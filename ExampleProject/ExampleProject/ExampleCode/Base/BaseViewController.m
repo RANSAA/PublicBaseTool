@@ -17,7 +17,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"class name:%@",self.class);
-    self.view.backgroundColor = [TKColorManage systemBackground];
+    self.view.backgroundColor = [TKColorManager systemBackground];
     self.navigationItem.title = self.clsModel.name;
 
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColor.greenColor,

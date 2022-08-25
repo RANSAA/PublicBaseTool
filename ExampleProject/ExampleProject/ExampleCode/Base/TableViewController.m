@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"class name:%@",self.class);
-    self.view.backgroundColor = [TKColorManage systemBackground];
+    self.view.backgroundColor = [TKColorManager systemBackground];
     self.navigationItem.title = self.clsModel.name;
 
 //    self.hidesBottomBarWhenPushed = YES;

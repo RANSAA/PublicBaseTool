@@ -18,26 +18,26 @@
 
 + (void)setDefaultStyleWith:(UISearchBar *)searchBar
 {
-    searchBar.tintColor = TKColorManage.systemRed;
-    searchBar.barTintColor = TKColorManage.systemYellow;
+    searchBar.tintColor = TKColorManager.systemRed;
+    searchBar.barTintColor = TKColorManager.systemYellow;
 
     UITextField *textfield = [self textFieldWith:searchBar];
     if (@available(iOS 11.0, *)) {
         [TKTextFieldFactory setSearchBarStyleWith:textfield];
         [TKTextFieldFactory setSearchBarStyleWith:textfield];
-        textfield.backgroundColor = TKColorManage.colorTextFieldPlaceholder;
-//        textfield.backgroundColor = TKColorManage.systemGray6;
+        textfield.backgroundColor = TKColorManager.colorTextFieldPlaceholder;
+//        textfield.backgroundColor = TKColorManager.systemGray6;
     }else{
         UIView* backgroundView = [self textFieldBackgroundViewWith:searchBar];
         backgroundView.layer.cornerRadius = 12.0f;
         backgroundView.clipsToBounds = YES;
-        textfield.backgroundColor = TKColorManage.colorTextFieldPlaceholder;
-//        textfield.backgroundColor = TKColorManage.systemGray6;
+        textfield.backgroundColor = TKColorManager.colorTextFieldPlaceholder;
+//        textfield.backgroundColor = TKColorManager.systemGray6;
     }
     searchBar.textField.font = kFont14;
     textfield.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索家居美图、商品、专贴和讨论帖" attributes:@{
         NSFontAttributeName:kFont14,
-        NSForegroundColorAttributeName:TKColorManage.systemGray3
+        NSForegroundColorAttributeName:TKColorManager.systemGray3
     }];
 
     //处理搜索框黑线问题
@@ -60,27 +60,27 @@
 + (void)setDefaultStyle2With:(UISearchBar *)searchBar
 {
     searchBar.searchBarStyle = UISearchBarStyleMinimal;
-    searchBar.tintColor = TKColorManage.systemYellow;
+    searchBar.tintColor = TKColorManager.systemYellow;
     searchBar.placeholder = @"搜索家居美图、商品、专贴和讨论帖";
 
     UITextField *textfield = [self textFieldWith:searchBar];
     if (@available(iOS 11.0, *)) {
         [TKTextFieldFactory setSearchBarStyleWith:textfield];
         [TKTextFieldFactory setSearchBarStyleWith:textfield];
-        textfield.backgroundColor = TKColorManage.systemGray6;
+        textfield.backgroundColor = TKColorManager.systemGray6;
     }else{
         UIView* backgroundView = [self textFieldBackgroundViewWith:searchBar];
         backgroundView.layer.cornerRadius = 12.0f;
         backgroundView.clipsToBounds = YES;
     //    //UISearchBarStyleMinimal模式下背景颜色修改
-//        backgroundView.backgroundColor = TKColorManage.systemGray6;
+//        backgroundView.backgroundColor = TKColorManager.systemGray6;
 
         textfield.clipsToBounds = YES;
         textfield.layer.borderWidth = 0.5;
-        textfield.layer.borderColor = [[TKColorManage systemOrange] CGColor];
+        textfield.layer.borderColor = [[TKColorManager systemOrange] CGColor];
         textfield.borderStyle = UITextBorderStyleNone;
         textfield.layer.cornerRadius = 12.0f;
-        textfield.backgroundColor = TKColorManage.systemGray6;
+        textfield.backgroundColor = TKColorManager.systemGray6;
     }
     textfield.font =kFont14;
 }

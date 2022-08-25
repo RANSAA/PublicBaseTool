@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-SW14
  */
 
-@interface AppIconManage : NSObject
+@interface AppIconManager : NSObject
 @property(nonatomic, assign) BOOL showAlert;//更换成功后是否显示弹窗提示， 默认显示
 @property(nonatomic, copy, nullable) void(^completionHandler)(NSError * _Nullable error);//更换图标后回调
 

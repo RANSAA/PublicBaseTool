@@ -5,17 +5,17 @@
 //  Created by PC on 2022/8/12.
 //
 
-#import "AppIconManage.h"
+#import "AppIconManager.h"
 #import "TKMethodSwap.h"
 
 
 
 // MARK: - App Icon图标动态更换管理图标
-@implementation AppIconManage
+@implementation AppIconManager
 
 + (instancetype)shared
 {
-    static AppIconManage* obj = nil;
+    static AppIconManager* obj = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         obj = [super allocWithZone:NULL];

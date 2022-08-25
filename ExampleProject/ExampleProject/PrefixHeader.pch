@@ -24,7 +24,7 @@
 #import "ClassTypeModel.h"
 
 #import "TKMethodSwap.h"
-#import "TKColorManage.h"
+#import "TKColorManager.h"
 #import "TKFontManager.h"
 #import "TKButtonFactory.h"
 #import "TKLableFactory.h"
@@ -37,7 +37,7 @@
 #import "UIButton+Factory.h"
 #import "TKSearchBarFactory.h"
 #import "UISearchBar+Factory.h"
-#import "LaunchPageManage.h"
+#import "LaunchPageManager.h"
 #import "UIView+ThemeEnvironment.h"
 #import "UIViewController+ThemeEnvironment.h"
 

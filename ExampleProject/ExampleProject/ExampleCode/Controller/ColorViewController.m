@@ -22,25 +22,25 @@
 - (void)setupUI
 {
     UIView *v1 = [[UIView alloc] initWithFrame:CGRectMake(20, 84, 44, 44)];
-    v1.backgroundColor = [TKColorManage systemYellow];
+    v1.backgroundColor = [TKColorManager systemYellow];
 
     UIView *v2 = [[UIView alloc] initWithFrame:CGRectMake(20, 84+60, 44, 44)];
-    v2.backgroundColor = [TKColorManage systemPink];
+    v2.backgroundColor = [TKColorManager systemPink];
 
     UIView *v3 = [[UIView alloc] initWithFrame:CGRectMake(20, 84+120, 44, 44)];
-    v3.backgroundColor = [TKColorManage systemOrange];
+    v3.backgroundColor = [TKColorManager systemOrange];
 
     UIView *v4 = [[UIView alloc] initWithFrame:CGRectMake(20, 84+180, 44, 44)];
-    v4.backgroundColor = [TKColorManage systemRed];
+    v4.backgroundColor = [TKColorManager systemRed];
 
     UIView *v5 = [[UIView alloc] initWithFrame:CGRectMake(20, 84+240, 44, 44)];
-    v5.backgroundColor = [TKColorManage systemPurple];
+    v5.backgroundColor = [TKColorManager systemPurple];
 
     UIView *v6 = [[UIView alloc] initWithFrame:CGRectMake(20, 84+300, 44, 44)];
-    v6.backgroundColor = [TKColorManage systemGray];
+    v6.backgroundColor = [TKColorManager systemGray];
 
     UIView *v7 = [[UIView alloc] initWithFrame:CGRectMake(20, 84+360, 44, 44)];
-    v7.backgroundColor = [TKColorManage label];
+    v7.backgroundColor = [TKColorManager label];
 
     [self.view addSubview:v1];
     [self.view addSubview:v2];

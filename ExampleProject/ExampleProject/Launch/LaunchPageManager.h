@@ -11,18 +11,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LaunchPageManage : NSObject
-+ (instancetype)shared;
+@interface LaunchPageManager : NSObject
 
++ (instancetype)shared;
 
 /// 用户协议检测
 /// @param completion 在block回调中进行APP初始化配置。
 - (void)userAgreementStatusDetectionCompletionHandler:(void (^)(void))completion;
-
-
-
-- (void)saveUserAgreementStatus;
-- (BOOL)getUserAgreementStatus;
 
 @end
 

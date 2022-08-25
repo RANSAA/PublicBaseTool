@@ -19,7 +19,7 @@
 
 + (void)setOrangeCornerWith:(UIButton *)btn
 {
-    btn.backgroundColor = [TKColorManage systemOrange];
+    btn.backgroundColor = [TKColorManager systemOrange];
     [btn setTitleColor:kColorWhite forState:UIControlStateNormal];
     btn.titleLabel.font = kFont15;
     btn.layer.masksToBounds = YES;
@@ -36,7 +36,7 @@
 
 + (void)setYellowCornerWith:(UIButton *)btn
 {
-    btn.backgroundColor = [TKColorManage systemYellow];
+    btn.backgroundColor = [TKColorManager systemYellow];
     [btn setTitleColor:kColorWhite forState:UIControlStateNormal];
     btn.titleLabel.font = kFont15;
     btn.layer.masksToBounds = YES;
@@ -53,7 +53,7 @@
 
 + (void)setGreenCornerWith:(UIButton *)btn
 {
-    btn.backgroundColor = [TKColorManage systemGreen];
+    btn.backgroundColor = [TKColorManager systemGreen];
     [btn setTitleColor:kColorWhite forState:UIControlStateNormal];
     btn.titleLabel.font = kFont15;
     btn.layer.masksToBounds = YES;

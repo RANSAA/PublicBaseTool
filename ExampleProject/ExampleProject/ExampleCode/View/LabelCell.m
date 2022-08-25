@@ -35,7 +35,7 @@
 {
 
     self.lab = [[UILabel alloc] init];
-    self.lab.textColor = [TKColorManage systemOrange];
+    self.lab.textColor = [TKColorManager systemOrange];
     self.lab.textAlignment = NSTextAlignmentLeft;
     self.lab.font = kFont12;
     [self.contentView addSubview:self.lab];

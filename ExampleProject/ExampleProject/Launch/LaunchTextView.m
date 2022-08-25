@@ -35,4 +35,20 @@
     }
 }
 
+
+// MARK: - UITextViewDelegate
+// 点击富文本区域，长按不会弹出3d网页浏览页面
+//- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction
+//{
+//    NSString *scheme = URL.scheme;
+//    if ([scheme isEqualToString:@"lauch1"]) {
+//        [self toUserAgreeAction];
+//        return NO;
+//    }else if ([scheme isEqualToString:@"lauch2"]){
+//        [self toPrivateAction];
+//        return NO;
+//    }
+//    return YES;
+//}
+
 @end

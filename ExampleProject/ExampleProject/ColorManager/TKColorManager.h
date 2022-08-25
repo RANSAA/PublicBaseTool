@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TKColorManage : NSObject
+@interface TKColorManager : NSObject
 
 + (instancetype)sheard;
 
@@ -36,13 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 //MARK: - APP主题相关颜色
-#define kColorWhite [TKColorManage colorWhite]
-#define kColorTextField [TKColorManage colorTextField]
-#define kColorTextFieldPlaceholder [TKColorManage colorTextFieldPlaceholder]
-#define kColorTextView [TKColorManage colorTextView]
+#define kColorWhite [TKColorManager colorWhite]
+#define kColorTextField [TKColorManager colorTextField]
+#define kColorTextFieldPlaceholder [TKColorManager colorTextFieldPlaceholder]
+#define kColorTextView [TKColorManager colorTextView]
 
 
-@interface TKColorManage (Theme)
+@interface TKColorManager (Theme)
 
 + (UIColor *)colorWhite;
 + (UIColor *)colorTextField;
@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  详解：https://noahgilmore.com/blog/dark-mode-uicolor-compatibility/
  */
 
-@interface TKColorManage (SystemColor)
+@interface TKColorManager (SystemColor)
 
 + (UIColor *)label;
 + (UIColor *)secondaryLabel;

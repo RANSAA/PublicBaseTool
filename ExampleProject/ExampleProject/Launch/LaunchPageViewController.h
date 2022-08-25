@@ -11,7 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LaunchPageViewController : UIViewController
 @property(nonatomic, strong) UIImageView *imgView;
-@property(nonatomic, copy) void (^block)(void);
+@property(nonatomic, copy) void (^completion)(void);
+@property(nonatomic, copy) void (^saveAgreementStatus)(void);
 @end
 
 NS_ASSUME_NONNULL_END

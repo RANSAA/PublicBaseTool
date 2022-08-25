@@ -6,7 +6,7 @@
 //
 
 #import "LaunchPageViewController.h"
-#import "LaunchPageManage.h"
+#import "LaunchPageManager.h"
 #import "LaunchTextView.h"
 
 @interface LaunchPageViewController ()<UITextViewDelegate>
@@ -114,8 +114,8 @@
     textview.editable = NO;
     textview.delegate = self;
     textview.dataDetectorTypes = UIDataDetectorTypeLink;
-    textview.textColor = TKColorManage.label;
-    textview.backgroundColor = TKColorManage.colorWhite;
+    textview.textColor = TKColorManager.label;
+    textview.backgroundColor = TKColorManager.colorWhite;
     [topView addSubview:textview];
     textview.translatesAutoresizingMaskIntoConstraints = NO;
     NSDictionary *v = @{@"view":textview};
@@ -143,10 +143,13 @@
 
 - (void)btnDoneAction
 {
-    if (self.block) {
-        self.block();
+    if (self.saveAgreementStatus) {
+        self.saveAgreementStatus();
     }
-    [LaunchPageManage.shared saveUserAgreementStatus];
+
+    if (self.completion) {
+        self.completion();
+    }
 }
 
 

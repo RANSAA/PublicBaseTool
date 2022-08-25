@@ -87,7 +87,7 @@
 {
     //解决系统导航条切换时，右上角显示问题
     UIWindow *key = [UIApplication.sharedApplication getKeyWindow];
-    key.backgroundColor = TKColorManage.systemBackground;
+    key.backgroundColor = TKColorManager.systemBackground;
 }
 
 /*

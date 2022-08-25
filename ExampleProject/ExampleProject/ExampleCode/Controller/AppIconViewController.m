@@ -6,7 +6,7 @@
 //
 
 #import "AppIconViewController.h"
-#import "AppIconManage.h"
+#import "AppIconManager.h"
 
 @interface AppIconViewController ()
 
@@ -73,9 +73,9 @@
     }
 
 
-    AppIconManage.shared.showAlert = NO;
-    [AppIconManage.shared changeAppIconWithName:iconName];
-    AppIconManage.shared.completionHandler = ^(NSError * _Nullable error) {
+    AppIconManager.shared.showAlert = NO;
+    [AppIconManager.shared changeAppIconWithName:iconName];
+    AppIconManager.shared.completionHandler = ^(NSError * _Nullable error) {
         NSLog(@"App Icon 更新回调");
         if (error) {
             [TKMBProgressHUD showText:@"App图标更新失败" inView:self.view after:1.5];

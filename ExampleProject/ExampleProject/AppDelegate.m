@@ -35,7 +35,7 @@
     if (@available(iOS 13.0, *)) {
         NSLog(@"first 13.0+:%@",UIApplication.sharedApplication.connectedScenes.allObjects.firstObject);
     }else{
-        [LaunchPageManage.shared userAgreementStatusDetectionCompletionHandler:^{
+        [LaunchPageManager.shared userAgreementStatusDetectionCompletionHandler:^{
             TabBarViewController *tabVC = [[TabBarViewController alloc] init];
             self.window.rootViewController = tabVC;
             [self.window makeKeyAndVisible];

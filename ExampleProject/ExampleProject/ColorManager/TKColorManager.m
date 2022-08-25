@@ -5,9 +5,9 @@
 //  Created by PC on 2022/7/25.
 //
 
-#import "TKColorManage.h"
+#import "TKColorManager.h"
 
-@implementation TKColorManage
+@implementation TKColorManager
 
 /**
  * 模式1：
@@ -137,33 +137,33 @@ color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
 
 
 //MARK: - APP主题相关颜色
-@implementation TKColorManage (Theme)
+@implementation TKColorManager (Theme)
 
 
 
 + (UIColor *)colorWhite
 {
-    return [TKColorManage lightText];
+    return [self lightText];
 }
 
 + (UIColor *)colorTextField
 {
-    return [TKColorManage darkText];
+    return [self darkText];
 }
 
 + (UIColor *)colorTextFieldPlaceholder
 {
-    return [TKColorManage placeholderText];
+    return [self placeholderText];
 }
 
 + (UIColor *)colorTextView
 {
-    return [TKColorManage darkText];
+    return [self darkText];
 }
 
 + (UIColor *)colorTextViewBackground
 {
-    return [TKColorManage colorWithLight:UIColor.whiteColor dark:nil];
+    return [self colorWithLight:UIColor.whiteColor dark:nil];
 }
 
 @end
@@ -173,7 +173,7 @@ color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
 
 
 #pragma mark - iOS13+后系统自带的动态颜色
-@implementation TKColorManage (SystemColor)
+@implementation TKColorManager (SystemColor)
 
 + (UIColor *)label
 {

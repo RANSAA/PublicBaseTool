@@ -31,7 +31,7 @@
     [self.view addSubview: line1];
     
     FlowView *flow = [[FlowView alloc] initWithFrame:CGRectMake(20, 80, 280, 420)];
-    flow.backgroundColor = TKColorManage.systemGray5;
+    flow.backgroundColor = TKColorManager.systemGray5;
     flow.image = [UIImage imageNamed:@"LaunchImage1"];
     flow.fixed = 580;
     flow.distance = 0.5;

@@ -25,7 +25,7 @@
 - (void)setupUI
 {
     UIStackView *stackView = [[UIStackView alloc]initWithFrame:CGRectMake(100, 64, 200, 400)];
-    stackView.backgroundColor = TKColorManage.systemGray3;
+    stackView.backgroundColor = TKColorManager.systemGray3;
     stackView.axis = UILayoutConstraintAxisVertical;
     stackView.distribution = UIStackViewDistributionFillEqually;
     stackView.spacing = 20;
