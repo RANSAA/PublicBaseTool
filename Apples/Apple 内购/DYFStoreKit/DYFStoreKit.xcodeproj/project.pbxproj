@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1424B8E3238510E80032D915 /* DYFStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424B8D4238510E50032D915 /* DYFStoreViewController.m */; };
+		1424B8E4238510E80032D915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424B8D5238510E50032D915 /* AppDelegate.m */; };
+		1424B8E5238510E80032D915 /* DYFStoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1424B8D7238510E60032D915 /* DYFStoreViewController.xib */; };
+		1424B8E6238510E80032D915 /* DYFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424B8D9238510E60032D915 /* DYFLoadingView.m */; };
+		1424B8E7238510E80032D915 /* DYFStoreProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424B8DA238510E60032D915 /* DYFStoreProduct.m */; };
+		1424B8E8238510E80032D915 /* DYFStoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1424B8DD238510E70032D915 /* DYFStoreTableViewCell.xib */; };
+		1424B8E9238510E80032D915 /* DYFStoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424B8DE238510E70032D915 /* DYFStoreTableViewCell.m */; };
+		1424B8EB238510E80032D915 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424B8E1238510E80032D915 /* ViewController.m */; };
+		1424B8EE238535820032D915 /* UIView+DYFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 1424B8ED238535820032D915 /* UIView+DYFAdd.m */; };
+		142556C92371DE5200D35669 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142556C82371DE5200D35669 /* Foundation.framework */; };
+		142556CB2371DE5A00D35669 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142556CA2371DE5A00D35669 /* UIKit.framework */; };
+		142556CD2371DE6200D35669 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142556CC2371DE6200D35669 /* CoreGraphics.framework */; };
+		142556CF2371DE6800D35669 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142556CE2371DE6800D35669 /* Security.framework */; };
+		143A19AF2484F4DD005A22D5 /* DYFIndefiniteAnimatedSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 143A19AE2484F4DD005A22D5 /* DYFIndefiniteAnimatedSpinner.m */; };
+		14717AD724A9144B0000D298 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143A19B22486ADDA005A22D5 /* StoreKit.framework */; };
+		147FC0F9239AA54400A879C1 /* NSObject+DYFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 147FC0F8239AA54400A879C1 /* NSObject+DYFAdd.m */; };
+		147FC0FC239B4F6700A879C1 /* DYFStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 147FC0FA239B4F6600A879C1 /* DYFStoreManager.m */; };
+		14ABF8DB237A980D00015826 /* DYFRuntimeProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8CB237A980A00015826 /* DYFRuntimeProvider.m */; };
+		14ABF8DC237A980D00015826 /* DYFStoreTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8CF237A980B00015826 /* DYFStoreTransaction.m */; };
+		14ABF8DD237A980D00015826 /* DYFStoreConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8D1237A980B00015826 /* DYFStoreConverter.m */; };
+		14ABF8DE237A980D00015826 /* DYFStoreKeychainPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8D2237A980B00015826 /* DYFStoreKeychainPersistence.m */; };
+		14ABF8DF237A980D00015826 /* DYFStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8D4237A980B00015826 /* DYFStore.m */; };
+		14ABF8E0237A980D00015826 /* DYFKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8D8237A980C00015826 /* DYFKeychain.m */; };
+		14ABF8E1237A980D00015826 /* DYFStoreReceiptVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8D9237A980C00015826 /* DYFStoreReceiptVerifier.m */; };
+		14ABF8E2237A980D00015826 /* DYFStoreUserDefaultsPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 14ABF8DA237A980C00015826 /* DYFStoreUserDefaultsPersistence.m */; };
+		14BAC1A922945440006974B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BAC1A722945440006974B5 /* Main.storyboard */; };
+		14BAC1AB2294544C006974B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BAC1AA2294544C006974B5 /* Assets.xcassets */; };
+		14BAC1AE2294544C006974B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BAC1AC2294544C006974B5 /* LaunchScreen.storyboard */; };
+		14BAC1B12294544C006974B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14BAC1B02294544C006974B5 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1424B8D3238510E50032D915 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1424B8D4238510E50032D915 /* DYFStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreViewController.m; sourceTree = "<group>"; };
+		1424B8D5238510E50032D915 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1424B8D6238510E60032D915 /* DYFStoreProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreProduct.h; sourceTree = "<group>"; };
+		1424B8D7238510E60032D915 /* DYFStoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYFStoreViewController.xib; sourceTree = "<group>"; };
+		1424B8D8238510E60032D915 /* DYFLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFLoadingView.h; sourceTree = "<group>"; };
+		1424B8D9238510E60032D915 /* DYFLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFLoadingView.m; sourceTree = "<group>"; };
+		1424B8DA238510E60032D915 /* DYFStoreProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreProduct.m; sourceTree = "<group>"; };
+		1424B8DB238510E60032D915 /* DYFStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreViewController.h; sourceTree = "<group>"; };
+		1424B8DC238510E70032D915 /* DYFStoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreTableViewCell.h; sourceTree = "<group>"; };
+		1424B8DD238510E70032D915 /* DYFStoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DYFStoreTableViewCell.xib; sourceTree = "<group>"; };
+		1424B8DE238510E70032D915 /* DYFStoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreTableViewCell.m; sourceTree = "<group>"; };
+		1424B8E1238510E80032D915 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1424B8E2238510E80032D915 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1424B8EC238535820032D915 /* UIView+DYFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DYFAdd.h"; sourceTree = "<group>"; };
+		1424B8ED238535820032D915 /* UIView+DYFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DYFAdd.m"; sourceTree = "<group>"; };
+		142556C82371DE5200D35669 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		142556CA2371DE5A00D35669 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		142556CC2371DE6200D35669 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		142556CE2371DE6800D35669 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		143A19AD2484F4DC005A22D5 /* DYFIndefiniteAnimatedSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFIndefiniteAnimatedSpinner.h; sourceTree = "<group>"; };
+		143A19AE2484F4DD005A22D5 /* DYFIndefiniteAnimatedSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFIndefiniteAnimatedSpinner.m; sourceTree = "<group>"; };
+		143A19B22486ADDA005A22D5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		147FC0F7239AA54400A879C1 /* NSObject+DYFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DYFAdd.h"; sourceTree = "<group>"; };
+		147FC0F8239AA54400A879C1 /* NSObject+DYFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DYFAdd.m"; sourceTree = "<group>"; };
+		147FC0FA239B4F6600A879C1 /* DYFStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreManager.m; sourceTree = "<group>"; };
+		147FC0FB239B4F6700A879C1 /* DYFStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreManager.h; sourceTree = "<group>"; };
+		14ABF8CB237A980A00015826 /* DYFRuntimeProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFRuntimeProvider.m; sourceTree = "<group>"; };
+		14ABF8CC237A980A00015826 /* DYFStoreReceiptVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreReceiptVerifier.h; sourceTree = "<group>"; };
+		14ABF8CD237A980B00015826 /* DYFStoreUserDefaultsPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreUserDefaultsPersistence.h; sourceTree = "<group>"; };
+		14ABF8CE237A980B00015826 /* DYFRuntimeProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFRuntimeProvider.h; sourceTree = "<group>"; };
+		14ABF8CF237A980B00015826 /* DYFStoreTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreTransaction.m; sourceTree = "<group>"; };
+		14ABF8D0237A980B00015826 /* DYFStoreTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreTransaction.h; sourceTree = "<group>"; };
+		14ABF8D1237A980B00015826 /* DYFStoreConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreConverter.m; sourceTree = "<group>"; };
+		14ABF8D2237A980B00015826 /* DYFStoreKeychainPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreKeychainPersistence.m; sourceTree = "<group>"; };
+		14ABF8D3237A980B00015826 /* DYFKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFKeychain.h; sourceTree = "<group>"; };
+		14ABF8D4237A980B00015826 /* DYFStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStore.m; sourceTree = "<group>"; };
+		14ABF8D5237A980C00015826 /* DYFStoreConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreConverter.h; sourceTree = "<group>"; };
+		14ABF8D6237A980C00015826 /* DYFStoreKeychainPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStoreKeychainPersistence.h; sourceTree = "<group>"; };
+		14ABF8D7237A980C00015826 /* DYFStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYFStore.h; sourceTree = "<group>"; };
+		14ABF8D8237A980C00015826 /* DYFKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFKeychain.m; sourceTree = "<group>"; };
+		14ABF8D9237A980C00015826 /* DYFStoreReceiptVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreReceiptVerifier.m; sourceTree = "<group>"; };
+		14ABF8DA237A980C00015826 /* DYFStoreUserDefaultsPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYFStoreUserDefaultsPersistence.m; sourceTree = "<group>"; };
+		14BAC19E2294543F006974B5 /* DYFStoreKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYFStoreKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14BAC1A822945440006974B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14BAC1AA2294544C006974B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14BAC1AD2294544C006974B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14BAC1AF2294544C006974B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14BAC1B02294544C006974B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14BAC19B2294543F006974B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14717AD724A9144B0000D298 /* StoreKit.framework in Frameworks */,
+				142556CF2371DE6800D35669 /* Security.framework in Frameworks */,
+				142556CD2371DE6200D35669 /* CoreGraphics.framework in Frameworks */,
+				142556CB2371DE5A00D35669 /* UIKit.framework in Frameworks */,
+				142556C92371DE5200D35669 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14BAC1952294543F006974B5 = {
+			isa = PBXGroup;
+			children = (
+				14BAC1BA22945848006974B5 /* DYFStoreKit */,
+				14BAC1A02294543F006974B5 /* DYFStoreKitDemo */,
+				14BAC19F2294543F006974B5 /* Products */,
+				14BAC1B722945490006974B5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14BAC19F2294543F006974B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14BAC19E2294543F006974B5 /* DYFStoreKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14BAC1A02294543F006974B5 /* DYFStoreKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1424B8D3238510E50032D915 /* AppDelegate.h */,
+				1424B8D5238510E50032D915 /* AppDelegate.m */,
+				143A19AD2484F4DC005A22D5 /* DYFIndefiniteAnimatedSpinner.h */,
+				143A19AE2484F4DD005A22D5 /* DYFIndefiniteAnimatedSpinner.m */,
+				1424B8D8238510E60032D915 /* DYFLoadingView.h */,
+				1424B8D9238510E60032D915 /* DYFLoadingView.m */,
+				147FC0FB239B4F6700A879C1 /* DYFStoreManager.h */,
+				147FC0FA239B4F6600A879C1 /* DYFStoreManager.m */,
+				1424B8D6238510E60032D915 /* DYFStoreProduct.h */,
+				1424B8DA238510E60032D915 /* DYFStoreProduct.m */,
+				1424B8DC238510E70032D915 /* DYFStoreTableViewCell.h */,
+				1424B8DE238510E70032D915 /* DYFStoreTableViewCell.m */,
+				1424B8DD238510E70032D915 /* DYFStoreTableViewCell.xib */,
+				1424B8DB238510E60032D915 /* DYFStoreViewController.h */,
+				1424B8D4238510E50032D915 /* DYFStoreViewController.m */,
+				1424B8D7238510E60032D915 /* DYFStoreViewController.xib */,
+				147FC0F7239AA54400A879C1 /* NSObject+DYFAdd.h */,
+				147FC0F8239AA54400A879C1 /* NSObject+DYFAdd.m */,
+				1424B8EC238535820032D915 /* UIView+DYFAdd.h */,
+				1424B8ED238535820032D915 /* UIView+DYFAdd.m */,
+				1424B8E2238510E80032D915 /* ViewController.h */,
+				1424B8E1238510E80032D915 /* ViewController.m */,
+				14BAC1A722945440006974B5 /* Main.storyboard */,
+				14BAC1AA2294544C006974B5 /* Assets.xcassets */,
+				14BAC1AC2294544C006974B5 /* LaunchScreen.storyboard */,
+				14BAC1AF2294544C006974B5 /* Info.plist */,
+				14BAC1B02294544C006974B5 /* main.m */,
+			);
+			path = DYFStoreKitDemo;
+			sourceTree = "<group>";
+		};
+		14BAC1B722945490006974B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				143A19B22486ADDA005A22D5 /* StoreKit.framework */,
+				142556CE2371DE6800D35669 /* Security.framework */,
+				142556CC2371DE6200D35669 /* CoreGraphics.framework */,
+				142556CA2371DE5A00D35669 /* UIKit.framework */,
+				142556C82371DE5200D35669 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14BAC1BA22945848006974B5 /* DYFStoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				14ABF8D3237A980B00015826 /* DYFKeychain.h */,
+				14ABF8D8237A980C00015826 /* DYFKeychain.m */,
+				14ABF8CE237A980B00015826 /* DYFRuntimeProvider.h */,
+				14ABF8CB237A980A00015826 /* DYFRuntimeProvider.m */,
+				14ABF8D7237A980C00015826 /* DYFStore.h */,
+				14ABF8D4237A980B00015826 /* DYFStore.m */,
+				14ABF8D5237A980C00015826 /* DYFStoreConverter.h */,
+				14ABF8D1237A980B00015826 /* DYFStoreConverter.m */,
+				14ABF8D6237A980C00015826 /* DYFStoreKeychainPersistence.h */,
+				14ABF8D2237A980B00015826 /* DYFStoreKeychainPersistence.m */,
+				14ABF8CC237A980A00015826 /* DYFStoreReceiptVerifier.h */,
+				14ABF8D9237A980C00015826 /* DYFStoreReceiptVerifier.m */,
+				14ABF8D0237A980B00015826 /* DYFStoreTransaction.h */,
+				14ABF8CF237A980B00015826 /* DYFStoreTransaction.m */,
+				14ABF8CD237A980B00015826 /* DYFStoreUserDefaultsPersistence.h */,
+				14ABF8DA237A980C00015826 /* DYFStoreUserDefaultsPersistence.m */,
+			);
+			path = DYFStoreKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14BAC19D2294543F006974B5 /* DYFStoreKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14BAC1B42294544C006974B5 /* Build configuration list for PBXNativeTarget "DYFStoreKit" */;
+			buildPhases = (
+				14BAC19A2294543F006974B5 /* Sources */,
+				14BAC19B2294543F006974B5 /* Frameworks */,
+				14BAC19C2294543F006974B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DYFStoreKit;
+			productName = DYFStore;
+			productReference = 14BAC19E2294543F006974B5 /* DYFStoreKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14BAC1962294543F006974B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = dyf;
+				TargetAttributes = {
+					14BAC19D2294543F006974B5 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 14BAC1992294543F006974B5 /* Build configuration list for PBXProject "DYFStoreKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14BAC1952294543F006974B5;
+			productRefGroup = 14BAC19F2294543F006974B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14BAC19D2294543F006974B5 /* DYFStoreKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14BAC19C2294543F006974B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BAC1AE2294544C006974B5 /* LaunchScreen.storyboard in Resources */,
+				14BAC1AB2294544C006974B5 /* Assets.xcassets in Resources */,
+				1424B8E5238510E80032D915 /* DYFStoreViewController.xib in Resources */,
+				14BAC1A922945440006974B5 /* Main.storyboard in Resources */,
+				1424B8E8238510E80032D915 /* DYFStoreTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14BAC19A2294543F006974B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1424B8E7238510E80032D915 /* DYFStoreProduct.m in Sources */,
+				1424B8E4238510E80032D915 /* AppDelegate.m in Sources */,
+				14ABF8DC237A980D00015826 /* DYFStoreTransaction.m in Sources */,
+				1424B8EE238535820032D915 /* UIView+DYFAdd.m in Sources */,
+				14ABF8DD237A980D00015826 /* DYFStoreConverter.m in Sources */,
+				147FC0FC239B4F6700A879C1 /* DYFStoreManager.m in Sources */,
+				14ABF8DB237A980D00015826 /* DYFRuntimeProvider.m in Sources */,
+				143A19AF2484F4DD005A22D5 /* DYFIndefiniteAnimatedSpinner.m in Sources */,
+				147FC0F9239AA54400A879C1 /* NSObject+DYFAdd.m in Sources */,
+				14BAC1B12294544C006974B5 /* main.m in Sources */,
+				14ABF8DF237A980D00015826 /* DYFStore.m in Sources */,
+				14ABF8E2237A980D00015826 /* DYFStoreUserDefaultsPersistence.m in Sources */,
+				1424B8E3238510E80032D915 /* DYFStoreViewController.m in Sources */,
+				1424B8EB238510E80032D915 /* ViewController.m in Sources */,
+				1424B8E9238510E80032D915 /* DYFStoreTableViewCell.m in Sources */,
+				14ABF8E0237A980D00015826 /* DYFKeychain.m in Sources */,
+				14ABF8E1237A980D00015826 /* DYFStoreReceiptVerifier.m in Sources */,
+				14ABF8DE237A980D00015826 /* DYFStoreKeychainPersistence.m in Sources */,
+				1424B8E6238510E80032D915 /* DYFLoadingView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14BAC1A722945440006974B5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14BAC1A822945440006974B5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14BAC1AC2294544C006974B5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14BAC1AD2294544C006974B5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14BAC1B22294544C006974B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		14BAC1B32294544C006974B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14BAC1B52294544C006974B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = KCBQ48PTUV;
+				INFOPLIST_FILE = "$(SRCROOT)/DYFStoreKitDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hncs.szj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14BAC1B62294544C006974B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = KCBQ48PTUV;
+				INFOPLIST_FILE = "$(SRCROOT)/DYFStoreKitDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hncs.szj;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14BAC1992294543F006974B5 /* Build configuration list for PBXProject "DYFStoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14BAC1B22294544C006974B5 /* Debug */,
+				14BAC1B32294544C006974B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14BAC1B42294544C006974B5 /* Build configuration list for PBXNativeTarget "DYFStoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14BAC1B52294544C006974B5 /* Debug */,
+				14BAC1B62294544C006974B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14BAC1962294543F006974B5 /* Project object */;
+}
