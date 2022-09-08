@@ -1,6 +1,0 @@
-framework module TKSDKUniversal {
-  umbrella header "TKSDKUniversal.h"
-
-  export *
-  module * { export * }
-}

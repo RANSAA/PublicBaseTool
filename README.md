@@ -27,3 +27,7 @@
 ## FaceSet
 人脸识别相关Demo集合
 
+
+### JSONWrapper
+
+属性包装器与Description
