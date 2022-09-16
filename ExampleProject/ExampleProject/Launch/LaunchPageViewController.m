@@ -111,8 +111,8 @@
 
 
     LaunchTextView *textview = [[LaunchTextView alloc] init];
-    textview.editable = NO;
-    textview.delegate = self;
+//    textview.editable = NO;
+//    textview.delegate = self;
     textview.dataDetectorTypes = UIDataDetectorTypeLink;
     textview.textColor = TKColorManager.label;
     textview.backgroundColor = TKColorManager.colorWhite;
@@ -121,19 +121,37 @@
     NSDictionary *v = @{@"view":textview};
     [topView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[view]-12-|" options:0 metrics:nil views:v]];
     [topView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-12-[view]-12-|" options:0 metrics:nil views:v]];
-    NSString *msg = @"\t\t用户协议与隐私政策\t\n\n\n这是一个测试《服务协议》和《隐私政策》的一段文字说明\n“我们一向庄严承诺保护使用户(“用户”或“您”)的隐私。您在使用我们服务时,我们可能会收集和使用您的相关信息";
+    NSString *msg = @"\t\t用户协议与隐私政策\t\n\n\n这是一个测试《服务协议》和《隐私政策》的一段文字说明\n“我们一向庄严承诺保护使用户(“用户”或“您”)的隐私。您在使用我们服务时,我们可能会收集和使用您的相关信息,https://sourceforge.net.";
     NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:msg];
+
+    NSURL *url1 = [NSURL URLWithString:@"lauch1://1513"];
+    NSURL *url2 = [NSURL URLWithString:@"lauch2:"];
     NSString *tip = @"《服务协议》";
     NSRange range = [msg rangeOfString:tip];
     [attr setAttributes:@{NSForegroundColorAttributeName:UIColor.redColor,
-                          NSLinkAttributeName:[NSURL URLWithString:@"lauch1://"]
+                          NSLinkAttributeName:url1
     } range:range];
     tip = @"《隐私政策》";
     range = [msg rangeOfString:tip];
     [attr setAttributes:@{NSForegroundColorAttributeName:UIColor.redColor,
-                          NSLinkAttributeName:[NSURL URLWithString:@"lauch2:"]
+                          NSLinkAttributeName:url2
     } range:range];
     textview.attributedText = attr;
+
+    __weak typeof(self) weakSelf = self;
+    [textview addLinkAttributeName:url1];
+    [textview addLinkAttributeName:url2];
+    textview.clickLinkCompletion = ^(NSURL * _Nonnull url) {
+        NSLog(@"clickLinkCompletion :%@",url);
+    };
+    textview.clickLinkAttrCompletion = ^(NSURL * _Nonnull url) {
+        NSLog(@"clickLinkAttrCompletion :%@",url);
+        if ([url isEqual:url1]) {
+            [weakSelf toUserAgreeAction];
+        }else if ([url isEqual:url2]){
+            [weakSelf toPrivateAction];
+        }
+    };
 }
 
 - (void)btnCancelAction
@@ -155,6 +173,8 @@
 
 - (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange interaction:(UITextItemInteraction)interaction
 {
+    NSLog(@"TEXT URL:%@",URL);
+
     NSString *scheme = URL.scheme;
     if ([scheme isEqualToString:@"lauch1"]) {
         [self toUserAgreeAction];
@@ -163,6 +183,7 @@
         [self toPrivateAction];
         return NO;
     }
+
     return YES;
 }
 
@@ -199,6 +220,11 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+}
+
+- (void)dealloc
+{
+    NSLog(@"dealloc LaunchPageViewController");
 }
 
 /*

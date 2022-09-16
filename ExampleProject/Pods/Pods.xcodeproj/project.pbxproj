@@ -16,6 +16,7 @@
 			dependencies = (
 			);
 			name = TKBaseKit;
+			productName = TKBaseKit;
 		};
 /* End PBXAggregateTarget section */
 
@@ -251,7 +252,7 @@
 		21A49BD1C60ED7A1BFA17CA58FCC511C /* TKPermissionKit.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TKPermissionKit.bundle; path = TKPermissionKit/Public/TKPermissionKit.bundle; sourceTree = "<group>"; };
 		24B1B1EA6BB937C8226A25040A4C2F5A /* TKMBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TKMBProgressHUD.h; path = TKUIKit/View/Alert/TKMBProgressHUD.h; sourceTree = "<group>"; };
 		262FA21888E94D8F3BF11168CE5A5B79 /* Pods-ExampleProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ExampleProject.modulemap"; sourceTree = "<group>"; };
-		26309515C4FCE70CC12AAE30E6F9B989 /* TKSDKUniversal.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TKSDKUniversal.xcframework; path = TKBaseKit/TKSDKUniversal/TKSDKUniversal.xcframework; sourceTree = "<group>"; };
+		26309515C4FCE70CC12AAE30E6F9B989 /* TKSDKUniversal.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = TKSDKUniversal.xcframework; path = TKBaseKit/TKSDKUniversal/TKSDKUniversal.xcframework; sourceTree = "<group>"; };
 		265DEDD53EEC952544E3E74A078B845B /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "IQUIView+Hierarchy.m"; path = "IQKeyboardManager/Categories/IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
 		26861493886E92B2A468D5D68D2EFC81 /* TKSystemPhotoPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKSystemPhotoPicker.m; path = TKUIKit/Tool/Photo/TKSystemPhotoPicker.m; sourceTree = "<group>"; };
 		28B6D2336A56DF33C128EB9C4CA43D98 /* IQPreviousNextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQPreviousNextView.m; path = IQKeyboardManager/IQToolbar/IQPreviousNextView.m; sourceTree = "<group>"; };
@@ -302,7 +303,7 @@
 		725583664B9A0A4DE482107449F5E06D /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQKeyboardManagerConstantsInternal.h; path = IQKeyboardManager/Constants/IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
 		73B2EE806C9AB6BF48E95E51407858F9 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQUIViewController+Additions.h"; path = "IQKeyboardManager/Categories/IQUIViewController+Additions.h"; sourceTree = "<group>"; };
 		749A35904D650BBEFC172AE06D259760 /* TKIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TKIndicatorView.m; path = TKUIKit/View/Progress/TKIndicatorView.m; sourceTree = "<group>"; };
-		74F4902F761C20A680486597C6BB9534 /* TKUIKit-TKUIKit */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "TKUIKit-TKUIKit"; path = TKUIKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F4902F761C20A680486597C6BB9534 /* TKUIKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKUIKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		754F89BE74EF9AD8347D96E4C5E54356 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IQTitleBarButtonItem.h; path = IQKeyboardManager/IQToolbar/IQTitleBarButtonItem.h; sourceTree = "<group>"; };
 		75AF3C2326362B1BA28E368E8170875D /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		76898433334E76860EDE1D661C07761B /* ResourceBundle-TKUIKit-TKUIKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-TKUIKit-TKUIKit-Info.plist"; sourceTree = "<group>"; };
@@ -330,7 +331,7 @@
 		98527D7196957AAB07B79E2E2AFDE23E /* IQKeyboardManager */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManager; path = IQKeyboardManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9855714B97B62897BE2D49F6DD09B55B /* Masonry-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Masonry-dummy.m"; sourceTree = "<group>"; };
 		9C60D30A373E3336C814AF62395DF3A1 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F73C4E4703ABF5F8FF805EC8F3846AC /* IQNSArray+Sort.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "IQNSArray+Sort.h"; path = "IQKeyboardManager/Categories/IQNSArray+Sort.h"; sourceTree = "<group>"; };
 		9F86CAC804C7867BF74F221FC32857A0 /* TKUIKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TKUIKit; path = TKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8EB9EA1F0BECB40714B19A1DB7665D /* IQBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IQBarButtonItem.m; path = IQKeyboardManager/IQToolbar/IQBarButtonItem.m; sourceTree = "<group>"; };
@@ -545,7 +546,7 @@
 				F584F356BA2B0FCC108479DAAC2ADEE0 /* Pods-ExampleProject */,
 				50179FFCCB6706AE9EEF90B4D9393622 /* TKPermissionKit */,
 				9F86CAC804C7867BF74F221FC32857A0 /* TKUIKit */,
-				74F4902F761C20A680486597C6BB9534 /* TKUIKit-TKUIKit */,
+				74F4902F761C20A680486597C6BB9534 /* TKUIKit.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -576,7 +577,6 @@
 				FE5A7E2CA481E86A41C66AA094E49F1B /* Tool */,
 				EE5A44889205AA917E477D1C7976B87C /* View */,
 			);
-			name = TKUIKit;
 			path = TKUIKit;
 			sourceTree = "<group>";
 		};
@@ -654,7 +654,6 @@
 				066144D637A750BABE422062372D5E11 /* ViewController+MASAdditions.m */,
 				E753743979E5B7291601B363A0B69440 /* Support Files */,
 			);
-			name = Masonry;
 			path = Masonry;
 			sourceTree = "<group>";
 		};
@@ -665,7 +664,6 @@
 				F25E1CC335749F0DA8A37E552957C1C7 /* MBProgressHUD.m */,
 				102E30DE011600B531A41C36FA7D1C21 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -704,7 +702,6 @@
 				C1A6541BE66CD15A3F5B456261C74273 /* Public */,
 				E40C9D5CBA9990D4D303599D1A484628 /* Support Files */,
 			);
-			name = TKPermissionKit;
 			path = TKPermissionKit;
 			sourceTree = "<group>";
 		};
@@ -741,7 +738,6 @@
 				F032FFDDFEE28A011BCF6843285AED94 /* Support Files */,
 				D5568F0FD736B33CBD6C22CBC00B3B55 /* TKSDKUniversal */,
 			);
-			name = TKBaseKit;
 			path = TKBaseKit;
 			sourceTree = "<group>";
 		};
@@ -778,7 +774,6 @@
 				2DA9075BC2D70B9D31833842DCD62E97 /* IQUIViewController+Additions.m */,
 				0B5D76A4013BF954F155765C732C877D /* Support Files */,
 			);
-			name = IQKeyboardManager;
 			path = IQKeyboardManager;
 			sourceTree = "<group>";
 		};
@@ -1020,7 +1015,7 @@
 			);
 			name = "TKUIKit-TKUIKit";
 			productName = TKUIKit;
-			productReference = 74F4902F761C20A680486597C6BB9534 /* TKUIKit-TKUIKit */;
+			productReference = 74F4902F761C20A680486597C6BB9534 /* TKUIKit.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
@@ -1436,6 +1431,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 914DCCFC953E173996B117824FF1065D /* TKUIKit.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TKUIKit";
 				IBSC_MODULE = TKUIKit;
 				INFOPLIST_FILE = "Target Support Files/TKUIKit/ResourceBundle-TKUIKit-TKUIKit-Info.plist";
@@ -1586,6 +1582,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 003F9F4AC4B50DC376A60C387C0DE588 /* TKUIKit.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/TKUIKit";
 				IBSC_MODULE = TKUIKit;
 				INFOPLIST_FILE = "Target Support Files/TKUIKit/ResourceBundle-TKUIKit-TKUIKit-Info.plist";
