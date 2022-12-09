@@ -43,6 +43,8 @@
 		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
 		3F86C88C28A87AF9006AC931 /* TestImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F86C88B28A87AF9006AC931 /* TestImageView.m */; };
 		3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */; };
+		3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */; };
+		3F87C5652943107B00FFC9C5 /* TKGrayWhiteFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */; };
 		3FA4C63D289E89800068544D /* DotIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C63C289E89800068544D /* DotIndicator.m */; };
 		3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C640289EBAFF0068544D /* TestAniView.m */; };
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
@@ -146,6 +148,10 @@
 		3F86C88B28A87AF9006AC931 /* TestImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestImageView.m; sourceTree = "<group>"; };
 		3F86C89328A883E2006AC931 /* UIView+ThemeEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ThemeEnvironment.h"; sourceTree = "<group>"; };
 		3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ThemeEnvironment.m"; sourceTree = "<group>"; };
+		3F87C55F29430EA500FFC9C5 /* GrayWhiteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GrayWhiteViewController.h; sourceTree = "<group>"; };
+		3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrayWhiteViewController.m; sourceTree = "<group>"; };
+		3F87C5632943107B00FFC9C5 /* TKGrayWhiteFilterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKGrayWhiteFilterView.h; sourceTree = "<group>"; };
+		3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKGrayWhiteFilterView.m; sourceTree = "<group>"; };
 		3FA4C63B289E897F0068544D /* DotIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotIndicator.h; sourceTree = "<group>"; };
 		3FA4C63C289E89800068544D /* DotIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotIndicator.m; sourceTree = "<group>"; };
 		3FA4C63F289EBAFF0068544D /* TestAniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAniView.h; sourceTree = "<group>"; };
@@ -320,6 +326,8 @@
 				3F4617A628A3BD7D00EFBE6D /* LaunchImageViewController.m */,
 				3FFDB47E28A69414004AA481 /* AppIconViewController.h */,
 				3FFDB47F28A69414004AA481 /* AppIconViewController.m */,
+				3F87C55F29430EA500FFC9C5 /* GrayWhiteViewController.h */,
+				3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -381,6 +389,8 @@
 			children = (
 				3F7BABFF2897CD0400C972C5 /* UITextFieldCustom.h */,
 				3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */,
+				3F87C5632943107B00FFC9C5 /* TKGrayWhiteFilterView.h */,
+				3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */,
 			);
 			path = "UIView+Custom";
 			sourceTree = "<group>";
@@ -664,6 +674,7 @@
 				3F378D99289687E000F1533C /* UIButton+Factory.m in Sources */,
 				3F0A8F8728950050009C8BEE /* BaseViewController.m in Sources */,
 				3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */,
+				3F87C5652943107B00FFC9C5 /* TKGrayWhiteFilterView.m in Sources */,
 				3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */,
 				3F46179F28A3951400EFBE6D /* FlowView.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
@@ -699,6 +710,7 @@
 				3FA4C63D289E89800068544D /* DotIndicator.m in Sources */,
 				3F4617AB28A3C6E400EFBE6D /* TKDynamicLaunchImage.m in Sources */,
 				3F4962B028952BB900F471F2 /* TKFontManager.m in Sources */,
+				3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */,
 				3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */,
 				3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */,
 				3F0A8F6C2894FFBE009C8BEE /* SceneDelegate.m in Sources */,

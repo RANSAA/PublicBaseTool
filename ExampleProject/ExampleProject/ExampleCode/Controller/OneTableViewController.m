@@ -14,6 +14,7 @@
 #import "FlowViewController.h"
 #import "LaunchImageViewController.h"
 #import "AppIconViewController.h"
+#import "GrayWhiteViewController.h"
 
 @interface OneTableViewController ()
 
@@ -32,6 +33,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"背景流动视图" cls:@"FlowViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改启动图" cls:@"LaunchImageViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改App图标" cls:@"AppIconViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"黑白纪念模式" cls:@"GrayWhiteViewController"]];
 }
 
 - (void)viewDidLoad {

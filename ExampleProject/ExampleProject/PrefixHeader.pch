@@ -40,5 +40,6 @@
 #import "LaunchPageManager.h"
 #import "UIView+ThemeEnvironment.h"
 #import "UIViewController+ThemeEnvironment.h"
+#import "TKGrayWhiteFilterView.h"
 
 #endif /* PrefixHeader_pch */

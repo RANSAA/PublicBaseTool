@@ -45,7 +45,7 @@
 {
     UIView *centerView = [[UIView alloc] init];
     centerView.frame = CGRectMake(100, 100, 200, 200);
-    centerView.backgroundColor = UIColor.grayColor;
+    centerView.backgroundColor = UIColor.whiteColor;
     centerView.clipsToBounds = YES;
     centerView.layer.cornerRadius = 8;
     centerView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -61,12 +61,10 @@
 
 
     UIView *topView = [[UIView alloc] init];
-    topView.backgroundColor = UIColor.whiteColor;
     [centerView addSubview:topView];
     topView.translatesAutoresizingMaskIntoConstraints = NO;
 
     UIView *bottomView = [[UIView alloc] init];
-    bottomView.backgroundColor = UIColor.whiteColor;
     [centerView addSubview:bottomView];
     bottomView.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -78,7 +76,7 @@
 
     NSLayoutConstraint *top22 = [bottomView.leftAnchor constraintEqualToAnchor:centerView.leftAnchor];
     NSLayoutConstraint *top33 = [bottomView.rightAnchor constraintEqualToAnchor:centerView.rightAnchor];
-    NSLayoutConstraint *top44 = [bottomView.bottomAnchor constraintEqualToAnchor:centerView.bottomAnchor];
+    NSLayoutConstraint *top44 = [bottomView.bottomAnchor constraintEqualToAnchor:centerView.bottomAnchor constant:-12];
     NSLayoutConstraint *top55 = [bottomView.heightAnchor constraintEqualToConstant:40];
     [centerView addConstraints:@[top22,top33,top44,top55]];
 
