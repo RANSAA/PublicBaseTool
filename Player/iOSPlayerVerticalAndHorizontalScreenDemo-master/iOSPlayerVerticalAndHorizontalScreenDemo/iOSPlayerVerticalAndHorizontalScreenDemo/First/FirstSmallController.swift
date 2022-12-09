@@ -73,6 +73,7 @@ import UIKit
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         NotificationCenter.default.addObserver(self, selector: #selector(FirstSmallController.deviceOrientationDidChange), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
@@ -152,6 +153,16 @@ import UIKit
             exitFullScreen()
         case .animating:
             break
+        }
+        testPlayViewStateChange()
+    }
+    
+    func testPlayViewStateChange(){
+        print("测试PlayView状态改变.")
+        DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+            let view = UIView(frame: CGRect(x: 80, y: 80, width: 100, height: 100))
+            view.backgroundColor = .red
+            self.playView.addSubview(view)
         }
     }
     
