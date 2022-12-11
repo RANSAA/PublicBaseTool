@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        performExistingAccountSetupFlows()
+//        performExistingAccountSetupFlows()
     }
     
     /// - Tag: add_appleid_button
@@ -61,12 +61,16 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     /// - Tag: did_complete_authorization
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
+        //新用户登录
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
             
             // Create an account in your system.
             let userIdentifier = appleIDCredential.user
             let fullName = appleIDCredential.fullName
             let email = appleIDCredential.email
+            let token = appleIDCredential.identityToken
+            
+            print("\nuserIdentifier:\(userIdentifier) \nfullName:\(fullName)    \nemail:\(email)    \ntoken:\(token)    \ntokenStr:\(String(data: token ?? Data(), encoding: .utf8))    \ncode:\(appleIDCredential.authorizationCode)   \ncodeStr:\(String(data: appleIDCredential.authorizationCode ?? Data(), encoding: .utf8))")
             
             // For the purpose of this demo app, store the `userIdentifier` in the keychain.
             self.saveUserInKeychain(userIdentifier)
@@ -74,11 +78,14 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
             self.showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
         
+        //旧用户登录
         case let passwordCredential as ASPasswordCredential:
         
             // Sign in using an existing iCloud Keychain credential.
             let username = passwordCredential.user
             let password = passwordCredential.password
+            
+            print("username:\(username) password:\(password)")
             
             // For the purpose of this demo app, show the password credential as an alert.
             DispatchQueue.main.async {
@@ -129,6 +136,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     /// - Tag: did_complete_error
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
+        print("authorization 错误")
     }
 }
 

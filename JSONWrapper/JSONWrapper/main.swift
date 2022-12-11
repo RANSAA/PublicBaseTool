@@ -24,7 +24,6 @@ import Foundation
 
 
 
-
 let a1 = ModelA(a:.init(wrappedValue: "A-string"),c:.init(wrappedValue: 11111))
 let a2 = ModelA(b:.init(wrappedValue: true),c:.init(wrappedValue: 22222))
 let a3 = "STRING TYPE"
@@ -105,3 +104,32 @@ var dic2 = ["a":"AAAAA","b":"BBBB","c":nil,"e":777] as [String : Any?]
 
 
 test_JSONWrapper_OLD()
+
+
+
+func testDecode(){
+    print("testDecode...")
+    do {
+        let jsonDecoder = JSONDecoder()
+        let url = URL(fileURLWithPath: "/Users/kimi/Desktop/ModelA.json")
+        let data = try Data(contentsOf: url)
+        let obj = try jsonDecoder.decode(ModelA.self, from: data)
+        printAllIvars(obj)
+        
+        
+        print("testEnder...")
+        let enURL = URL(fileURLWithPath: "/Users/kimi/Desktop/ModelA-Ecoder.json")
+        let jsonEncoder = JSONEncoder()
+        let enData = try jsonEncoder.encode(obj)
+        _ = try enData.write(to: enURL)
+        
+        
+    } catch  {
+        print("error:\(error)")
+    }
+}
+
+
+
+testDecode()
+

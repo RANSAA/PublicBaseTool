@@ -14,9 +14,9 @@ import Foundation
 
 
 struct ModelA:Codable{
-    @JSONWrapper.JSONString var a:String
+    @JSONWrapper.JSONString var a:String 
     @JSONWrapper.JSONFalse var b:Bool
-    @JSONWrapper.JSONInt var c:Int
+    @JSONWrapper.JSONInt var c:Int //= 1
 }
 
 

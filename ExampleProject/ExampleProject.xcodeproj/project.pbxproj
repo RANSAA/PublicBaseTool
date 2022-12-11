@@ -45,6 +45,7 @@
 		3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */; };
 		3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */; };
 		3F87C5652943107B00FFC9C5 /* TKGrayWhiteFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */; };
+		3F87C5B22943713600FFC9C5 /* UniversalLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C5B12943713600FFC9C5 /* UniversalLinkViewController.m */; };
 		3FA4C63D289E89800068544D /* DotIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C63C289E89800068544D /* DotIndicator.m */; };
 		3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C640289EBAFF0068544D /* TestAniView.m */; };
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
@@ -74,6 +75,20 @@
 		3FFDB53B28A6A3C5004AA481 /* AppIconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFDB53A28A6A3C5004AA481 /* AppIconManager.m */; };
 		EFBCA72A4260BB3FAF960865 /* Pods_ExampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B36ADFF77DB9D0E192C02F9 /* Pods_ExampleProject.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		3F87C5B42943751D00FFC9C5 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		36A304E9FBBEB1590B2B546E /* Pods-ExampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleProject.debug.xcconfig"; path = "Target Support Files/Pods-ExampleProject/Pods-ExampleProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +167,8 @@
 		3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrayWhiteViewController.m; sourceTree = "<group>"; };
 		3F87C5632943107B00FFC9C5 /* TKGrayWhiteFilterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKGrayWhiteFilterView.h; sourceTree = "<group>"; };
 		3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKGrayWhiteFilterView.m; sourceTree = "<group>"; };
+		3F87C5B02943713600FFC9C5 /* UniversalLinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniversalLinkViewController.h; sourceTree = "<group>"; };
+		3F87C5B12943713600FFC9C5 /* UniversalLinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UniversalLinkViewController.m; sourceTree = "<group>"; };
 		3FA4C63B289E897F0068544D /* DotIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotIndicator.h; sourceTree = "<group>"; };
 		3FA4C63C289E89800068544D /* DotIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotIndicator.m; sourceTree = "<group>"; };
 		3FA4C63F289EBAFF0068544D /* TestAniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAniView.h; sourceTree = "<group>"; };
@@ -328,6 +345,8 @@
 				3FFDB47F28A69414004AA481 /* AppIconViewController.m */,
 				3F87C55F29430EA500FFC9C5 /* GrayWhiteViewController.h */,
 				3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */,
+				3F87C5B02943713600FFC9C5 /* UniversalLinkViewController.h */,
+				3F87C5B12943713600FFC9C5 /* UniversalLinkViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -539,6 +558,7 @@
 				33A50915EC74E4F674286DF7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
+				3F87C5B42943751D00FFC9C5 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -680,6 +700,7 @@
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
 				3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */,
 				3FF755E4289C0DAF00BC0121 /* UIApplication+Window.m in Sources */,
+				3F87C5B22943713600FFC9C5 /* UniversalLinkViewController.m in Sources */,
 				3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */,
 				3F4047F628951834004CBD35 /* LabelCell.m in Sources */,
 				3F40480928951CCD004CBD35 /* ClassTypeModel.m in Sources */,

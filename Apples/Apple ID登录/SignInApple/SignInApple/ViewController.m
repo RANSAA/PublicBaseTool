@@ -39,14 +39,13 @@
         //注意：按钮的样式会随bounds.size的变化二改变
         ASAuthorizationAppleIDButton *btn = [[ASAuthorizationAppleIDButton alloc] initWithAuthorizationButtonType:ASAuthorizationAppleIDButtonTypeSignIn authorizationButtonStyle:ASAuthorizationAppleIDButtonStyleWhiteOutline];
         CGRect frame = btn.bounds;
-        frame.origin = CGPointMake(100, 300);
-        frame.size.height = 50+10;
-        frame.size.width = 50+10;
+        frame.origin = CGPointMake(120, 240);
+//        frame.size.height = 50+10;
+//        frame.size.width = 50+10;
+        frame.size.height = 44;
+        frame.size.width = 44;
         btn.frame = frame;
-        btn.layer.masksToBounds = YES;
-        btn.layer.cornerRadius = frame.size.height/2.0;
-        btn.layer.borderWidth = 1;
-        btn.layer.borderColor = UIColor.blackColor.CGColor;
+        btn.cornerRadius = frame.size.height/2.0;
         [btn addTarget:self action:@selector(handleAuthorization) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:btn];
         

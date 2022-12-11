@@ -15,6 +15,7 @@
 #import "LaunchImageViewController.h"
 #import "AppIconViewController.h"
 #import "GrayWhiteViewController.h"
+#import "UniversalLinkViewController.h"
 
 @interface OneTableViewController ()
 
@@ -34,6 +35,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改启动图" cls:@"LaunchImageViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改App图标" cls:@"AppIconViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"黑白纪念模式" cls:@"GrayWhiteViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"Universa lLink" cls:@"UniversalLinkViewController"]];
 }
 
 - (void)viewDidLoad {

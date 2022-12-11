@@ -10,26 +10,53 @@
  自定义属性包装器，让可选属性总是有一个有效值(即可选属性永远不会为nil)
  主要用于Model中
  */
+
 import Foundation
 
+
+//@propertyWrapper
+//struct JSONWrapperString {
+//    private var raw: String!
+//    var wrappedValue: String!{
+//        set{
+//            if newValue != nil {
+//                raw = newValue
+//            }
+//        }
+//        get{ return raw }
+//    }
+//
+//    init() { raw = "null" }
+//    init(wrappedValue: String!) {
+//        self.init()
+//        if wrappedValue != nil {
+//            raw = wrappedValue
+//        }
+//    }
+//}
 
 @propertyWrapper
 struct JSONWrapperString {
     private var raw: String!
-    var wrappedValue: String!{
-        set{
-            if newValue != nil {
-                raw = newValue
-            }
-        }
-        get{ return raw }
+    private var defaultRaw:String{
+        return "null"
     }
-
-    init() { raw = "null-JSONWrapperString" }
+    private var rawVaule:String{
+        if let raw = raw {
+            return raw
+        }
+        return defaultRaw
+    }
+    
+    var wrappedValue: String! {
+        set{ if let value = newValue { raw = value } }
+        get{ return rawVaule }
+    }
+    init() { raw = defaultRaw }
     init(wrappedValue: String!) {
         self.init()
-        if wrappedValue != nil {
-            raw = wrappedValue
+        if let vaule = wrappedValue {
+            raw = vaule
         }
     }
 }
