@@ -16,6 +16,7 @@
 #import "AppIconViewController.h"
 #import "GrayWhiteViewController.h"
 #import "UniversalLinkViewController.h"
+#import "WKWebViewController.h"
 
 @interface OneTableViewController ()
 
@@ -36,6 +37,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"动态修改App图标" cls:@"AppIconViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"黑白纪念模式" cls:@"GrayWhiteViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Universa lLink" cls:@"UniversalLinkViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"WKWebViewController" cls:@"WKWebViewController"]];
 }
 
 - (void)viewDidLoad {
@@ -46,16 +48,26 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self loadData];
 
 
+    
+    /**
+     注意backBarButtonItem与leftBarButtonItem的区别：
+     backBarButtonItem:将会在子控制器中显示(push)
+     leftBarButtonItem:直接在当前控制器中显示
+     */
     UIBarButtonItem *backBtn = [[UIBarButtonItem alloc] init];
-     backBtn.title = @"返回";
+    backBtn.title = @"返回List";
     [backBtn setTitleTextAttributes:@{NSFontAttributeName:kFont14,NSForegroundColorAttributeName:UIColor.redColor} forState:UIControlStateNormal];
-     self.navigationItem.backBarButtonItem = backBtn;
+    self.navigationItem.backBarButtonItem = backBtn;
     self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
     self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage new];
 
+
+    
+    
+    NSLog(@"OneTableViewController nav.....");
+    [self loadData];
 }
 
 
@@ -64,7 +76,16 @@
 {
     ClassTypeModel *model = self.dataAry[indexPath.row];
     Class class = NSClassFromString(model.cls);
-    id vc = [[class alloc] init];
+
+    id vc;
+    if([model.cls isEqualToString:@"WKWebViewController"]){
+        WKWebViewController *web = [WKWebViewController instanceWithTitle:model.name urlString:@"https://www.baidu.com"];
+//        WKWebViewController *web = [WKWebViewController instanceWithTitle:@"HTML Test" htmlString:@"<p>HTML String</p>" baseURL:nil];
+        web.updateTitle = YES;
+        vc = web;
+    }else{
+        vc = [[class alloc] init];
+    }
     [vc setValue:model forKey:@"clsModel"];
 //    [vc setValue:@(YES) forKey:@"hidesBottomBarWhenPushed"];
     [self.navigationController pushViewController:vc animated:YES];

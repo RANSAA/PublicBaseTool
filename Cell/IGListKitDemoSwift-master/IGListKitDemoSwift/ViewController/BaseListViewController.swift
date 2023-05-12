@@ -17,8 +17,9 @@ class BaseListViewController: UIViewController {
         let flow = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flow)
         collectionView.backgroundColor = UIColor.groupTableViewBackground
-//        collectionView.bounces = true
-//        collectionView.bouncesZoom = true
+        //cell没有占满整个UICollectionView时，允许水平/垂直方向始终可以拖动
+        collectionView.alwaysBounceVertical = true
+//        collectionView.alwaysBounceHorizontal = true
         return collectionView
     }()
    lazy var adapter: ListAdapter = {

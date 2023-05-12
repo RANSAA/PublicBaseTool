@@ -14,6 +14,7 @@
 @property (strong, nonatomic) UIProgressView *progressView;
 @property (strong, nonatomic) WKWebView *webView;
 @property (strong, nonatomic) WKWebViewConfiguration * config;
+
 @property (copy  , nonatomic) NSString *navTitle;
 @property (copy  , nonatomic) NSString *soureURL;//资源路径
 @property (strong, nonatomic) NSURL *baseURL;
@@ -26,7 +27,8 @@
  @param title 标题
  @param urlString 请求url
  */
-+ (instancetype)instanceWithTitle:(NSString *)title urlString:(NSString *)urlString {
++ (instancetype)instanceWithTitle:(NSString *)title urlString:(NSString *)urlString
+{
     HtmlViewController *controller = [[HtmlViewController alloc]init];
     controller.hidesBottomBarWhenPushed = YES;
     controller.loadType = 0;

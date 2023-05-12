@@ -38,6 +38,8 @@
 		3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4962B52895320D00F471F2 /* TKLableFactory.m */; };
 		3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4962B92895323800F471F2 /* TKButtonFactory.m */; };
 		3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */; };
+		3F6743DD2A0CF1E8004385AF /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6743DC2A0CF1E8004385AF /* WKWebViewController.m */; };
+		3F6743E02A0D29DE004385AF /* WKWebViewController+JavaScirpt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */; };
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
 		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
@@ -153,6 +155,10 @@
 		3F4962B92895323800F471F2 /* TKButtonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKButtonFactory.m; sourceTree = "<group>"; };
 		3F61A5C828A909E300880DCC /* UIViewController+ThemeEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ThemeEnvironment.h"; sourceTree = "<group>"; };
 		3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ThemeEnvironment.m"; sourceTree = "<group>"; };
+		3F6743DB2A0CF1E8004385AF /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		3F6743DC2A0CF1E8004385AF /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		3F6743DE2A0D29DE004385AF /* WKWebViewController+JavaScirpt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebViewController+JavaScirpt.h"; sourceTree = "<group>"; };
+		3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebViewController+JavaScirpt.m"; sourceTree = "<group>"; };
 		3F7BABF22897BA3200C972C5 /* UISearchBar+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Factory.h"; sourceTree = "<group>"; };
 		3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Factory.m"; sourceTree = "<group>"; };
 		3F7BABFF2897CD0400C972C5 /* UITextFieldCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldCustom.h; sourceTree = "<group>"; };
@@ -267,6 +273,10 @@
 				3FF755E3289C0DAF00BC0121 /* UIApplication+Window.m */,
 				3F0A8F6D2894FFBE009C8BEE /* ViewController.h */,
 				3F0A8F6E2894FFBE009C8BEE /* ViewController.m */,
+				3F4047FF28951AF1004CBD35 /* OneTableViewController.h */,
+				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
+				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
+				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
 				3F86C88928A87AE3006AC931 /* TestView */,
 				3FA4C63A289E895E0068544D /* Animation */,
 				3FF755D9289C09C600BC0121 /* Launch */,
@@ -323,10 +333,6 @@
 		3F0A8F8428950022009C8BEE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F4047FF28951AF1004CBD35 /* OneTableViewController.h */,
-				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
-				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
-				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
 				3F40480B28951E49004CBD35 /* ColorViewController.h */,
 				3F40480C28951E49004CBD35 /* ColorViewController.m */,
 				3F40480F28951E5C004CBD35 /* FontViewController.h */,
@@ -347,6 +353,10 @@
 				3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */,
 				3F87C5B02943713600FFC9C5 /* UniversalLinkViewController.h */,
 				3F87C5B12943713600FFC9C5 /* UniversalLinkViewController.m */,
+				3F6743DB2A0CF1E8004385AF /* WKWebViewController.h */,
+				3F6743DC2A0CF1E8004385AF /* WKWebViewController.m */,
+				3F6743DE2A0D29DE004385AF /* WKWebViewController+JavaScirpt.h */,
+				3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -722,6 +732,7 @@
 				3F4617A728A3BD7D00EFBE6D /* LaunchImageViewController.m in Sources */,
 				3FFDB53B28A6A3C5004AA481 /* AppIconManager.m in Sources */,
 				3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */,
+				3F6743E02A0D29DE004385AF /* WKWebViewController+JavaScirpt.m in Sources */,
 				3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */,
 				3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */,
 				3F40480528951AFB004CBD35 /* TwoTableViewController.m in Sources */,
@@ -733,6 +744,7 @@
 				3F4962B028952BB900F471F2 /* TKFontManager.m in Sources */,
 				3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */,
 				3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */,
+				3F6743DD2A0CF1E8004385AF /* WKWebViewController.m in Sources */,
 				3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */,
 				3F0A8F6C2894FFBE009C8BEE /* SceneDelegate.m in Sources */,
 				3FF755D2289BB32100BC0121 /* TransformViewController.m in Sources */,
@@ -884,6 +896,7 @@
 				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -893,6 +906,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -910,6 +924,7 @@
 				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 39E8LG3NH3;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
@@ -919,6 +934,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

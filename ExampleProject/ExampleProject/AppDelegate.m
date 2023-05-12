@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+#import <WebKit/WebKit.h>
+
 
 @interface AppDelegate ()
 
@@ -22,7 +24,8 @@
     NSLog(@"first:%@",UIApplication.sharedApplication.windows.firstObject);
 
 
-
+    NSString *language = [NSLocale preferredLanguages].firstObject;
+    NSLog(@"NSLocale: %@",[NSLocale preferredLanguages]);
 
 
 
@@ -30,6 +33,7 @@
 
 //    [NSThread sleepForTimeInterval:1.5];
 
+    [self delayLoadView];
 
 
     if (@available(iOS 13.0, *)) {
@@ -87,5 +91,15 @@
     NSLog(@"lunch 2...");
 }
 
+
+//延迟加载一些第一次初始化比较耗时的UI
+- (void)delayLoadView
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        WKWebView *web = [[WKWebView alloc] init];
+        [UIApplication.sharedApplication.windows.firstObject addSubview:web];
+        [web removeFromSuperview];
+    });
+}
 
 @end
