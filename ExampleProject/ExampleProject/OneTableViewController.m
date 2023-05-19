@@ -17,6 +17,7 @@
 #import "GrayWhiteViewController.h"
 #import "UniversalLinkViewController.h"
 #import "WKWebViewController.h"
+#import "CoreDataViewController.h"
 
 @interface OneTableViewController ()
 
@@ -38,6 +39,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"黑白纪念模式" cls:@"GrayWhiteViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Universa lLink" cls:@"UniversalLinkViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"WKWebViewController" cls:@"WKWebViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"Core Data" cls:@"CoreDataViewController"]];
 }
 
 - (void)viewDidLoad {

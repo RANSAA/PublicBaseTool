@@ -43,6 +43,14 @@
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
 		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
+		3F7EDDB52A1783D1003EBBEB /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDA22A1783D0003EBBEB /* CoreDataModel.xcdatamodeld */; };
+		3F7EDDB62A1783D1003EBBEB /* CDBookModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDA72A1783D0003EBBEB /* CDBookModel+CoreDataClass.m */; };
+		3F7EDDB72A1783D1003EBBEB /* CDPeopleModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDAA2A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.m */; };
+		3F7EDDB82A1783D1003EBBEB /* CDBookModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDAB2A1783D0003EBBEB /* CDBookModel+CoreDataProperties.m */; };
+		3F7EDDB92A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDAD2A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m */; };
+		3F7EDDBA2A1783D1003EBBEB /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDAF2A1783D1003EBBEB /* CoreDataViewController.m */; };
+		3F7EDDBB2A1783D1003EBBEB /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDB32A1783D1003EBBEB /* CoreDataManager.m */; };
+		3F7EDDBC2A1783D1003EBBEB /* CoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDDB42A1783D1003EBBEB /* CoreDataService.m */; };
 		3F86C88C28A87AF9006AC931 /* TestImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F86C88B28A87AF9006AC931 /* TestImageView.m */; };
 		3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F86C89428A883E2006AC931 /* UIView+ThemeEnvironment.m */; };
 		3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */; };
@@ -165,6 +173,21 @@
 		3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFieldCustom.m; sourceTree = "<group>"; };
 		3F7E1051289F8E110053408B /* NYWaterWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYWaterWaveView.m; sourceTree = "<group>"; };
 		3F7E1052289F8E110053408B /* NYWaterWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYWaterWaveView.h; sourceTree = "<group>"; };
+		3F7EDDA32A1783D0003EBBEB /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		3F7EDDA62A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDPeopleModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F7EDDA72A1783D0003EBBEB /* CDBookModel+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CDBookModel+CoreDataClass.m"; sourceTree = "<group>"; };
+		3F7EDDA82A1783D0003EBBEB /* CDBookModel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDBookModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		3F7EDDA92A1783D0003EBBEB /* CDPeopleModel+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDPeopleModel+CoreDataClass.h"; sourceTree = "<group>"; };
+		3F7EDDAA2A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CDPeopleModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F7EDDAB2A1783D0003EBBEB /* CDBookModel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CDBookModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		3F7EDDAC2A1783D0003EBBEB /* CDBookModel+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDBookModel+CoreDataClass.h"; sourceTree = "<group>"; };
+		3F7EDDAD2A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CDPeopleModel+CoreDataClass.m"; sourceTree = "<group>"; };
+		3F7EDDAF2A1783D1003EBBEB /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
+		3F7EDDB02A1783D1003EBBEB /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
+		3F7EDDB12A1783D1003EBBEB /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		3F7EDDB22A1783D1003EBBEB /* CoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataService.h; sourceTree = "<group>"; };
+		3F7EDDB32A1783D1003EBBEB /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		3F7EDDB42A1783D1003EBBEB /* CoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataService.m; sourceTree = "<group>"; };
 		3F86C88A28A87AF9006AC931 /* TestImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestImageView.h; sourceTree = "<group>"; };
 		3F86C88B28A87AF9006AC931 /* TestImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestImageView.m; sourceTree = "<group>"; };
 		3F86C89328A883E2006AC931 /* UIView+ThemeEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ThemeEnvironment.h"; sourceTree = "<group>"; };
@@ -265,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0A8FA12895015E009C8BEE /* ExampleProject.entitlements */,
+				3F86C88928A87AE3006AC931 /* TestView */,
 				3F0A8F672894FFBE009C8BEE /* AppDelegate.h */,
 				3F0A8F682894FFBE009C8BEE /* AppDelegate.m */,
 				3F0A8F6A2894FFBE009C8BEE /* SceneDelegate.h */,
@@ -277,7 +301,7 @@
 				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
 				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
 				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
-				3F86C88928A87AE3006AC931 /* TestView */,
+				3F7EDDA12A1783D0003EBBEB /* CoreData */,
 				3FA4C63A289E895E0068544D /* Animation */,
 				3FF755D9289C09C600BC0121 /* Launch */,
 				3FF755D4289BF80400BC0121 /* Push */,
@@ -422,6 +446,52 @@
 				3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */,
 			);
 			path = "UIView+Custom";
+			sourceTree = "<group>";
+		};
+		3F7EDDA12A1783D0003EBBEB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3F7EDDA22A1783D0003EBBEB /* CoreDataModel.xcdatamodeld */,
+				3F7EDDA42A1783D0003EBBEB /* Test */,
+				3F7EDDB12A1783D1003EBBEB /* CoreDataManager.h */,
+				3F7EDDB22A1783D1003EBBEB /* CoreDataService.h */,
+				3F7EDDB32A1783D1003EBBEB /* CoreDataManager.m */,
+				3F7EDDB42A1783D1003EBBEB /* CoreDataService.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3F7EDDA42A1783D0003EBBEB /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				3F7EDDA52A1783D0003EBBEB /* EntityModel */,
+				3F7EDDAE2A1783D1003EBBEB /* Controller */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		3F7EDDA52A1783D0003EBBEB /* EntityModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F7EDDA62A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.h */,
+				3F7EDDA72A1783D0003EBBEB /* CDBookModel+CoreDataClass.m */,
+				3F7EDDA82A1783D0003EBBEB /* CDBookModel+CoreDataProperties.h */,
+				3F7EDDA92A1783D0003EBBEB /* CDPeopleModel+CoreDataClass.h */,
+				3F7EDDAA2A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.m */,
+				3F7EDDAB2A1783D0003EBBEB /* CDBookModel+CoreDataProperties.m */,
+				3F7EDDAC2A1783D0003EBBEB /* CDBookModel+CoreDataClass.h */,
+				3F7EDDAD2A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m */,
+			);
+			path = EntityModel;
+			sourceTree = "<group>";
+		};
+		3F7EDDAE2A1783D1003EBBEB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F7EDDAF2A1783D1003EBBEB /* CoreDataViewController.m */,
+				3F7EDDB02A1783D1003EBBEB /* CoreDataViewController.h */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3F86C88928A87AE3006AC931 /* TestView */ = {
@@ -698,6 +768,7 @@
 			files = (
 				3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */,
 				3FF755C5289BA9DA00BC0121 /* TraitCollectionViewController.m in Sources */,
+				3F7EDDB72A1783D1003EBBEB /* CDPeopleModel+CoreDataProperties.m in Sources */,
 				3FF755CD289BAD7300BC0121 /* KVOViewController.m in Sources */,
 				3F0A8F6F2894FFBE009C8BEE /* ViewController.m in Sources */,
 				3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */,
@@ -707,11 +778,13 @@
 				3F87C5652943107B00FFC9C5 /* TKGrayWhiteFilterView.m in Sources */,
 				3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */,
 				3F46179F28A3951400EFBE6D /* FlowView.m in Sources */,
+				3F7EDDB92A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
 				3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */,
 				3FF755E4289C0DAF00BC0121 /* UIApplication+Window.m in Sources */,
 				3F87C5B22943713600FFC9C5 /* UniversalLinkViewController.m in Sources */,
 				3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */,
+				3F7EDDBC2A1783D1003EBBEB /* CoreDataService.m in Sources */,
 				3F4047F628951834004CBD35 /* LabelCell.m in Sources */,
 				3F40480928951CCD004CBD35 /* ClassTypeModel.m in Sources */,
 				3FC9BABA28A530A300C559EC /* LaunchTextView.m in Sources */,
@@ -720,6 +793,7 @@
 				3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */,
 				3F0A8F7A2894FFC8009C8BEE /* main.m in Sources */,
 				3F40480D28951E49004CBD35 /* ColorViewController.m in Sources */,
+				3F7EDDB52A1783D1003EBBEB /* CoreDataModel.xcdatamodeld in Sources */,
 				3F4047FD28951911004CBD35 /* TKColorManager.m in Sources */,
 				3F0A8F9E289500DF009C8BEE /* TabBarViewController.m in Sources */,
 				3F4617A328A3953600EFBE6D /* FlowViewController.m in Sources */,
@@ -735,9 +809,11 @@
 				3F6743E02A0D29DE004385AF /* WKWebViewController+JavaScirpt.m in Sources */,
 				3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */,
 				3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */,
+				3F7EDDBB2A1783D1003EBBEB /* CoreDataManager.m in Sources */,
 				3F40480528951AFB004CBD35 /* TwoTableViewController.m in Sources */,
 				3F86C88C28A87AF9006AC931 /* TestImageView.m in Sources */,
 				3FF755E8289C0E7900BC0121 /* LaunchPageManager.m in Sources */,
+				3F7EDDB82A1783D1003EBBEB /* CDBookModel+CoreDataProperties.m in Sources */,
 				3FF755D7289BF82700BC0121 /* DeviceToken.m in Sources */,
 				3FA4C63D289E89800068544D /* DotIndicator.m in Sources */,
 				3F4617AB28A3C6E400EFBE6D /* TKDynamicLaunchImage.m in Sources */,
@@ -745,9 +821,11 @@
 				3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */,
 				3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */,
 				3F6743DD2A0CF1E8004385AF /* WKWebViewController.m in Sources */,
+				3F7EDDBA2A1783D1003EBBEB /* CoreDataViewController.m in Sources */,
 				3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */,
 				3F0A8F6C2894FFBE009C8BEE /* SceneDelegate.m in Sources */,
 				3FF755D2289BB32100BC0121 /* TransformViewController.m in Sources */,
+				3F7EDDB62A1783D1003EBBEB /* CDBookModel+CoreDataClass.m in Sources */,
 				3F40481128951E5C004CBD35 /* FontViewController.m in Sources */,
 				3F0A8F9528950092009C8BEE /* TableViewController.m in Sources */,
 			);
@@ -965,6 +1043,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3F7EDDA22A1783D0003EBBEB /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F7EDDA32A1783D0003EBBEB /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 3F7EDDA32A1783D0003EBBEB /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3F0A8F5C2894FFBE009C8BEE /* Project object */;
 }
