@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 #import <WebKit/WebKit.h>
-
+#import "Touch3DManager.h"
 
 @interface AppDelegate ()
 
@@ -34,6 +34,8 @@
 //    [NSThread sleepForTimeInterval:1.5];
 
     [self delayLoadView];
+    
+    [self init3DTouch];
 
 
     if (@available(iOS 13.0, *)) {
@@ -100,6 +102,18 @@
         [UIApplication.sharedApplication.windows.firstObject addSubview:web];
         [web removeFromSuperview];
     });
+}
+
+
+//3D Touch
+- (void)init3DTouch
+{
+    [Touch3DManager.shared addShortItems];
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    [Touch3DManager.shared performActionForShortcutItem:shortcutItem completionHandler:completionHandler];
 }
 
 @end

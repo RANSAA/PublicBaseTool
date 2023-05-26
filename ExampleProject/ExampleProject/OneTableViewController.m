@@ -18,6 +18,7 @@
 #import "UniversalLinkViewController.h"
 #import "WKWebViewController.h"
 #import "CoreDataViewController.h"
+#import "Touch3DViewController.h"
 
 @interface OneTableViewController ()
 
@@ -40,6 +41,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Universa lLink" cls:@"UniversalLinkViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"WKWebViewController" cls:@"WKWebViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Core Data" cls:@"CoreDataViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"3D Touch 示例" cls:@"Touch3DViewController"]];
 }
 
 - (void)viewDidLoad {
