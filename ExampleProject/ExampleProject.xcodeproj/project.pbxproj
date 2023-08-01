@@ -63,6 +63,8 @@
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
 		3FC8C67C28957C9C00B933A7 /* TKTextViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67B28957C9C00B933A7 /* TKTextViewFactory.m */; };
 		3FC9BABA28A530A300C559EC /* LaunchTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9BAB928A530A300C559EC /* LaunchTextView.m */; };
+		3FCFA46A2A7934400000E2A5 /* UIDevice+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFA4682A7934400000E2A5 /* UIDevice+Orientation.m */; };
+		3FCFA46D2A7934690000E2A5 /* OrientationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFA46C2A7934690000E2A5 /* OrientationViewController.m */; };
 		3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE392289661D8002C74AE /* UIView+Factory.m */; };
 		3FEEE397289665C6002C74AE /* UITextField+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE396289665C6002C74AE /* UITextField+Factory.m */; };
 		3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE39C28966996002C74AE /* TKMethodSwap.m */; };
@@ -214,6 +216,10 @@
 		3FC8C67B28957C9C00B933A7 /* TKTextViewFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTextViewFactory.m; sourceTree = "<group>"; };
 		3FC9BAB828A530A300C559EC /* LaunchTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchTextView.h; sourceTree = "<group>"; };
 		3FC9BAB928A530A300C559EC /* LaunchTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchTextView.m; sourceTree = "<group>"; };
+		3FCFA4682A7934400000E2A5 /* UIDevice+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Orientation.m"; sourceTree = "<group>"; };
+		3FCFA4692A7934400000E2A5 /* UIDevice+Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Orientation.h"; sourceTree = "<group>"; };
+		3FCFA46B2A7934690000E2A5 /* OrientationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrientationViewController.h; sourceTree = "<group>"; };
+		3FCFA46C2A7934690000E2A5 /* OrientationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationViewController.m; sourceTree = "<group>"; };
 		3FEEE391289661D8002C74AE /* UIView+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Factory.h"; sourceTree = "<group>"; };
 		3FEEE392289661D8002C74AE /* UIView+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Factory.m"; sourceTree = "<group>"; };
 		3FEEE395289665C6002C74AE /* UITextField+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Factory.h"; sourceTree = "<group>"; };
@@ -307,6 +313,7 @@
 				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
 				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
 				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
+				3FCFA4672A7934290000E2A5 /* Orientation */,
 				3F870EE52A20D3020003CE4D /* 3D Touch */,
 				3F7EDDA12A1783D0003EBBEB /* CoreData */,
 				3F870EE92A20D3830003CE4D /* WKWebView */,
@@ -387,6 +394,8 @@
 				3F87C5B12943713600FFC9C5 /* UniversalLinkViewController.m */,
 				3F870EEA2A20D3DB0003CE4D /* Touch3DViewController.h */,
 				3F870EEB2A20D3DB0003CE4D /* Touch3DViewController.m */,
+				3FCFA46B2A7934690000E2A5 /* OrientationViewController.h */,
+				3FCFA46C2A7934690000E2A5 /* OrientationViewController.m */,
 			);
 			path = TestController;
 			sourceTree = "<group>";
@@ -542,6 +551,15 @@
 				3F46179E28A3951400EFBE6D /* FlowView.m */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		3FCFA4672A7934290000E2A5 /* Orientation */ = {
+			isa = PBXGroup;
+			children = (
+				3FCFA4692A7934400000E2A5 /* UIDevice+Orientation.h */,
+				3FCFA4682A7934400000E2A5 /* UIDevice+Orientation.m */,
+			);
+			path = Orientation;
 			sourceTree = "<group>";
 		};
 		3FEEE39928966710002C74AE /* Runttime */ = {
@@ -805,6 +823,7 @@
 				3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */,
 				3F46179F28A3951400EFBE6D /* FlowView.m in Sources */,
 				3F7EDDB92A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m in Sources */,
+				3FCFA46D2A7934690000E2A5 /* OrientationViewController.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
 				3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */,
 				3FF755E4289C0DAF00BC0121 /* UIApplication+Window.m in Sources */,
@@ -832,6 +851,7 @@
 				3FFDB47A28A67E49004AA481 /* TKDynamicLaunchImageHelper.m in Sources */,
 				3F4617A728A3BD7D00EFBE6D /* LaunchImageViewController.m in Sources */,
 				3FFDB53B28A6A3C5004AA481 /* AppIconManager.m in Sources */,
+				3FCFA46A2A7934400000E2A5 /* UIDevice+Orientation.m in Sources */,
 				3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */,
 				3F6743E02A0D29DE004385AF /* WKWebViewController+JavaScirpt.m in Sources */,
 				3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */,

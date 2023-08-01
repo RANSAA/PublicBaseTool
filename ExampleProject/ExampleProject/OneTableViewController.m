@@ -19,6 +19,8 @@
 #import "WKWebViewController.h"
 #import "CoreDataViewController.h"
 #import "Touch3DViewController.h"
+#import "OrientationViewController.h"
+
 
 @interface OneTableViewController ()
 
@@ -42,6 +44,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"WKWebViewController" cls:@"WKWebViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Core Data" cls:@"CoreDataViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"3D Touch 示例" cls:@"Touch3DViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"屏幕方向设置" cls:@"OrientationViewController"]];
 }
 
 - (void)viewDidLoad {
