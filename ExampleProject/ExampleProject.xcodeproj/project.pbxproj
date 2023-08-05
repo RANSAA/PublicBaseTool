@@ -40,6 +40,7 @@
 		3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */; };
 		3F6743DD2A0CF1E8004385AF /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6743DC2A0CF1E8004385AF /* WKWebViewController.m */; };
 		3F6743E02A0D29DE004385AF /* WKWebViewController+JavaScirpt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */; };
+		3F6E623C2A7E742A00E59A34 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E623B2A7E742A00E59A34 /* UIImage+Extension.m */; };
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
 		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
@@ -171,6 +172,8 @@
 		3F6743DC2A0CF1E8004385AF /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		3F6743DE2A0D29DE004385AF /* WKWebViewController+JavaScirpt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebViewController+JavaScirpt.h"; sourceTree = "<group>"; };
 		3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebViewController+JavaScirpt.m"; sourceTree = "<group>"; };
+		3F6E623A2A7E742A00E59A34 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Extension.h"; path = "../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/View/TKPhotoPickerTool/UIImage+Extension.h"; sourceTree = "<group>"; };
+		3F6E623B2A7E742A00E59A34 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Extension.m"; path = "../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/View/TKPhotoPickerTool/UIImage+Extension.m"; sourceTree = "<group>"; };
 		3F7BABF22897BA3200C972C5 /* UISearchBar+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Factory.h"; sourceTree = "<group>"; };
 		3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Factory.m"; sourceTree = "<group>"; };
 		3F7BABFF2897CD0400C972C5 /* UITextFieldCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldCustom.h; sourceTree = "<group>"; };
@@ -313,6 +316,7 @@
 				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
 				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
 				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
+				3F6E62392A7E740C00E59A34 /* UIImage */,
 				3FCFA4672A7934290000E2A5 /* Orientation */,
 				3F870EE52A20D3020003CE4D /* 3D Touch */,
 				3F7EDDA12A1783D0003EBBEB /* CoreData */,
@@ -450,6 +454,15 @@
 				3F4962AC28952BB900F471F2 /* TKFontManager.m */,
 			);
 			path = FontManager;
+			sourceTree = "<group>";
+		};
+		3F6E62392A7E740C00E59A34 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3F6E623A2A7E742A00E59A34 /* UIImage+Extension.h */,
+				3F6E623B2A7E742A00E59A34 /* UIImage+Extension.m */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		3F7BAC052897D0E400C972C5 /* UIView+Custom */ = {
@@ -866,6 +879,7 @@
 				3FA4C63D289E89800068544D /* DotIndicator.m in Sources */,
 				3F4617AB28A3C6E400EFBE6D /* TKDynamicLaunchImage.m in Sources */,
 				3F4962B028952BB900F471F2 /* TKFontManager.m in Sources */,
+				3F6E623C2A7E742A00E59A34 /* UIImage+Extension.m in Sources */,
 				3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */,
 				3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */,
 				3F6743DD2A0CF1E8004385AF /* WKWebViewController.m in Sources */,

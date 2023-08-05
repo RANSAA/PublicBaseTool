@@ -88,7 +88,7 @@
     return image;
 }
 
-+ (UIImage *) imageCompressForOriginalImage:(UIImage *)sourceImage targetSize:(CGSize)size
++ (UIImage *)imageCompressForOriginalImage:(UIImage *)sourceImage targetSize:(CGSize)size
 {
     UIImage *newImage = nil;
     CGSize imageSize = sourceImage.size;
@@ -134,6 +134,30 @@
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+
+
+/**
+ 图片旋转,
+ radians: 旋转的弧度。
+ */
++ (UIImage *)imageRotatedByRadinasWithImage:(UIImage *)image radina:(CGFloat)radians
+{
+    CGAffineTransform t = CGAffineTransformMakeRotation(radians);
+    CGRect rotatedRect = CGRectApplyAffineTransform(CGRectMake(0.0 , 0.0, image.size.width, image.size.height), t);
+    
+    CGSize rotatedsize = rotatedRect.size;
+    UIGraphicsBeginImageContext (rotatedsize);
+    CGContextRef ctx = UIGraphicsGetCurrentContext ();
+    
+    CGContextTranslateCTM(ctx, rotatedsize.width/2, rotatedsize.height /2);
+    CGContextRotateCTM(ctx,radians);
+    CGContextScaleCTM(ctx,1.0, -1.0);//Y方向镜像翻转
+    CGContextDrawImage (ctx, CGRectMake (-image.size.width/2, -image.size.height/2, image.size.width, image.size. height),image.CGImage);
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return  newImage;
+
 }
 
 

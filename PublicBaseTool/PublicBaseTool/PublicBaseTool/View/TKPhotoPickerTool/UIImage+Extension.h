@@ -83,6 +83,12 @@
 + (UIImage *)resizeImageWithOriginalImage:(UIImage *)image;
 
 
-+ (UIImage *) imageCompressForOriginalImage:(UIImage *)sourceImage targetSize:(CGSize)size;
++ (UIImage *)imageCompressForOriginalImage:(UIImage *)sourceImage targetSize:(CGSize)size;
+
+/**
+ 图片旋转,
+ radians: 旋转的弧度。
+ */
++ (UIImage *)imageRotatedByRadinasWithImage:(UIImage *)image radina:(CGFloat)radians;
 
 @end
