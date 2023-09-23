@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 
-NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
+NSString * kNotificationNameFontChange = @"kNotificationNameFontChange";
 
 #pragma mark - 字体管理及其相关设置
 @implementation TKFontManager{
@@ -171,7 +171,7 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     _customFontName = fontName;
     _isApply = isApply;
     [self saveFontManageConfig];
-    [self postFontNotification];
+    [self postFontChangeNotification];
 }
 
 /**
@@ -179,20 +179,21 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
  */
 - (UIFont *)fontFactoryOfSize:(CGFloat)size
 {
+    CGFloat realSize = size + _increaseSize;
     if (_isApply) {
         UIFont *font = nil;
         if (_isDescriptorFont) {
-            font = [UIFont fontWithDescriptor:[UIFontDescriptor fontDescriptorWithName:_customFontName size:size] size:size];
+            font = [UIFont fontWithDescriptor:[UIFontDescriptor fontDescriptorWithName:_customFontName size:realSize] size:realSize];
         }else{
-            font = [UIFont fontWithName:_customFontName size:size];
+            font = [UIFont fontWithName:_customFontName size:realSize];
         }
         if (!font) {
             NSLog(@"字体: %@ 不存在，使用系统默认字体", _customFontName);
-            font = [UIFont systemFontOfSize:size];
+            font = [UIFont systemFontOfSize:realSize];
         }
         return font;
     }else{
-        return [UIFont systemFontOfSize:size];
+        return [UIFont systemFontOfSize:realSize];
     }
 }
 
@@ -236,7 +237,7 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     [user setValue:_customFontName forKey:@"TKFontManage-fontName"];
     [user setValue:@(_isApply) forKey:@"TKFontManage-isApply"];
     [user setValue:@(_isDescriptorFont) forKey:@"TKFontManage-isDescriptorFont"];
-    [user setValue:@(_scaleSize) forKey:@"TKFontManage-scaleSize"];
+//    [user setValue:@(_increaseSize) forKey:@"TKFontManage-increaseSize"];
     [user synchronize];
 }
 
@@ -247,21 +248,21 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
     _customFontName = [user valueForKey:@"TKFontManage-fontName"];
     _isApply = [[user valueForKey:@"TKFontManage-isApply"] boolValue];
     _isDescriptorFont = [[user valueForKey:@"TKFontManage-isDescriptorFont"] boolValue];
-    _scaleSize = [[user valueForKey:@"TKFontManage-scaleSize"] floatValue];
+//    _increaseSize = [[user valueForKey:@"TKFontManage-increaseSize"] floatValue];
     NSLog(@"恢复字体配置信息.....");
 
 }
 
-- (void)setScaleSize:(CGFloat)scaleSize
+- (void)setIncreaseSize:(CGFloat)increaseSize
 {
-    _scaleSize = scaleSize;
-    [self postFontNotification];
+    _increaseSize = increaseSize;
+    [self postFontChangeNotification];
 }
 
 
-- (void)postFontNotification
+- (void)postFontChangeNotification
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationNameFontChange object:nil];
 }
 
 @end
@@ -456,12 +457,12 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 - (void)tk_didMoveToSuperview
 {
     [self tk_didMoveToSuperview];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChange object:nil];
 }
 
 - (void)tk_removeFromSuperview{
     [self tk_removeFromSuperview];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChange object:nil];
 }
 
 - (void)tk_setAttributedText:(NSAttributedString *)attributedText
@@ -522,12 +523,12 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 - (void)tk_didMoveToSuperview
 {
     [self tk_didMoveToSuperview];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChange object:nil];
 }
 
 - (void)tk_removeFromSuperview{
     [self tk_removeFromSuperview];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChange object:nil];
 }
 
 
@@ -574,12 +575,12 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 - (void)tk_didMoveToSuperview
 {
     [self tk_didMoveToSuperview];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChange object:nil];
 }
 
 - (void)tk_removeFromSuperview{
     [self tk_removeFromSuperview];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChange object:nil];
 }
 
 - (void)tk_setAttributedText:(NSAttributedString *)attributedText
@@ -640,12 +641,12 @@ NSString * kNotificationNameFontChangeKey = @"kNotificationNameFontChangeKey";
 - (void)tk_didMoveToSuperview
 {
     [self tk_didMoveToSuperview];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFontNotification:) name:kNotificationNameFontChange object:nil];
 }
 
 - (void)tk_removeFromSuperview{
     [self tk_removeFromSuperview];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChangeKey object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:kNotificationNameFontChange object:nil];
 }
 
 - (void)tk_setAttributedText:(NSAttributedString *)attributedText

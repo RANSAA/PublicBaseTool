@@ -202,7 +202,7 @@
     CGFloat progressHeight = 2.0;
     _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, progressHeight)];
     //设置进度条的高度，下面这句代码表示进度条的宽度变为原来的1倍，高度变为原来的1.5倍.
-    _progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);
+    _progressView.transform = CGAffineTransformMakeScale(1.0f, 1.f);
     _progressView.layer.zPosition = 1000;
     _progressView.hidden = YES;
     _progressView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -214,6 +214,7 @@
     NSLayoutConstraint *lay3;
     if(self.customNavBar){
         //自定义的导航条
+        NSLog(@"自定义的导航条: 目前还没有设置！");
         UIView *navBar = nil;
         [navBar addSubview:_progressView];
         lay0 = [_progressView.topAnchor constraintEqualToAnchor:navBar.bottomAnchor];
@@ -222,7 +223,11 @@
     }else{
         [self.view addSubview:_progressView];
         if (@available(iOS 11.0, *)) {
-            lay0 = [_progressView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
+            if([UIDevice.currentDevice userInterfaceIdiom] == 5){//UIUserInterfaceIdiomMac
+                lay0 = [_progressView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:-10];
+            }else{
+                lay0 = [_progressView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
+            }
         } else {
             lay0 = [_progressView.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor];
         }
@@ -233,7 +238,6 @@
     [NSLayoutConstraint activateConstraints:@[lay0,lay1,lay2,lay3]];
 
 
-    
 }
 
 /**
@@ -384,13 +388,19 @@
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:self.soureURL]];
     if(self.customRequest){
-        NSString *method = _HTTPMethod ? _HTTPMethod : @"POST";
+        //HTTPMethod
+        NSString *method = _HTTPMethod ? _HTTPMethod : @"GET";
         request.HTTPMethod = method;
-        
-        //header
-        for (NSString *key in self.header) {
-            NSString *value = self.header[key];
+
+        //headers
+        for (NSString *key in self.headers) {
+            NSString *value = self.headers[key];
             [request setValue:value forHTTPHeaderField:key];
+        }
+        
+        //User-Agent
+        if(self.userAgent){
+            self.webView.customUserAgent = self.userAgent;
         }
         
         //parameter 这儿追加到body参数的格式可由具体项目修改
@@ -410,10 +420,9 @@
             request.HTTPBody   = bodyData;
         }
     }
+    
     [self.webView loadRequest:request];
 }
-
-
 
 
 

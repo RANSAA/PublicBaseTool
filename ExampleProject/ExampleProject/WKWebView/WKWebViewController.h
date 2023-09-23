@@ -47,10 +47,12 @@ NS_ASSUME_NONNULL_BEGIN
 //MARK: - 自定义请求
 /** 是否使用自定义的方式进行请求数据。 默认NO*/
 @property(nonatomic, assign) BOOL customRequest;
-/** 自定义数据请求方式：POST, GET。 默认POST */
+/** 自定义数据请求方式：POST, GET。 默认GET */
 @property(nonatomic, copy) NSString *HTTPMethod;
-/**  request header */
-@property(nonatomic, copy) NSDictionary *header;
+/**  request headers */
+@property(nonatomic, copy) NSDictionary *headers;
+/** 自定义User-Agent，PS:直接将User-Agent值放在headers中设置无效*/
+@property(nonatomic, copy) NSString *userAgent;
 /**
  附加的请求参数，位于Body中,POST方式才追加。
  **/

@@ -118,9 +118,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- 字体缩放大小(即在默认的字号上增加的大小)，会更新所有kFontXX 的大小
+ 字体大小的增量，即在所用通过TKFontManager管理的字体大小的值为:设定值+增量值，默认为0.
  */
-@property(nonatomic, assign) CGFloat scaleSize;
+@property(nonatomic, assign) CGFloat increaseSize;
 
 /**
  是否使用UIFontDescriptor详细描述创建UIFont，默认NO

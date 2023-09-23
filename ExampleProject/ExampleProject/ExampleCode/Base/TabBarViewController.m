@@ -45,6 +45,7 @@
     NavigationViewController *nav2 = [[NavigationViewController alloc] initWithRootViewController:vc2];
     [nav1.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColor.redColor,NSFontAttributeName:kFont15}];
     [nav2.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:UIColor.redColor}];
+    
 
 
     UITabBarItem *item1 = [[UITabBarItem alloc] initWithTitle:@"BASE" image:[UIImage imageNamed:@"house"] tag:0];
@@ -60,6 +61,7 @@
         appearance1.stackedLayoutAppearance.normal.titleTextAttributes = @{NSForegroundColorAttributeName:UIColor.orangeColor};
         //tabbar 背景颜色
         appearance1.backgroundColor = [UIColor.groupTableViewBackgroundColor colorWithAlphaComponent:0.5];
+        appearance1.backgroundColor = UIColor.whiteColor;
         
         //设置tabbar上面的那条线为透明图片
         UIImage *blankImage = [UIImage imageNamed:@"blank"];

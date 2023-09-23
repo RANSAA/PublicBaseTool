@@ -9,10 +9,19 @@
 
 @implementation TKButtonFactory
 
++ (UIButton *)creationCustom
+{
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    // 按下状态下的文字颜色
+    [btn setTitleColor:[UIColor.whiteColor colorWithAlphaComponent:0.15] forState:UIControlStateHighlighted];
+    return btn;
+}
+
+//MARK: -
 + (UIButton *)btnOrangeCorner
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.bounds = CGRectMake(0, 0, 120, 44);
+    UIButton *btn = self.creationCustom;
     [self setOrangeCornerWith:btn];
     return btn;
 }
@@ -28,8 +37,7 @@
 
 + (UIButton *)btnYellowCorner
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.bounds = CGRectMake(0, 0, 120, 44);
+    UIButton *btn = self.creationCustom;
     [self setYellowCornerWith:btn];
     return btn;
 }
@@ -45,8 +53,7 @@
 
 + (UIButton *)btnGreenCorner
 {
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-    btn.bounds = CGRectMake(0, 0, 120, 44);
+    UIButton *btn = self.creationCustom;
     [self setGreenCornerWith:btn];
     return btn;
 }

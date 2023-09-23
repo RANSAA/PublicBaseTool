@@ -39,7 +39,7 @@
                                    class_getInstanceMethod(class, swizzledSel));
 
 
-// 方式二：
+//// 方式二：
 //    BOOL didAddMethod = class_addMethod(class,
 //                                        originSel,
 //                                        method_getImplementation(swizzleMethod),
@@ -54,6 +54,61 @@
 //    }
     
 }
+
+
+/**
+ 新增：交换实例对象中的方法
+ */
++ (void)exchangeInstanceMethod:(Class)class originSel:(SEL)originSel swizzSel:(SEL)swizzledSel
+{
+    Method originaMethod = class_getInstanceMethod(class, originSel);
+    Method swizzleMethod = class_getInstanceMethod(class, swizzledSel);
+
+    if (!originaMethod || !swizzleMethod) {
+      return ;
+    }
+    
+    BOOL didAddMethod = class_addMethod(class,
+                                        originSel,
+                                        method_getImplementation(swizzleMethod),
+                                        method_getTypeEncoding(swizzleMethod));
+    if (didAddMethod) {
+        class_replaceMethod(class,
+                            swizzledSel,
+                            method_getImplementation(originaMethod),
+                            method_getTypeEncoding(originaMethod));
+    } else {
+        method_exchangeImplementations(originaMethod, swizzleMethod);
+    }
+}
+
+
+/**
+ 新增：交换类中的方法
+ */
++ (void)exchangeClassMethod:(Class)class originSel:(SEL)originSel swizzSel:(SEL)swizzledSel
+{
+    Method originaMethod = class_getClassMethod(class, originSel);
+    Method swizzleMethod = class_getClassMethod(class, swizzledSel);
+
+    if (!originaMethod || !swizzleMethod) {
+      return ;
+    }
+    
+    BOOL didAddMethod = class_addMethod(class,
+                                        originSel,
+                                        method_getImplementation(swizzleMethod),
+                                        method_getTypeEncoding(swizzleMethod));
+    if (didAddMethod) {
+        class_replaceMethod(class,
+                            swizzledSel,
+                            method_getImplementation(originaMethod),
+                            method_getTypeEncoding(originaMethod));
+    } else {
+        method_exchangeImplementations(originaMethod, swizzleMethod);
+    }
+}
+
 
 
 @end

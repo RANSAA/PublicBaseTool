@@ -32,37 +32,37 @@
 //    self.navigationItem.title = @"Core Data测试";
 //    self.view.backgroundColor = UIColor.systemGray6Color;
     
-    UIButton *btnAdd = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *btnAdd = TKButtonFactory.btnGreenCorner;
     btnAdd.frame = CGRectMake(80, 100, 80, 50);
     [btnAdd setTitle:@"添加" forState:UIControlStateNormal];
     [btnAdd addTarget:self action:@selector(btnAddAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnAdd];
     
-    UIButton *btnUpdate = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *btnUpdate = TKButtonFactory.btnGreenCorner;
     btnUpdate.frame = CGRectMake(200, 100, 80, 50);
     [btnUpdate setTitle:@"修改" forState:UIControlStateNormal];
     [btnUpdate addTarget:self action:@selector(btnUpdateAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnUpdate];
     
-    UIButton *btnDel = [UIButton buttonWithType:UIButtonTypeSystem];
-    btnDel.frame = CGRectMake(80, 180, 80, 50);
+    UIButton *btnDel = TKButtonFactory.btnGreenCorner;
+    btnDel.frame = CGRectMake(320, 100, 80, 50);
     [btnDel setTitle:@"删除" forState:UIControlStateNormal];
     [btnDel addTarget:self action:@selector(btnDelAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnDel];
     
-    UIButton *btnQuary = [UIButton buttonWithType:UIButtonTypeSystem];
-    btnQuary.frame = CGRectMake(200, 180, 80, 50);
+    UIButton *btnQuary = TKButtonFactory.btnGreenCorner;
+    btnQuary.frame = CGRectMake(80, 180, 160, 50);
     [btnQuary setTitle:@"查询sex==2" forState:UIControlStateNormal];
     [btnQuary addTarget:self action:@selector(btnQuaryAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnQuary];
     
-    UIButton *btnQuaryAll = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *btnQuaryAll = TKButtonFactory.btnGreenCorner;
     btnQuaryAll.frame = CGRectMake(320, 180, 80, 50);
     [btnQuaryAll setTitle:@"查询全部" forState:UIControlStateNormal];
     [btnQuaryAll addTarget:self action:@selector(btnQuaryAllAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnQuaryAll];
     
-    _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 260, 350, 350)];
+    _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 260, 375, 460)];
     _textView.font = [UIFont systemFontOfSize:17];
     [self.view addSubview:_textView];
     _textView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -84,7 +84,7 @@
 
     
     [CoreDataService.shared testInsetModel];
-    [CoreDataService.shared testAddPeopelAssociateBook];
+//    [CoreDataService.shared testAddPeopelAssociateBook];
     
 
 }

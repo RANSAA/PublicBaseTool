@@ -70,8 +70,12 @@ API_AVAILABLE(ios(12.0)) @implementation UIViewController (ThemeEnvironment)
     if (@available(iOS 13.0, *)) {
         //主题切换才会调用
         if (self.monitorThemeCompletionHandlerUseUserTK) {
-            //判断当前模式是否发生变化，因为屏幕旋转也会触发该方法。
-            if ([self.traitCollection hasDifferentColorAppearanceComparedToTraitCollection:previousTraitCollection]) {
+//            //判断当前模式是否发生变化，因为屏幕旋转也会触发该方法。
+//            if ([self.traitCollection hasDifferentColorAppearanceComparedToTraitCollection:previousTraitCollection]) {
+//                self.monitorThemeCompletionHandlerUseUserTK(self.traitCollection.userInterfaceStyle, self);
+//            }
+            //只监听userInterfaceStyle，如果和之前的不一致，则会触发主题操作
+            if(self.traitCollection.userInterfaceStyle != previousTraitCollection.userInterfaceStyle){
                 self.monitorThemeCompletionHandlerUseUserTK(self.traitCollection.userInterfaceStyle, self);
             }
         }
@@ -93,7 +97,7 @@ API_AVAILABLE(ios(12.0)) @implementation UIViewController (ThemeEnvironment)
     dispatch_once(&onceToken, ^{
         Class cls = self.class;
         SEL selector = NSSelectorFromString(@"TKThemeEnvironment_traitCollectionDidChange:");
-        [TKMethodSwap swizzleMethod:cls originSel:@selector(traitCollectionDidChange:) swizzSel:selector];
+        [TKMethodSwap exchangeInstanceMethod:cls originSel:@selector(traitCollectionDidChange:) swizzSel:selector];
     });
 }
 

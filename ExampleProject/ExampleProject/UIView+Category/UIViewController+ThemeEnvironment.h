@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)bingMonitorTheme:(void(^)(UIUserInterfaceStyle style, UIViewController* controller))completionHandler API_AVAILABLE(ios(13.0));
 
 /**
- 绑定监听TraitCollectionDidChange
+ 绑定traitCollectionDidChange:方法，即traitCollectionDidChange:执行时会直接将参数传递到该方法并执行。
  */
 - (void)bingMonitorTraitCollection:(void(^)(UITraitCollection *previousTraitCollection, UIViewController* controller))completionHandler;
 

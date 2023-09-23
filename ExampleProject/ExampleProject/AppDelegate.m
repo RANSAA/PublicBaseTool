@@ -27,11 +27,13 @@
     NSString *language = [NSLocale preferredLanguages].firstObject;
     NSLog(@"NSLocale: %@",[NSLocale preferredLanguages]);
 
-
+    //给字体设置增量
+//    TKFontManager.shared.increaseSize = 60;
+    
+    
 
     [self registerFont];
 
-//    [NSThread sleepForTimeInterval:1.5];
 
     [self delayLoadView];
     
@@ -49,7 +51,6 @@
     }
 
 
-
     return YES;
 }
 
@@ -62,10 +63,6 @@
     [TKFontManager.shared dynamicLoadFontPath:path checkFontName:@"AaJianHaoTi"];
     [TKFontManager.shared turnOnAutoRefreshFonts];
 //    [TKFontManager.shared fontNames];
-
-    [UIApplication.sharedApplication registerForRemoteNotifications];
-  
-    UIApplication.sharedApplication.applicationIconBadgeNumber = 20;
 }
 
 #pragma mark - 小于13.0的生命周期
@@ -94,7 +91,7 @@
 }
 
 
-//延迟加载一些第一次初始化比较耗时的UI
+//MARK: - 延迟加载一些第一次初始化比较耗时的UI
 - (void)delayLoadView
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -105,7 +102,7 @@
 }
 
 
-//3D Touch
+//MARK: - 3D Touch
 - (void)init3DTouch
 {
     [Touch3DManager.shared addShortItems];

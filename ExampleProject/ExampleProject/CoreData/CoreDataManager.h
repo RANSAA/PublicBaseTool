@@ -87,12 +87,27 @@ NS_ASSUME_NONNULL_BEGIN
 //MARK: -
 /** sqlite文件存储地址 */
 - (NSURL *)fileCoreDataURL;
-/**
- 功能:保存上下文
- PS:在applicationWillTerminate中也需要保存上下文，因为程序中断时如果不保存，那么可能会造成数据丢失问题。
- */
-- (void)saveContext;
 
+
+/**
+ 功能::保存到数据库文件中
+ PS:在applicationWillTerminate中也需要保存上下文，因为程序中断时如果不保存，那么可能会造成数据丢失问题。
+ 注意事项：
+ 1.NSManagedObject创建对象时就已经插入到了当前的上下文中，这是在context中都可以对当前对象进行操作；
+ 但是如果不执行save方法那么对应的操作是不会同步到磁盘上的数据库文件中，即数据不会保存到数据库文件中，但是它依然在内存中也可操作。
+ 2.context还有即可对应的方法:
+    undo
+    redo
+    reset
+    rollback
+ 示例：如果先创建了某个NSManagedObject对象，但是后续条件不满足，需要将当前NSManagedObject对象从上下文中删除时就可以执行reset或rollback方法。
+ */
+- (void)save;
+
+- (void)undo;
+- (void)redo;
+- (void)reset;
+- (void)rollback;
 
 
 /**

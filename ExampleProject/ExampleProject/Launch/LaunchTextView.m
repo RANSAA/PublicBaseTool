@@ -68,6 +68,10 @@
     return NO;
 }
 
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
 
 - (void)layoutSubviews
 {

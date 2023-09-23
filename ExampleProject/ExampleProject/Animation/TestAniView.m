@@ -81,7 +81,7 @@
     scaleAnimation.toValue = @0.7;
     scaleAnimation.beginTime = CACurrentMediaTime();
     scaleAnimation.duration = 2;
-    scaleAnimation.repeatCount = 20;
+    scaleAnimation.repeatCount = CGFLOAT_MAX;
     scaleAnimation.autoreverses = YES;//动画结束时是否执行逆动画
     scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];//设置动画的速度变化:淡出
     return scaleAnimation;

@@ -18,6 +18,8 @@
 		3F0A8F9528950092009C8BEE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A8F9428950092009C8BEE /* TableViewController.m */; };
 		3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A8F98289500B3009C8BEE /* NavigationViewController.m */; };
 		3F0A8F9E289500DF009C8BEE /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A8F9D289500DF009C8BEE /* TabBarViewController.m */; };
+		3F0D3A602ABC93E1003C993E /* JumpToAppStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D3A5F2ABC93E1003C993E /* JumpToAppStoreViewController.m */; };
+		3F0D3A632ABC94C9003C993E /* JumpToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D3A612ABC94C9003C993E /* JumpToAppStore.m */; };
 		3F378D99289687E000F1533C /* UIButton+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F378D98289687E000F1533C /* UIButton+Factory.m */; };
 		3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F378D9C2896880600F1533C /* UIControl+Factory.m */; };
 		3F378DA128969DED00F1533C /* TKSearchBarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F378DA028969DED00F1533C /* TKSearchBarFactory.m */; };
@@ -130,6 +132,10 @@
 		3F0A8F9D289500DF009C8BEE /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		3F0A8FA028950156009C8BEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		3F0A8FA12895015E009C8BEE /* ExampleProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExampleProject.entitlements; sourceTree = "<group>"; };
+		3F0D3A5E2ABC93E1003C993E /* JumpToAppStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JumpToAppStoreViewController.h; sourceTree = "<group>"; };
+		3F0D3A5F2ABC93E1003C993E /* JumpToAppStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpToAppStoreViewController.m; sourceTree = "<group>"; };
+		3F0D3A612ABC94C9003C993E /* JumpToAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JumpToAppStore.m; path = ../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/Tool/JumpToAppStore.m; sourceTree = "<group>"; };
+		3F0D3A622ABC94C9003C993E /* JumpToAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JumpToAppStore.h; path = ../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/Tool/JumpToAppStore.h; sourceTree = "<group>"; };
 		3F378D97289687E000F1533C /* UIButton+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Factory.h"; sourceTree = "<group>"; };
 		3F378D98289687E000F1533C /* UIButton+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Factory.m"; sourceTree = "<group>"; };
 		3F378D9B2896880600F1533C /* UIControl+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Factory.h"; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 		3F4962B52895320D00F471F2 /* TKLableFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKLableFactory.m; sourceTree = "<group>"; };
 		3F4962B82895323800F471F2 /* TKButtonFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKButtonFactory.h; sourceTree = "<group>"; };
 		3F4962B92895323800F471F2 /* TKButtonFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKButtonFactory.m; sourceTree = "<group>"; };
+		3F594F022AB1FDD3009E99B6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		3F594F032AB1FDD4009E99B6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		3F61A5C828A909E300880DCC /* UIViewController+ThemeEnvironment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ThemeEnvironment.h"; sourceTree = "<group>"; };
 		3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ThemeEnvironment.m"; sourceTree = "<group>"; };
 		3F6743DB2A0CF1E8004385AF /* WKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
@@ -316,6 +324,7 @@
 				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
 				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
 				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
+				3F0D3A5D2ABC93AF003C993E /* JumpToAppStore */,
 				3F6E62392A7E740C00E59A34 /* UIImage */,
 				3FCFA4672A7934290000E2A5 /* Orientation */,
 				3F870EE52A20D3020003CE4D /* 3D Touch */,
@@ -400,6 +409,8 @@
 				3F870EEB2A20D3DB0003CE4D /* Touch3DViewController.m */,
 				3FCFA46B2A7934690000E2A5 /* OrientationViewController.h */,
 				3FCFA46C2A7934690000E2A5 /* OrientationViewController.m */,
+				3F0D3A5E2ABC93E1003C993E /* JumpToAppStoreViewController.h */,
+				3F0D3A5F2ABC93E1003C993E /* JumpToAppStoreViewController.m */,
 			);
 			path = TestController;
 			sourceTree = "<group>";
@@ -417,6 +428,15 @@
 				3F0A8F9428950092009C8BEE /* TableViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		3F0D3A5D2ABC93AF003C993E /* JumpToAppStore */ = {
+			isa = PBXGroup;
+			children = (
+				3F0D3A622ABC94C9003C993E /* JumpToAppStore.h */,
+				3F0D3A612ABC94C9003C993E /* JumpToAppStore.m */,
+			);
+			path = JumpToAppStore;
 			sourceTree = "<group>";
 		};
 		3F4047F828951860004CBD35 /* FactoryUI */ = {
@@ -482,8 +502,8 @@
 				3F7EDDA22A1783D0003EBBEB /* CoreDataModel.xcdatamodeld */,
 				3F7EDDA42A1783D0003EBBEB /* Test */,
 				3F7EDDB12A1783D1003EBBEB /* CoreDataManager.h */,
-				3F7EDDB22A1783D1003EBBEB /* CoreDataService.h */,
 				3F7EDDB32A1783D1003EBBEB /* CoreDataManager.m */,
+				3F7EDDB22A1783D1003EBBEB /* CoreDataService.h */,
 				3F7EDDB42A1783D1003EBBEB /* CoreDataService.m */,
 			);
 			path = CoreData;
@@ -501,14 +521,14 @@
 		3F7EDDA52A1783D0003EBBEB /* EntityModel */ = {
 			isa = PBXGroup;
 			children = (
-				3F7EDDA62A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.h */,
+				3F7EDDAC2A1783D0003EBBEB /* CDBookModel+CoreDataClass.h */,
 				3F7EDDA72A1783D0003EBBEB /* CDBookModel+CoreDataClass.m */,
 				3F7EDDA82A1783D0003EBBEB /* CDBookModel+CoreDataProperties.h */,
-				3F7EDDA92A1783D0003EBBEB /* CDPeopleModel+CoreDataClass.h */,
-				3F7EDDAA2A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.m */,
 				3F7EDDAB2A1783D0003EBBEB /* CDBookModel+CoreDataProperties.m */,
-				3F7EDDAC2A1783D0003EBBEB /* CDBookModel+CoreDataClass.h */,
+				3F7EDDA92A1783D0003EBBEB /* CDPeopleModel+CoreDataClass.h */,
 				3F7EDDAD2A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m */,
+				3F7EDDA62A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.h */,
+				3F7EDDAA2A1783D0003EBBEB /* CDPeopleModel+CoreDataProperties.m */,
 			);
 			path = EntityModel;
 			sourceTree = "<group>";
@@ -516,8 +536,8 @@
 		3F7EDDAE2A1783D1003EBBEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F7EDDAF2A1783D1003EBBEB /* CoreDataViewController.m */,
 				3F7EDDB02A1783D1003EBBEB /* CoreDataViewController.h */,
+				3F7EDDAF2A1783D1003EBBEB /* CoreDataViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -724,6 +744,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 3F0A8F5B2894FFBE009C8BEE;
 			productRefGroup = 3F0A8F652894FFBE009C8BEE /* Products */;
@@ -836,6 +857,7 @@
 				3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */,
 				3F46179F28A3951400EFBE6D /* FlowView.m in Sources */,
 				3F7EDDB92A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m in Sources */,
+				3F0D3A632ABC94C9003C993E /* JumpToAppStore.m in Sources */,
 				3FCFA46D2A7934690000E2A5 /* OrientationViewController.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
 				3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */,
@@ -868,6 +890,7 @@
 				3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */,
 				3F6743E02A0D29DE004385AF /* WKWebViewController+JavaScirpt.m in Sources */,
 				3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */,
+				3F0D3A602ABC93E1003C993E /* JumpToAppStoreViewController.m in Sources */,
 				3F870EEC2A20D3DB0003CE4D /* Touch3DViewController.m in Sources */,
 				3F86C89528A883E2006AC931 /* UIView+ThemeEnvironment.m in Sources */,
 				3F7EDDBB2A1783D1003EBBEB /* CoreDataManager.m in Sources */,
@@ -900,6 +923,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3F0A8F712894FFBE009C8BEE /* Base */,
+				3F594F022AB1FDD3009E99B6 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -908,6 +932,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3F0A8F762894FFC8009C8BEE /* Base */,
+				3F594F032AB1FDD4009E99B6 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -919,6 +944,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -978,6 +1004,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1034,11 +1061,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 39E8LG3NH3;
+				DEVELOPMENT_TEAM = KBHDP222FK;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ExampleProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1048,10 +1075,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -1062,11 +1090,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 39E8LG3NH3;
+				DEVELOPMENT_TEAM = KBHDP222FK;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ExampleProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1076,10 +1104,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTS_MACCATALYST = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};

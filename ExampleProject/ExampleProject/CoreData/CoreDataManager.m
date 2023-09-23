@@ -100,15 +100,23 @@
     return _managedObjectModel;
 }
 
-- (void)saveContext
+
+/**
+ 功能:保存到数据库文件中
+ PS:在applicationWillTerminate中也需要保存上下文，因为程序中断时如果不保存，那么可能会造成数据丢失问题。
+ 注意事项：
+ 1.NSManagedObject创建对象时就已经插入到了当前的上下文中，这是在context中都可以对当前对象进行操作；
+ 但是如果不执行save方法那么对应的操作是不会同步到磁盘上的数据库文件中，即数据不会保存到数据库文件中，但是它依然在内存中也可操作。
+ 2.context还有即可对应的方法:
+    undo
+    redo
+    reset
+    rollback
+ 示例：如果先创建了某个NSManagedObject对象，但是后续条件不满足，需要将当前NSManagedObject对象从上下文中删除时就可以执行reset或rollback方法。
+ */
+- (void)save
 {
     if(_managedObjectContext){
-//        NSError *err = nil;
-//        if([_managedObjectContext hasChanges] && ![_managedObjectContext save:&err]){
-//            NSLog(@"Core Data 保存出现错误:%@",err);
-//            assert(!err);
-//        }
-        
         if(self.concurrencyType == NSMainQueueConcurrencyType){
             NSError *err = nil;
             if([_managedObjectContext hasChanges] && ![_managedObjectContext save:&err]){
@@ -129,6 +137,34 @@
     }
 }
 
+- (void)undo
+{
+    if(_managedObjectContext){
+        [_managedObjectContext undo];
+    }
+}
+
+- (void)redo
+{
+    if(_managedObjectContext){
+        [_managedObjectContext redo];
+    }
+}
+
+- (void)reset
+{
+    if(_managedObjectContext){
+        [_managedObjectContext reset];
+    }
+}
+
+- (void)rollback
+{
+    if(_managedObjectContext){
+        [_managedObjectContext rollback];
+    }
+}
+
 
 
 //MARK: - 添加实体
@@ -142,7 +178,7 @@
 {
     /**
      方式1：
-        NSManagedObject *model = [[ NSManagedObject alloc] initWithEntity:@"entityName" insertIntoManagedObjectContext:self.managedObjectContext];
+        NSManagedObject *model = [[ NSManagedObject alloc] initWithEntity:entityName insertIntoManagedObjectContext:self.managedObjectContext];
      方式2：
         NSManagedObject *model = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.managedObjectContext];
      */
@@ -176,7 +212,7 @@
 - (void)deleteModel:(NSManagedObject *)model
 {
     [self.managedObjectContext deleteObject:model];
-    [self saveContext];
+    [self save];
 }
 
 - (void)deleteModels:(NSArray<NSManagedObject *> *) models
@@ -198,7 +234,7 @@
     //修改实体属性
     //....
     
-    [self saveContext];
+    [self save];
 }
 
 

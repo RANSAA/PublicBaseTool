@@ -317,13 +317,13 @@
 			isa = PBXGroup;
 			children = (
 				3F407C15247546A800FB4CC6 /* AddressManager.h */,
-				3F407C18247546A800FB4CC6 /* ConfigManager.h */,
-				3F407E1A2475600700FB4CC6 /* ColorManager.h */,
-				3F407C16247546A800FB4CC6 /* EnumManager.h */,
-				3F407C17247546A800FB4CC6 /* NotifactionManager.h */,
 				3F407C0F2475467E00FB4CC6 /* AppManager.h */,
 				3F407C122475467E00FB4CC6 /* AppManager.m */,
 				3F407C19247546A800FB4CC6 /* CheckAppVersion.m */,
+				3F407E1A2475600700FB4CC6 /* ColorManager.h */,
+				3F407C18247546A800FB4CC6 /* ConfigManager.h */,
+				3F407C16247546A800FB4CC6 /* EnumManager.h */,
+				3F407C17247546A800FB4CC6 /* NotifactionManager.h */,
 				3F407C102475467E00FB4CC6 /* StateManager.h */,
 				3F407C112475467E00FB4CC6 /* StateManager.m */,
 			);
@@ -333,8 +333,8 @@
 		3F407C1E2475470100FB4CC6 /* WebSocket */ = {
 			isa = PBXGroup;
 			children = (
-				3F407C1F2475470100FB4CC6 /* WebSocketUnit.m */,
 				3F407C202475470100FB4CC6 /* WebSocketUnit.h */,
+				3F407C1F2475470100FB4CC6 /* WebSocketUnit.m */,
 			);
 			path = WebSocket;
 			sourceTree = "<group>";
@@ -342,11 +342,11 @@
 		3F407DA424754B4000FB4CC6 /* TKPhotoPickerTool */ = {
 			isa = PBXGroup;
 			children = (
-				3F407DA524754B4000FB4CC6 /* TKSimplePhotoPickerView.m */,
-				3F407DA624754B4000FB4CC6 /* UIImage+Extension.m */,
 				3F407DA724754B4000FB4CC6 /* TKSimplePhotoPickerView.h */,
+				3F407DA524754B4000FB4CC6 /* TKSimplePhotoPickerView.m */,
 				3F407DA824754B4000FB4CC6 /* TKSimplePhotoPickerView.xib */,
 				3F407DA924754B4000FB4CC6 /* UIImage+Extension.h */,
+				3F407DA624754B4000FB4CC6 /* UIImage+Extension.m */,
 			);
 			path = TKPhotoPickerTool;
 			sourceTree = "<group>";
@@ -354,9 +354,9 @@
 		3F407DAD24754C2800FB4CC6 /* TKStarView */ = {
 			isa = PBXGroup;
 			children = (
-				3F407DAE24754C2800FB4CC6 /* TKStarsView.xib */,
-				3F407DAF24754C2800FB4CC6 /* TKStarsView.m */,
 				3F407DB024754C2800FB4CC6 /* TKStarsView.h */,
+				3F407DAF24754C2800FB4CC6 /* TKStarsView.m */,
+				3F407DAE24754C2800FB4CC6 /* TKStarsView.xib */,
 			);
 			path = TKStarView;
 			sourceTree = "<group>";
@@ -364,12 +364,12 @@
 		3F407DB124754C2800FB4CC6 /* PickerView */ = {
 			isa = PBXGroup;
 			children = (
-				3F407DB224754C2800FB4CC6 /* TKDatePickerView.xib */,
 				3F407DB324754C2800FB4CC6 /* TKDatePickerView.h */,
+				3F407DB624754C2800FB4CC6 /* TKDatePickerView.m */,
+				3F407DB224754C2800FB4CC6 /* TKDatePickerView.xib */,
+				3F407DB724754C2800FB4CC6 /* TKSimplePickerView.h */,
 				3F407DB424754C2800FB4CC6 /* TKSimplePickerView.m */,
 				3F407DB524754C2800FB4CC6 /* TKSimplePickerView.xib */,
-				3F407DB624754C2800FB4CC6 /* TKDatePickerView.m */,
-				3F407DB724754C2800FB4CC6 /* TKSimplePickerView.h */,
 			);
 			path = PickerView;
 			sourceTree = "<group>";
@@ -377,32 +377,32 @@
 		3F407DB824754C2800FB4CC6 /* OtherView */ = {
 			isa = PBXGroup;
 			children = (
-				3F407DB924754C2800FB4CC6 /* TKTriangleButton.m */,
-				3F407DBA24754C2800FB4CC6 /* TKRunLabelView.m */,
-				3F407DBB24754C2800FB4CC6 /* TKPointView.m */,
-				3F407DBC24754C2800FB4CC6 /* TKDotProgressView.h */,
-				3F407DBD24754C2800FB4CC6 /* TKCommentView.m */,
-				3F407DBE24754C2800FB4CC6 /* TKDotProgressView.xib */,
-				3F407DBF24754C2800FB4CC6 /* TKItemTitleView.m */,
-				3F407DC024754C2800FB4CC6 /* TKProgressView.xib */,
-				3F407DC124754C2800FB4CC6 /* TKNavEdgeButton.xib */,
-				3F407DC224754C2800FB4CC6 /* TKItemView.h */,
-				3F407DC324754C2800FB4CC6 /* TKProgressView.m */,
-				3F407DC424754C2800FB4CC6 /* TKItemTitleView.xib */,
-				3F407DC524754C2800FB4CC6 /* TKCommentView.xib */,
-				3F407DC624754C2800FB4CC6 /* TKNavEdgeButton.h */,
-				3F407DC724754C2800FB4CC6 /* TKItemView.xib */,
-				3F407DC824754C2800FB4CC6 /* TKDotProgressView.m */,
-				3F407DC924754C2800FB4CC6 /* TKPointView.h */,
-				3F407DCA24754C2800FB4CC6 /* TKTriangleButton.xib */,
-				3F407DCB24754C2800FB4CC6 /* TKRunLabelView.h */,
-				3F407DCC24754C2800FB4CC6 /* TKPointView.xib */,
-				3F407DCD24754C2800FB4CC6 /* TKTriangleButton.h */,
-				3F407DCE24754C2800FB4CC6 /* TKItemTitleView.h */,
 				3F407DCF24754C2800FB4CC6 /* TKCommentView.h */,
-				3F407DD024754C2800FB4CC6 /* TKNavEdgeButton.m */,
-				3F407DD124754C2800FB4CC6 /* TKProgressView.h */,
+				3F407DBD24754C2800FB4CC6 /* TKCommentView.m */,
+				3F407DC524754C2800FB4CC6 /* TKCommentView.xib */,
+				3F407DBC24754C2800FB4CC6 /* TKDotProgressView.h */,
+				3F407DC824754C2800FB4CC6 /* TKDotProgressView.m */,
+				3F407DBE24754C2800FB4CC6 /* TKDotProgressView.xib */,
+				3F407DCE24754C2800FB4CC6 /* TKItemTitleView.h */,
+				3F407DBF24754C2800FB4CC6 /* TKItemTitleView.m */,
+				3F407DC424754C2800FB4CC6 /* TKItemTitleView.xib */,
+				3F407DC224754C2800FB4CC6 /* TKItemView.h */,
 				3F407DD224754C2800FB4CC6 /* TKItemView.m */,
+				3F407DC724754C2800FB4CC6 /* TKItemView.xib */,
+				3F407DC624754C2800FB4CC6 /* TKNavEdgeButton.h */,
+				3F407DD024754C2800FB4CC6 /* TKNavEdgeButton.m */,
+				3F407DC124754C2800FB4CC6 /* TKNavEdgeButton.xib */,
+				3F407DC924754C2800FB4CC6 /* TKPointView.h */,
+				3F407DBB24754C2800FB4CC6 /* TKPointView.m */,
+				3F407DCC24754C2800FB4CC6 /* TKPointView.xib */,
+				3F407DD124754C2800FB4CC6 /* TKProgressView.h */,
+				3F407DC324754C2800FB4CC6 /* TKProgressView.m */,
+				3F407DC024754C2800FB4CC6 /* TKProgressView.xib */,
+				3F407DCB24754C2800FB4CC6 /* TKRunLabelView.h */,
+				3F407DBA24754C2800FB4CC6 /* TKRunLabelView.m */,
+				3F407DCD24754C2800FB4CC6 /* TKTriangleButton.h */,
+				3F407DB924754C2800FB4CC6 /* TKTriangleButton.m */,
+				3F407DCA24754C2800FB4CC6 /* TKTriangleButton.xib */,
 			);
 			path = OtherView;
 			sourceTree = "<group>";
@@ -438,10 +438,10 @@
 		3F407DE324754C2800FB4CC6 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				3F407DE424754C2800FB4CC6 /* TKTextView.m */,
 				3F407DE524754C2800FB4CC6 /* TKTableView.h */,
 				3F407DE624754C2800FB4CC6 /* TKTableView.m */,
 				3F407DE724754C2800FB4CC6 /* TKTextView.h */,
+				3F407DE424754C2800FB4CC6 /* TKTextView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -449,8 +449,8 @@
 		3F407DE824754C2800FB4CC6 /* TKSearchBar */ = {
 			isa = PBXGroup;
 			children = (
-				3F407DE924754C2800FB4CC6 /* TKSearchBar.m */,
 				3F407DEA24754C2800FB4CC6 /* TKSearchBar.h */,
+				3F407DE924754C2800FB4CC6 /* TKSearchBar.m */,
 				3F407DEB24754C2800FB4CC6 /* TKSearchBar.xib */,
 			);
 			path = TKSearchBar;

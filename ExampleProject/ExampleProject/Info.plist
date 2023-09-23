@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>工具演示</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundleAlternateIcons</key>
@@ -39,12 +47,12 @@
 		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
-			<key>CFBundleIconName</key>
-			<string></string>
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string></string>
 			</array>
+			<key>CFBundleIconName</key>
+			<string></string>
 			<key>UIPrerenderedIcon</key>
 			<false/>
 		</dict>
@@ -54,22 +62,12 @@
 			<array>
 				<string></string>
 			</array>
-			<key>UINewsstandBindingType</key>
-			<string>UINewsstandBindingTypeMagazine</string>
 			<key>UINewsstandBindingEdge</key>
 			<string>UINewsstandBindingEdgeLeft</string>
+			<key>UINewsstandBindingType</key>
+			<string>UINewsstandBindingTypeMagazine</string>
 		</dict>
 	</dict>
-	<key>CFBundleAllowMixedLocalizations</key>
-	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Aa可爱日系中文-AaKADRXZW.ttf</string>
-	</array>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
-	<key>CFBundleExecutable</key>
-	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -84,6 +82,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Aa可爱日系中文-AaKADRXZW.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -119,8 +121,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleDisplayName</key>
-	<string>工具演示</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

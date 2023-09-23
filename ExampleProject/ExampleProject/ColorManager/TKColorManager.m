@@ -143,7 +143,8 @@ color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
 
 + (UIColor *)colorWhite
 {
-    return [self lightText];
+//    return [self lightText];
+    return UIColor.whiteColor;
 }
 
 + (UIColor *)colorTextField
@@ -343,6 +344,7 @@ color:支持@“#123456”、 @“0X123456”、 @“123456”三种格式
         return [self colorWithHexString:@"#000000ff"];
     }
 }
+
 
 + (UIColor *)lightText
 {

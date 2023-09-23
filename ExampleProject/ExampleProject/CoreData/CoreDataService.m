@@ -37,7 +37,7 @@
 
 - (void)saveContext
 {
-    [_manager saveContext];
+    [_manager save];
 }
 
 
@@ -48,14 +48,15 @@
 - (CDPeopleModel *)testEntityModel
 {
     //根据实体名创建model
-    CDPeopleModel *model = (CDPeopleModel *)[self.manager createModelWithEntityName:@"Entity_People"];
+//    CDPeopleModel *model = (CDPeopleModel *)[self.manager createModelWithEntityName:@"Entity_People"];
     
-//    CDPeopleModel *model = (CDPeopleModel *)[self createModelWithClass:CDPeopleModel.class];
+    CDPeopleModel *model = (CDPeopleModel *)[self.manager createModelWithClass:CDPeopleModel.class];
     
     //为具体实体设置属性
     model.name = @"张三";
     model.sex = 1;
     model.age = 25;
+    
     
     return model;
 }
@@ -63,14 +64,22 @@
 
 - (void)testInsetModel
 {
-    CDPeopleModel *model = [[ CDPeopleModel alloc] initWithContext:self.manager.managedObjectContext];
+
     
+    CDPeopleModel *model = [[ CDPeopleModel alloc] initWithContext:self.manager.managedObjectContext];
+
     model.name = [NSString stringWithFormat:@"Name-%d",arc4random()%2550];
     model.sex = arc4random()%3;
-    model.age = 25;
+    model.age = 222;
     
-
-    [self.manager saveContext];
+    
+    
+    
+//    CDPeopleModel *model = [NSEntityDescription insertNewObjectForEntityForName:@"Entity_People" inManagedObjectContext:self.manager.managedObjectContext];
+//    model.age = 996;
+    
+//    [self.manager.managedObjectContext rollback];
+    [self.manager save];
 }
 
 
@@ -100,7 +109,7 @@
     [model addBooksObject:book2];
 
     
-    [self.manager saveContext];
+    [self.manager save];
 }
 
 

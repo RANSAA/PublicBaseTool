@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +36,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqf-Zq-4Qk">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-Gf-rC6">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sk-Gf-rC6">
                                     <rect key="frame" x="315" y="0.0" width="60" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="P9X-6C-i4i"/>
@@ -51,7 +49,7 @@
                                         <action selector="btnDoneAction:" destination="-1" eventType="touchUpInside" id="1nS-YX-rQZ"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-6g-YOI">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-6g-YOI">
                                     <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="CwN-ei-8Du"/>
@@ -76,11 +74,8 @@
                                 <constraint firstAttribute="trailing" secondItem="8Sk-Gf-rC6" secondAttribute="trailing" id="yV7-oF-y3Q"/>
                             </constraints>
                         </view>
-                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-NT-RJl">
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="M1u-NT-RJl">
                             <rect key="frame" x="0.0" y="40" width="375" height="145"/>
-                            <date key="date" timeIntervalSinceReferenceDate="572604000.79047501">
-                                <!--2019-02-23 08:40:00 +0000-->
-                            </date>
                         </datePicker>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,6 +91,7 @@
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="5Kb-iY-Xel" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="8aL-5Q-PpG"/>
@@ -105,7 +101,6 @@
                 <constraint firstAttribute="bottom" secondItem="5Kb-iY-Xel" secondAttribute="bottom" id="SIa-TC-Ura"/>
                 <constraint firstItem="5Kb-iY-Xel" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gIf-Ou-FjH"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>
         </view>
     </objects>

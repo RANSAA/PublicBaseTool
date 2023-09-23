@@ -49,6 +49,7 @@
             completion();
         }
     }else{
+        //按需配置
         LaunchPageViewController *vc = [self instanceViewController];
         vc.completion = completion;
         vc.saveAgreementStatus = ^{

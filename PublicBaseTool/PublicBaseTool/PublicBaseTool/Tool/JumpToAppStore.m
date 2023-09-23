@@ -13,13 +13,22 @@
 
 
 // Apple iteuns 中该App对应的ID，用于更新跳转到APP Store
-#define AppleAppID @"1436002627"
+//#define AppleAppID @"1436002627"
 
 @interface JumpToAppStore ()<SKStoreProductViewControllerDelegate>
 
 @end
 
-@implementation JumpToAppStore
+@implementation JumpToAppStore{
+    NSString* _AppleAppID;
+}
+
+/** 设置需要跳转应用的Apple ID */
+- (void)setAppleAppID:(NSString *)appID
+{
+    _AppleAppID = appID;
+}
+
 
 /**
  不离开本应用，应用内跳转到App Store
@@ -27,7 +36,7 @@
  */
 - (void)jumpWithPresentVC:(UIViewController *)presentVC
 {
-    NSString *appID = AppleAppID;
+    NSString *appID = _AppleAppID;
     NSDictionary *dic = [NSDictionary dictionaryWithObject:appID forKey:SKStoreProductParameterITunesItemIdentifier];
     SKStoreProductViewController *storeProductVC = [[SKStoreProductViewController alloc] init];
     storeProductVC.delegate = self;
@@ -47,7 +56,7 @@
  */
 - (void)jump
 {
-    NSString *str = [NSString stringWithFormat:@"https://itunes.apple.com/app/apple-store/id%@?mt=8",AppleAppID];
+    NSString *str = [NSString stringWithFormat:@"https://itunes.apple.com/app/apple-store/id%@?mt=8",_AppleAppID];
     NSURL *url = [NSURL URLWithString:str];
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         if (@available(iOS 10.0, *)) {

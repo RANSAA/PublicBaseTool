@@ -20,6 +20,7 @@
 #import "CoreDataViewController.h"
 #import "Touch3DViewController.h"
 #import "OrientationViewController.h"
+#import "JumpToAppStoreViewController.h"
 
 
 @interface OneTableViewController ()
@@ -45,6 +46,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Core Data" cls:@"CoreDataViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"3D Touch 示例" cls:@"Touch3DViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"屏幕方向设置" cls:@"OrientationViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"跳转到App Store" cls:@"JumpToAppStoreViewController"]];
 }
 
 - (void)viewDidLoad {
@@ -86,8 +88,14 @@
 
     id vc;
     if([model.cls isEqualToString:@"WKWebViewController"]){
-        WKWebViewController *web = [WKWebViewController instanceWithTitle:model.name urlString:@"https://www.baidu.com"];
+        WKWebViewController *web = [WKWebViewController instanceWithTitle:model.name urlString:@"https://www.bilibili.com/"];
+//        WKWebViewController *web = [WKWebViewController instanceWithTitle:model.name urlString:@"https://www.jianshu.com/"];
 //        WKWebViewController *web = [WKWebViewController instanceWithTitle:@"HTML Test" htmlString:@"<p>HTML String</p>" baseURL:nil];
+       
+
+        web.userAgent = @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1788.0  uacq";
+        web.customRequest = YES;
+        web.customNavBar = NO;
         web.updateTitle = YES;
         vc = web;
     }else{
