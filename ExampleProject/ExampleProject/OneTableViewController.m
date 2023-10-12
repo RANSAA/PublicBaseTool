@@ -22,6 +22,8 @@
 #import "OrientationViewController.h"
 #import "JumpToAppStoreViewController.h"
 #import "TouchIDViewController.h"
+#import "ShareActivityViewController.h"
+
 
 
 
@@ -49,7 +51,8 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"3D Touch 示例" cls:@"Touch3DViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"屏幕方向设置" cls:@"OrientationViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"跳转到App Store" cls:@"JumpToAppStoreViewController"]];
-    [self.dataAry addObject:[ClassTypeModel initWithName:@"TouchID" cls:@"TouchIDViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"Touch ID" cls:@"TouchIDViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"系统自带UIActivityViewController分享控制器" cls:@"ShareActivityViewController"]];
 }
 
 - (void)viewDidLoad {

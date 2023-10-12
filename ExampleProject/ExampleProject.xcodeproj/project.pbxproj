@@ -70,6 +70,8 @@
 		3FCFA46D2A7934690000E2A5 /* OrientationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCFA46C2A7934690000E2A5 /* OrientationViewController.m */; };
 		3FD862892AD7FEA0002DB43F /* TouchIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD862882AD7FEA0002DB43F /* TouchIDManager.m */; };
 		3FD8628B2AD807C2002DB43F /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8628A2AD807C2002DB43F /* TouchIDViewController.m */; };
+		3FD8628F2AD81851002DB43F /* ShareActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8628E2AD81851002DB43F /* ShareActivity.m */; };
+		3FD862922AD81B38002DB43F /* ShareActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD862912AD81B38002DB43F /* ShareActivityViewController.m */; };
 		3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE392289661D8002C74AE /* UIView+Factory.m */; };
 		3FEEE397289665C6002C74AE /* UITextField+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE396289665C6002C74AE /* UITextField+Factory.m */; };
 		3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE39C28966996002C74AE /* TKMethodSwap.m */; };
@@ -237,6 +239,10 @@
 		3FD862872AD7FEA0002DB43F /* TouchIDManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDManager.h; sourceTree = "<group>"; };
 		3FD862882AD7FEA0002DB43F /* TouchIDManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDManager.m; sourceTree = "<group>"; };
 		3FD8628A2AD807C2002DB43F /* TouchIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
+		3FD8628D2AD81851002DB43F /* ShareActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareActivity.h; sourceTree = "<group>"; };
+		3FD8628E2AD81851002DB43F /* ShareActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareActivity.m; sourceTree = "<group>"; };
+		3FD862902AD81B38002DB43F /* ShareActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareActivityViewController.h; sourceTree = "<group>"; };
+		3FD862912AD81B38002DB43F /* ShareActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareActivityViewController.m; sourceTree = "<group>"; };
 		3FEEE391289661D8002C74AE /* UIView+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Factory.h"; sourceTree = "<group>"; };
 		3FEEE392289661D8002C74AE /* UIView+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Factory.m"; sourceTree = "<group>"; };
 		3FEEE395289665C6002C74AE /* UITextField+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Factory.h"; sourceTree = "<group>"; };
@@ -330,6 +336,7 @@
 				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
 				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
 				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
+				3FD8628C2AD8182E002DB43F /* Share */,
 				3FD862802AD7FDFF002DB43F /* TouchuID */,
 				3F0D3A5D2ABC93AF003C993E /* JumpToAppStore */,
 				3F6E62392A7E740C00E59A34 /* UIImage */,
@@ -420,6 +427,8 @@
 				3F0D3A5F2ABC93E1003C993E /* JumpToAppStoreViewController.m */,
 				3FD862812AD7FE36002DB43F /* TouchIDViewController.h */,
 				3FD8628A2AD807C2002DB43F /* TouchIDViewController.m */,
+				3FD862902AD81B38002DB43F /* ShareActivityViewController.h */,
+				3FD862912AD81B38002DB43F /* ShareActivityViewController.m */,
 			);
 			path = TestController;
 			sourceTree = "<group>";
@@ -611,6 +620,15 @@
 				3FD862882AD7FEA0002DB43F /* TouchIDManager.m */,
 			);
 			path = TouchuID;
+			sourceTree = "<group>";
+		};
+		3FD8628C2AD8182E002DB43F /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				3FD8628D2AD81851002DB43F /* ShareActivity.h */,
+				3FD8628E2AD81851002DB43F /* ShareActivity.m */,
+			);
+			path = Share;
 			sourceTree = "<group>";
 		};
 		3FEEE39928966710002C74AE /* Runttime */ = {
@@ -888,7 +906,9 @@
 				3FC9BABA28A530A300C559EC /* LaunchTextView.m in Sources */,
 				3F0A8F692894FFBE009C8BEE /* AppDelegate.m in Sources */,
 				3F378DA128969DED00F1533C /* TKSearchBarFactory.m in Sources */,
+				3FD8628F2AD81851002DB43F /* ShareActivity.m in Sources */,
 				3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */,
+				3FD862922AD81B38002DB43F /* ShareActivityViewController.m in Sources */,
 				3F0A8F7A2894FFC8009C8BEE /* main.m in Sources */,
 				3F870EE82A20D3020003CE4D /* Touch3DManager.m in Sources */,
 				3F40480D28951E49004CBD35 /* ColorViewController.m in Sources */,
