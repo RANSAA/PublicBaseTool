@@ -21,6 +21,8 @@
 #import "Touch3DViewController.h"
 #import "OrientationViewController.h"
 #import "JumpToAppStoreViewController.h"
+#import "TouchIDViewController.h"
+
 
 
 @interface OneTableViewController ()
@@ -47,6 +49,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"3D Touch 示例" cls:@"Touch3DViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"屏幕方向设置" cls:@"OrientationViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"跳转到App Store" cls:@"JumpToAppStoreViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"TouchID" cls:@"TouchIDViewController"]];
 }
 
 - (void)viewDidLoad {
