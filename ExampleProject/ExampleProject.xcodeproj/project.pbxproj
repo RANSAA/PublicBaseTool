@@ -61,6 +61,9 @@
 		3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C56029430EA500FFC9C5 /* GrayWhiteViewController.m */; };
 		3F87C5652943107B00FFC9C5 /* TKGrayWhiteFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */; };
 		3F87C5B22943713600FFC9C5 /* UniversalLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F87C5B12943713600FFC9C5 /* UniversalLinkViewController.m */; };
+		3F9B3B282AD8FB12001AEB15 /* TKQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B3B272AD8FB12001AEB15 /* TKQRCodeTool.m */; };
+		3F9B3B2B2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B3B2A2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m */; };
+		3F9B3B2F2AD90165001AEB15 /* QRCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B3B2E2AD90165001AEB15 /* QRCenter.png */; };
 		3FA4C63D289E89800068544D /* DotIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C63C289E89800068544D /* DotIndicator.m */; };
 		3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C640289EBAFF0068544D /* TestAniView.m */; };
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
@@ -221,6 +224,11 @@
 		3F87C5642943107B00FFC9C5 /* TKGrayWhiteFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKGrayWhiteFilterView.m; sourceTree = "<group>"; };
 		3F87C5B02943713600FFC9C5 /* UniversalLinkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniversalLinkViewController.h; sourceTree = "<group>"; };
 		3F87C5B12943713600FFC9C5 /* UniversalLinkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UniversalLinkViewController.m; sourceTree = "<group>"; };
+		3F9B3B262AD8FB12001AEB15 /* TKQRCodeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKQRCodeTool.h; sourceTree = "<group>"; };
+		3F9B3B272AD8FB12001AEB15 /* TKQRCodeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKQRCodeTool.m; sourceTree = "<group>"; };
+		3F9B3B292AD8FD1A001AEB15 /* TKQRCodeToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKQRCodeToolViewController.h; sourceTree = "<group>"; };
+		3F9B3B2A2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKQRCodeToolViewController.m; sourceTree = "<group>"; };
+		3F9B3B2E2AD90165001AEB15 /* QRCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCenter.png; sourceTree = "<group>"; };
 		3FA4C63B289E897F0068544D /* DotIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotIndicator.h; sourceTree = "<group>"; };
 		3FA4C63C289E89800068544D /* DotIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotIndicator.m; sourceTree = "<group>"; };
 		3FA4C63F289EBAFF0068544D /* TestAniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAniView.h; sourceTree = "<group>"; };
@@ -336,6 +344,7 @@
 				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
 				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
 				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
+				3F9B3B252AD8FAEC001AEB15 /* QRCode */,
 				3FD8628C2AD8182E002DB43F /* Share */,
 				3FD862802AD7FDFF002DB43F /* TouchuID */,
 				3F0D3A5D2ABC93AF003C993E /* JumpToAppStore */,
@@ -360,6 +369,7 @@
 				3FF755EF289C324B00BC0121 /* LaunchImage0.png */,
 				3FF755F1289C324C00BC0121 /* LaunchImage1.png */,
 				3FF755F0289C324B00BC0121 /* LaunchImage2.png */,
+				3F9B3B2E2AD90165001AEB15 /* QRCenter.png */,
 				3F0A8F782894FFC8009C8BEE /* Info.plist */,
 				3F0A8F792894FFC8009C8BEE /* main.m */,
 				3F0A8FA028950156009C8BEE /* PrefixHeader.pch */,
@@ -429,6 +439,8 @@
 				3FD8628A2AD807C2002DB43F /* TouchIDViewController.m */,
 				3FD862902AD81B38002DB43F /* ShareActivityViewController.h */,
 				3FD862912AD81B38002DB43F /* ShareActivityViewController.m */,
+				3F9B3B292AD8FD1A001AEB15 /* TKQRCodeToolViewController.h */,
+				3F9B3B2A2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m */,
 			);
 			path = TestController;
 			sourceTree = "<group>";
@@ -587,6 +599,15 @@
 				3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */,
 			);
 			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		3F9B3B252AD8FAEC001AEB15 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				3F9B3B262AD8FB12001AEB15 /* TKQRCodeTool.h */,
+				3F9B3B272AD8FB12001AEB15 /* TKQRCodeTool.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		3FA4C63A289E895E0068544D /* Animation */ = {
@@ -800,6 +821,7 @@
 				3FF5F30428A7868B002C475F /* Icon1@2x.png in Resources */,
 				3FFDB53028A6A095004AA481 /* Icon1@3x.png in Resources */,
 				3F0A8F772894FFC8009C8BEE /* LaunchScreen.storyboard in Resources */,
+				3F9B3B2F2AD90165001AEB15 /* QRCenter.png in Resources */,
 				3FFDB53328A6A0C1004AA481 /* Icon3@3x.png in Resources */,
 				3F0A8F742894FFC8009C8BEE /* Assets.xcassets in Resources */,
 				3FF755F3289C324C00BC0121 /* LaunchImage2.png in Resources */,
@@ -894,6 +916,7 @@
 				3F46179F28A3951400EFBE6D /* FlowView.m in Sources */,
 				3F7EDDB92A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m in Sources */,
 				3F0D3A632ABC94C9003C993E /* JumpToAppStore.m in Sources */,
+				3F9B3B282AD8FB12001AEB15 /* TKQRCodeTool.m in Sources */,
 				3FCFA46D2A7934690000E2A5 /* OrientationViewController.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
 				3FF755ED289C17E900BC0121 /* LaunchPageViewController.m in Sources */,
@@ -918,6 +941,7 @@
 				3F4617A328A3953600EFBE6D /* FlowViewController.m in Sources */,
 				3FEEE397289665C6002C74AE /* UITextField+Factory.m in Sources */,
 				3FFDB48028A69414004AA481 /* AppIconViewController.m in Sources */,
+				3F9B3B2B2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m in Sources */,
 				3F40480128951AF1004CBD35 /* OneTableViewController.m in Sources */,
 				3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */,
 				3FC8C67C28957C9C00B933A7 /* TKTextViewFactory.m in Sources */,

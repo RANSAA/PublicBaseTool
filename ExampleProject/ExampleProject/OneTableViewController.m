@@ -23,6 +23,8 @@
 #import "JumpToAppStoreViewController.h"
 #import "TouchIDViewController.h"
 #import "ShareActivityViewController.h"
+#import "TKQRCodeToolViewController.h"
+
 
 
 
@@ -53,6 +55,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"跳转到App Store" cls:@"JumpToAppStoreViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Touch ID" cls:@"TouchIDViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"系统自带UIActivityViewController分享控制器" cls:@"ShareActivityViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"二维码生成与扫描" cls:@"TKQRCodeToolViewController"]];
 }
 
 - (void)viewDidLoad {
