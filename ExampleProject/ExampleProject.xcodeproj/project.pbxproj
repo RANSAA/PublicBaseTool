@@ -64,6 +64,8 @@
 		3F9B3B282AD8FB12001AEB15 /* TKQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B3B272AD8FB12001AEB15 /* TKQRCodeTool.m */; };
 		3F9B3B2B2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B3B2A2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m */; };
 		3F9B3B2F2AD90165001AEB15 /* QRCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B3B2E2AD90165001AEB15 /* QRCenter.png */; };
+		3F9B3B332AD9599D001AEB15 /* TKLocationlocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B3B322AD9599D001AEB15 /* TKLocationlocator.m */; };
+		3F9B3B362AD959C0001AEB15 /* TKLocationlocatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B3B352AD959C0001AEB15 /* TKLocationlocatorViewController.m */; };
 		3FA4C63D289E89800068544D /* DotIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C63C289E89800068544D /* DotIndicator.m */; };
 		3FA4C641289EBAFF0068544D /* TestAniView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4C640289EBAFF0068544D /* TestAniView.m */; };
 		3FC8C67828957C8E00B933A7 /* TKTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8C67728957C8E00B933A7 /* TKTextFieldFactory.m */; };
@@ -229,6 +231,10 @@
 		3F9B3B292AD8FD1A001AEB15 /* TKQRCodeToolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKQRCodeToolViewController.h; sourceTree = "<group>"; };
 		3F9B3B2A2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKQRCodeToolViewController.m; sourceTree = "<group>"; };
 		3F9B3B2E2AD90165001AEB15 /* QRCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCenter.png; sourceTree = "<group>"; };
+		3F9B3B312AD9599D001AEB15 /* TKLocationlocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKLocationlocator.h; sourceTree = "<group>"; };
+		3F9B3B322AD9599D001AEB15 /* TKLocationlocator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKLocationlocator.m; sourceTree = "<group>"; };
+		3F9B3B342AD959C0001AEB15 /* TKLocationlocatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKLocationlocatorViewController.h; sourceTree = "<group>"; };
+		3F9B3B352AD959C0001AEB15 /* TKLocationlocatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKLocationlocatorViewController.m; sourceTree = "<group>"; };
 		3FA4C63B289E897F0068544D /* DotIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DotIndicator.h; sourceTree = "<group>"; };
 		3FA4C63C289E89800068544D /* DotIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DotIndicator.m; sourceTree = "<group>"; };
 		3FA4C63F289EBAFF0068544D /* TestAniView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAniView.h; sourceTree = "<group>"; };
@@ -344,6 +350,7 @@
 				3F40480028951AF1004CBD35 /* OneTableViewController.m */,
 				3F40480328951AFB004CBD35 /* TwoTableViewController.h */,
 				3F40480428951AFB004CBD35 /* TwoTableViewController.m */,
+				3F9B3B302AD9598A001AEB15 /* Locationlocator */,
 				3F9B3B252AD8FAEC001AEB15 /* QRCode */,
 				3FD8628C2AD8182E002DB43F /* Share */,
 				3FD862802AD7FDFF002DB43F /* TouchuID */,
@@ -441,6 +448,8 @@
 				3FD862912AD81B38002DB43F /* ShareActivityViewController.m */,
 				3F9B3B292AD8FD1A001AEB15 /* TKQRCodeToolViewController.h */,
 				3F9B3B2A2AD8FD1A001AEB15 /* TKQRCodeToolViewController.m */,
+				3F9B3B342AD959C0001AEB15 /* TKLocationlocatorViewController.h */,
+				3F9B3B352AD959C0001AEB15 /* TKLocationlocatorViewController.m */,
 			);
 			path = TestController;
 			sourceTree = "<group>";
@@ -608,6 +617,15 @@
 				3F9B3B272AD8FB12001AEB15 /* TKQRCodeTool.m */,
 			);
 			path = QRCode;
+			sourceTree = "<group>";
+		};
+		3F9B3B302AD9598A001AEB15 /* Locationlocator */ = {
+			isa = PBXGroup;
+			children = (
+				3F9B3B312AD9599D001AEB15 /* TKLocationlocator.h */,
+				3F9B3B322AD9599D001AEB15 /* TKLocationlocator.m */,
+			);
+			path = Locationlocator;
 			sourceTree = "<group>";
 		};
 		3FA4C63A289E895E0068544D /* Animation */ = {
@@ -964,6 +982,7 @@
 				3FF755D7289BF82700BC0121 /* DeviceToken.m in Sources */,
 				3FD8628B2AD807C2002DB43F /* TouchIDViewController.m in Sources */,
 				3FA4C63D289E89800068544D /* DotIndicator.m in Sources */,
+				3F9B3B332AD9599D001AEB15 /* TKLocationlocator.m in Sources */,
 				3F4617AB28A3C6E400EFBE6D /* TKDynamicLaunchImage.m in Sources */,
 				3F4962B028952BB900F471F2 /* TKFontManager.m in Sources */,
 				3F6E623C2A7E742A00E59A34 /* UIImage+Extension.m in Sources */,
@@ -977,6 +996,7 @@
 				3F7EDDB62A1783D1003EBBEB /* CDBookModel+CoreDataClass.m in Sources */,
 				3F40481128951E5C004CBD35 /* FontViewController.m in Sources */,
 				3F0A8F9528950092009C8BEE /* TableViewController.m in Sources */,
+				3F9B3B362AD959C0001AEB15 /* TKLocationlocatorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

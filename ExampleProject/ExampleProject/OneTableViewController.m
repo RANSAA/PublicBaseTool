@@ -24,6 +24,7 @@
 #import "TouchIDViewController.h"
 #import "ShareActivityViewController.h"
 #import "TKQRCodeToolViewController.h"
+#import "TKLocationlocatorViewController.h"
 
 
 
@@ -56,6 +57,7 @@
     [self.dataAry addObject:[ClassTypeModel initWithName:@"Touch ID" cls:@"TouchIDViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"系统自带UIActivityViewController分享控制器" cls:@"ShareActivityViewController"]];
     [self.dataAry addObject:[ClassTypeModel initWithName:@"二维码生成与扫描" cls:@"TKQRCodeToolViewController"]];
+    [self.dataAry addObject:[ClassTypeModel initWithName:@"定位与地址编码-未完成" cls:@"TKLocationlocatorViewController"]];
 }
 
 - (void)viewDidLoad {
