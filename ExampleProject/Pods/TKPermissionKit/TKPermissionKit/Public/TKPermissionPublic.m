@@ -13,27 +13,89 @@
 @implementation TKPermissionPublic
 
 
-#pragma mark 国际化
 
-+ (NSBundle *)TKPermissionBundle
++ (instancetype)shared
 {
-    static NSBundle *bundle = nil;
+    static id obj = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        //这种方式获取NSBundle不会因为二进制文件，bundle文件是否处于framework中而受到影响
-        bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[TKPermissionPublic class]] pathForResource:@"TKPermissionKit" ofType:@"bundle"]];
+        obj = [[self.class alloc] init];
     });
-    return bundle;
+    return  obj;
 }
+
+
+#pragma mark 国际化处理
 
 /** 直接从bundle文件中读取指定string，而获取国际化字符串*/
 + (NSString *)localizedStringForKey:(NSString *)key tab:(NSString *)tab
 {
-    NSString *value = [[self lprojBundle] localizedStringForKey:key value:nil table:tab];
+//    NSString *value = [[self lprojBundle] localizedStringForKey:key value:nil table:tab];
+    NSString *value = [[self.shared lprojBundle] localizedStringForKey:key value:nil table:tab];
     return value;
 }
 
-//获取当前语言lproj文件对应的bundle
+/** TKPermissionKit Bundle Path*/
+- (NSString *)bundlePath
+{
+    NSString *path = [[NSBundle bundleForClass:[TKPermissionPublic class]] pathForResource:@"TKPermissionKit" ofType:@"bundle"];
+    return  path;
+}
+
+/** TKPermissionKit Bundle */
+- (NSBundle *)bundle
+{
+    NSBundle *bundle = [NSBundle bundleWithPath:[self bundlePath]];
+    return bundle;
+}
+
+/** 配置.lproj文件 */
+- (NSString *)selectedLanguage
+{
+    NSString *selectedLanguage = @"zh-Hans";
+    NSString *systemLanguage = [NSLocale preferredLanguages].firstObject.lowercaseString;
+    NSString *path = [self bundlePath];
+    NSArray *subPaths = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:nil];
+    subPaths = [subPaths filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
+        return [evaluatedObject hasSuffix:@".lproj"];
+    }]];
+    for (NSString *dirName in subPaths) {
+        NSString *name = [dirName stringByReplacingOccurrencesOfString:@".lproj" withString:@""];
+        NSString *lowerName = [name lowercaseString];
+        if ([lowerName containsString:systemLanguage] || [systemLanguage containsString:lowerName]) {
+            selectedLanguage = name;
+            break;
+        }
+    }
+    for (NSString *dirName in subPaths) {
+        NSString *name = [dirName stringByReplacingOccurrencesOfString:@".lproj" withString:@""];
+        NSString *lowerName = [name lowercaseString];
+        if ([lowerName isEqualToString:systemLanguage]) {
+            selectedLanguage = name;
+            break;
+        }
+    }    
+    return selectedLanguage;
+}
+
+//MARK: 获取当前语言lproj文件对应的bundle 方式一
+- (NSBundle *)lprojBundle
+{
+    NSBundle *bundle = [NSBundle bundleWithPath:[[self bundle] pathForResource:[self selectedLanguage] ofType:@"lproj"]];
+    return bundle;
+}
+
+
+
+
+//MARK: 获取当前语言lproj文件对应的bundle 方式二
++ (NSBundle *)TKPermissionBundle
+{
+    //这种方式获取NSBundle不会因为二进制文件，bundle文件是否处于framework中而受到影响
+    NSBundle *bundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[TKPermissionPublic class]] pathForResource:@"TKPermissionKit" ofType:@"bundle"]];
+    return bundle;
+}
+
 + (NSBundle *)lprojBundle
 {
     static NSBundle *bundle = nil;
@@ -87,6 +149,11 @@
 + (void)alertTitle:(NSString *)title msg:(NSString *)msg leftTitle:(NSString *)leftTitle rightTitle:(NSString *)rightTitle
 {
     dispatch_async(dispatch_get_main_queue(), ^{
+        if (TKPermissionPublic.shared.blockCustomMsg) {
+            TKPermissionPublic.shared.blockCustomMsg(title, msg, leftTitle, rightTitle);
+            return;;
+        }
+        
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:leftTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
@@ -104,6 +171,8 @@
         UIViewController *tragetVC = [self TK_getCurrentController];
         [tragetVC presentViewController:alert animated:YES completion:nil];
     });
+    
+    
 }
 
 
@@ -114,6 +183,11 @@
 + (void)alertActionTitle:(NSString *)title msg:(NSString *)msg actionTitle:(NSString *)actionTitle;
 {
     dispatch_async(dispatch_get_main_queue(), ^{
+        if (TKPermissionPublic.shared.blockCustomMsg) {
+            TKPermissionPublic.shared.blockCustomMsg(title, msg, actionTitle, nil);
+            return;;
+        }
+        
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:actionTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
@@ -147,20 +221,29 @@
 + (UIWindow*)TK_keyWindow
 {
     UIWindow *mainWindow = nil;
-    if ( @available(iOS 13.0, *) ) {
-        //如果是多场景，可以遍历windows,检查window.isKeyWindow获取
-        NSArray *windows = UIApplication.sharedApplication.windows;
-        for (UIWindow *window in windows) {
-            if (window.isKeyWindow) {
-                mainWindow = window;
-                break;
+    if (@available(iOS 13.0, *)) {
+//        for (UIWindow *window in UIApplication.sharedApplication.windows) {
+//            if (window.isKeyWindow) {
+//                return window;
+//            }
+//        }
+        for (UIWindowScene *windowScene in UIApplication.sharedApplication.connectedScenes) {
+            if (windowScene.activationState == UISceneActivationStateForegroundActive) {
+                for (UIWindow *window in windowScene.windows) {
+                    if (window.isKeyWindow) {
+                        return window;
+                    }
+                }
             }
         }
-        if (!mainWindow) {
-            mainWindow = windows.firstObject;
-        }
-    } else {
+    }else{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         mainWindow = UIApplication.sharedApplication.keyWindow;
+#pragma clang diagnostic pop
+    }
+    if (!mainWindow) {
+        mainWindow = UIApplication.sharedApplication.windows.firstObject;
     }
     return mainWindow;
 }

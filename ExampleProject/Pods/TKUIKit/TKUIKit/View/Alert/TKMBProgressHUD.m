@@ -28,11 +28,8 @@ static NSMutableArray *aryLoading = nil;
         case MBProgressHUDModeText:{//提示文字
             HUD.bezelView.color = [[UIColor blackColor]colorWithAlphaComponent:0.5];
             HUD.label.text = text;
-            HUD.label.font = [UIFont systemFontOfSize:14];
             HUD.label.numberOfLines = 0;
             HUD.label.textColor = [UIColor whiteColor];
-//            HUD.offset = CGPointMake(0, 240);
-//            HUD.margin = 10;
         }
             break;
         case MBProgressHUDModeIndeterminate:{//菊花-圈圈

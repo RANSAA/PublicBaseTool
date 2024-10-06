@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/TKBaseKit/TKBaseKit.Privacy.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/TKUIKit/TKUIKit.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/TKUIKit/TKUIKit.Privacy.bundle

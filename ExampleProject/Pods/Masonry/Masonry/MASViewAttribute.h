@@ -39,6 +39,10 @@
  */
 - (id)initWithView:(MAS_VIEW *)view item:(id)item layoutAttribute:(NSLayoutAttribute)layoutAttribute;
 
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
 /**
  *	Determine whether the layoutAttribute is a size attribute
  *

@@ -14,12 +14,15 @@
  */
 
 
-//BUG字符串是否输出t日志
+
+//BUG字符串是否输出日志
+#ifndef TKLog
 #ifdef DEBUG
-//#define TKLog(...) NSLog(__VA_ARGS__)
-#define TKLog(FORMAT, ...) fprintf(stderr,"function:%s line:%d content:   %s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+//#define TKLog(fmt, ...) NSLog((fmt), ##__VA_ARGS__);
+#define TKLog(FORMAT, ...) fprintf(stderr,"function:%s line:%d content: %s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else
-#define TKLog(FORMAT, ...) nil
+#define TKLog(...)
+#endif
 #endif
 
 
@@ -70,10 +73,10 @@
 #define kNavHeight              44.0
 //状态栏高度（顶部安全区域高度）
 #define kStatusBarHeight        [UIDevice TK_getSafeTopAreaHeight]
-//底部安全区域高度
-#define kBottomSafeAreaHeight   [UIDevice TK_getSafeBottomAreaHeight]
 //获取状态栏+导航条的高度
 #define kNavStatusBarHeight     (kNavHeight + kStatusBarHeight)
+//底部安全区域高度
+#define kBottomSafeAreaHeight   [UIDevice TK_getSafeBottomAreaHeight]
 //获取导航条，状态栏，底部凹凸区域的总高度
 #define kNavAllSafeAreaHeight   (kNavStatusBarHeight + kBottomSafeAreaHeight)
 //获取状态栏和底部安全区域的总高度

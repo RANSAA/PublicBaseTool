@@ -1,5 +1,5 @@
 //
-//  UIView+MASAdditions.m
+//  View+MASAdditions.m
 //  Masonry
 //
 //  Created by Jonas Budelmann on 20/07/13.
@@ -11,14 +11,14 @@
 
 @implementation MAS_VIEW (MASAdditions)
 
-- (NSArray *)mas_makeConstraints:(void(^)(MASConstraintMaker *))block {
+- (NSArray *)mas_makeConstraints:(void (NS_NOESCAPE^)(MASConstraintMaker *))block {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];
     block(constraintMaker);
     return [constraintMaker install];
 }
 
-- (NSArray *)mas_updateConstraints:(void(^)(MASConstraintMaker *))block {
+- (NSArray *)mas_updateConstraints:(void (NS_NOESCAPE^)(MASConstraintMaker *))block {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];
     constraintMaker.updateExisting = YES;
@@ -26,7 +26,7 @@
     return [constraintMaker install];
 }
 
-- (NSArray *)mas_remakeConstraints:(void(^)(MASConstraintMaker *make))block {
+- (NSArray *)mas_remakeConstraints:(void (NS_NOESCAPE^)(MASConstraintMaker *make))block {
     self.translatesAutoresizingMaskIntoConstraints = NO;
     MASConstraintMaker *constraintMaker = [[MASConstraintMaker alloc] initWithView:self];
     constraintMaker.removeExisting = YES;
@@ -77,17 +77,14 @@
 }
 
 - (MASViewAttribute *)mas_baseline {
-    return [[MASViewAttribute alloc] initWithView:self layoutAttribute:NSLayoutAttributeBaseline];
+    return [[MASViewAttribute alloc] initWithView:self layoutAttribute:NSLayoutAttributeLastBaseline];
 }
 
-- (MASViewAttribute *(^)(NSLayoutAttribute))mas_attribute
-{
+- (MASViewAttribute * (^)(NSLayoutAttribute))mas_attribute {
     return ^(NSLayoutAttribute attr) {
         return [[MASViewAttribute alloc] initWithView:self layoutAttribute:attr];
     };
 }
-
-#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 80000) || (__TV_OS_VERSION_MIN_REQUIRED >= 9000) || (__MAC_OS_X_VERSION_MIN_REQUIRED >= 101100)
 
 - (MASViewAttribute *)mas_firstBaseline {
     return [[MASViewAttribute alloc] initWithView:self layoutAttribute:NSLayoutAttributeFirstBaseline];
@@ -96,9 +93,7 @@
     return [[MASViewAttribute alloc] initWithView:self layoutAttribute:NSLayoutAttributeLastBaseline];
 }
 
-#endif
-
-#if (__IPHONE_OS_VERSION_MIN_REQUIRED >= 80000) || (__TV_OS_VERSION_MIN_REQUIRED >= 9000)
+#if TARGET_OS_IPHONE || TARGET_OS_TV
 
 - (MASViewAttribute *)mas_leftMargin {
     return [[MASViewAttribute alloc] initWithView:self layoutAttribute:NSLayoutAttributeLeftMargin];
@@ -132,24 +127,48 @@
     return [[MASViewAttribute alloc] initWithView:self layoutAttribute:NSLayoutAttributeCenterYWithinMargins];
 }
 
-#endif
-
-#if (__IPHONE_OS_VERSION_MAX_ALLOWED >= 110000) || (__TV_OS_VERSION_MAX_ALLOWED >= 110000)
-
 - (MASViewAttribute *)mas_safeAreaLayoutGuide {
-    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeBottom];
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeNotAnAttribute];
 }
-- (MASViewAttribute *)mas_safeAreaLayoutGuideTop {
-    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeTop];
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideLeading {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeLeading];
 }
-- (MASViewAttribute *)mas_safeAreaLayoutGuideBottom {
-    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeBottom];
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideTrailing {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeTrailing];
 }
+
 - (MASViewAttribute *)mas_safeAreaLayoutGuideLeft {
     return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeLeft];
 }
+
 - (MASViewAttribute *)mas_safeAreaLayoutGuideRight {
     return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeRight];
+}
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideTop {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeTop];
+}
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideBottom {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeBottom];
+}
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideWidth {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeWidth];
+}
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideHeight {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeHeight];
+}
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideCenterX {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeCenterX];
+}
+
+- (MASViewAttribute *)mas_safeAreaLayoutGuideCenterY {
+    return [[MASViewAttribute alloc] initWithView:self item:self.safeAreaLayoutGuide layoutAttribute:NSLayoutAttributeCenterY];
 }
 
 #endif
@@ -166,20 +185,15 @@
 
 #pragma mark - heirachy
 
-- (instancetype)mas_closestCommonSuperview:(MAS_VIEW *)view {
-    MAS_VIEW *closestCommonSuperview = nil;
-
+- (__kindof MAS_VIEW *)mas_closestCommonSuperview:(MAS_VIEW *)view {
+    MAS_VIEW *closestCommonSuperview = self;
     MAS_VIEW *secondViewSuperview = view;
-    while (!closestCommonSuperview && secondViewSuperview) {
-        MAS_VIEW *firstViewSuperview = self;
-        while (!closestCommonSuperview && firstViewSuperview) {
-            if (secondViewSuperview == firstViewSuperview) {
-                closestCommonSuperview = secondViewSuperview;
-            }
-            firstViewSuperview = firstViewSuperview.superview;
-        }
-        secondViewSuperview = secondViewSuperview.superview;
+    // O(a+b)
+    while (closestCommonSuperview != secondViewSuperview) {
+        closestCommonSuperview = !closestCommonSuperview ? view : closestCommonSuperview.superview;
+        secondViewSuperview = !secondViewSuperview ? self : secondViewSuperview.superview;
     }
+
     return closestCommonSuperview;
 }
 

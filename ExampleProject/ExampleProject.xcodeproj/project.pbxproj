@@ -19,7 +19,6 @@
 		3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A8F98289500B3009C8BEE /* NavigationViewController.m */; };
 		3F0A8F9E289500DF009C8BEE /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0A8F9D289500DF009C8BEE /* TabBarViewController.m */; };
 		3F0D3A602ABC93E1003C993E /* JumpToAppStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D3A5F2ABC93E1003C993E /* JumpToAppStoreViewController.m */; };
-		3F0D3A632ABC94C9003C993E /* JumpToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D3A612ABC94C9003C993E /* JumpToAppStore.m */; };
 		3F378D99289687E000F1533C /* UIButton+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F378D98289687E000F1533C /* UIButton+Factory.m */; };
 		3F378D9D2896880600F1533C /* UIControl+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F378D9C2896880600F1533C /* UIControl+Factory.m */; };
 		3F378DA128969DED00F1533C /* TKSearchBarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F378DA028969DED00F1533C /* TKSearchBarFactory.m */; };
@@ -42,7 +41,6 @@
 		3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F61A5C928A909E300880DCC /* UIViewController+ThemeEnvironment.m */; };
 		3F6743DD2A0CF1E8004385AF /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6743DC2A0CF1E8004385AF /* WKWebViewController.m */; };
 		3F6743E02A0D29DE004385AF /* WKWebViewController+JavaScirpt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */; };
-		3F6E623C2A7E742A00E59A34 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6E623B2A7E742A00E59A34 /* UIImage+Extension.m */; };
 		3F7BABF42897BA3200C972C5 /* UISearchBar+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */; };
 		3F7BAC012897CD0400C972C5 /* UITextFieldCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7BAC002897CD0400C972C5 /* UITextFieldCustom.m */; };
 		3F7E1053289F8E110053408B /* NYWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E1051289F8E110053408B /* NYWaterWaveView.m */; };
@@ -80,6 +78,8 @@
 		3FEEE393289661D8002C74AE /* UIView+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE392289661D8002C74AE /* UIView+Factory.m */; };
 		3FEEE397289665C6002C74AE /* UITextField+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE396289665C6002C74AE /* UITextField+Factory.m */; };
 		3FEEE39D28966996002C74AE /* TKMethodSwap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FEEE39C28966996002C74AE /* TKMethodSwap.m */; };
+		3FF50AC92CB28A480089905B /* JumpToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF50AC82CB28A480089905B /* JumpToAppStore.m */; };
+		3FF50ACD2CB28B010089905B /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF50ACB2CB28B010089905B /* UIImage+Extension.m */; };
 		3FF5F30128A78664002C475F /* Icon3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF5F30028A78664002C475F /* Icon3@2x.png */; };
 		3FF5F30428A7868B002C475F /* Icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF5F30328A7868B002C475F /* Icon1@2x.png */; };
 		3FF5F30728A786A9002C475F /* Icon2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF5F30628A786A9002C475F /* Icon2@2x.png */; };
@@ -140,11 +140,8 @@
 		3F0A8F9C289500DF009C8BEE /* TabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		3F0A8F9D289500DF009C8BEE /* TabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		3F0A8FA028950156009C8BEE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		3F0A8FA12895015E009C8BEE /* ExampleProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExampleProject.entitlements; sourceTree = "<group>"; };
 		3F0D3A5E2ABC93E1003C993E /* JumpToAppStoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JumpToAppStoreViewController.h; sourceTree = "<group>"; };
 		3F0D3A5F2ABC93E1003C993E /* JumpToAppStoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpToAppStoreViewController.m; sourceTree = "<group>"; };
-		3F0D3A612ABC94C9003C993E /* JumpToAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JumpToAppStore.m; path = ../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/Tool/JumpToAppStore.m; sourceTree = "<group>"; };
-		3F0D3A622ABC94C9003C993E /* JumpToAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JumpToAppStore.h; path = ../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/Tool/JumpToAppStore.h; sourceTree = "<group>"; };
 		3F378D97289687E000F1533C /* UIButton+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Factory.h"; sourceTree = "<group>"; };
 		3F378D98289687E000F1533C /* UIButton+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Factory.m"; sourceTree = "<group>"; };
 		3F378D9B2896880600F1533C /* UIControl+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Factory.h"; sourceTree = "<group>"; };
@@ -189,8 +186,6 @@
 		3F6743DC2A0CF1E8004385AF /* WKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		3F6743DE2A0D29DE004385AF /* WKWebViewController+JavaScirpt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebViewController+JavaScirpt.h"; sourceTree = "<group>"; };
 		3F6743DF2A0D29DE004385AF /* WKWebViewController+JavaScirpt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebViewController+JavaScirpt.m"; sourceTree = "<group>"; };
-		3F6E623A2A7E742A00E59A34 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Extension.h"; path = "../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/View/TKPhotoPickerTool/UIImage+Extension.h"; sourceTree = "<group>"; };
-		3F6E623B2A7E742A00E59A34 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Extension.m"; path = "../../../PublicBaseTool/PublicBaseTool/PublicBaseTool/View/TKPhotoPickerTool/UIImage+Extension.m"; sourceTree = "<group>"; };
 		3F7BABF22897BA3200C972C5 /* UISearchBar+Factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Factory.h"; sourceTree = "<group>"; };
 		3F7BABF32897BA3200C972C5 /* UISearchBar+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Factory.m"; sourceTree = "<group>"; };
 		3F7BABFF2897CD0400C972C5 /* UITextFieldCustom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFieldCustom.h; sourceTree = "<group>"; };
@@ -263,6 +258,10 @@
 		3FEEE396289665C6002C74AE /* UITextField+Factory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Factory.m"; sourceTree = "<group>"; };
 		3FEEE39B28966996002C74AE /* TKMethodSwap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMethodSwap.h; sourceTree = "<group>"; };
 		3FEEE39C28966996002C74AE /* TKMethodSwap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMethodSwap.m; sourceTree = "<group>"; };
+		3FF50AC72CB28A480089905B /* JumpToAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpToAppStore.h; sourceTree = "<group>"; };
+		3FF50AC82CB28A480089905B /* JumpToAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpToAppStore.m; sourceTree = "<group>"; };
+		3FF50ACB2CB28B010089905B /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		3FF50ACC2CB28B010089905B /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		3FF5F30028A78664002C475F /* Icon3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3@2x.png"; sourceTree = "<group>"; };
 		3FF5F30328A7868B002C475F /* Icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon1@2x.png"; sourceTree = "<group>"; };
 		3FF5F30628A786A9002C475F /* Icon2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon2@2x.png"; sourceTree = "<group>"; };
@@ -336,7 +335,6 @@
 		3F0A8F662894FFBE009C8BEE /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
-				3F0A8FA12895015E009C8BEE /* ExampleProject.entitlements */,
 				3F86C88928A87AE3006AC931 /* TestView */,
 				3F0A8F672894FFBE009C8BEE /* AppDelegate.h */,
 				3F0A8F682894FFBE009C8BEE /* AppDelegate.m */,
@@ -354,14 +352,15 @@
 				3F9B3B252AD8FAEC001AEB15 /* QRCode */,
 				3FD8628C2AD8182E002DB43F /* Share */,
 				3FD862802AD7FDFF002DB43F /* TouchuID */,
-				3F0D3A5D2ABC93AF003C993E /* JumpToAppStore */,
-				3F6E62392A7E740C00E59A34 /* UIImage */,
+				3FF50AC62CB28A480089905B /* JumpToAppStore */,
+				3FF50ACA2CB28B010089905B /* UIImage */,
 				3FCFA4672A7934290000E2A5 /* Orientation */,
 				3F870EE52A20D3020003CE4D /* 3D Touch */,
 				3F7EDDA12A1783D0003EBBEB /* CoreData */,
 				3F870EE92A20D3830003CE4D /* WKWebView */,
 				3FA4C63A289E895E0068544D /* Animation */,
-				3FF755D9289C09C600BC0121 /* Launch */,
+				3FF50AC52CB286730089905B /* AppLogo */,
+				3FF755D9289C09C600BC0121 /* AppLaunch */,
 				3FF755D4289BF80400BC0121 /* Push */,
 				3FEEE39928966710002C74AE /* Runttime */,
 				3F4047FA289518BA004CBD35 /* FontManager */,
@@ -469,15 +468,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		3F0D3A5D2ABC93AF003C993E /* JumpToAppStore */ = {
-			isa = PBXGroup;
-			children = (
-				3F0D3A622ABC94C9003C993E /* JumpToAppStore.h */,
-				3F0D3A612ABC94C9003C993E /* JumpToAppStore.m */,
-			);
-			path = JumpToAppStore;
-			sourceTree = "<group>";
-		};
 		3F4047F828951860004CBD35 /* FactoryUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,15 +503,6 @@
 				3F4962AC28952BB900F471F2 /* TKFontManager.m */,
 			);
 			path = FontManager;
-			sourceTree = "<group>";
-		};
-		3F6E62392A7E740C00E59A34 /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				3F6E623A2A7E742A00E59A34 /* UIImage+Extension.h */,
-				3F6E623B2A7E742A00E59A34 /* UIImage+Extension.m */,
-			);
-			path = UIImage;
 			sourceTree = "<group>";
 		};
 		3F7BAC052897D0E400C972C5 /* UIView+Custom */ = {
@@ -700,6 +681,34 @@
 			path = "UIView+Category";
 			sourceTree = "<group>";
 		};
+		3FF50AC52CB286730089905B /* AppLogo */ = {
+			isa = PBXGroup;
+			children = (
+				3FFDB52B28A6A033004AA481 /* icons */,
+				3FFDB53928A6A3C5004AA481 /* AppIconManager.h */,
+				3FFDB53A28A6A3C5004AA481 /* AppIconManager.m */,
+			);
+			path = AppLogo;
+			sourceTree = "<group>";
+		};
+		3FF50AC62CB28A480089905B /* JumpToAppStore */ = {
+			isa = PBXGroup;
+			children = (
+				3FF50AC72CB28A480089905B /* JumpToAppStore.h */,
+				3FF50AC82CB28A480089905B /* JumpToAppStore.m */,
+			);
+			path = JumpToAppStore;
+			sourceTree = "<group>";
+		};
+		3FF50ACA2CB28B010089905B /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				3FF50ACB2CB28B010089905B /* UIImage+Extension.m */,
+				3FF50ACC2CB28B010089905B /* UIImage+Extension.h */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		3FF755D4289BF80400BC0121 /* Push */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,10 +718,9 @@
 			path = Push;
 			sourceTree = "<group>";
 		};
-		3FF755D9289C09C600BC0121 /* Launch */ = {
+		3FF755D9289C09C600BC0121 /* AppLaunch */ = {
 			isa = PBXGroup;
 			children = (
-				3FFDB52B28A6A033004AA481 /* icons */,
 				3FF755E6289C0E7900BC0121 /* LaunchPageManager.h */,
 				3FF755E7289C0E7900BC0121 /* LaunchPageManager.m */,
 				3FF755EB289C17E900BC0121 /* LaunchPageViewController.h */,
@@ -723,10 +731,8 @@
 				3F4617AA28A3C6E400EFBE6D /* TKDynamicLaunchImage.m */,
 				3FFDB47928A67E49004AA481 /* TKDynamicLaunchImageHelper.h */,
 				3FFDB47828A67E49004AA481 /* TKDynamicLaunchImageHelper.m */,
-				3FFDB53928A6A3C5004AA481 /* AppIconManager.h */,
-				3FFDB53A28A6A3C5004AA481 /* AppIconManager.m */,
 			);
-			path = Launch;
+			path = AppLaunch;
 			sourceTree = "<group>";
 		};
 		3FFDB52B28A6A033004AA481 /* icons */ = {
@@ -787,7 +793,7 @@
 				3F0A8F612894FFBE009C8BEE /* Frameworks */,
 				3F0A8F622894FFBE009C8BEE /* Resources */,
 				90DC222F32D9F65BFEE9C8BD /* [CP] Embed Pods Frameworks */,
-				33A50915EC74E4F674286DF7 /* [CP] Copy Pods Resources */,
+				A8341C2BF5530C9B1F472B34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 				3F87C5B42943751D00FFC9C5 /* PBXBuildRule */,
@@ -879,23 +885,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		33A50915EC74E4F674286DF7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		90DC222F32D9F65BFEE9C8BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -911,6 +900,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8341C2BF5530C9B1F472B34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleProject/Pods-ExampleProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -933,7 +939,6 @@
 				3F61A5CA28A909E300880DCC /* UIViewController+ThemeEnvironment.m in Sources */,
 				3F46179F28A3951400EFBE6D /* FlowView.m in Sources */,
 				3F7EDDB92A1783D1003EBBEB /* CDPeopleModel+CoreDataClass.m in Sources */,
-				3F0D3A632ABC94C9003C993E /* JumpToAppStore.m in Sources */,
 				3F9B3B282AD8FB12001AEB15 /* TKQRCodeTool.m in Sources */,
 				3FCFA46D2A7934690000E2A5 /* OrientationViewController.m in Sources */,
 				3F4962B62895320D00F471F2 /* TKLableFactory.m in Sources */,
@@ -942,6 +947,8 @@
 				3F87C5B22943713600FFC9C5 /* UniversalLinkViewController.m in Sources */,
 				3F4962BA2895323800F471F2 /* TKButtonFactory.m in Sources */,
 				3F7EDDBC2A1783D1003EBBEB /* CoreDataService.m in Sources */,
+				3FF50ACD2CB28B010089905B /* UIImage+Extension.m in Sources */,
+				3FF50AC92CB28A480089905B /* JumpToAppStore.m in Sources */,
 				3F4047F628951834004CBD35 /* LabelCell.m in Sources */,
 				3F40480928951CCD004CBD35 /* ClassTypeModel.m in Sources */,
 				3FC9BABA28A530A300C559EC /* LaunchTextView.m in Sources */,
@@ -985,7 +992,6 @@
 				3F9B3B332AD9599D001AEB15 /* TKLocationlocator.m in Sources */,
 				3F4617AB28A3C6E400EFBE6D /* TKDynamicLaunchImage.m in Sources */,
 				3F4962B028952BB900F471F2 /* TKFontManager.m in Sources */,
-				3F6E623C2A7E742A00E59A34 /* UIImage+Extension.m in Sources */,
 				3F87C56129430EA500FFC9C5 /* GrayWhiteViewController.m in Sources */,
 				3F0A8F99289500B3009C8BEE /* NavigationViewController.m in Sources */,
 				3F6743DD2A0CF1E8004385AF /* WKWebViewController.m in Sources */,
@@ -1076,7 +1082,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1130,7 +1136,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1144,15 +1150,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProjectDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = KBHDP222FK;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ExampleProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1162,8 +1170,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,6";
 			};
 			name = Debug;
 		};
@@ -1175,13 +1186,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ExampleProject/ExampleProject.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = KBHDP222FK;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = ExampleProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1191,8 +1204,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sayaDev.ExampleProject.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,6";
 			};
 			name = Release;
 		};

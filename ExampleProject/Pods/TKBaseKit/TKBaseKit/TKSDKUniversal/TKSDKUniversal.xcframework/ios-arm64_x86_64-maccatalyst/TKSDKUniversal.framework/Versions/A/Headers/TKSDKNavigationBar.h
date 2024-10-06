@@ -55,7 +55,8 @@
 @property(nonatomic, strong, nullable) UILabel  *labTitle;
 /** 实现该代理可以监听到TKSDKNavigationBar frame的变化  */
 @property(nonatomic, weak, nullable) id<TKSDKNavigationBarDelegate> delegate;
-
+/** navView区域中新增的toolbar，注意：1.使用时需要注意他与TKSDKNavigationBar的样式 2.如果直接添加到TKSDKNavigationBar中需要手动指定高度 */
+@property(nonatomic, strong, nullable) UIToolbar *toolbar;
 
 
 
@@ -144,6 +145,10 @@
  */
 + (NSMutableSet *_Nonnull)stockList;
 
+
+//MARK: - toolbar
+/** 设置toolbar.barTintColor */
+- (void)setToolBarTintColor:(nullable UIColor *)color;
 
 @end
 

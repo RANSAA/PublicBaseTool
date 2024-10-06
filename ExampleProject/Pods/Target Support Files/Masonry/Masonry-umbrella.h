@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "LayoutGuide+MASAdditions.h"
+#import "LayoutGuide+MASShorthandAdditions.h"
 #import "MASCompositeConstraint.h"
 #import "MASConstraint+Private.h"
 #import "MASConstraint.h"

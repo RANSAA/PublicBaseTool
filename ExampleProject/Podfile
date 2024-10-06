@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '11.0'
 install! 'cocoapods', :warn_for_unused_master_specs_repo => false
 
 target 'ExampleProject' do
@@ -7,8 +7,21 @@ target 'ExampleProject' do
   use_frameworks!
 
   # Pods for ExampleProject
-  pod 'Masonry'
+#  pod 'Masonry'
   pod 'IQKeyboardManager'
   pod 'TKUIKit'
+  
+  pod 'Masonry'         ,:git => 'https://github.com/ctsfork/Masonry.git'
+
+  
+#  pod 'TKBaseKit', '2.2.4'
+#
+#  pod 'GTMBase64'       ,:git => 'https://github.com/ctsfork/GTMBase64.git'
+#  pod 'Masonry'         ,:git => 'https://github.com/ctsfork/Masonry.git'
+#  pod 'YYModel'         ,:git => 'https://github.com/ctsfork/YYModel.git'
+#  pod 'AFNetworking'    ,:git => 'https://github.com/ctsfork/AFNetworking.git'
+#
+#  pod 'MJRefresh'       #,'~> 3.7.9'
+#  pod 'MBProgressHUD'
 
 end

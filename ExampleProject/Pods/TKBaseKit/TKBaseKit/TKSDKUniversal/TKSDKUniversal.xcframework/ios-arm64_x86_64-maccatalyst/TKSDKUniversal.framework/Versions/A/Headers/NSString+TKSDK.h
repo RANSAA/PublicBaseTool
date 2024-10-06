@@ -17,46 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (TKSDK)
 
 /**
- 创建目录
- */
-+ (void)TKCreateStorageFolder:(NSString *)path;
-
-/**
-获取TK在沙盒中的存储目录，不能被《文件》这个应用访问
-PS:位于Library中的子目录中
-*/
-+ (NSString *)TKGetStorageFolder;
-
-/**
- 获取Document这个目录
- */
-+ (NSString *)TKGetStorageDocument;
-
-/**
- 获取Preferences这个目录
- */
-+ (NSString *)TKGetStoragePreferences;
-
-/**
- 获取Caches这个目录
- */
-+ (NSString *)TKGetStorageCaches;
-
-/**
-获取NSBundle中的指定目录(不包括子目录)中的所有文件路径，并以升序方式进行排序
-bundle: 需要获取文件的bundle
-dirName:目录名称，例如:nil, /, dir_1 , dir1/dir2/dir3
-isPath: 是否返回全路径，YES:返回全路径 NO:只返回文件名称
-*/
-+ (NSArray *)TKGetAllFilePathWithBundle:(NSBundle *)bundle dirName:(NSString *)dirName isPath:(BOOL)isPath;
-
-/**
- 判断path路径是文件，还是目录或者不存在
- return: 0:文件 1：目录 -1：不存在
- */
-+ (NSInteger)TKGetFilePathTypeWith:(NSString *)path;
-
-/**
 获取字符串拼音的大写首字母
 str:输入的字符串
 firstChar:用于替换字符串拼音首字母不在A-Z区间时返回的字符,如果为nil,则不替换。
@@ -127,12 +87,6 @@ isNum:返回首字母是否包含数字区间，并且只有firstChar不为nil�
 
 
 /**
- 直接将float格式化2位小数的字符串，直接截取小数点后两位
- 与.2f有点区别（即：最后一位的值不会四舍五入）
- */
-+ (NSString *)TKStringTwoWithFloat:(CGFloat)Float;
-
-/**
  判断字符串是否是数字,即整数或者小数
  样式：
     12345  123456.0
@@ -151,14 +105,7 @@ isNum:返回首字母是否包含数字区间，并且只有firstChar不为nil�
  */
 + (BOOL)TKIsFloatWithString:(NSString *)strValue;
 
-/** 判断是否是文件 */
-+ (BOOL)TKIsFileWithPath:(NSString *)path;
 
-/** 判断是否是目录*/
-+ (BOOL)TKIsDirWithPath:(NSString *)path;
-
-/** 判断是否是文件或者目录 */
-+ (BOOL)TKIsFileOrDirWithPath:(NSString *)path;
 
 /**
  HTML转富文本
@@ -187,12 +134,23 @@ isNum:返回首字母是否包含数字区间，并且只有firstChar不为nil�
  return YES: 表示可升级
  */
 + (BOOL)TKUpdateCompareStringWith:(NSString *)v1 fast:(NSString *)v2;
-/**
- APP版本检测比较(数字比较) V1>V2 返回YES
- return YES: 表示可升级
- */
-+ (BOOL)TKUpdateCompareFloatWith:(CGFloat)v1 fast:(CGFloat)v2;
 
+/**
+ 去除小数点后多余的0，并返回去除0之后的字符串；
+ maxLength:小数点后最大的长度 == 6
+ */
++ (NSString *)TKStringRemoveExcessZeroWith:(CGFloat)value;
+/**
+ 去除小数点后多余的0，并返回去除0之后的字符串
+ maxLength:小数点后最大的长度
+ 示例:
+ 23.056 -> @"23.056"
+ 23.500 -> @"23.5"
+ 23.000 -> @"23"
+ 23.    -> @"23"
+ 23     -> @"23"
+ */
++ (NSString *)TKStringRemoveExcessZeroWith:(CGFloat)value maxLength:(NSUInteger)maxLength;
 
 @end
 

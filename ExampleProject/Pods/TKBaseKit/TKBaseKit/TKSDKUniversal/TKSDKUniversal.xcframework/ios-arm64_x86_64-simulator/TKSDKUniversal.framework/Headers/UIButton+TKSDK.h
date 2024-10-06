@@ -17,15 +17,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIButton (TKSDK)
 //这5个扩展的属性都是指UIControlStateNormal状态
-@property(nonatomic, strong) NSString *text;        //等效titleText
-@property(nonatomic, strong) NSString *titleText;   //等效text
+/** 等效titleText属性 */
+@property(nonatomic, strong) NSString *text;
+/** 等效text属性 */
+@property(nonatomic, strong) NSString *titleText;  
 @property(nonatomic, strong) UIColor *titleColor;
 @property(nonatomic, strong) UIFont *titleFont;
 @property(nonatomic, strong) UIImage *image;
 
 
 #pragma mark Action
-/** 添加一个action点击事件,并且添加了0.3秒防止重复点击 */
+
+/**
+ 将addTarget:action:forControlEvents:方法包裹成block方式；
+ 并使用了UIView setAfterUserInteractionEnabled的延迟方法
+ */
 - (void)addActionWithBlock:(void(^)(UIButton *button))block;
 
 @end

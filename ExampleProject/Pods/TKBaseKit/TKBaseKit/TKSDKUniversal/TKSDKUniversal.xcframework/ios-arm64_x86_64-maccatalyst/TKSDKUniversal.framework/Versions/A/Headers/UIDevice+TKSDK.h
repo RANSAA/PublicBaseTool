@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 获取信息区域
 
 
-
 /**
  获取APP名称。
  PS:即获取CFBundleDisplayName的值，如果没有就获取CFBundleName的值
@@ -85,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  获取推送时的deviceToken；即将NSData格式的deviceToken转化为十六进制格式的字符串
  */
-+ (NSString *)TK_getDeviceTokenWithRemoteNotification:(NSData *)deviceToken;
++ (NSString *)TKGetDeviceTokenStringWith:(NSData *)deviceToken;
 
 
 /**
@@ -164,12 +163,16 @@ NS_ASSUME_NONNULL_BEGIN
 /**
   获取设备的具体型号如iPhone5s,iPhone6s等(PS:如果是模拟器会直接返回Simulator)
   已经更新到 iPhone 12 Pro Max
-  time: 2021-6-17
+  time: 2023-9-21
   ps:只有iPhone的类型是全的，其它的如果需要，直接到下列网址中w去添加
-  https://www.theiphonewiki.com/wiki/Models
+  https://theapplewiki.com/wiki/Models
 */
 + (NSString *)TK_getDeviceDetailsType;
 
+/**
+ 获取当前用户界面方向
+ */
++ (UIInterfaceOrientation)TK_getInterfaceOrientation;
 
 
 #pragma mark 检测判断区域
@@ -188,31 +191,26 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)TK_isInterfaceLandscape;
 
 /**
- 获取当前用户界面方向
+ 获取当前应用运行的UI Style是否为：iPhone
  */
-+ (UIInterfaceOrientation)TK_getInterfaceOrientation;
-
++ (BOOL)TK_isUserInterfaceIPhone;
 /**
- 判断当前设备运行的UI模式是否时iPhone布局
- iPad设备上会根据项目是否勾选target iPad而右不用的结果
- 主要用于UI上面区分iPhone与iPad
- YES:iPhone
- NO: iPad
-*/
-+ (BOOL)TK_isDeviceWithInterfaceIphone;
-
-/**
- 获取当前设备运行的模式，比如在iPad上面模拟运行返回的还是iPhone
- 主要用于设计UI时区分iPad还是iPhone（如程序在iPad上是否是模拟iPhone运行）
-
- UIUserInterfaceIdiomUnspecified = -1,
- UIUserInterfaceIdiomPhone API_AVAILABLE(ios(3.2)), // iPhone and iPod touch style UI
- UIUserInterfaceIdiomPad API_AVAILABLE(ios(3.2)), // iPad style UI
- UIUserInterfaceIdiomTV API_AVAILABLE(ios(9.0)), // Apple TV style UI
- UIUserInterfaceIdiomCarPlay API_AVAILABLE(ios(9.0)), // CarPlay style UI
- 
+ 获取当前应用运行的UI Style是否为：iPad
  */
-+ (UIUserInterfaceIdiom)TK_isDeviceWithInterfaceIdiom;
++ (BOOL)TK_isUserInterfaceIPad;
+/**
+ 获取当前应用运行的UI Style是否为：Apple TV
+ */
++ (BOOL)TK_isUserInterfaceTV;
+/**
+ 获取当前应用运行的UI Style是否为：CarPlay
+ */
++ (BOOL)TK_isUserInterfaceCarPlay;
+/**
+ 获取当前应用运行的UI Style是否为：Optimized for Mac
+ */
++ (BOOL)TK_isUserInterfaceMac;
+
 
 /**
  * 检查当前设备是否是模拟器

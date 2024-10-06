@@ -16,6 +16,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TKSDKClearManager : NSObject
+
 /** 单利  */
 + (instancetype)shared;
 
@@ -23,31 +24,30 @@ NS_ASSUME_NONNULL_BEGIN
  设置要清理垃圾的目录数组
  */
 - (void)setClearPathAry:(NSArray *)clearPathAry;
-
-/**
- 获取所有指定路径中的缓存大小，单位M。
- success: 缓存计算完成后回调
- PS:该操作是在子线程中进行的。
-*/
-- (void)getAllCacheSizeSuccess:(void(^)(CGFloat size))success;
-/**
- 清除指定目录中的所有缓存
- success: 缓存清理完成后回调
- PS:该操作是在子线程中进行的。
-*/
-- (void)clearAllCacheSuccess:(void(^)(CGFloat size))success;
+/** 添加需要清理的path路径 */
+- (void)addClearPath:(NSString*)path;
 
 
 /**
- 获取所有指定路径中的缓存大小，单位M。
- PS:推荐在子线程中获取缓存大小。
+ 获取所有指定路径中文件的大小，单位字节
  */
-- (CGFloat)getAllCacheSize;
+- (NSUInteger)getAllCacheSize;
 /**
- 清除指定目录中的所有缓存
- PS:推荐在子线程中清除缓存
+ 获取clearPaths中指定路径所有文件的大小，并进行单位格式化
  */
-- (void)clearAllCache;
+- (NSString *)getAllCacheSizeString;
+/**
+ 删除clearPaths中所有路径对应的文件
+ */
+- (void)clearAllCaches;
+
+
+
+/** 获取路径中的文件大小，如果是目录则计算目录的总大小，单位：字节 */
+- (NSUInteger)fileSizeWithPath:(NSString *)path;
+/** 删除指定路径对应的文件/目录 */
+- (void)removeWithPath:(NSString *)path;
+
 
 @end
 

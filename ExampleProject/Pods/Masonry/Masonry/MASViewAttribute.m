@@ -15,14 +15,13 @@
     return self;
 }
 
-- (id)initWithView:(MAS_VIEW *)view item:(id)item layoutAttribute:(NSLayoutAttribute)layoutAttribute {
-    self = [super init];
-    if (!self) return nil;
-    
-    _view = view;
-    _item = item;
-    _layoutAttribute = layoutAttribute;
-    
+- (instancetype)initWithView:(MAS_VIEW *)view item:(id)item layoutAttribute:(NSLayoutAttribute)layoutAttribute {
+    if (self = [super init]) {
+        _view = view;
+        _item = item?:view;
+        _layoutAttribute = layoutAttribute;
+    }
+
     return self;
 }
 

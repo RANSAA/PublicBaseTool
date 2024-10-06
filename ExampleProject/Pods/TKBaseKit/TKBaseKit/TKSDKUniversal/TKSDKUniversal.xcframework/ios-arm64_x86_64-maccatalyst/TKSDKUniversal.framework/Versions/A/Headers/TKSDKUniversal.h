@@ -2,12 +2,10 @@
 //  TKSDKUniversal.h
 //  TKSDKUniversal
 //
-//  Created by Mac on 2019/2/23.
-//  Copyright © 2019年 Mac. All rights reserved.
+//  Created by kimi on 2023/8/26.
 //
 
-#import <UIKit/UIKit.h>
-
+#import <Foundation/Foundation.h>
 
 //! Project version number for TKSDKUniversal.
 FOUNDATION_EXPORT double TKSDKUniversalVersionNumber;
@@ -16,6 +14,7 @@ FOUNDATION_EXPORT double TKSDKUniversalVersionNumber;
 FOUNDATION_EXPORT const unsigned char TKSDKUniversalVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <TKSDKUniversal/PublicHeader.h>
+
 
 //通用宏
 #import "TKSDKUniversalMacro.h"
@@ -45,6 +44,8 @@ FOUNDATION_EXPORT const unsigned char TKSDKUniversalVersionString[];
 #import "TKSDKFPSLabel.h"
 #import "TKSDKDashLineView.h"
 #import "TKSDKLinkTextView.h"
+#import "TKSDKCornerShadowView.h"
+
 
 
 

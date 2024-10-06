@@ -30,7 +30,12 @@
     //给字体设置增量
 //    TKFontManager.shared.increaseSize = 60;
     
-    
+#if DEBUG
+if (@available(iOS 16.0, *)) {
+//    [self setInspectable:YES];
+}
+#endif
+
 
     [self registerFont];
 

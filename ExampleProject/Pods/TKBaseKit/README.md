@@ -1,62 +1,201 @@
 ## TKBaseKit
+简介：常用的工具类集成框架！
 
-<br>
 
 
-### 警告： 2.1.9即以后的版本使用了XCFramework构建，需要Xcode11+才能支持；如果使用低于Xcode11版本，可以直接在.xcframework文件中找到指定架构版本使用即可。
 
-<br>
+## 最新 - TKBaseKit快速添加依赖：
+
+⚠️⚠️警告：由于该项目使用了特定用户的三方库，所以需要导入指定用户的三方库。
+
+1. 两个模块都使用了，直接导入：
+```
+pod 'TKBaseKit', '2.2.3'  
+
+pod 'GTMBase64'       ,:git => 'https://github.com/ctsfork/GTMBase64.git'  
+pod 'Masonry'         ,:git => 'https://github.com/ctsfork/Masonry.git'             
+pod 'YYModel'         ,:git => 'https://github.com/ctsfork/YYModel.git'    
+pod 'AFNetworking'    ,:git => 'https://github.com/ctsfork/AFNetworking.git'
+
+pod 'MJRefresh'       #,'~> 3.7.9'   
+pod 'MBProgressHUD' 
+```
+使用方式:
+```
+#import <TKBaseKit.h>
+或者
+#import <TKSDKUniversal/TKSDKUniversal.h>
+#import <TKSDKTool/TKSDKTool.h>
+```
+
+2. 只使用TKSDKUniversal模块，直接导入：
+```
+pod 'TKBaseKit/TKSDKUniversal'
+```
+使用方式:
+```
+#import <TKSDKUniversal/TKSDKUniversal.h>
+```
+⚠️⚠️警告：
+1. 如果使用了MJRefresh并且版本 >= 3.7.7+，那么项目最低目标版本为iOS12
+2. 目前使用了一个公共Privacy模块用于存放PrivacyInfo.xcprivacy隐私清单，然后TKSDKUniversal与TKSDKTool模块同时依赖他。
+如果后期开发使用时出现隐私错误，可以为两个模块分别绑定隐私清单，因为该框架是同时集成了两个动态XCFramework静态框架。
+
+
+
+
+## ⚠️⚠️说明： 
+1. 注意：使用时最好固定到某个具体的版本,因为这只是一个自用的SDK，版本之间可能会有大改。
+2. v2.2.3版本支持Xcode14, iOS版本支持切换到11.0+。
+3. 对内置的部分三方库引用切换到了ctsfok用户的fork版本；因为这些fork项目对原项目进行了一些维护。
+```
+YYModel:
+主分支：
+pod 'YYModel', :git => 'https://github.com/ctsfork/YYModel.git'
+指定tag：
+pod 'YYModel', :git => 'https://github.com/ctsfork/YYModel.git', :tag => '1.2.0'
+
+Masonry:
+主分支：
+pod 'Masonry', :git => 'https://github.com/ctsfork/Masonry.git'
+指定tag：
+pod 'Masonry', :git => 'https://github.com/ctsfork/Masonry.git', :tag => '1.2.0'
+
+GTMBase64:
+主分支：
+pod 'GTMBase64', :git => 'https://github.com/ctsfork/GTMBase64.git'
+指定tag：
+pod 'GTMBase64', :git => 'https://github.com/ctsfork/GTMBase64.git', :tag => '1.0.2'
+
+AFNetworking:
+主分支：
+pod 'AFNetworking', :git => 'https://github.com/ctsfork/AFNetworking.git'
+指定tag：
+pod 'AFNetworking', :git => 'https://github.com/ctsfork/AFNetworking.git', :tag => '4.0.2'
+```
+4. 内部引用的原作者官方三方库三方库（作者在维护），包含：
+```
+pod 'MJRefresh',  '~> 3.7.9'
+pod 'MBProgressHUD'
+```
+5. ⚠️⚠️如果使用了MJRefresh版本 >= 3.7.7+，那么项目最低的iOS版本为iOS 12.0
+
+
+
+
 
 ## 功能说明：
 该静态框架主要封装了一些常用的工具，以及一些三方框架的二次封装；其中又分为两个框架分别为：
 * TKSDKUniversal：通用基础库Framework封装
 * TKSDKTool：对一些三方框架进行了二次封装如：AFNetworking，MJRefresh等，具体请查看TKSDKTooImportSDK.h文件
 
-<br>
+
+
 
 ## 使用说明
-1.CocoaPods方式
+
+1. CocoaPods方式：
 ```
 //全部引入
-pod 'TKBaseKit', '2.1.9'    
+pod 'TKBaseKit', '2.2.3'    
 
 使用：直接导入下列头文件即可：
 #import <TKBaseKit.h>
 
 
-//模块引入
+//按模块引入
 pod 'TKBaseKit/TKSDKUniversal'
 pod 'TKBaseKit/TKSDKTool'
 
 使用：导入对应静态库的头文件即可：
 #import <TKSDKUniversal/TKSDKUniversal.h>
 #import <TKSDKTool/TKSDKTool.h>
-
 ```
-2.手动添加
+2. 手动添加
 ```
-第一步：先将如下文件添加到项目中：
-    TKSDKUniversal.framework
-    TKSDKTool.framework
-    TKSDKTool.bundle
-第二步：导入三方依赖(需要匹配指定版本)
-      pod 'Masonry'
-      pod 'YYModel'
-      pod 'MBProgressHUD'
-      pod 'GTMBase64'          , '~> 1.0.1'
-      pod 'MJRefresh'          , '~> 3.6'
-      pod 'AFNetworking'       , '~> 4.0'
-第三步：
-    1.设置"Other Linker Flags"-->添加: -ObjC 
-    2.将Build Settings中的Allow Non-modular Includes In Framework Modules设为YES
-    3.将Build Settings中的 "Excluded Architectures" --> "Release" --> 选中 --> "Any iOS Simulator SDK", 为其添加："arm64"。 即排除模拟器arm64架构的生成。
-    
-```
+//全部引入
+将TKBaseKit中的所有文件加入项目中
 
 
-<br>
+//按模块引入
+TKSDKUniversal.xcframework
+TKSDKTool.xcframework
+TKSDKTool.bundle
+
+然后按需导入对应静态库的头文件：
+#import <TKSDKUniversal/TKSDKUniversal.h>
+#import <TKSDKTool/TKSDKTool.h>
+
+
+然后对项目进行设置：
+1.  设置"Other Linker Flags"-->添加: -ObjC 
+2.  将Build Settings中的Allow Non-modular Includes In Framework Modules设为YES
+3.  将Build Settings中的 "Excluded Architectures" --> "Release" --> 选中 --> "Any iOS Simulator SDK", 为其添加："arm64"。 即排除模拟器arm64架构的生成。
+注意：第3项可以根据情况不设置，即直接使用XCFramework。
+```
+3. 内置依赖三方库添加，如果不使用TKSDKTool框架可不添加三方依赖，因为只有TKSDKTool内置了的三方依赖库
+```
+    pod 'MJRefresh',     '~> 3.7'
+    pod 'MBProgressHUD'
+    pod 'YYModel', :git => 'https://github.com/ctsfork/YYModel.git'
+    pod 'Masonry', :git => 'https://github.com/ctsfork/Masonry.git'
+    pod 'GTMBase64', :git => 'https://github.com/ctsfork/GTMBase64.git'
+    pod 'AFNetworking', :git => 'https://github.com/ctsfork/AFNetworking.git', :tag => '4.0.2'
+```
+
+
+
+
+## Frameworks的制作与测试
+1. 制作framework:直接创建framework项目即可，framework可分为动态库和静态库；
+```
+可以通过Build Settings -> Mach-O Type 更改framework的类型。
+一般可选为： "Static Library", "Dynamic Library"
+```
+2. 同工作空间的其它项目测试framework的相关配置：
+```
+在测试项目中需要进行以下配置才能进行正确的测试
+
+1. Build Settings ->  Other Linker Flags 中添加：
+    1. -ObjC
+    2. -all_load
+    3. $(inherited)
+    4. Framework(.framework类型的动/静态库)
+        -framework 
+        "TKSDKUniversal"
+       Static Library(.a类型的静态库)    
+        -l"Masonry"
+    说明：
+        1,2项用于加载静态库中比如类别，IBInspectable，IB_DESIGNABLE设计的类，如果不加则在项目中可能找不到相关类。
+        3项用于自动加载一些如Cocospods管理的一些配置，推荐默认可以加上。
+        4项用于加载动静态库，如果没有该设置，那么在测试项目中将找不到对应的库。它们加载库的区别：-framework用于加载Framework类型的库，-l"xx"用于加载.a类型的库。
+
+2. Build Settings -> Framework Search Paths
+    说明：如果要加载一些其他的库时出现找不到的情况时需要再该项中配置对应framework的搜索路径。
+    注意：默认不需要配置只有出现前面的问题才配置。
+
+
+3. General -> Frameworks,Libraries,and Embedded Content
+    说明：该项用于将其他的库(Frameworks)嵌入该项目中。
+    1. 不使用Cocospods管理项目:
+        1.将需要测试的framework添加到该项；
+        2.注意被嵌入的framework的签名方式(这跟Framework目标的Signing & Capabilities项中是否开启签名有关)，
+        一般可设置为：“Do Not Embed”, "Embed Sign"。可根据项目具体情况设置。
+        如果这两项设置有问题一遍表现为：无法安装(提示签名错误)，程序运行崩溃(提示找不到对应的framework)。
+
+    2. 使用Cocospods管理项目:
+        可不做配置直接使用默认即可(也有可能需要按1的方式进行配置)。
+
+    注意：是否使用Cocospods管理项目会对这项配置有影响，如果配置不正确可以同时试试上面配置，已找到正确的配置，   
+```
+
+
+
+
 
 ## TKSDKUniversal介绍
+
+* **并未全部列出，可自行查看框架**
 
 * TKSDKUniversalMacro.h：定义了一些常用的宏。
 > ***
@@ -126,7 +265,8 @@ pod 'TKBaseKit/TKSDKTool'
 > * **TKSDKClearManager**：缓存清理工具
 
 
-<br>
+
+
 
 
 ## TKSDKTool介绍

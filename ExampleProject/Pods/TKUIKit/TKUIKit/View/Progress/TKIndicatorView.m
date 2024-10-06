@@ -20,10 +20,12 @@
 
 @implementation TKIndicatorView
 
-- (instancetype)init
+
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self = [super init]) {
+    if (self = [super initWithFrame:frame]) {
         [self initConfig];
+        [self setupIndicatorUI];
     }
     return self;
 }
@@ -53,6 +55,7 @@
     _lineWidth = 6;
     _lineColor = UIColor.whiteColor;
     _style = TKIndicatorViewDefaultStyle;
+    self.userInteractionEnabled = NO;
 }
 
 - (void)setStyle:(TKIndicatorViewStyle)style
@@ -513,8 +516,12 @@
 //    self.firstGradientLayer.endPoint = CGPointMake(0, 5);
 //    self.firstGradientLayer.type = kCAGradientLayerRadial;
 
-    self.firstGradientLayer.startPoint = CGPointMake(1, 0.5);
-    self.firstGradientLayer.endPoint = CGPointMake(0, 0.5);
+//    self.firstGradientLayer.startPoint = CGPointMake(1, 0.5);
+//    self.firstGradientLayer.endPoint = CGPointMake(0, 0.5);
+//    self.firstGradientLayer.type = kCAGradientLayerAxial;
+
+    self.firstGradientLayer.startPoint = CGPointMake(0.0, 0.0);
+    self.firstGradientLayer.endPoint = CGPointMake(1, 1);
     self.firstGradientLayer.type = kCAGradientLayerAxial;
 
 

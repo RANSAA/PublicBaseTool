@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NSFileManager+TKSDK.h</key>
 		<data>
-		RYgFf25LaDd+DelhPVYBUjWnYPo=
+		mhiEuLsyG3K5Ju40r01uGKacbdE=
 		</data>
 		<key>Headers/NSObject+TKSDK.h</key>
 		<data>
@@ -14,11 +14,11 @@
 		</data>
 		<key>Headers/NSString+TKSDK.h</key>
 		<data>
-		sWwQw6Z0FlvvS30+o1Ju1elwjJ0=
+		I9dKexoP7rWMAloFhRHB3Pm9aTE=
 		</data>
 		<key>Headers/NSTimer+TKSDK.h</key>
 		<data>
-		LFImhJwTpF50/2isqjhghnwGCC8=
+		nticQ5YkvqJVdJ6c3Q2r0RIiEgA=
 		</data>
 		<key>Headers/NSValue+TKSDK.h</key>
 		<data>
@@ -26,11 +26,15 @@
 		</data>
 		<key>Headers/TKSDKClearManager.h</key>
 		<data>
-		z4vHks9RCiFu/0hm639sXzbkEXY=
+		1T5ix9HhgLbAoGT5gJoxqxggAs4=
 		</data>
 		<key>Headers/TKSDKCollectionViewController.h</key>
 		<data>
 		JFTP8a6LkZzIilGRjXNkbztiVPk=
+		</data>
+		<key>Headers/TKSDKCornerShadowView.h</key>
+		<data>
+		fQObue0kq+jLCH4IuaM0Sa6I+Ng=
 		</data>
 		<key>Headers/TKSDKDashLineView.h</key>
 		<data>
@@ -58,7 +62,7 @@
 		</data>
 		<key>Headers/TKSDKNavigationBar.h</key>
 		<data>
-		B2IHDjwOMnlSmGubyC3C8sMujRQ=
+		VgRP99arNdoUDdagUEr40gi3Qsk=
 		</data>
 		<key>Headers/TKSDKNavigationController.h</key>
 		<data>
@@ -70,11 +74,11 @@
 		</data>
 		<key>Headers/TKSDKUniversal.h</key>
 		<data>
-		3wq4UVtqwy2x3pswNotE+V43UX8=
+		V1LmI/4XlnbueNYGDZkHcL+mxnw=
 		</data>
 		<key>Headers/TKSDKUniversalMacro.h</key>
 		<data>
-		M3PpBfXvTVw2E4NxhteJrSF/m7s=
+		84Ou+mJKA+9XD1YiYj0ajfDcQkM=
 		</data>
 		<key>Headers/TKSDKViewController.h</key>
 		<data>
@@ -82,15 +86,15 @@
 		</data>
 		<key>Headers/TKSDKWeakProxy.h</key>
 		<data>
-		bA1EtSUyQLURp0xseC0RrYYk+Ts=
+		pnFnMCkJ0E24wcQZemqk0vq9TnM=
 		</data>
 		<key>Headers/TKSDKXibView.h</key>
 		<data>
-		+nf70p3ULykkz2BaOwtkCl9GE14=
+		l0bhHUKho4gNK9Tqn6hNhNmTDPo=
 		</data>
 		<key>Headers/UIApplication+TKSDK.h</key>
 		<data>
-		cveoXXjUyfT1hY9EWsJ7vIlwUqA=
+		lDxf23k+gC3X3M9a6dMo5BvNNdk=
 		</data>
 		<key>Headers/UIBezierPath+TKSDK.h</key>
 		<data>
@@ -98,7 +102,7 @@
 		</data>
 		<key>Headers/UIButton+TKSDK.h</key>
 		<data>
-		uZ89EUwOT7kJKv4w1VitvT8uY+Q=
+		o3KF/j9mnXKFZmxCxIvkFXlOA5U=
 		</data>
 		<key>Headers/UIColor+TKSDK.h</key>
 		<data>
@@ -106,23 +110,27 @@
 		</data>
 		<key>Headers/UIDevice+TKSDK.h</key>
 		<data>
-		aLKONDhG9iv5RY4EwDDiLNpwE8c=
+		BlV/Wmej7zq4EAep86DVxX02xCA=
 		</data>
 		<key>Headers/UIImage+TKSDK.h</key>
 		<data>
-		XUZExCL6bSI60YDm6ZWLoFv9G1I=
+		2YIGkEYiGQmHWODaT2XSnqaOF/o=
 		</data>
 		<key>Headers/UIView+TKSDK.h</key>
 		<data>
-		JUuMD4aOngDdHst0VSL2cAumE54=
+		zTX8LzBPGxXfUKuBKQvhhZPS2KQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0eKrB0dDywXwA7CQlZgfmjNYydg=
+		0y3L/4Kh3UqbwSDyVRYMzydpE3g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		1bNnQhDezhBCfqC+ij7gJw15cO8=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		OGl4H7ny93gyz1FVztaVI+HrHt8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -131,11 +139,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RYgFf25LaDd+DelhPVYBUjWnYPo=
+			mhiEuLsyG3K5Ju40r01uGKacbdE=
 			</data>
 			<key>hash2</key>
 			<data>
-			1+HMzhz3wJ3Kp++tjjCqi3o5s69fnPQEhY8mCfYXCBY=
+			yJseak18x+HsJMESf9KRKbsKy6gRzZq3bH9nU8fLfyk=
 			</data>
 		</dict>
 		<key>Headers/NSObject+TKSDK.h</key>
@@ -153,22 +161,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sWwQw6Z0FlvvS30+o1Ju1elwjJ0=
+			I9dKexoP7rWMAloFhRHB3Pm9aTE=
 			</data>
 			<key>hash2</key>
 			<data>
-			2uReejCHY4X5hOyv7YF6r9TnUO6aMpnanMdg3E8e5xk=
+			uIzd7jvtNc14IoAv1U1BQEQROlzYoUYpLoI2o7qOCq4=
 			</data>
 		</dict>
 		<key>Headers/NSTimer+TKSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LFImhJwTpF50/2isqjhghnwGCC8=
+			nticQ5YkvqJVdJ6c3Q2r0RIiEgA=
 			</data>
 			<key>hash2</key>
 			<data>
-			eKbT273GvFJV+bIcFKf2vP5Q4ELXGBK6eiq117AtRNw=
+			Qo4fhbPzqusM7yLXdUoe+Abz58h6u4/w3QwB88j0dDE=
 			</data>
 		</dict>
 		<key>Headers/NSValue+TKSDK.h</key>
@@ -186,11 +194,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			z4vHks9RCiFu/0hm639sXzbkEXY=
+			1T5ix9HhgLbAoGT5gJoxqxggAs4=
 			</data>
 			<key>hash2</key>
 			<data>
-			2u+93uXo3f6sEdq6jvmFBeupySij3P6HlNQH5cb0SiE=
+			U9+4klNirnRhV49a4YKg94hBM40UOLsbwF7lMnLg+bg=
 			</data>
 		</dict>
 		<key>Headers/TKSDKCollectionViewController.h</key>
@@ -202,6 +210,17 @@
 			<key>hash2</key>
 			<data>
 			MXs7S++b0Y4T4pWncUNkmFXDFEwEA2DLhYALjq1UGHM=
+			</data>
+		</dict>
+		<key>Headers/TKSDKCornerShadowView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			fQObue0kq+jLCH4IuaM0Sa6I+Ng=
+			</data>
+			<key>hash2</key>
+			<data>
+			rvaYFanDAE3BFgIu+00hI1eTbu4Iuw6Am1FGcw6l3go=
 			</data>
 		</dict>
 		<key>Headers/TKSDKDashLineView.h</key>
@@ -274,11 +293,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			B2IHDjwOMnlSmGubyC3C8sMujRQ=
+			VgRP99arNdoUDdagUEr40gi3Qsk=
 			</data>
 			<key>hash2</key>
 			<data>
-			t7hz/ov9EBKKBrGBaqzjuZ0eaxRFj4Yoz6nsc/unNv0=
+			K54Z3ZAByFBXR+mCgSSatipvlGw5W+pXZpvu+ddy7po=
 			</data>
 		</dict>
 		<key>Headers/TKSDKNavigationController.h</key>
@@ -307,22 +326,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3wq4UVtqwy2x3pswNotE+V43UX8=
+			V1LmI/4XlnbueNYGDZkHcL+mxnw=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zwtp831RWbVcCKha1sAKfika2o4n4CQEdh07mfHb8jc=
+			hRW1Ph0eSRMNjvO/wgY1yBN7In+8oNjnvcE9mOz1AMI=
 			</data>
 		</dict>
 		<key>Headers/TKSDKUniversalMacro.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			M3PpBfXvTVw2E4NxhteJrSF/m7s=
+			84Ou+mJKA+9XD1YiYj0ajfDcQkM=
 			</data>
 			<key>hash2</key>
 			<data>
-			WUi0/lG5V7JNy+BdP5euf6CM0dpgXXNreETfN5Rw5sc=
+			WoSPLHJAouBFjKVrvpj8ionRxkBxEomLqHH77NNxC5s=
 			</data>
 		</dict>
 		<key>Headers/TKSDKViewController.h</key>
@@ -340,33 +359,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bA1EtSUyQLURp0xseC0RrYYk+Ts=
+			pnFnMCkJ0E24wcQZemqk0vq9TnM=
 			</data>
 			<key>hash2</key>
 			<data>
-			wrDYSkzBbcyqJ3j9NUN5LEWL3QTmildsHsTxXUKNbss=
+			gsnTwjOCgRmoIUt62LeXUWSxpLAUYEpc4fUPc0TC25k=
 			</data>
 		</dict>
 		<key>Headers/TKSDKXibView.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+nf70p3ULykkz2BaOwtkCl9GE14=
+			l0bhHUKho4gNK9Tqn6hNhNmTDPo=
 			</data>
 			<key>hash2</key>
 			<data>
-			sil2S6Fx8DL3yCN+h1mkM7BY+/edxYtspWGn5g3zYLM=
+			9HisqtH/T7TrOmGiqnWul29wBUFzKO/IhfqlQU8knvU=
 			</data>
 		</dict>
 		<key>Headers/UIApplication+TKSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cveoXXjUyfT1hY9EWsJ7vIlwUqA=
+			lDxf23k+gC3X3M9a6dMo5BvNNdk=
 			</data>
 			<key>hash2</key>
 			<data>
-			6sP0sHY8HcqE7SqKTwy+92Oqj8TQdTBPtl8vD9bOUFI=
+			IIJ6+8DfB4srOd3gdT2tvg3TSwiER1oT4uL2taFPbUU=
 			</data>
 		</dict>
 		<key>Headers/UIBezierPath+TKSDK.h</key>
@@ -384,11 +403,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uZ89EUwOT7kJKv4w1VitvT8uY+Q=
+			o3KF/j9mnXKFZmxCxIvkFXlOA5U=
 			</data>
 			<key>hash2</key>
 			<data>
-			hkDHV4qBRbi9OHv5I1vLGc27NJxTUY4/JaM0t8DhnCk=
+			waoYRWL2CdJEFOwncRhvRjgfO250K5Fx2iXtW3hv560=
 			</data>
 		</dict>
 		<key>Headers/UIColor+TKSDK.h</key>
@@ -406,33 +425,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			aLKONDhG9iv5RY4EwDDiLNpwE8c=
+			BlV/Wmej7zq4EAep86DVxX02xCA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fr2+xBOamQaQ9HRXl25K9QZRAwW2m/D/v5duY+oyc+0=
+			bE7U2n6smvpTUZ0erxQ/p/CNvQRlLdE3flB6yKgZZKA=
 			</data>
 		</dict>
 		<key>Headers/UIImage+TKSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XUZExCL6bSI60YDm6ZWLoFv9G1I=
+			2YIGkEYiGQmHWODaT2XSnqaOF/o=
 			</data>
 			<key>hash2</key>
 			<data>
-			zMP0xVN8Y7ajxGcKTwqWz3YBbMm6YTbawAcuYYghZik=
+			Au/5ZUfrDMOxIWzkUbgi7V+87CpuMHU081T2zSMPLN0=
 			</data>
 		</dict>
 		<key>Headers/UIView+TKSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			JUuMD4aOngDdHst0VSL2cAumE54=
+			zTX8LzBPGxXfUKuBKQvhhZPS2KQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			3l4KAB26pwUsbBJkmsLi+b8vJJAL89gZRO5ZVwqKeIo=
+			5Sn/wnsB7xILRYbzP8I96tK7zKwDR8M6tyS64JOBGfE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -444,6 +463,17 @@
 			<key>hash2</key>
 			<data>
 			NRQhpktKsoVIaluGT1ErqPaTUyswzWks2XPJFgrs1N4=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OGl4H7ny93gyz1FVztaVI+HrHt8=
+			</data>
+			<key>hash2</key>
+			<data>
+			ozHVGGR0Pr5OAN0iNgtKU4trOsJqaz61QJTmCjaVmhI=
 			</data>
 		</dict>
 	</dict>

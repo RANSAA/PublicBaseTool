@@ -1,53 +1,63 @@
 PODS:
-  - IQKeyboardManager (6.5.10)
-  - Masonry (1.1.0)
+  - IQKeyboardManager (6.5.19)
+  - Masonry (1.2.0)
   - MBProgressHUD (1.2.0)
-  - TKBaseKit/TKSDKUniversal (2.2.0)
-  - TKPermissionKit/Camera (1.2.4):
+  - TKBaseKit/Privacy (2.2.4)
+  - TKBaseKit/TKSDKUniversal (2.2.4):
+    - TKBaseKit/Privacy
+  - TKPermissionKit/Camera (1.2.8):
     - TKPermissionKit/Public
-  - TKPermissionKit/Photo (1.2.4):
+  - TKPermissionKit/Photo (1.2.8):
     - TKPermissionKit/Public
-  - TKPermissionKit/Public (1.2.4)
-  - TKUIKit (0.0.2):
-    - TKUIKit/Anim (= 0.0.2)
-    - TKUIKit/Core (= 0.0.2)
-    - TKUIKit/Tool (= 0.0.2)
-    - TKUIKit/View (= 0.0.2)
-  - TKUIKit/Anim (0.0.2):
+  - TKPermissionKit/Public (1.2.8)
+  - TKUIKit (0.0.4):
+    - TKUIKit/Anim (= 0.0.4)
+    - TKUIKit/Core (= 0.0.4)
+    - TKUIKit/Tool (= 0.0.4)
+    - TKUIKit/View (= 0.0.4)
+  - TKUIKit/Anim (0.0.4):
     - TKUIKit/Core
-  - TKUIKit/Core (0.0.2):
+  - TKUIKit/Core (0.0.4):
     - MBProgressHUD
     - TKBaseKit/TKSDKUniversal
     - TKPermissionKit/Camera
     - TKPermissionKit/Photo
-  - TKUIKit/Tool (0.0.2):
+  - TKUIKit/Tool (0.0.4):
     - TKUIKit/Core
-  - TKUIKit/View (0.0.2):
+  - TKUIKit/View (0.0.4):
     - TKUIKit/Anim
     - TKUIKit/Core
 
 DEPENDENCIES:
   - IQKeyboardManager
-  - Masonry
+  - Masonry (from `https://github.com/ctsfork/Masonry.git`)
   - TKUIKit
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
-    - Masonry
     - MBProgressHUD
     - TKBaseKit
     - TKPermissionKit
     - TKUIKit
 
+EXTERNAL SOURCES:
+  Masonry:
+    :git: https://github.com/ctsfork/Masonry.git
+
+CHECKOUT OPTIONS:
+  Masonry:
+    :commit: 8038ff4fe34ef5537f1afca66d7ef9bf9804c06a
+    :git: https://github.com/ctsfork/Masonry.git
+
 SPEC CHECKSUMS:
-  IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  Masonry: 37b972a2dbfb80e23ece08614267a16251d607ef
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  TKBaseKit: fde529df83871099ebeb818077674940bccbfcf0
-  TKPermissionKit: 4226853b17bc39c40ddaf28771c81a0a33544e35
-  TKUIKit: eb9d79d38a07aad42329dcab602fdbadaeeafbb1
+  TKBaseKit: 54c8f5e01f0810e67c3f65e2c9560b9b0b7b9ef0
+  TKPermissionKit: 7553969596a8e918eebca85a684b44c36241c0c4
+  TKUIKit: a5a5aff02d0301199e3209e99d235d5cbd85d615
 
-PODFILE CHECKSUM: 743f5a819816b9ce09830fa1cce6eb01d68118e8
+PODFILE CHECKSUM: f2b675826044848242ef009e893495e91285e193
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.15.2

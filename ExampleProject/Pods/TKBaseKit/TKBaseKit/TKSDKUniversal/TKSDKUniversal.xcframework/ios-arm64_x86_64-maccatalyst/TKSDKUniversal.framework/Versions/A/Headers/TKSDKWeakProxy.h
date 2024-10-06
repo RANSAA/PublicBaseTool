@@ -9,7 +9,11 @@
 
 
 /**
- 功能：利用NSProxy的消息转发机制来避免循环引用，用在NSTimer或者CADisplayLink中
+ 功能：可利用NSProxy的消息转发机制来避免循环引用，用在NSTimer或者CADisplayLink中
+ 使用示例:
+ _link = [CADisplayLink displayLinkWithTarget:[TKSDKWeakProxy proxyWithTarget:self] selector:@selector(tick:)];
+ [_link addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+
  */
 
 NS_ASSUME_NONNULL_BEGIN
